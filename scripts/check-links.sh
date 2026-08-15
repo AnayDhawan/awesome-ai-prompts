@@ -7,7 +7,7 @@
 set -uo pipefail
 
 repo="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-cd "$repo"
+cd "$repo" || exit 1
 
 fail=0
 
