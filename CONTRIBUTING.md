@@ -48,11 +48,13 @@ Look for issues labeled [`good first issue`](https://github.com/StudentSuite/awe
 ## Commit Style
 
 [Conventional Commits](https://www.conventionalcommits.org/):
-```
+
+```text
 docs: add code-interview-practice prompt
 docs: fix broken link in README
 chore: add docs lint CI
 ```
+
 Types: `feat | fix | docs | style | refactor | perf | test | ci | chore`
 
 ---

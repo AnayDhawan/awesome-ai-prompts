@@ -7,12 +7,14 @@ We pledge to make participation in our community a harassment-free experience fo
 ## Our Standards
 
 **Positive behavior includes:**
+
 - Using welcoming and inclusive language
 - Being respectful of differing viewpoints
 - Gracefully accepting constructive criticism
 - Showing empathy towards other community members
 
 **Unacceptable behavior includes:**
+
 - Sexualized language or imagery
 - Trolling, insulting or derogatory comments
 - Public or private harassment
@@ -20,7 +22,7 @@ We pledge to make participation in our community a harassment-free experience fo
 
 ## Enforcement
 
-Instances of unacceptable behavior may be reported to: **studentsuite3@gmail.com**
+Instances of unacceptable behavior may be reported to: **<studentsuite3@gmail.com>**
 
 All complaints will be reviewed and investigated promptly and fairly.
 

@@ -22,6 +22,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [0.1.0] - 2026-08-15
 
 ### Added
+
 - Initial public release
 - 26 curated copy-paste prompts covering the full development lifecycle: core coding, git & GitHub, code review, testing, docs, security, performance, DevOps, and career
 - Prompts grouped into category folders with a categorized README index

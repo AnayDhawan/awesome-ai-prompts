@@ -14,9 +14,10 @@ the only maintained state. The table below is kept for completeness.
 
 **Do not open a public GitHub issue for security vulnerabilities.**
 
-Email: **studentsuite3@gmail.com**
+Email: **<studentsuite3@gmail.com>**
 
 Include in your report:
+
 - Description of the vulnerability
 - Steps to reproduce
 - Potential impact
@@ -33,12 +34,14 @@ Include in your report:
 ## Scope
 
 **In scope:**
+
 - Prompts that instruct an AI agent to do something unsafe (exfiltrating data, escalating
   privileges, or bypassing controls)
 - Any exposed credentials, tokens, or personal data in the repository
 - Links that point to malicious or compromised destinations
 
 **Out of scope:**
+
 - Vulnerabilities in the AI tools themselves (report them to the tool vendors)
 - Social engineering
 - Theoretical vulnerabilities without a concrete example

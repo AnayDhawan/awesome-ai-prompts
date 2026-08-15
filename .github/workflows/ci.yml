@@ -12,6 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Markdown lint
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npx --yes markdownlint-cli2@0.17.2 "**/*.md"
       - name: Docs lint (README links + prompt conventions)
         run: bash scripts/check-links.sh
       - name: Shellcheck scripts
