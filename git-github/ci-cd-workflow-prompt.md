@@ -6,18 +6,18 @@ pipeline that is correct, secure, and actually verified.
 ---
 
 Create a CI/CD pipeline for **this** repository using GitHub Actions. Do not
-ask which repo — use the current one. The pipeline must be fully automatic and
+ask which repo - use the current one. The pipeline must be fully automatic and
 enforce the constraints below.
 
 ## Output
 
 One or more workflow files under `.github/workflows/`. Prefer official
 `actions/*` steps over third-party actions. If you write custom logic, use
-bash with the GitHub CLI (`gh`) — no unchecked third-party actions.
+bash with the GitHub CLI (`gh`) - no unchecked third-party actions.
 
 ## Default pipeline (adjust to the repo's actual stack)
 
-- **CI**: on `push` and `pull_request` — install dependencies, run lint,
+- **CI**: on `push` and `pull_request` - install dependencies, run lint,
   format, type checks, and the test suite using the repo's own tooling.
   Cache dependencies where supported. Fail fast on the first broken job.
 - **Coverage**: if the repo has a coverage tool, run it and upload the report.
@@ -30,7 +30,7 @@ bash with the GitHub CLI (`gh`) — no unchecked third-party actions.
 - Never execute untrusted code in a privileged context. For pull requests from
   forks, use `pull_request_target` **only** if the workflow needs a
   write-scoped token, and in that case never `checkout` or run code from the
-  PR — only read metadata and post statuses/comments. Say so in a header
+  PR - only read metadata and post statuses/comments. Say so in a header
   comment.
 - Never string-interpolate user-derived values into `bash -c` or command
   strings that could be injected. Pass them via environment variables.
@@ -49,6 +49,6 @@ bash with the GitHub CLI (`gh`) — no unchecked third-party actions.
    commands return sensible results. Do NOT perform write operations during
    verification.
 4. If the repo already has CI, ensure your pipeline does not duplicate or
-   conflict with it — reconcile rather than replace.
+   conflict with it - reconcile rather than replace.
 5. Confirm commit-message style follows the repo's conventions (Conventional
    Commits) if committing.

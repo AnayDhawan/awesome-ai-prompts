@@ -8,32 +8,32 @@ spec to shipped, with verification at every stage.
 You are implementing a feature in this repository. Work end-to-end: understand
 the requirement, design a minimal solution that fits the existing
 architecture, implement it, verify it, and leave the codebase clean. Never
-guess — read the relevant code first and verify every claim you make.
+guess - read the relevant code first and verify every claim you make.
 
 ## Steps
 
-1. **Understand** — Read the feature request/issue carefully. Read the code
+1. **Understand** - Read the feature request/issue carefully. Read the code
    this touches: the files, their callers, and the surrounding tests. Ask
    clarifying questions if the requirement is ambiguous or conflicts with the
    existing design.
-2. **Plan** — State your plan before writing code: the files you will change,
+2. **Plan** - State your plan before writing code: the files you will change,
    what each change does, the edge cases you'll handle, and how you'll verify.
    Do not start editing until the plan is agreed.
-3. **Design to fit** — Follow the repo's existing patterns, conventions, and
+3. **Design to fit** - Follow the repo's existing patterns, conventions, and
    architecture. Do not introduce a new library, pattern, or directory unless
-   it's clearly warranted — prefer the boring, idiomatic option.
-4. **Implement** — Write the smallest change that satisfies the requirement.
+   it's clearly warranted - prefer the boring, idiomatic option.
+4. **Implement** - Write the smallest change that satisfies the requirement.
    Handle edge cases (empty input, missing data, errors, timeouts). Do not add
    speculative features or refactor unrelated code.
-5. **Test** — Add or update tests that assert the actual behavior, including
+5. **Test** - Add or update tests that assert the actual behavior, including
    the key edge cases. Run the full test suite plus lint, format, and type
    checks using the repo's own tooling (check `pyproject.toml`, `package.json`,
    `Makefile`, CI workflows, or README). Fix whatever breaks.
-6. **Verify the behavior** — Exercise the feature as a user would where
+6. **Verify the behavior** - Exercise the feature as a user would where
    practical, not just through mocked paths.
-7. **Document** — Update README/CHANGELOG only if the feature changes user
+7. **Document** - Update README/CHANGELOG only if the feature changes user
    behavior or setup. Keep it accurate and in the repo's voice.
-8. **Self-review** — Re-read your diff as a reviewer: is the fix correct, are
+8. **Self-review** - Re-read your diff as a reviewer: is the fix correct, are
    the tests meaningful, is there anything dead, duplicated, or confusing?
 
 ## Rules

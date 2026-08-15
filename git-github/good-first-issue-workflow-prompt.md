@@ -7,7 +7,7 @@ good-first-issue enforcement workflow for a different repository.
 
 Two labels are reserved for contributors submitting their **first PR** to the
 repo: `good first issue` and `help wanted`. Together they cover the explicit
-kinds of issues a newcomer can realistically ship — documentation, tests,
+kinds of issues a newcomer can realistically ship - documentation, tests,
 small bug fixes, and scoped UI/UX, performance, and devops chores. Any
 experienced contributor (≥1 merged PR here) who grabs one is unassigned and
 their PR is closed, with a note to pick an **unreserved** issue instead.
@@ -20,7 +20,7 @@ released back to the pool.
 Create a GitHub Actions workflow for **this** repository that reserves
 starter-labeled issues (`good first issue` and `help wanted`) for first-time
 contributors. The workflow must run fully automatically with no manual
-approval, and enforce the rules below. Do not ask the user which repo — use
+approval, and enforce the rules below. Do not ask the user which repo - use
 the current one.
 
 ## Output
@@ -36,12 +36,12 @@ retroactively.
 - Labels to protect (reserved for first-timers): `good first issue` and
   `help wanted`
 - Experienced contributors should be redirected to any **unreserved** issue
-  (the old "pick a help wanted issue instead" advice no longer applies —
+  (the old "pick a help wanted issue instead" advice no longer applies -
   `help wanted` is itself reserved)
 - "First-time contributor" = has **0 merged PRs** authored by them in this
   repo (query via `gh pr list --state merged --author "<login>" --limit 1`;
   beware the `commits?author=` API 422ing for users with no GitHub activity
-  — don't use it)
+  - don't use it)
 - Exempt from enforcement: repo owner and anyone with collaborator access
   (use `author_association` if available on the event, else the collaborators
   API `repos/{owner}/{repo}/collaborators/{login}` → 204 means exempt)
@@ -52,8 +52,8 @@ retroactively.
 ## Enforcement behavior
 
 All comments (welcome, policy, close, stale) must spell out the **explicit
-kinds of issues** the reserved labels cover — documentation, tests, small
-bug fixes, and scoped UI/UX, performance, and devops chores — and, for
+kinds of issues** the reserved labels cover - documentation, tests, small
+bug fixes, and scoped UI/UX, performance, and devops chores - and, for
 experienced contributors, point them at unreserved work (e.g. larger
 features, architecture, security hardening, cross-platform/CI overhauls)
 instead.
@@ -70,7 +70,7 @@ instead.
      `cross-referenced` events filtered to PRs and matching author).
 2. **When a PR is opened that claims a protected issue** (trigger
    `pull_request_target: types: [opened, reopened]`): parse the PR body for
-   claim refs ONLY — regex
+   claim refs ONLY - regex
    `(close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved)\s+#\d+`
    (case-insensitive) so a `#N` in prose or code fences is ignored. If any
    referenced issue has either protected label and the author is experienced →
@@ -79,7 +79,7 @@ instead.
    `workflow_dispatch` so it can be run on demand). It is the backstop that
    catches everything the event triggers miss, so it must do three things:
    - **Assignment enforcement**: search all open protected issues (union of
-     both labels — note `gh search issues` ANDs multiple `--label` flags, so
+     both labels - note `gh search issues` ANDs multiple `--label` flags, so
      run one search per label and `sort -u`), and for any assigned to a
      non-exempt experienced contributor, apply the same unassign + comment +
      close-linked-PRs logic. This catches issues labeled after assignment and
@@ -88,7 +88,7 @@ instead.
      refs from the body (same regex as rule 2), and close any PR by an
      experienced non-exempt author that claims a protected issue. This closes
      PRs opened **before** the workflow existed and authors who became
-     "experienced" after opening their PR — the event trigger alone never
+     "experienced" after opening their PR - the event trigger alone never
      sees either case.
    - **Staleness release**: for a protected issue held by a **first-time**
      assignee, find their last `assigned` timeline event (dedupe by
@@ -106,7 +106,7 @@ instead.
   duplicated inline across jobs instead of being factored into a script file
   that would require a checkout.
 - Pass any user-derived values to `gh` via environment variables or shell
-  variables — never string-interpolate them into commands that could be
+  variables - never string-interpolate them into commands that could be
   injected.
 - Guard every `gh` write call with `|| true` so a race (already-closed PR,
   already-unassigned) can't fail the job.

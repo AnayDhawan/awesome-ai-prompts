@@ -11,18 +11,18 @@ findings are what the team will act on, so accuracy matters more than volume.
 
 ## Scope to cover
 
-1. **Injection & input handling** — SQL/NoSQL injection, shell injection,
+1. **Injection & input handling** - SQL/NoSQL injection, shell injection,
    command execution, path traversal, template injection, unsafe deserialization.
-2. **Authentication & authorization** — broken auth, default/weak credentials,
+2. **Authentication & authorization** - broken auth, default/weak credentials,
    missing authorization checks, privilege escalation, session handling.
-3. **Data exposure** — secrets and API keys committed in the repo or in git
+3. **Data exposure** - secrets and API keys committed in the repo or in git
    history, sensitive data in logs, responses exposing internal details,
    insecure storage/transmission (HTTP, no TLS).
-4. **Web-specific** — the OWASP Top 10 as it applies to the code: XSS, CSRF,
+4. **Web-specific** - the OWASP Top 10 as it applies to the code: XSS, CSRF,
    SSRF, open redirects, insecure headers, IDOR.
-5. **Dependencies** — known-vulnerable packages (run the repo's dependency
+5. **Dependencies** - known-vulnerable packages (run the repo's dependency
    scanner if configured, e.g. `npm audit`, `pip-audit`, `gh security`).
-6. **Configuration** — over-permissive permissions, debug mode enabled,
+6. **Configuration** - over-permissive permissions, debug mode enabled,
    unsafe defaults, missing rate limiting/input validation.
 
 ## Method
@@ -45,7 +45,7 @@ found clean.
 ## Rules
 
 - Do **not** change code, push fixes, or rotate secrets without explicit
-  approval — report first.
+  approval - report first.
 - Never redact or dismiss a real finding because it's awkward. Report it
   plainly.
 - If something looks vulnerable but you can't confirm the path, mark it as

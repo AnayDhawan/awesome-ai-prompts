@@ -3,7 +3,7 @@
 ## Supported Versions
 
 This repository is a curated collection of documentation and prompts. Because there is no
-shipping runtime, there is no "supported versions" contract — the current `main` branch is
+shipping runtime, there is no "supported versions" contract - the current `main` branch is
 the only maintained state. The table below is kept for completeness.
 
 | Version | Supported |
@@ -50,4 +50,4 @@ Include in your report:
 
 | Researcher | Issue | Date |
 |------------|-------|------|
-| — | — | — |
+| - | - | - |

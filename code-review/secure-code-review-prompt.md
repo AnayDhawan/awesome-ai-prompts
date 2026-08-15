@@ -1,30 +1,30 @@
 # Reusable prompt: security-focused code review
 
 Copy-paste the block below into any AI coding agent to review a PR or diff
-through a security lens — find real vulnerabilities, with evidence.
+through a security lens - find real vulnerabilities, with evidence.
 
 ---
 
 Review this code with a security focus. The author has already had a
-functional review — your job is to find the ways an attacker or a bad input
+functional review - your job is to find the ways an attacker or a bad input
 could abuse it. Verify everything; don't flag theoretical risks without a
 real path.
 
 ## What to hunt for
 
-1. **Injection & shell** — User input reaching SQL/NoSQL queries, shell
+1. **Injection & shell** - User input reaching SQL/NoSQL queries, shell
    commands, URLs, templates, or deserializers. Trace input from source to
    sink before flagging.
-2. **Authn/authz** — Missing or bypassable checks, IDOR (using another user's
+2. **Authn/authz** - Missing or bypassable checks, IDOR (using another user's
    ID without ownership checks), privilege escalation, hardcoded/weak
    credentials, secrets in code.
-3. **Web & network** — XSS (esp. where user content is rendered), CSRF, SSRF,
+3. **Web & network** - XSS (esp. where user content is rendered), CSRF, SSRF,
    open redirects, insecure headers/CSP, missing TLS, trusting attacker-controlled
    URLs or hosts.
-4. **Data handling** — Sensitive data logged or returned in responses,
+4. **Data handling** - Sensitive data logged or returned in responses,
    over-permissive CORS, secrets in error messages, caching of private data,
    insecure deserialization.
-5. **Dependencies & config** — New dependencies with known vulnerabilities,
+5. **Dependencies & config** - New dependencies with known vulnerabilities,
    unsafe defaults, debug mode, permissive permissions.
 
 ## Method
@@ -47,6 +47,6 @@ nice-to-harden. No fluff, no duplicates.
 ## Rules
 
 - Never run destructive or write operations against real systems during review.
-- Don't fix the code unless asked — report the findings and proposed fixes.
+- Don't fix the code unless asked - report the findings and proposed fixes.
 - Never dismiss a real issue because it's "just" a demo/assignment; say so
   but still report it.
