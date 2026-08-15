@@ -19,6 +19,13 @@ jobs:
       - run: npx --yes markdownlint-cli2@0.17.2 "**/*.md"
       - name: Docs lint (README links + prompt conventions)
         run: bash scripts/check-links.sh
+      - name: No em dashes
+        run: |
+          if git ls-files | xargs grep -l '—' ; then
+            echo "Em dashes are not allowed in this repo. Use an ASCII hyphen (-) instead."
+            exit 1
+          fi
+          echo "No em dashes found."
       - name: Shellcheck scripts
         run: |
           mapfile -t FILES < <(git ls-files '*.sh')
