@@ -1,0 +1,23 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  docs-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Docs lint (README links + prompt conventions)
+        run: bash scripts/check-links.sh
+      - name: Shellcheck scripts
+        run: |
+          mapfile -t FILES < <(git ls-files '*.sh')
+          if [ ${#FILES[@]} -gt 0 ]; then
+            sudo apt-get update && sudo apt-get install -y shellcheck
+            shellcheck "${FILES[@]}"
+          fi
