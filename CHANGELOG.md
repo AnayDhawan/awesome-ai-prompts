@@ -56,6 +56,9 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `learning-roadmap-prompt.md` - project-based learning plans with checkpoints
 - New `system-design/` category for architecture-level prompts
 - New `data-ai/` category for data engineering and AI/LLM prompts
+- `commit-checklist.yml` workflow enforcing PR gates: listed prompts, changelog coverage, folder/section sync, Contents counts, Conventional Commits titles
+- `scripts/check-consistency.sh` for running the consistency checks locally
+- Prompt counts in the README Contents list
 
 ---
 

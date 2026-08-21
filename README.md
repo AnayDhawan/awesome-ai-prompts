@@ -16,17 +16,17 @@ and required verification. Everything else is a focused one-pager.
 
 ## Contents
 
-- [Core coding](#core-coding)
-- [System design](#system-design)
-- [Git & GitHub](#git--github)
-- [Code review & quality](#code-review--quality)
-- [Testing & quality](#testing--quality)
-- [Docs & delivery](#docs--delivery)
-- [Security & performance](#security--performance)
-- [DevOps & deploy](#devops--deploy)
-- [Career & learning](#career--learning)
-- [Frontend & UI](#frontend--ui)
-- [Data & AI](#data--ai)
+- [Core coding](#core-coding) (10)
+- [System design](#system-design) (5)
+- [Git & GitHub](#git--github) (7)
+- [Code review & quality](#code-review--quality) (4)
+- [Testing & quality](#testing--quality) (7)
+- [Docs & delivery](#docs--delivery) (5)
+- [Security & performance](#security--performance) (7)
+- [DevOps & deploy](#devops--deploy) (9)
+- [Career & learning](#career--learning) (5)
+- [Frontend & UI](#frontend--ui) (5)
+- [Data & AI](#data--ai) (4)
 
 ## Quick Start
 
