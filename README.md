@@ -14,6 +14,20 @@ guess; small steps; tests as guardrails.
 Prompts marked **[spec]** are deep, multi-section specs with hard constraints
 and required verification. Everything else is a focused one-pager.
 
+## Contents
+
+- [Core coding](#core-coding)
+- [System design](#system-design)
+- [Git & GitHub](#git--github)
+- [Code review & quality](#code-review--quality)
+- [Testing & quality](#testing--quality)
+- [Docs & delivery](#docs--delivery)
+- [Security & performance](#security--performance)
+- [DevOps & deploy](#devops--deploy)
+- [Career & learning](#career--learning)
+- [Frontend & UI](#frontend--ui)
+- [Data & AI](#data--ai)
+
 ## Quick Start
 
 1. Browse the category below and pick a prompt.
