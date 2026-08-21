@@ -1,0 +1,13 @@
+# Normalize line endings - this is a markdown-heavy repo.
+* text=auto eol=lf
+
+*.sh text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.jsonc text eol=lf
+*.cff text eol=lf
+
+# Denote assets that should not be touched.
+*.png binary
+*.jpg binary
+*.gif binary
