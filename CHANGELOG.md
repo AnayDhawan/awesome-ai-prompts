@@ -29,6 +29,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `incident-response-prompt.md` - debug incidents and write post-mortems
 - `git-bisect-debug-prompt.md` - find the commit that introduced a bug with git bisect
 - `release-automation-prompt.md` - automate versioning, tagging, and publishing
+- `commit-checklist-prompt.md` - build consistency gates for derived artifacts
 - `resume-review-prompt.md` - review a technical resume
 - `tech-blog-writer-prompt.md` - turn a project into a blog post
 - `component-build-prompt.md` - build a reusable, accessible UI component

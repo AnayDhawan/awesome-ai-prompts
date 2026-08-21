@@ -18,7 +18,7 @@ and required verification. Everything else is a focused one-pager.
 
 - [Core coding](#core-coding) (10)
 - [System design](#system-design) (5)
-- [Git & GitHub](#git--github) (7)
+- [Git & GitHub](#git--github) (8)
 - [Code review & quality](#code-review--quality) (4)
 - [Testing & quality](#testing--quality) (7)
 - [Docs & delivery](#docs--delivery) (5)
@@ -66,6 +66,7 @@ That's it. Each prompt is self-contained and tool-agnostic.
 - [good-first-issue-workflow-prompt.md](git-github/good-first-issue-workflow-prompt.md) **[spec]** - GitHub Actions workflow reserving starter issues for first-time contributors.
 - [git-bisect-debug-prompt.md](git-github/git-bisect-debug-prompt.md) - use git bisect to find the exact commit that introduced a bug.
 - [release-automation-prompt.md](git-github/release-automation-prompt.md) - automate versioning, tagging, changelogs, and publishing with CI.
+- [commit-checklist-prompt.md](git-github/commit-checklist-prompt.md) - build deterministic PR gates that keep indexes, changelogs, and counts in sync.
 
 ## Code review & quality
 
