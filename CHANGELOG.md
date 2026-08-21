@@ -34,6 +34,28 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `component-build-prompt.md` - build a reusable, accessible UI component
 - `responsive-design-prompt.md` - audit and implement responsive layouts
 - New `frontend-ui/` category for UI-specific prompts
+- `system-design-prompt.md` **[spec]** - design a scalable system end-to-end
+- `adr-writing-prompt.md` - record a technical decision as an ADR
+- `technical-debt-triage-prompt.md` - inventory and prioritize tech debt
+- `concurrency-debugging-prompt.md` - debug race conditions and deadlocks
+- `caching-strategy-prompt.md` - add caching with designed invalidation
+- `data-pipeline-prompt.md` - build idempotent, validated ETL pipelines
+- `sql-query-optimization-prompt.md` - optimize slow queries with plan evidence
+- `rag-pipeline-prompt.md` - build grounded, cited RAG features with evals
+- `llm-feature-eval-prompt.md` - evaluate LLM features against held-out test sets
+- `threat-modeling-prompt.md` - STRIDE threat modeling ranked by real risk
+- `auth-implementation-prompt.md` - implement authn/authz safely
+- `contract-testing-prompt.md` - consumer-driven contract tests in CI
+- `chaos-resilience-prompt.md` - failure injection and resilience fixes
+- `state-management-prompt.md` - one home per piece of client state
+- `web-performance-vitals-prompt.md` - Core Web Vitals optimization with proof
+- `i18n-localization-prompt.md` - internationalization done properly
+- `kubernetes-deployment-prompt.md` - secure, zero-downtime K8s deploys
+- `feature-flag-rollout-prompt.md` - progressive delivery with kill switches
+- `backup-disaster-recovery-prompt.md` - restore-proven backups and DR runbooks
+- `learning-roadmap-prompt.md` - project-based learning plans with checkpoints
+- New `system-design/` category for architecture-level prompts
+- New `data-ai/` category for data engineering and AI/LLM prompts
 
 ---
 

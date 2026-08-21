@@ -35,6 +35,14 @@ That's it. Each prompt is self-contained and tool-agnostic.
 - [environment-setup-prompt.md](core-coding/environment-setup-prompt.md) - bootstrap a dev environment from scratch: deps, tooling, config, first-run verification.
 - [code-migration-prompt.md](core-coding/code-migration-prompt.md) **[spec]** - migrate code between frameworks/languages with behavior parity and incremental verification.
 
+## System design
+
+- [system-design-prompt.md](system-design/system-design-prompt.md) **[spec]** - design a scalable system end-to-end: requirements, components, tradeoffs, failure modes, phased build.
+- [adr-writing-prompt.md](system-design/adr-writing-prompt.md) - record a technical decision as a two-minute ADR: context, options, consequences.
+- [technical-debt-triage-prompt.md](system-design/technical-debt-triage-prompt.md) - inventory tech debt with evidence and get a prioritized paydown plan.
+- [concurrency-debugging-prompt.md](system-design/concurrency-debugging-prompt.md) - hunt race conditions and deadlocks: prove the interleaving, minimal fix, stress-verified.
+- [caching-strategy-prompt.md](system-design/caching-strategy-prompt.md) - add caching that pays for itself: measured wins, invalidation designed up front.
+
 ## Git & GitHub
 
 - [git-history-surgery-prompt.md](git-github/git-history-surgery-prompt.md) - safe history editing, bisect, blame, and recovery via reflog.
@@ -59,6 +67,8 @@ That's it. Each prompt is self-contained and tool-agnostic.
 - [code-coverage-gap-prompt.md](testing-quality/code-coverage-gap-prompt.md) - find risky untested paths and cover them meaningfully.
 - [e2e-test-scaffold-prompt.md](testing-quality/e2e-test-scaffold-prompt.md) - scaffold end-to-end/integration tests with realistic fixtures and CI integration.
 - [mutation-testing-prompt.md](testing-quality/mutation-testing-prompt.md) - run mutation testing to validate that tests actually catch real defects.
+- [contract-testing-prompt.md](testing-quality/contract-testing-prompt.md) - consumer-driven contract tests so API drift fails CI, not production.
+- [chaos-resilience-prompt.md](testing-quality/chaos-resilience-prompt.md) - inject failures and close the gaps: timeouts, backoff, graceful degradation.
 
 ## Docs & delivery
 
@@ -75,6 +85,8 @@ That's it. Each prompt is self-contained and tool-agnostic.
 - [secrets-management-prompt.md](security-performance/secrets-management-prompt.md) - audit and remediate hardcoded secrets, set up env-based secret management.
 - [load-testing-prompt.md](security-performance/load-testing-prompt.md) - design and run load/stress tests with measurable thresholds.
 - [dependency-audit-prompt.md](security-performance/dependency-audit-prompt.md) - audit dependencies for vulnerabilities, license issues, and staleness.
+- [threat-modeling-prompt.md](security-performance/threat-modeling-prompt.md) - STRIDE-style threat model ranked by real risk, with verified mitigations.
+- [auth-implementation-prompt.md](security-performance/auth-implementation-prompt.md) - implement sessions/OAuth/JWT safely with server-side authorization everywhere.
 
 ## DevOps & deploy
 
@@ -84,6 +96,9 @@ That's it. Each prompt is self-contained and tool-agnostic.
 - [database-schema-migrations-prompt.md](devops-deploy/database-schema-migrations-prompt.md) - backward-compatible schema changes: expand, migrate, contract.
 - [monitoring-observability-prompt.md](devops-deploy/monitoring-observability-prompt.md) - set up logging, metrics, and alerting with actionable dashboards.
 - [incident-response-prompt.md](devops-deploy/incident-response-prompt.md) - debug a live incident or write a post-mortem with structured triage.
+- [kubernetes-deployment-prompt.md](devops-deploy/kubernetes-deployment-prompt.md) - deploy to Kubernetes securely: real probes, zero-downtime rollouts, non-root pods.
+- [feature-flag-rollout-prompt.md](devops-deploy/feature-flag-rollout-prompt.md) - ship behind flags with progressive rollout, kill switch, and cleanup plan.
+- [backup-disaster-recovery-prompt.md](devops-deploy/backup-disaster-recovery-prompt.md) - backups proven by restore drills plus a scenario-based DR runbook with RTO/RPO.
 
 ## Career & learning
 
@@ -91,11 +106,22 @@ That's it. Each prompt is self-contained and tool-agnostic.
 - [portfolio-project-prompt.md](career-learning/portfolio-project-prompt.md) - shape an idea into a scoped, presentable portfolio project.
 - [resume-review-prompt.md](career-learning/resume-review-prompt.md) - review a technical resume: impact bullets, keyword density, honesty.
 - [tech-blog-writer-prompt.md](career-learning/tech-blog-writer-prompt.md) - turn a project or technical concept into a clear, engaging blog post.
+- [learning-roadmap-prompt.md](career-learning/learning-roadmap-prompt.md) - turn a skill gap into a project-based roadmap with verifiable checkpoints.
 
 ## Frontend & UI
 
 - [component-build-prompt.md](frontend-ui/component-build-prompt.md) - build a reusable, accessible UI component with props, variants, and stories.
 - [responsive-design-prompt.md](frontend-ui/responsive-design-prompt.md) - audit and implement responsive layouts: breakpoints, fluid grids, mobile-first.
+- [state-management-prompt.md](frontend-ui/state-management-prompt.md) - give every piece of client state one home; compute derived data, delete sync bugs.
+- [web-performance-vitals-prompt.md](frontend-ui/web-performance-vitals-prompt.md) - fix Core Web Vitals from measurements: LCP, INP, CLS with before/after proof.
+- [i18n-localization-prompt.md](frontend-ui/i18n-localization-prompt.md) - internationalize properly: extracted strings, ICU plurals, RTL, pseudo-locale testing.
+
+## Data & AI
+
+- [data-pipeline-prompt.md](data-ai/data-pipeline-prompt.md) - build ETL pipelines that fail loudly, resume cleanly, and prove their output.
+- [sql-query-optimization-prompt.md](data-ai/sql-query-optimization-prompt.md) - make slow queries fast with plans before/after and justified indexes.
+- [rag-pipeline-prompt.md](data-ai/rag-pipeline-prompt.md) - build retrieval-augmented generation with citations and eval numbers before shipping.
+- [llm-feature-eval-prompt.md](data-ai/llm-feature-eval-prompt.md) - evaluate LLM features with a held-out test set and pre-committed thresholds.
 
 ## Contributing
 
