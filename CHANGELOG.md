@@ -55,6 +55,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `feature-flag-rollout-prompt.md` - progressive delivery with kill switches
 - `backup-disaster-recovery-prompt.md` - restore-proven backups and DR runbooks
 - `learning-roadmap-prompt.md` - project-based learning plans with checkpoints
+- `website-seo-prompt.md` - technical SEO audit with verification
 - New `system-design/` category for architecture-level prompts
 - New `data-ai/` category for data engineering and AI/LLM prompts
 - `commit-checklist.yml` workflow enforcing PR gates: listed prompts, changelog coverage, folder/section sync, Contents counts, Conventional Commits titles

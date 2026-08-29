@@ -25,7 +25,7 @@ and required verification. Everything else is a focused one-pager.
 - [Security & performance](#security--performance) (7)
 - [DevOps & deploy](#devops--deploy) (9)
 - [Career & learning](#career--learning) (5)
-- [Frontend & UI](#frontend--ui) (5)
+- [Frontend & UI](#frontend--ui) (6)
 - [Data & AI](#data--ai) (4)
 
 ## Quick Start
@@ -130,6 +130,7 @@ That's it. Each prompt is self-contained and tool-agnostic.
 - [state-management-prompt.md](frontend-ui/state-management-prompt.md) - give every piece of client state one home; compute derived data, delete sync bugs.
 - [web-performance-vitals-prompt.md](frontend-ui/web-performance-vitals-prompt.md) - fix Core Web Vitals from measurements: LCP, INP, CLS with before/after proof.
 - [i18n-localization-prompt.md](frontend-ui/i18n-localization-prompt.md) - internationalize properly: extracted strings, ICU plurals, RTL, pseudo-locale testing.
+- [website-seo-prompt.md](frontend-ui/website-seo-prompt.md) - technical SEO audit: crawlability, canonicalization, metadata, structured data, redirects, and speed - with verification at every step.
 
 ## Data & AI
 
