@@ -3,7 +3,6 @@
 ![Build](https://github.com/StudentSuite/awesome-ai-prompts/actions/workflows/ci.yml/badge.svg)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/StudentSuite/awesome-ai-prompts?style=social)](https://github.com/StudentSuite/awesome-ai-prompts)
-[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)]([https://github.com/sindresorhus/awesome](https://github.com/StudentSuite/awesome-ai-prompts))
 
 A curated list of AI prompts for Student Developers. Copy-paste any prompt
 into an AI coding agent (Claude, ChatGPT, Copilot, Cursor, opencode, and
