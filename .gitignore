@@ -9,6 +9,9 @@
 tmp/
 scratch/
 
+# Local design assets (screenshots in a browser, not committed)
+instagram-post.html
+
 # OS + editor
 .DS_Store
 Thumbs.db
