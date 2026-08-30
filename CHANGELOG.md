@@ -56,6 +56,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `backup-disaster-recovery-prompt.md` - restore-proven backups and DR runbooks
 - `learning-roadmap-prompt.md` - project-based learning plans with checkpoints
 - `website-seo-prompt.md` - technical SEO audit with verification
+- `instagram-carousel-prompt.md` - turn a repo into a branded Instagram carousel of HTML slides
 - New `system-design/` category for architecture-level prompts
 - New `data-ai/` category for data engineering and AI/LLM prompts
 - `commit-checklist.yml` workflow enforcing PR gates: listed prompts, changelog coverage, folder/section sync, Contents counts, Conventional Commits titles

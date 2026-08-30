@@ -25,7 +25,7 @@ and required verification. Everything else is a focused one-pager.
 - [Security & performance](#security--performance) (7)
 - [DevOps & deploy](#devops--deploy) (9)
 - [Career & learning](#career--learning) (5)
-- [Frontend & UI](#frontend--ui) (6)
+- [Frontend & UI](#frontend--ui) (7)
 - [Data & AI](#data--ai) (4)
 
 ## Quick Start
@@ -131,6 +131,7 @@ That's it. Each prompt is self-contained and tool-agnostic.
 - [web-performance-vitals-prompt.md](frontend-ui/web-performance-vitals-prompt.md) - fix Core Web Vitals from measurements: LCP, INP, CLS with before/after proof.
 - [i18n-localization-prompt.md](frontend-ui/i18n-localization-prompt.md) - internationalize properly: extracted strings, ICU plurals, RTL, pseudo-locale testing.
 - [website-seo-prompt.md](frontend-ui/website-seo-prompt.md) - technical SEO audit: crawlability, canonicalization, metadata, structured data, redirects, and speed - with verification at every step.
+- [instagram-carousel-prompt.md](frontend-ui/instagram-carousel-prompt.md) - turn this repo into a branded, swipeable Instagram carousel delivered as self-contained 1080x1080 HTML slides, mirroring the repo's brand identity.
 
 ## Data & AI
 
