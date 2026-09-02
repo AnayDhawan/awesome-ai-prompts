@@ -3,8 +3,9 @@ message: "If you use this collection, please cite it as below."
 title: "awesome-ai-prompts"
 type: software
 authors:
-  - name: "StudentSuite"
-repository-code: "https://github.com/StudentSuite/awesome-ai-prompts"
+  - family-names: "Gangrade"
+    given-names: "Shaurya"
+repository-code: "https://github.com/shauryagangrade/awesome-ai-prompts"
 license: "MIT"
 version: "0.1.0"
 date-released: "2026-08-15"

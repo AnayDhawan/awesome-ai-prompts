@@ -1,18 +1,55 @@
 # awesome-ai-prompts
 
-![Build](https://github.com/StudentSuite/awesome-ai-prompts/actions/workflows/ci.yml/badge.svg)
+![Build](https://github.com/shauryagangrade/awesome-ai-prompts/actions/workflows/ci.yml/badge.svg)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/StudentSuite/awesome-ai-prompts?style=social)](https://github.com/StudentSuite/awesome-ai-prompts)
+[![Stars](https://img.shields.io/github/stars/shauryagangrade/awesome-ai-prompts?style=social)](https://github.com/shauryagangrade/awesome-ai-prompts)
 
-A curated list of AI prompts for Student Developers. Copy-paste any prompt
-into an AI coding agent (Claude, ChatGPT, Copilot, Cursor, opencode, and
-friends) to get a disciplined, senior-engineer-style workflow: verify, don't
-guess; small steps; tests as guardrails.
+A curated list of copy-paste AI prompts for **student developers who use AI
+coding agents**. Unlike most prompt lists, these aren't one-off hacks - they're
+disciplined, **senior-engineer workflows that verify, don't guess**: read the
+code before editing, small confirmed steps, and tests as guardrails. Paste one
+into Claude, ChatGPT, Copilot, Cursor, opencode, or any agent and it takes
+over.
 
-**[★ Star on GitHub](https://github.com/StudentSuite/awesome-ai-prompts)**
+Most list agents will happily *hallucinate* a solution. These prompts are built
+to stop that: every one demands evidence, the repo's own tooling, and a
+verifiable result before it calls the work done.
 
-Prompts marked **[spec]** are deep, multi-section specs with hard constraints
-and required verification. Everything else is a focused one-pager.
+**[★ Star on GitHub](https://github.com/shauryagangrade/awesome-ai-prompts)**
+
+## Why these are different
+
+- **Tool-agnostic** - works with Claude, ChatGPT, Copilot, Cursor, opencode,
+  and anything else that reads a prompt. Nothing is tied to one vendor.
+- **Verification-first** - "never guess; run the commands and prove it." A
+  prompt's whole job is to keep the agent honest.
+- **Two formats** - focused one-pagers for quick tasks, plus multi-section
+  **[spec]** prompts with hard constraints and required verification for
+  big, risky work.
+- **Self-contained** - everything you need is in one copy-paste block.
+
+## Quick Start
+
+1. Browse a category below and pick a prompt.
+2. Open its `*-prompt.md`, then copy everything after the `---` divider.
+3. Paste it into your AI coding agent along with your task - it handles the rest.
+
+That's it. Here's the shape of it (from
+[`feature-implementation-prompt.md`](core-coding/feature-implementation-prompt.md)):
+
+```text
+You are implementing a feature in this repository. Work end-to-end ...
+1. Understand - Read the code this touches. Ask questions if ambiguous.
+2. Plan - State your plan before writing code. Do not start until agreed.
+3. Design to fit - Follow existing patterns. Prefer the boring option.
+4. Implement - Smallest change that satisfies the requirement.
+5. Test - Add tests that assert real behavior. Run the full suite.
+6-8. Verify, document, self-review.
+Rules: Never modify unrelated code. Verify before claiming. Small commits.
+```
+
+The agent handles the rest: reading code, planning, testing, and holding itself
+accountable at every step.
 
 ## Contents
 
@@ -27,14 +64,6 @@ and required verification. Everything else is a focused one-pager.
 - [Career & learning](#career--learning) (5)
 - [Frontend & UI](#frontend--ui) (7)
 - [Data & AI](#data--ai) (4)
-
-## Quick Start
-
-1. Browse the category below and pick a prompt.
-2. Open its `*-prompt.md`, then copy everything after the `---` divider.
-3. Paste it into your AI coding agent along with your task - it handles the rest.
-
-That's it. Each prompt is self-contained and tool-agnostic.
 
 ## Core coding
 

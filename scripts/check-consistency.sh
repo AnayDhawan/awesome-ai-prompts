@@ -68,6 +68,10 @@ fi
 for d in */; do
   d="${d%/}"
   case "$d" in scripts) continue ;; esac
+  if git check-ignore -q -- "$d/"; then
+    # Skip local-only, gitignored directories (e.g. design assets).
+    continue
+  fi
   if ! meta_for "$d" >/dev/null; then
     echo "FAIL category folder without README section: $d/"
     fail=1

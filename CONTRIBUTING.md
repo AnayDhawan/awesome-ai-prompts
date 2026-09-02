@@ -6,11 +6,11 @@
 
 ### Reporting Bugs
 
-Open an issue using the [bug report template](.github/ISSUE_TEMPLATE/bug_report.md). Include steps to reproduce, expected vs actual behavior, and which prompt/agent you were using.
+Open an issue using the [bug report template](.github/ISSUE_TEMPLATE/bug_report.yml). Include steps to reproduce, expected vs actual behavior, and which prompt/agent you were using.
 
 ### Requesting Features
 
-Open an issue using the [feature request template](.github/ISSUE_TEMPLATE/feature_request.md).
+Open an issue using the [feature request template](.github/ISSUE_TEMPLATE/feature_request.yml).
 
 ### Adding a Prompt
 
@@ -41,7 +41,7 @@ bash scripts/check-consistency.sh
 
 ## Good First Issues
 
-Look for issues labeled [`good first issue`](https://github.com/StudentSuite/awesome-ai-prompts/labels/good%20first%20issue).
+Look for issues labeled [`good first issue`](https://github.com/shauryagangrade/awesome-ai-prompts/labels/good%20first%20issue).
 
 ---
 
@@ -78,4 +78,4 @@ Types: `feat | fix | docs | style | refactor | perf | test | ci | chore`
 
 ## Community
 
-Questions and discussion happen in [GitHub Discussions](https://github.com/StudentSuite/awesome-ai-prompts/discussions).
+Questions and discussion happen in [GitHub Discussions](https://github.com/shauryagangrade/awesome-ai-prompts/discussions).
