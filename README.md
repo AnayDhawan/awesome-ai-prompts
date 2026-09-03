@@ -53,7 +53,7 @@ accountable at every step.
 
 ## Contents
 
-- [Core coding](#core-coding) (10)
+- [Core coding](#core-coding) (11)
 - [System design](#system-design) (5)
 - [Git & GitHub](#git--github) (10)
 - [Code review & quality](#code-review--quality) (3)
@@ -63,7 +63,7 @@ accountable at every step.
 - [DevOps & deploy](#devops--deploy) (9)
 - [Career & learning](#career--learning) (5)
 - [Frontend & UI](#frontend--ui) (7)
-- [Data & AI](#data--ai) (5)
+- [Data & AI](#data--ai) (6)
 
 ## Core coding
 
@@ -77,6 +77,7 @@ accountable at every step.
 - [database-design-prompt.md](core-coding/database-design-prompt.md) - model a relational schema from requirements with normalization, indexes, and migration path.
 - [environment-setup-prompt.md](core-coding/environment-setup-prompt.md) - bootstrap a dev environment from scratch: deps, tooling, config, first-run verification.
 - [code-migration-prompt.md](core-coding/code-migration-prompt.md) **[spec]** - migrate code between frameworks/languages with behavior parity and incremental verification.
+- [datetime-timezone-correctness-prompt.md](core-coding/datetime-timezone-correctness-prompt.md) - store UTC render local, handle DST, and get calendar/duration math right.
 
 ## System design
 
@@ -170,6 +171,7 @@ accountable at every step.
 - [rag-pipeline-prompt.md](data-ai/rag-pipeline-prompt.md) - build retrieval-augmented generation with citations and eval numbers before shipping.
 - [llm-feature-eval-prompt.md](data-ai/llm-feature-eval-prompt.md) - evaluate LLM features with a held-out test set and pre-committed thresholds.
 - [csv-spreadsheet-wrangling-prompt.md](data-ai/csv-spreadsheet-wrangling-prompt.md) - clean messy CSV/spreadsheet exports with encoding detection, explicit type overrides, and a validation report.
+- [responsible-web-scraping-prompt.md](data-ai/responsible-web-scraping-prompt.md) - scrape within robots.txt/ToS with resilient selectors, checkpointed crawls, and politeness budgets.
 
 ## Contributing
 
