@@ -9,6 +9,10 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Fixed
+
+- `git-github/pr-review-prompt.md` renamed from `pr-review.md` and moved to `git-github/` for correct categorization
+
 ### Added
 
 - `api-design-prompt.md` - design a well-structured REST API with OpenAPI spec
