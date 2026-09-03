@@ -53,7 +53,7 @@ accountable at every step.
 
 ## Contents
 
-- [Core coding](#core-coding) (10)
+- [Core coding](#core-coding) (11)
 - [System design](#system-design) (5)
 - [Git & GitHub](#git--github) (9)
 - [Code review & quality](#code-review--quality) (3)
@@ -77,6 +77,7 @@ accountable at every step.
 - [database-design-prompt.md](core-coding/database-design-prompt.md) - model a relational schema from requirements with normalization, indexes, and migration path.
 - [environment-setup-prompt.md](core-coding/environment-setup-prompt.md) - bootstrap a dev environment from scratch: deps, tooling, config, first-run verification.
 - [code-migration-prompt.md](core-coding/code-migration-prompt.md) **[spec]** - migrate code between frameworks/languages with behavior parity and incremental verification.
+- [datetime-timezone-correctness-prompt.md](core-coding/datetime-timezone-correctness-prompt.md) - store UTC render local, handle DST, and get calendar/duration math right.
 
 ## System design
 
