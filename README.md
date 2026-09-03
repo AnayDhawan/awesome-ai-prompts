@@ -63,7 +63,7 @@ accountable at every step.
 - [DevOps & deploy](#devops--deploy) (9)
 - [Career & learning](#career--learning) (5)
 - [Frontend & UI](#frontend--ui) (7)
-- [Data & AI](#data--ai) (5)
+- [Data & AI](#data--ai) (6)
 
 ## Core coding
 
@@ -169,6 +169,7 @@ accountable at every step.
 - [rag-pipeline-prompt.md](data-ai/rag-pipeline-prompt.md) - build retrieval-augmented generation with citations and eval numbers before shipping.
 - [llm-feature-eval-prompt.md](data-ai/llm-feature-eval-prompt.md) - evaluate LLM features with a held-out test set and pre-committed thresholds.
 - [csv-spreadsheet-wrangling-prompt.md](data-ai/csv-spreadsheet-wrangling-prompt.md) - clean messy CSV/spreadsheet exports with encoding detection, explicit type overrides, and a validation report.
+- [responsible-web-scraping-prompt.md](data-ai/responsible-web-scraping-prompt.md) - scrape within robots.txt/ToS with resilient selectors, checkpointed crawls, and politeness budgets.
 
 ## Contributing
 
