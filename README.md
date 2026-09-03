@@ -17,7 +17,7 @@ verifiable result before it calls the work done.
 
 **[★ Star on GitHub](https://github.com/shauryagangrade/awesome-ai-prompts)**
 
-## Why these are different
+## Why these are different {#quality-standards}
 
 - **Tool-agnostic** - works with Claude, ChatGPT, Copilot, Cursor, opencode,
   and anything else that reads a prompt. Nothing is tied to one vendor.
@@ -55,8 +55,8 @@ accountable at every step.
 
 - [Core coding](#core-coding) (10)
 - [System design](#system-design) (5)
-- [Git & GitHub](#git--github) (8)
-- [Code review & quality](#code-review--quality) (4)
+- [Git & GitHub](#git--github) (9)
+- [Code review & quality](#code-review--quality) (3)
 - [Testing & quality](#testing--quality) (7)
 - [Docs & delivery](#docs--delivery) (5)
 - [Security & performance](#security--performance) (7)
@@ -96,10 +96,9 @@ accountable at every step.
 - [git-bisect-debug-prompt.md](git-github/git-bisect-debug-prompt.md) - use git bisect to find the exact commit that introduced a bug.
 - [release-automation-prompt.md](git-github/release-automation-prompt.md) - automate versioning, tagging, changelogs, and publishing with CI.
 - [commit-checklist-prompt.md](git-github/commit-checklist-prompt.md) - build deterministic PR gates that keep indexes, changelogs, and counts in sync.
+- [pr-review-prompt.md](git-github/pr-review-prompt.md) - thorough PR review: verify claims, run checks, clear verdict, merge-ready.
 
 ## Code review & quality
-
-- [pr-review-prompt.md](code-review/pr-review-prompt.md) - thorough PR review: verify claims, run checks, clear verdict, merge-ready.
 - [secure-code-review-prompt.md](code-review/secure-code-review-prompt.md) - security-lens review: injection, authz, data exposure, with evidence.
 - [performance-review-prompt.md](code-review/performance-review-prompt.md) - review code for performance anti-patterns with evidence and specific fixes.
 - [accessibility-review-prompt.md](code-review/accessibility-review-prompt.md) - audit UI code for WCAG compliance: semantics, keyboard nav, contrast, screen readers.
