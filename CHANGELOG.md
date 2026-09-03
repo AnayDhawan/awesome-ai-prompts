@@ -15,6 +15,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- `issue-triage-for-maintainers-prompt.md` - triage a backlog into labeled, prioritized, answerable queues
 - `csv-spreadsheet-wrangling-prompt.md` - clean messy CSV/spreadsheet exports with encoding detection, explicit type overrides, and a validation report
 - `api-design-prompt.md` - design a well-structured REST API with OpenAPI spec
 - `database-design-prompt.md` - model a relational schema from requirements
