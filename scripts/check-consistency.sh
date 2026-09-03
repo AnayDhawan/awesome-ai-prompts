@@ -55,7 +55,7 @@ if git rev-parse --verify --quiet "$BASE_REF" >/dev/null; then
   unreleased="$(awk '/^## \[Unreleased\]/{flag=1; next} /^## \[/{flag=0} flag' CHANGELOG.md)"
   while IFS= read -r rel; do
     [[ -n "$rel" ]] || continue
-    if ! grep -qF "$rel" <<<"$unreleased"; then
+    if ! grep -qF "$(basename "$rel")" <<<"$unreleased"; then
       echo "FAIL newly added prompt missing from CHANGELOG [Unreleased]: $rel"
       fail=1
     fi
