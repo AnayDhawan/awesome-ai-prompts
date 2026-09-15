@@ -36,7 +36,9 @@ works.
    State how a stuck or repeating loop is interrupted or recovered.
 4. **Guardrails** - Hard limits on destructive actions, secret handling,
    external calls, and confirmation requirements. Each guardrail must map to
-   a real enforcement point in code, cited.
+   a real enforcement point in code, cited. Every tool call and its result
+   is written to an audit log, stored out of band, so behavior can be
+   replayed and reviewed.
 5. **Eval set** - At least ten golden tasks covering success cases, edge
    cases, and expected failures, each with a scored rubric (correct output,
    tool misuse, wasted steps, refusing when it should refuse).
@@ -68,6 +70,8 @@ works.
 - [ ] Cost and latency are measured on a real run, not estimated.
 - [ ] A safety stop fires when max steps or the error budget is hit, proven
       by a recorded run.
+- [ ] The audit log captures every tool call and result for a full run, in
+      order, and is stored outside the model's context.
 
 ## Rules
 
