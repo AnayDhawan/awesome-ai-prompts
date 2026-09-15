@@ -29,7 +29,7 @@ Want it in video form? [Download the MP4](docs/media/prompt-in-action.mp4).
   prompt's whole job is to keep the agent honest.
 - **Two formats** - focused one-pagers for quick tasks, plus multi-section
   **[spec]** prompts with hard constraints and required verification for
-  big, risky work. Spec prompts carry a violet badge in the index so you can
+  big, risky work. Spec prompts carry a light-blue badge in the index so you can
   spot them at a glance.
 - **Self-contained** - everything you need is in one copy-paste block.
 
@@ -198,7 +198,7 @@ CI pass.
 
 ## Contents
 
-Prompts tagged with the violet badge are the heavyweight [spec] prompts
+Prompts tagged with the light-blue badge are the heavyweight [spec] prompts
 described above.
 
 - [Contributing to this repo](#contributing-to-this-repo) (4)
