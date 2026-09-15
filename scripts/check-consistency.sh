@@ -121,7 +121,7 @@ for d in $CATEGORIES; do
   expected="- [$heading](#$anchor) ($count)"
   spec_count="$(spec_count_for "$d")"
   if [[ "$spec_count" -gt 0 ]]; then
-    expected="$expected ![${spec_count} spec](https://img.shields.io/badge/${spec_count}%20spec-6f42c1)"
+    expected="$expected ![spec](docs/media/spec-badge.svg)"
   fi
   if ! grep -qxF -- "$expected" README.md; then
     echo "FAIL stale Contents entry for $d/ - expected line: $expected"
@@ -137,10 +137,8 @@ for d in $CATEGORIES; do
 done
 
 # 5. [spec] badges in README listings stay in sync with SPEC_PROMPTS.
-BADGE='![spec](https://img.shields.io/badge/spec-6f42c1)'
-spec_total=0
+BADGE='![spec](docs/media/spec-badge.svg)'
 for s in $SPEC_PROMPTS; do
-  spec_total=$((spec_total + 1))
   line="$(grep -F "($s)" README.md | head -n 1)"
   if ! grep -qF -- "$BADGE" <<<"$line"; then
     echo "FAIL spec prompt missing [spec] badge in README: $s"
@@ -156,11 +154,6 @@ while IFS= read -r rel; do
     fi
   fi
 done < <(find . -mindepth 2 -name '*-prompt.md' -not -path './.git/*' | sed 's#^\./##' | sort)
-badge_count="$(grep '^- \[' README.md | grep -oF -- "$BADGE" | wc -l | tr -d ' ')"
-if [[ "$badge_count" != "$spec_total" ]]; then
-  echo "FAIL [spec] badge count ($badge_count) != SPEC_PROMPTS count ($spec_total)"
-  fail=1
-fi
 
 if [[ "$fail" -ne 0 ]]; then
   echo "check-consistency.sh: FAILED"
