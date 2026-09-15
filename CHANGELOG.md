@@ -15,6 +15,14 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `a-a-p-contributing/prompt-pr-review-prompt.md` - review a prompt-contribution PR against the repo's gates with an explicit verdict
 - `a-a-p-contributing/resolve-open-issue-prompt.md` - take an open issue end-to-end from ticket to a mergeable PR
 - `a-a-p-contributing/fix-reported-bug-prompt.md` - fix a reported bug with reproduction, root cause, and proof
+- `core-coding/cli-tool-build-prompt.md` - build a well-behaved CLI: documented flags, typed exit codes, safe pipe and TTY handling, testable core
+- `data-ai/ai-agent-build-prompt.md` **[spec]** - design and build an LLM agent: tool contracts, context strategy, guardrails, eval set, cost and latency budget
+- `mobile-dev/mobile-app-develop-prompt.md` **[spec]** - build a mobile feature and prove it works on both platforms: offline, permissions, deep links, lifecycle, with a platform verification matrix
+- `mobile-dev/mobile-performance-prompt.md` - find and fix mobile performance from measurements: startup, frame rate, app size, memory, network
+- New `mobile-dev/` category for mobile-specific prompts
+- `career-learning/conference-talk-proposal-prep-prompt.md` - write a competitive CFP and rehearse the talk: hook, takeaway, timed outline, demo fallbacks
+- `git-github/open-source-maintainer-survival-prompt.md` - harden maintenance practices: guidelines, automation, kind declines, bus factor, handoff
+- `frontend-ui/design-handoff-prompt.md` - turn a mockup into token-aligned, responsive code with a screenshot comparison loop
 
 ## [0.3.0] - 2026-09-09
 

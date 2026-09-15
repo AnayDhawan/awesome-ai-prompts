@@ -14,7 +14,11 @@ cd "$repo" || exit 1
 BASE_REF="${BASE_REF:-origin/main}"
 fail=0
 
-CATEGORIES="a-a-p-contributing career-learning code-review core-coding data-ai devops-deploy docs-delivery frontend-ui git-github security-performance system-design testing-quality"
+CATEGORIES="a-a-p-contributing career-learning code-review core-coding data-ai devops-deploy docs-delivery frontend-ui git-github mobile-dev security-performance system-design testing-quality"
+
+# Authoritative list of [spec] prompts. Must stay in sync with the badge
+# images in README.md (see section 5 below).
+SPEC_PROMPTS="core-coding/codebase-onboarding-prompt.md core-coding/code-migration-prompt.md system-design/system-design-prompt.md git-github/ci-cd-workflow-prompt.md git-github/good-first-issue-workflow-prompt.md testing-quality/bug-finder-prompt.md testing-quality/bug-finder-with-docs-prompt.md security-performance/security-audit-prompt.md frontend-ui/ui-audit-prompt.md data-ai/ai-agent-build-prompt.md mobile-dev/mobile-app-develop-prompt.md"
 
 # Folder -> "README heading|Contents anchor".
 meta_for() {
@@ -28,6 +32,7 @@ meta_for() {
     docs-delivery)        echo "Docs & delivery|docs--delivery" ;;
     frontend-ui)          echo "Frontend & UI|frontend--ui" ;;
     git-github)           echo "Git & GitHub|git--github" ;;
+    mobile-dev)           echo "Mobile development|mobile-development" ;;
     security-performance) echo "Security & performance|security--performance" ;;
     system-design)        echo "System design|system-design" ;;
     testing-quality)      echo "Testing & quality|testing--quality" ;;
@@ -41,6 +46,14 @@ anchor_of() { printf '%s' "${1##*|}"; }
 file_count() { find "$1" -maxdepth 1 -name '*-prompt.md' | wc -l | tr -d ' '; }
 
 total_count() { find . -mindepth 2 -name '*-prompt.md' -not -path './.git/*' | wc -l | tr -d ' '; }
+
+spec_count_for() {
+  local d="$1" n=0 s
+  for s in $SPEC_PROMPTS; do
+    case "$s" in "$d/"*) n=$((n + 1)) ;; esac
+  done
+  printf '%s' "$n"
+}
 
 # 1. Every prompt file in a category folder is linked from README.
 while IFS= read -r f; do
@@ -106,6 +119,10 @@ for d in $CATEGORIES; do
   count="$(file_count "$d")"
 
   expected="- [$heading](#$anchor) ($count)"
+  spec_count="$(spec_count_for "$d")"
+  if [[ "$spec_count" -gt 0 ]]; then
+    expected="$expected ![${spec_count} spec](https://img.shields.io/badge/${spec_count}%20spec-6f42c1)"
+  fi
   if ! grep -qxF -- "$expected" README.md; then
     echo "FAIL stale Contents entry for $d/ - expected line: $expected"
     fail=1
@@ -118,6 +135,32 @@ for d in $CATEGORIES; do
     fail=1
   fi
 done
+
+# 5. [spec] badges in README listings stay in sync with SPEC_PROMPTS.
+BADGE='![spec](https://img.shields.io/badge/spec-6f42c1)'
+spec_total=0
+for s in $SPEC_PROMPTS; do
+  spec_total=$((spec_total + 1))
+  line="$(grep -F "($s)" README.md | head -n 1)"
+  if ! grep -qF -- "$BADGE" <<<"$line"; then
+    echo "FAIL spec prompt missing [spec] badge in README: $s"
+    fail=1
+  fi
+done
+while IFS= read -r rel; do
+  if ! grep -qF " $rel " <<<" $SPEC_PROMPTS "; then
+    line="$(grep -F "($rel)" README.md | head -n 1)"
+    if grep -qF -- "$BADGE" <<<"$line"; then
+      echo "FAIL [spec] badge on non-spec prompt: $rel"
+      fail=1
+    fi
+  fi
+done < <(find . -mindepth 2 -name '*-prompt.md' -not -path './.git/*' | sed 's#^\./##' | sort)
+badge_count="$(grep '^- \[' README.md | grep -oF -- "$BADGE" | wc -l | tr -d ' ')"
+if [[ "$badge_count" != "$spec_total" ]]; then
+  echo "FAIL [spec] badge count ($badge_count) != SPEC_PROMPTS count ($spec_total)"
+  fail=1
+fi
 
 if [[ "$fail" -ne 0 ]]; then
   echo "check-consistency.sh: FAILED"

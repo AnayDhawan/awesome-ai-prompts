@@ -16,9 +16,9 @@ Open an issue using the [feature request template](.github/ISSUE_TEMPLATE/featur
 
 1. Fork the repo and create a branch: `git checkout -b docs/add-my-prompt`
 2. Model your file on an existing prompt (or [.github/PROMPT_TEMPLATE.md](.github/PROMPT_TEMPLATE.md) if present): an H1 title, a one-line "copy-paste this block" usage note, then the prompt block separated by a `---` divider.
-3. Name it `kebab-case-prompt.md` and place it in the matching category folder (`a-a-p-contributing/`, `core-coding/`, `git-github/`, `code-review/`, `testing-quality/`, `docs-delivery/`, `security-performance/`, `devops-deploy/`, `career-learning/`, `frontend-ui/`, `system-design/`, `data-ai/`).
+3. Name it `kebab-case-prompt.md` and place it in the matching category folder (`a-a-p-contributing/`, `core-coding/`, `git-github/`, `code-review/`, `testing-quality/`, `docs-delivery/`, `security-performance/`, `devops-deploy/`, `career-learning/`, `frontend-ui/`, `system-design/`, `data-ai/`, `mobile-dev/`).
 4. Verify locally: `bash scripts/check-links.sh` - must pass clean. This checks that every README link resolves and each prompt file follows the repo's structure.
-5. Open a PR against `main` with a one-line entry added to the matching category in the README.
+5. Open a PR against `main` with a one-line entry added to the matching category in the README. If the prompt takes on a big, risky task, mark its entry with the violet [spec] badge (`![spec](https://img.shields.io/badge/spec-6f42c1)`) and bump the spec-count badge on the category's Contents line.
 
 ---
 
