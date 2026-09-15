@@ -25,6 +25,20 @@ while IFS= read -r link; do
   fi
 done < <(grep -oE '\]\([^)]*\)' README.md | sed -E 's/^\]\(//; s/\)$//')
 
+# 1b. README <img src="..."> paths resolve to existing files.
+while IFS= read -r src; do
+  case "$src" in
+    http* | '#'* | mailto:*) continue ;;
+  esac
+  path="${src%%#*}"
+  path="${path%%\?*}"
+  [[ -z "$path" ]] && continue
+  if [[ ! -e "$path" ]]; then
+    echo "README broken <img> src: $src"
+    fail=1
+  fi
+done < <(grep -oE 'src="[^"]*"' README.md | sed -E 's/^src="//; s/"$//')
+
 # 2. Prompt files follow the structure conventions.
 count=0
 while IFS= read -r f; do

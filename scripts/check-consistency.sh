@@ -121,7 +121,7 @@ for d in $CATEGORIES; do
   expected="- [$heading](#$anchor) ($count)"
   spec_count="$(spec_count_for "$d")"
   if [[ "$spec_count" -gt 0 ]]; then
-    expected="$expected ![spec](docs/media/spec-badge.svg?v=2)"
+    expected="$expected <img src=\"docs/media/spec-badge.svg\" alt=\"spec\" style=\"vertical-align:-3px\">"
   fi
   if ! grep -qxF -- "$expected" README.md; then
     echo "FAIL stale Contents entry for $d/ - expected line: $expected"
@@ -137,7 +137,7 @@ for d in $CATEGORIES; do
 done
 
 # 5. [spec] badges in README listings stay in sync with SPEC_PROMPTS.
-BADGE='![spec](docs/media/spec-badge.svg?v=2)'
+BADGE='<img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">'
 for s in $SPEC_PROMPTS; do
   line="$(grep -F "($s)" README.md | head -n 1)"
   if ! grep -qF -- "$BADGE" <<<"$line"; then

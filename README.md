@@ -137,7 +137,7 @@ If you would rather do it by hand, the steps below are the same workflow.
    description ending in a period. Bump that category's count in the
    [Contents](#contents) list. If the prompt takes on a big, risky task, mark
    its entry with the violet [spec] badge
-   (`![spec](docs/media/spec-badge.svg?v=2)`) and bump the
+   (`<img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">`) and bump the
    spec-count badge on the category's Contents line.
 6. **Add a changelog entry** - Under `## [Unreleased]` in
    [CHANGELOG.md](CHANGELOG.md), add a line naming the file in backticks, then
@@ -202,18 +202,18 @@ Prompts tagged with the light-blue badge are the heavyweight [spec] prompts
 described above.
 
 - [Contributing to this repo](#contributing-to-this-repo) (4)
-- [Core coding](#core-coding) (12) ![spec](docs/media/spec-badge.svg?v=2)
-- [System design](#system-design) (5) ![spec](docs/media/spec-badge.svg?v=2)
-- [Git & GitHub](#git--github) (11) ![spec](docs/media/spec-badge.svg?v=2)
+- [Core coding](#core-coding) (12) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [System design](#system-design) (5) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [Git & GitHub](#git--github) (11) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Code review & quality](#code-review--quality) (3)
-- [Testing & quality](#testing--quality) (9) ![spec](docs/media/spec-badge.svg?v=2)
+- [Testing & quality](#testing--quality) (9) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Docs & delivery](#docs--delivery) (5)
-- [Security & performance](#security--performance) (7) ![spec](docs/media/spec-badge.svg?v=2)
+- [Security & performance](#security--performance) (7) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [DevOps & deploy](#devops--deploy) (9)
 - [Career & learning](#career--learning) (6)
-- [Frontend & UI](#frontend--ui) (9) ![spec](docs/media/spec-badge.svg?v=2)
-- [Data & AI](#data--ai) (7) ![spec](docs/media/spec-badge.svg?v=2)
-- [Mobile development](#mobile-development) (2) ![spec](docs/media/spec-badge.svg?v=2)
+- [Frontend & UI](#frontend--ui) (9) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [Data & AI](#data--ai) (7) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [Mobile development](#mobile-development) (2) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 
 ## Contributing to this repo
 
@@ -228,18 +228,18 @@ described above.
 - [pair-programming-session-prompt.md](core-coding/pair-programming-session-prompt.md) - interactive build loop: plan → code → explain → verify, in small confirmed steps.
 - [debugging-prompt.md](core-coding/debugging-prompt.md) - systematic debugging: reproduce, isolate, root-cause, minimal fix, regression test.
 - [refactoring-prompt.md](core-coding/refactoring-prompt.md) - behavior-preserving refactoring with tests as the safety net.
-- [codebase-onboarding-prompt.md](core-coding/codebase-onboarding-prompt.md) ![spec](docs/media/spec-badge.svg?v=2) - understand an unfamiliar repo at verification depth: stack, architecture, data flow, conventions, gotchas, with file:line evidence.
+- [codebase-onboarding-prompt.md](core-coding/codebase-onboarding-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - understand an unfamiliar repo at verification depth: stack, architecture, data flow, conventions, gotchas, with file:line evidence.
 - [api-integration-prompt.md](core-coding/api-integration-prompt.md) - integrate a REST API with types, error handling, retries, and tests.
 - [api-design-prompt.md](core-coding/api-design-prompt.md) - design a well-structured REST API with OpenAPI spec, conventions, and validation.
 - [database-design-prompt.md](core-coding/database-design-prompt.md) - model a relational schema from requirements with normalization, indexes, and migration path.
 - [environment-setup-prompt.md](core-coding/environment-setup-prompt.md) - bootstrap a dev environment from scratch: deps, tooling, config, first-run verification.
-- [code-migration-prompt.md](core-coding/code-migration-prompt.md) ![spec](docs/media/spec-badge.svg?v=2) - migrate code between frameworks/languages with behavior parity and incremental verification.
+- [code-migration-prompt.md](core-coding/code-migration-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - migrate code between frameworks/languages with behavior parity and incremental verification.
 - [cli-tool-build-prompt.md](core-coding/cli-tool-build-prompt.md) - build a well-behaved CLI: documented flags, typed exit codes, safe pipe and TTY handling, testable core.
 - [datetime-timezone-correctness-prompt.md](core-coding/datetime-timezone-correctness-prompt.md) - store UTC render local, handle DST, and get calendar/duration math right.
 
 ## System design
 
-- [system-design-prompt.md](system-design/system-design-prompt.md) ![spec](docs/media/spec-badge.svg?v=2) - design a scalable system end-to-end: requirements, components, tradeoffs, failure modes, phased build.
+- [system-design-prompt.md](system-design/system-design-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - design a scalable system end-to-end: requirements, components, tradeoffs, failure modes, phased build.
 - [adr-writing-prompt.md](system-design/adr-writing-prompt.md) - record a technical decision as a two-minute ADR: context, options, consequences.
 - [technical-debt-triage-prompt.md](system-design/technical-debt-triage-prompt.md) - inventory tech debt with evidence and get a prioritized paydown plan.
 - [concurrency-debugging-prompt.md](system-design/concurrency-debugging-prompt.md) - hunt race conditions and deadlocks: prove the interleaving, minimal fix, stress-verified.
@@ -249,9 +249,9 @@ described above.
 
 - [git-history-surgery-prompt.md](git-github/git-history-surgery-prompt.md) - safe history editing, bisect, blame, and recovery via reflog.
 - [open-source-contribution-prompt.md](git-github/open-source-contribution-prompt.md) - contribute to an OSS repo the maintainer-friendly way.
-- [ci-cd-workflow-prompt.md](git-github/ci-cd-workflow-prompt.md) ![spec](docs/media/spec-badge.svg?v=2) - build a verified, secure GitHub Actions pipeline.
+- [ci-cd-workflow-prompt.md](git-github/ci-cd-workflow-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - build a verified, secure GitHub Actions pipeline.
 - [dependency-upgrade-prompt.md](git-github/dependency-upgrade-prompt.md) - upgrade a dependency safely: changelog, migration, full verification.
-- [good-first-issue-workflow-prompt.md](git-github/good-first-issue-workflow-prompt.md) ![spec](docs/media/spec-badge.svg?v=2) - GitHub Actions workflow reserving starter issues for first-time contributors.
+- [good-first-issue-workflow-prompt.md](git-github/good-first-issue-workflow-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - GitHub Actions workflow reserving starter issues for first-time contributors.
 - [git-bisect-debug-prompt.md](git-github/git-bisect-debug-prompt.md) - use git bisect to find the exact commit that introduced a bug.
 - [release-automation-prompt.md](git-github/release-automation-prompt.md) - automate versioning, tagging, changelogs, and publishing with CI.
 - [commit-checklist-prompt.md](git-github/commit-checklist-prompt.md) - build deterministic PR gates that keep indexes, changelogs, and counts in sync.
@@ -267,8 +267,8 @@ described above.
 
 ## Testing & quality
 
-- [bug-finder-prompt.md](testing-quality/bug-finder-prompt.md) ![spec](docs/media/spec-badge.svg?v=2) - sweep a codebase across correctness factors and get a clear, evidence-backed, priority-ordered list of bugs.
-- [bug-finder-with-docs-prompt.md](testing-quality/bug-finder-with-docs-prompt.md) ![spec](docs/media/spec-badge.svg?v=2) - find bugs and leave a durable bug ledger behind: a priority-ordered report plus BUGS.md and README pointers, with the code untouched.
+- [bug-finder-prompt.md](testing-quality/bug-finder-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - sweep a codebase across correctness factors and get a clear, evidence-backed, priority-ordered list of bugs.
+- [bug-finder-with-docs-prompt.md](testing-quality/bug-finder-with-docs-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - find bugs and leave a durable bug ledger behind: a priority-ordered report plus BUGS.md and README pointers, with the code untouched.
 - [test-writing-prompt.md](testing-quality/test-writing-prompt.md) - write tests that catch regressions, not ones that pad coverage.
 - [test-driven-development-prompt.md](testing-quality/test-driven-development-prompt.md) - strict red → green → refactor discipline.
 - [code-coverage-gap-prompt.md](testing-quality/code-coverage-gap-prompt.md) - find risky untested paths and cover them meaningfully.
@@ -287,7 +287,7 @@ described above.
 
 ## Security & performance
 
-- [security-audit-prompt.md](security-performance/security-audit-prompt.md) ![spec](docs/media/spec-badge.svg?v=2) - full-repo audit: injection, auth, secrets, dependencies, with verified findings.
+- [security-audit-prompt.md](security-performance/security-audit-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - full-repo audit: injection, auth, secrets, dependencies, with verified findings.
 - [performance-optimization-prompt.md](security-performance/performance-optimization-prompt.md) - measure-first optimization with before/after proof.
 - [secrets-management-prompt.md](security-performance/secrets-management-prompt.md) - audit and remediate hardcoded secrets, set up env-based secret management.
 - [load-testing-prompt.md](security-performance/load-testing-prompt.md) - design and run load/stress tests with measurable thresholds.
@@ -325,12 +325,12 @@ described above.
 - [i18n-localization-prompt.md](frontend-ui/i18n-localization-prompt.md) - internationalize properly: extracted strings, ICU plurals, RTL, pseudo-locale testing.
 - [website-seo-prompt.md](frontend-ui/website-seo-prompt.md) - technical SEO audit: crawlability, canonicalization, metadata, structured data, redirects, and speed - with verification at every step.
 - [instagram-carousel-prompt.md](frontend-ui/instagram-carousel-prompt.md) - turn this repo into a branded, swipeable Instagram carousel delivered as self-contained 1080x1080 HTML slides, mirroring the repo's brand identity.
-- [ui-audit-prompt.md](frontend-ui/ui-audit-prompt.md) ![spec](docs/media/spec-badge.svg?v=2) - audit UI for visual consistency, design system adherence, spacing, typography, and responsive behavior with concrete fixes and file:line evidence.
+- [ui-audit-prompt.md](frontend-ui/ui-audit-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - audit UI for visual consistency, design system adherence, spacing, typography, and responsive behavior with concrete fixes and file:line evidence.
 - [design-handoff-prompt.md](frontend-ui/design-handoff-prompt.md) - turn a mockup into token-aligned, responsive code with a screenshot comparison loop.
 
 ## Mobile development
 
-- [mobile-app-develop-prompt.md](mobile-dev/mobile-app-develop-prompt.md) ![spec](docs/media/spec-badge.svg?v=2) - build a mobile feature and prove it works on both platforms: offline, permissions, deep links, lifecycle, with a platform verification matrix.
+- [mobile-app-develop-prompt.md](mobile-dev/mobile-app-develop-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - build a mobile feature and prove it works on both platforms: offline, permissions, deep links, lifecycle, with a platform verification matrix.
 - [mobile-performance-prompt.md](mobile-dev/mobile-performance-prompt.md) - find and fix mobile performance from measurements: startup, frame rate, app size, memory, network.
 
 ## Data & AI
@@ -339,6 +339,6 @@ described above.
 - [sql-query-optimization-prompt.md](data-ai/sql-query-optimization-prompt.md) - make slow queries fast with plans before/after and justified indexes.
 - [rag-pipeline-prompt.md](data-ai/rag-pipeline-prompt.md) - build retrieval-augmented generation with citations and eval numbers before shipping.
 - [llm-feature-eval-prompt.md](data-ai/llm-feature-eval-prompt.md) - evaluate LLM features with a held-out test set and pre-committed thresholds.
-- [ai-agent-build-prompt.md](data-ai/ai-agent-build-prompt.md) ![spec](docs/media/spec-badge.svg?v=2) - design and build an LLM agent: tool contracts, context strategy, guardrails, eval set, cost and latency budget.
+- [ai-agent-build-prompt.md](data-ai/ai-agent-build-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - design and build an LLM agent: tool contracts, context strategy, guardrails, eval set, cost and latency budget.
 - [csv-spreadsheet-wrangling-prompt.md](data-ai/csv-spreadsheet-wrangling-prompt.md) - clean messy CSV/spreadsheet exports with encoding detection, explicit type overrides, and a validation report.
 - [responsible-web-scraping-prompt.md](data-ai/responsible-web-scraping-prompt.md) - scrape within robots.txt/ToS with resilient selectors, checkpointed crawls, and politeness budgets.
