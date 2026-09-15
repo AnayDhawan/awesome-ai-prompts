@@ -17,6 +17,7 @@ while IFS= read -r link; do
     http* | '#'* | mailto:*) continue ;;
   esac
   path="${link%%#*}"
+  path="${path%%\?*}"
   [[ -z "$path" ]] && continue
   if [[ ! -e "$path" ]]; then
     echo "README broken link: $link"
