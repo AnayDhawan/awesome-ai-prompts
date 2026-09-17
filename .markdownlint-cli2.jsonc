@@ -2,10 +2,10 @@
   "config": {
     "line-length": false,
     "no-duplicate-heading": {
-      "siblings_only": true
+      "siblings_only": true,
     },
     "no-inline-html": {
-      "allowed_elements": ["img"]
-    }
-  }
+      "allowed_elements": ["img"],
+    },
+  },
 }

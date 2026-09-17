@@ -16,6 +16,8 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `a-a-p-contributing/resolve-open-issue-prompt.md` - take an open issue end-to-end from ticket to a mergeable PR
 - `a-a-p-contributing/fix-reported-bug-prompt.md` - fix a reported bug with reproduction, root cause, and proof
 - `core-coding/cli-tool-build-prompt.md` - build a well-behaved CLI: documented flags, typed exit codes, safe pipe and TTY handling, testable core
+- `core-coding/agent-codebase-onboarding-prompt.md` **[spec]** - onboard an agent into an unfamiliar repo with no human in the loop: a token-budgeted reading protocol, a compact in-context model, and hard verification gates
+- `core-coding/human-codebase-onboarding-prompt.md` **[spec]** - renamed from `codebase-onboarding-prompt.md`; understand an unfamiliar repo at verification depth: stack, architecture, data flow, conventions, gotchas, with file:line evidence
 - `data-ai/ai-agent-build-prompt.md` **[spec]** - design and build an LLM agent: tool contracts, context strategy, guardrails, eval set, cost and latency budget
 - `mobile-dev/mobile-app-develop-prompt.md` **[spec]** - build a mobile feature and prove it works on both platforms: offline, permissions, deep links, lifecycle, with a platform verification matrix
 - `mobile-dev/mobile-performance-prompt.md` - find and fix mobile performance from measurements: startup, frame rate, app size, memory, network
@@ -23,6 +25,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `career-learning/conference-talk-proposal-prep-prompt.md` - write a competitive CFP and rehearse the talk: hook, takeaway, timed outline, demo fallbacks
 - `git-github/open-source-maintainer-survival-prompt.md` - harden maintenance practices: guidelines, automation, kind declines, bus factor, handoff
 - `frontend-ui/design-handoff-prompt.md` - turn a mockup into token-aligned, responsive code with a screenshot comparison loop
+- `scripts/check-prettier.sh` - Prettier gate verifying markdown, JSON/JSONC, YAML, and CSS files match repo formatting, wired into CI
 
 ## [0.3.0] - 2026-09-09
 
@@ -96,6 +99,23 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
+## [0.2.0] - 2026-09-05
+
+### Added
+
+- 50 new prompts, bringing the catalog from 26 to 76 across 11 categories
+- New `frontend-ui/` category for UI-specific prompts (ui-audit, component-build, responsive-design, web-performance-vitals, state-management, i18n-localization)
+- New `data-ai/` category for data engineering and AI/LLM prompts (data-pipeline, sql-query-optimization, rag-pipeline, llm-feature-eval)
+- New `system-design/` category for architecture-level prompts (system-design, adr-writing, caching-strategy, technical-debt-triage)
+- `pr-review-prompt.md` for pull request review in `git-github/`
+- `commit-checklist-prompt.md` for building consistency gates, plus the `commit-checklist.yml` workflow enforcing them
+- `CONTRIBUTORS.md` and `CITATION.cff`
+- CI hardening: markdownlint job, em-dash block in tracked files, LF line endings
+- README repositioned around verification-first messaging with a category table of contents
+- `ui-audit-prompt.md` and `codebase-onboarding-prompt.md` upgraded to **[spec]** prompts
+
+---
+
 ## [0.1.0] - 2026-08-15
 
 ### Added
@@ -108,4 +128,5 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 [Unreleased]: https://github.com/shauryagangrade/awesome-ai-prompts/compare/v0.3.0...HEAD
 [0.3.0]: https://github.com/shauryagangrade/awesome-ai-prompts/releases/tag/v0.3.0
+[0.2.0]: https://github.com/shauryagangrade/awesome-ai-prompts/releases/tag/v0.2.0
 [0.1.0]: https://github.com/shauryagangrade/awesome-ai-prompts/releases/tag/v0.1.0

@@ -17,6 +17,8 @@ jobs:
         with:
           node-version: 20
       - run: npx --yes markdownlint-cli2@0.17.2 "**/*.md"
+      - name: Prettier format check
+        run: bash scripts/check-prettier.sh
       - name: Docs lint (README links + prompt conventions)
         run: bash scripts/check-links.sh
       - name: No em dashes

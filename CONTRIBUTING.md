@@ -35,6 +35,7 @@ Run the consistency checks locally before pushing:
 
 ```bash
 bash scripts/check-consistency.sh
+bash scripts/check-prettier.sh
 ```
 
 ---
