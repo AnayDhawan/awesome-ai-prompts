@@ -11,6 +11,16 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+### Changed
+
+### Fixed
+
+---
+
+## [0.4.0] - 2026-09-17
+
+### Added
+
 - `a-a-p-contributing/new-prompt-contribution-prompt.md` - author a new prompt for this repo: read conventions, confirm the idea is new, draft, sync index, run gates, open a PR
 - `a-a-p-contributing/prompt-pr-review-prompt.md` - review a prompt-contribution PR against the repo's gates with an explicit verdict
 - `a-a-p-contributing/resolve-open-issue-prompt.md` - take an open issue end-to-end from ticket to a mergeable PR
@@ -126,7 +136,8 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
-[Unreleased]: https://github.com/shauryagangrade/awesome-ai-prompts/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/shauryagangrade/awesome-ai-prompts/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/shauryagangrade/awesome-ai-prompts/releases/tag/v0.4.0
 [0.3.0]: https://github.com/shauryagangrade/awesome-ai-prompts/releases/tag/v0.3.0
 [0.2.0]: https://github.com/shauryagangrade/awesome-ai-prompts/releases/tag/v0.2.0
 [0.1.0]: https://github.com/shauryagangrade/awesome-ai-prompts/releases/tag/v0.1.0
