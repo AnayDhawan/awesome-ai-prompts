@@ -21,6 +21,8 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `mobile-dev/mobile-ui-audit-prompt.md` **[spec]** - audit a mobile UI against platform conventions: touch targets, safe areas, accessibility, states, theming, with file:line fixes
 - `mobile-dev/mobile-ui-overhaul-prompt.md` **[spec]** - overhaul a mobile UI end-to-end: target design spec, token layer, reimplemented screens, with before/after proof on every platform
 - `mobile-dev/website-to-mobile-app-prompt.md` **[spec]** - turn a website into a mobile app, choosing the adaptation strategy from the site's actual architecture: wrapper vs shared-logic vs native
+- `a-a-p-contributing/one-pager-schema-prompt.md` - the repo's one-pager format as a schema: field contract, size budget, and checks for authoring quick-task prompts
+- `a-a-p-contributing/spec-prompt-schema-prompt.md` **[spec]** - the repo's spec format as a schema: what earns the badge, the mandatory field contract, and evidence-gated verification
 
 ### Changed
 

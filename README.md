@@ -216,7 +216,7 @@ CI pass.
 Prompts tagged with the light-blue badge are the heavyweight [spec] prompts
 described above.
 
-- [Contributing to this repo](#contributing-to-this-repo) (4)
+- [Contributing to this repo](#contributing-to-this-repo) (6) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Core coding](#core-coding) (15) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [System design](#system-design) (5) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Git & GitHub](#git--github) (11) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
@@ -236,6 +236,8 @@ described above.
 - [prompt-pr-review-prompt.md](a-a-p-contributing/prompt-pr-review-prompt.md) - review a prompt PR against the repo's real gates with an explicit verdict.
 - [resolve-open-issue-prompt.md](a-a-p-contributing/resolve-open-issue-prompt.md) - take an open issue from ticket to a mergeable PR.
 - [fix-reported-bug-prompt.md](a-a-p-contributing/fix-reported-bug-prompt.md) - fix a reported bug with reproduction, root cause, and proof.
+- [one-pager-schema-prompt.md](a-a-p-contributing/one-pager-schema-prompt.md) - the repo's one-pager format as a schema: field contract, size budget, and checks for authoring quick-task prompts.
+- [spec-prompt-schema-prompt.md](a-a-p-contributing/spec-prompt-schema-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - the repo's spec format as a schema: what earns the badge, the mandatory field contract, and evidence-gated verification.
 
 ## Core coding
 
