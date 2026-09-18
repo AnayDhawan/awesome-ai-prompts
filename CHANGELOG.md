@@ -18,12 +18,16 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `security-performance/memory-leak-hunting-prompt.md` - find and remove a leak from measurements: baseline, reproduced growth, diffed snapshots, and a flat after-curve
 - `core-coding/regular-expressions-prompt.md` - write or repair a regex with a stated purpose, a test corpus, and a check that it cannot hang on adversarial input
 - `scripts/check-external-links.py` + `.github/workflows/url-rot-check.yml` - weekly external-link rot check (manual dispatch too) that fails on dead URLs in the README or any prompt
+- `mobile-dev/mobile-ui-audit-prompt.md` **[spec]** - audit a mobile UI against platform conventions: touch targets, safe areas, accessibility, states, theming, with file:line fixes
+- `mobile-dev/mobile-ui-overhaul-prompt.md` **[spec]** - overhaul a mobile UI end-to-end: target design spec, token layer, reimplemented screens, with before/after proof on every platform
+- `mobile-dev/website-to-mobile-app-prompt.md` **[spec]** - turn a website into a mobile app, choosing the adaptation strategy from the site's actual architecture: wrapper vs shared-logic vs native
 
 ### Changed
 
 - CONTRIBUTING.md - review policy: 48h response SLA for external PRs, merge-first with maintainer nit-fixing
 - README.md - recent contributors strip, star-to-contribute handshake, and a "PR in under 10 minutes" contribution CTA
 - `.github/workflows/thanks.yml` - limit the thank-you to a contributor's first merged PR
+- `.gitignore` - ignore local launch drafts (`drafts/`) that are pasted from your own accounts, not part of the repo
 
 ### Fixed
 
