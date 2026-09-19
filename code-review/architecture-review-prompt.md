@@ -33,6 +33,7 @@ State all four before reading any code:
    justification - no bare numbers.
 
    Dimensions (non-overlapping - no finding is counted twice):
+
    1. Structure & modularity - component sizes, monoliths, god components,
       where to split/merge/relocate.
    2. Coupling & dependency direction - dependency direction, circular
