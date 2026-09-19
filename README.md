@@ -219,7 +219,7 @@ described above.
 - [Contributing to this repo](#contributing-to-this-repo) (6) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Core coding](#core-coding) (15) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [System design](#system-design) (5) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [Git & GitHub](#git--github) (11) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [Git & GitHub](#git--github) (12) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Code review & quality](#code-review--quality) (3)
 - [Testing & quality](#testing--quality) (9) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Docs & delivery](#docs--delivery) (5)
@@ -277,6 +277,7 @@ described above.
 - [commit-checklist-prompt.md](git-github/commit-checklist-prompt.md) - build deterministic PR gates that keep indexes, changelogs, and counts in sync.
 - [pr-review-prompt.md](git-github/pr-review-prompt.md) - thorough PR review: verify claims, run checks, clear verdict, merge-ready.
 - [issue-triage-for-maintainers-prompt.md](git-github/issue-triage-for-maintainers-prompt.md) - turn an untriaged backlog into labeled, prioritized, answerable queues.
+- [issue-resolving-prompt.md](git-github/issue-resolving-prompt.md) - resolve a GitHub issue end-to-end: reproduce the failure, prove the root cause, land a minimal fix with a regression test, and verify against the project's checks.
 - [open-source-maintainer-survival-prompt.md](git-github/open-source-maintainer-survival-prompt.md) - harden maintenance practices: guidelines, automation, kind declines, bus factor, handoff.
 
 ## Code review & quality
