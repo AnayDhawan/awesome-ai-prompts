@@ -24,6 +24,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `a-a-p-contributing/one-pager-schema-prompt.md` - the repo's one-pager format as a schema: field contract, size budget, and checks for authoring quick-task prompts
 - `a-a-p-contributing/spec-prompt-schema-prompt.md` **[spec]** - the repo's spec format as a schema: what earns the badge, the mandatory field contract, and evidence-gated verification
 - `git-github/issue-resolving-prompt.md` - resolve a GitHub issue end-to-end: reproduce the failure, prove the root cause, land a minimal fix with a regression test, and verify against the project's checks
+- `code-review/architecture-review-prompt.md` **[spec]** - audit architecture as a senior architect: evidence-backed 0-10 scorecard, file:line findings with severity/impact/fix, and a prioritized refactoring roadmap, read-only
 
 ### Changed
 
