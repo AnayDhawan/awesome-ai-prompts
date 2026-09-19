@@ -1,14 +1,14 @@
 # Reusable prompt: architecture review [spec]
 
 Copy-paste the block below into any AI coding agent to audit a repository's
-architecture with evidence-backed scores and a prioritized refactoring plan —
+architecture with evidence-backed scores and a prioritized refactoring plan -
 the heavy format, because a wrong audit ships a misleading roadmap.
 
 ---
 
 Audit the architecture of this repository as a senior software architect.
 Read-only: this produces a report, never diffs. Every claim must trace to a
-file:line or a measured number — accuracy matters more than volume.
+file:line or a measured number - accuracy matters more than volume.
 
 ## Define the scope first
 
@@ -96,10 +96,10 @@ State all four before reading any code:
 
 ## Rules
 
-- Never modify, move, or delete code — this task produces a report only.
+- Never modify, move, or delete code - this task produces a report only.
 - Never report a finding without a file:line or measured trace; unprovable
   suspicions go in a separate "needs confirmation" list.
 - Never count a problem in more than one dimension; each finding maps to
   exactly one.
-- Never pad — five verified findings beat forty speculative ones.
+- Never pad - five verified findings beat forty speculative ones.
 - Never propose a rewrite; fixes must be incremental and verifiable.
