@@ -14,7 +14,8 @@ against the [Quality Standards](README.md#quality-standards), and open a PR.
 Open a PR that adds or fixes an entry and your name goes here. If you would
 rather not be listed, say so in the PR and we will leave you off.
 
-- [@AnayDhawan](https://github.com/AnayDhawan) - Added a CSV-Wrangling Prompt in #56
+- [@AnayDhawan](https://github.com/AnayDhawan) - added CSV & spreadsheet wrangling (#56), issue triage for maintainers (#57), responsible web scraping (#58), and datetime & timezone correctness (#59)
+- [@millsydotdev](https://github.com/millsydotdev) - added codebase audit in #66
 
 <!--
 When adding yourself, keep the list alphabetical by GitHub handle:
