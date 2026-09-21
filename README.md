@@ -187,8 +187,9 @@ If you would rather do it by hand, the steps below are the same workflow.
 Two workflows run on every push to `main` and every pull request:
 
 - [docs-lint](.github/workflows/ci.yml) - markdown lint on every `*.md`,
-  README relative links must resolve, no em dashes in any tracked file, and
-  shellcheck on every `*.sh`.
+  README relative links must resolve, no em dashes in any tracked file,
+  shellcheck on every `*.sh`, and `scripts/build-all.py --check` keeps the
+  all-prompts page builder deterministic.
 - [commit-checklist](.github/workflows/commit-checklist.yml) - every
   `*-prompt.md` in a category folder must be linked from the README, new
   prompts need a `## [Unreleased]` changelog entry, category folders and
@@ -198,6 +199,21 @@ Two workflows run on every push to `main` and every pull request:
 
 Both run the same scripts you run locally, so a green local pass means a green
 CI pass.
+
+### Printable one-page catalog
+
+For workshops, printing, or browsing the whole corpus on one page, open
+[ALL_PROMPTS.html](ALL_PROMPTS.html) - every prompt, a linked mini-TOC, and a
+one-click copy button on each card. To regenerate it after the catalog changes:
+
+```bash
+python3 scripts/build-all.py
+```
+
+The page is committed so static hosts can serve it directly - the repo's
+[vercel.json](vercel.json) deploys it at the root on Vercel. CI runs
+`python3 scripts/build-all.py --check`, which fails if the builder becomes
+non-deterministic or the committed page drifts out of sync.
 
 ### Guidelines
 
