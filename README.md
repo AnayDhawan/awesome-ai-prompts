@@ -17,7 +17,7 @@ verifiable result before it calls the work done.
 
 **[★ Star on GitHub](https://github.com/shauryagangrade/awesome-ai-prompts)**
 
-[![Contributors](https://contrib.rocks/image?repo=shauryagangrade/awesome-ai-prompts)](https://github.com/shauryagangrade/awesome-ai-prompts/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=shauryagangrade/awesome-ai-prompts&t=20260921)](https://github.com/shauryagangrade/awesome-ai-prompts/graphs/contributors)
 
 Starring is the hello; a merged PR is the handshake. Every merged prompt PR
 auto-appends its author to [CONTRIBUTORS.md](CONTRIBUTORS.md) - the avatars
