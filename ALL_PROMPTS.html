@@ -9,49 +9,79 @@
 header.site{border-bottom:2px solid #1a1a1a;padding-bottom:1rem;margin-bottom:2rem}
 header.site h1{margin:0 0 .25rem;font-size:1.9rem}
 header.site p.sub{margin:.25rem 0;color:#555}
+header.site .links{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;margin-top:.9rem;font-size:.9rem}
+header.site .links a{display:inline-flex;align-items:center;gap:.35rem;color:#1a1a1a;text-decoration:none;border-bottom:1px dotted #999}
+header.site .links a:hover{border-bottom-style:solid;color:#2f4f7f}
+header.site .links svg{width:1.05em;height:1.05em;flex:none}
 nav.toc{background:#fff;border:1px solid #ddd;border-radius:8px;padding:1rem 1.5rem;margin-bottom:2.5rem}
-nav.toc h2{margin:0 0 .75rem;font-size:1.05rem;text-transform:uppercase;letter-spacing:.04em;color:#555}
+nav.toc h2{margin:0 0 .5rem;font-size:1.05rem;text-transform:uppercase;letter-spacing:.04em;color:#555}
+nav.toc .controls{display:flex;gap:.5rem;margin:0 0 .9rem}
+nav.toc .controls button{border:1px solid #ddd;background:#fff;border-radius:6px;padding:.3rem .65rem;font-size:.8rem;color:#555;cursor:pointer}
+nav.toc .controls button:hover{background:rgba(0,0,0,.05);color:#111}
 nav.toc ol,.toc ul{margin:.25rem 0}.toc ul{margin-left:1.25rem}
 nav.toc li{margin:.15rem 0}
 nav.toc a{color:#1a1a1a;text-decoration:none;border-bottom:1px dotted #999}
 nav.toc a:hover{border-bottom-style:solid}
 nav.toc .count{color:#888;font-size:.85em}
+nav.toc li>a{display:inline-flex;align-items:center;gap:.35rem}
+nav.toc li>a svg{width:.95em;height:.95em;flex:none;color:#4a6fa5}
 section.cat{margin-bottom:3rem}
-section.cat h2{border-bottom:2px solid #333;padding-bottom:.35rem;font-size:1.35rem}
+section.cat h2{border-bottom:2px solid #333;padding-bottom:.35rem;font-size:1.35rem;display:flex;align-items:center;gap:.5rem}
+section.cat h2 svg{width:1.2rem;height:1.2rem;flex:none;color:#2f4f7f}
+section.cat h2 .count{font-size:.8rem;color:#888;font-weight:400;margin-left:.15rem}
 article.prompt{background:#fff;border:1px solid #ddd;border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:1.75rem}
-article.prompt h3{margin:0 0 .5rem;font-size:1.15rem}
+article.prompt h3{margin:0 0 .5rem;font-size:1.15rem;display:flex;align-items:center;gap:.45rem}
+article.prompt h3 svg{width:1.05em;height:1.05em;flex:none;color:#4a6fa5}
 article.prompt .head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
-button.copy{border:none;background:none;padding:.2rem .55rem;border-radius:6px;color:#888;cursor:pointer;font-size:.8rem;flex:none}
-button.copy:hover{background:rgba(0,0,0,.06);color:#333}
+button.copy{border:1px solid #ddd;background:#fff;padding:.25rem .6rem;border-radius:6px;color:#666;cursor:pointer;font-size:.78rem;flex:none}
+button.copy:hover{background:rgba(0,0,0,.05);color:#111}
 article.prompt .meta{font-size:.82rem;color:#777;margin-bottom:.75rem}
 article.prompt .meta a{color:#777}
 article.prompt .intro p{margin:.4rem 0 .9rem;color:#333}
+details.body{margin-top:.25rem}
+details.body summary{cursor:pointer;user-select:none;color:#666;font-size:.82rem;margin:.1rem 0}
+details.body summary:hover{color:#111}
+details.body[open] summary{margin-bottom:.6rem}
+details.body summary::after{content:"▸";color:#999;margin-left:.4rem}
+details.body[open] summary::after{content:"▾"}
 pre.prompt{white-space:pre-wrap;background:#1e1e1e;color:#e6e6e6;border-radius:6px;padding:1rem;margin:0;overflow-x:auto}
-span.spec{display:inline-block;font-size:.7rem;vertical-align:middle;background:#7fb3df;color:#fff;border-radius:4px;padding:.05rem .45rem;margin-left:.5rem}
+span.spec{display:inline-block;font-size:.7rem;vertical-align:middle;background:#7fb3df;color:#fff;border-radius:4px;padding:.05rem .45rem;margin-left:.15rem}
 footer.site{margin-top:3rem;padding-top:1rem;border-top:1px solid #ddd;color:#888;font-size:.85rem}
-@media print{button.copy,nav.toc,header.site h1 + p.sub{display:none}.wrap{max-width:none;padding:0}article.prompt{border:none;padding:.5rem 0}section.cat{page-break-before:always}pre.prompt{color:#000;background:#fff;border:1px solid #ccc}}
+@media print{button.copy,.controls,nav.toc,header.site p.sub,header.site .links{display:none}.wrap{max-width:none;padding:0}article.prompt{border:none;padding:.5rem 0}section.cat{page-break-before:always}pre.prompt{color:#000;background:#fff;border:1px solid #ccc}}
 </style>
 </head>
 <body>
 <div class="wrap">
 <header class="site">
 <h1>awesome-ai-prompts</h1>
-<p class="sub">101 prompts across 13 categories. Copy any block below into your AI coding agent.</p>
+<p class="sub">101 prompts across 13 categories. Prompt bodies are collapsed by default: expand a card to read it, or Copy to grab the whole block.</p>
+<nav class="links">
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/README.md"><i data-lucide="book-open" aria-hidden="true"></i>README &amp; docs</a>
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/README.md#quick-start"><i data-lucide="terminal" aria-hidden="true"></i>How to use</a>
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/README.md#usage-in-the-wild"><i data-lucide="globe" aria-hidden="true"></i>Examples in the wild</a>
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/CONTRIBUTING.md#pr-guidelines"><i data-lucide="circle-check" aria-hidden="true"></i>Best practices</a>
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts"><i data-lucide="git-fork" aria-hidden="true"></i>GitHub</a>
+</nav>
 </header>
 <nav class="toc">
 <h2>Jump to</h2>
-<ul><li><a href="#a-a-p-contributing">a-a-p-contributing</a> <span class="count">(6)</span><ul><li><a href="#a-a-p-contributing-fix-reported-bug">Reusable prompt: fix a reported bug</a></li><li><a href="#a-a-p-contributing-new-prompt-contribution">Reusable prompt: new prompt contribution</a></li><li><a href="#a-a-p-contributing-one-pager-schema">Reusable prompt: one-pager prompt schema</a></li><li><a href="#a-a-p-contributing-prompt-pr-review">Reusable prompt: prompt PR review</a></li><li><a href="#a-a-p-contributing-resolve-open-issue">Reusable prompt: resolve an open issue</a></li><li><a href="#a-a-p-contributing-spec-prompt-schema">Reusable prompt: spec prompt schema</a></li></ul></li><li><a href="#career-learning">career-learning</a> <span class="count">(6)</span><ul><li><a href="#career-learning-code-interview-practice">Reusable prompt: coding interview practice</a></li><li><a href="#career-learning-conference-talk-proposal-prep">Reusable prompt: conference talk proposal &amp; prep</a></li><li><a href="#career-learning-learning-roadmap">Reusable prompt: learning roadmap</a></li><li><a href="#career-learning-portfolio-project">Reusable prompt: portfolio project builder</a></li><li><a href="#career-learning-resume-review">Reusable prompt: resume review</a></li><li><a href="#career-learning-tech-blog-writer">Reusable prompt: technical blog writer</a></li></ul></li><li><a href="#code-review">code-review</a> <span class="count">(5)</span><ul><li><a href="#code-review-accessibility-review">Reusable prompt: accessibility review</a></li><li><a href="#code-review-architecture-review">Reusable prompt: architecture review</a></li><li><a href="#code-review-codebase-audit">Reusable prompt: codebase audit</a></li><li><a href="#code-review-performance-review">Reusable prompt: performance review</a></li><li><a href="#code-review-secure-code-review">Reusable prompt: security-focused code review</a></li></ul></li><li><a href="#core-coding">core-coding</a> <span class="count">(15)</span><ul><li><a href="#core-coding-agent-codebase-onboarding">Reusable prompt: agent codebase onboarding</a></li><li><a href="#core-coding-api-design">Reusable prompt: API design</a></li><li><a href="#core-coding-api-integration">Reusable prompt: REST API integration</a></li><li><a href="#core-coding-cli-tool-build">Reusable prompt: CLI tool build</a></li><li><a href="#core-coding-code-migration">Reusable prompt: code migration</a></li><li><a href="#core-coding-database-design">Reusable prompt: database design</a></li><li><a href="#core-coding-datetime-timezone-correctness">Reusable prompt: datetime &amp; timezone correctness</a></li><li><a href="#core-coding-debugging">Reusable prompt: systematic debugging</a></li><li><a href="#core-coding-environment-setup">Reusable prompt: environment setup</a></li><li><a href="#core-coding-error-handling-strategy">Reusable prompt: error handling strategy</a></li><li><a href="#core-coding-feature-implementation">Reusable prompt: end-to-end feature implementation</a></li><li><a href="#core-coding-human-codebase-onboarding">Reusable prompt: codebase understanding</a></li><li><a href="#core-coding-pair-programming-session">Reusable prompt: pair-programming session</a></li><li><a href="#core-coding-refactoring">Reusable prompt: safe refactoring</a></li><li><a href="#core-coding-regular-expressions">Reusable prompt: regular expressions that don&#x27;t bite</a></li></ul></li><li><a href="#data-ai">data-ai</a> <span class="count">(7)</span><ul><li><a href="#data-ai-ai-agent-build">Reusable prompt: AI agent build</a></li><li><a href="#data-ai-csv-spreadsheet-wrangling">Reusable prompt: CSV &amp; spreadsheet wrangling</a></li><li><a href="#data-ai-data-pipeline">Reusable prompt: data pipeline construction</a></li><li><a href="#data-ai-llm-feature-eval">Reusable prompt: LLM feature evaluation</a></li><li><a href="#data-ai-rag-pipeline">Reusable prompt: RAG pipeline</a></li><li><a href="#data-ai-responsible-web-scraping">Reusable prompt: responsible web scraping</a></li><li><a href="#data-ai-sql-query-optimization">Reusable prompt: SQL query optimization</a></li></ul></li><li><a href="#devops-deploy">devops-deploy</a> <span class="count">(9)</span><ul><li><a href="#devops-deploy-backup-disaster-recovery">Reusable prompt: backup &amp; disaster recovery</a></li><li><a href="#devops-deploy-database-schema-migrations">Reusable prompt: database schema &amp; migrations</a></li><li><a href="#devops-deploy-deployment-runbook">Reusable prompt: deployment runbook</a></li><li><a href="#devops-deploy-docker-containerization">Reusable prompt: Docker containerization</a></li><li><a href="#devops-deploy-feature-flag-rollout">Reusable prompt: feature flags &amp; progressive rollout</a></li><li><a href="#devops-deploy-incident-response">Reusable prompt: incident response</a></li><li><a href="#devops-deploy-infrastructure-as-code">Reusable prompt: infrastructure as code</a></li><li><a href="#devops-deploy-kubernetes-deployment">Reusable prompt: Kubernetes deployment</a></li><li><a href="#devops-deploy-monitoring-observability">Reusable prompt: monitoring and observability</a></li></ul></li><li><a href="#docs-delivery">docs-delivery</a> <span class="count">(5)</span><ul><li><a href="#docs-delivery-api-documentation">Reusable prompt: API documentation</a></li><li><a href="#docs-delivery-documentation-writer">Reusable prompt: documentation writer</a></li><li><a href="#docs-delivery-inline-documentation">Reusable prompt: inline documentation</a></li><li><a href="#docs-delivery-readme-builder">Reusable prompt: README builder</a></li><li><a href="#docs-delivery-release-notes-changelog">Reusable prompt: changelog &amp; release notes</a></li></ul></li><li><a href="#frontend-ui">frontend-ui</a> <span class="count">(9)</span><ul><li><a href="#frontend-ui-component-build">Reusable prompt: component build</a></li><li><a href="#frontend-ui-design-handoff">Reusable prompt: design handoff to code</a></li><li><a href="#frontend-ui-i18n-localization">Reusable prompt: internationalization (i18n)</a></li><li><a href="#frontend-ui-instagram-carousel">Reusable prompt: Instagram carousel from a repo</a></li><li><a href="#frontend-ui-responsive-design">Reusable prompt: responsive design</a></li><li><a href="#frontend-ui-state-management">Reusable prompt: frontend state management</a></li><li><a href="#frontend-ui-ui-audit">Reusable prompt: UI audit</a></li><li><a href="#frontend-ui-web-performance-vitals">Reusable prompt: Core Web Vitals optimization</a></li><li><a href="#frontend-ui-website-seo">Reusable prompt: Website SEO audit and optimization</a></li></ul></li><li><a href="#git-github">git-github</a> <span class="count">(12)</span><ul><li><a href="#git-github-ci-cd-workflow">Reusable prompt: CI/CD pipeline builder</a></li><li><a href="#git-github-commit-checklist">Reusable prompt: commit checklist &amp; consistency gates</a></li><li><a href="#git-github-dependency-upgrade">Reusable prompt: dependency upgrade</a></li><li><a href="#git-github-git-bisect-debug">Reusable prompt: git bisect debug</a></li><li><a href="#git-github-git-history-surgery">Reusable prompt: git history surgery</a></li><li><a href="#git-github-good-first-issue-workflow">Reusable prompt: good-first-issue guard workflow</a></li><li><a href="#git-github-issue-resolving">Reusable prompt: resolve a GitHub issue</a></li><li><a href="#git-github-issue-triage-for-maintainers">Reusable prompt: issue triage for maintainers</a></li><li><a href="#git-github-open-source-contribution">Reusable prompt: open-source contribution</a></li><li><a href="#git-github-open-source-maintainer-survival">Reusable prompt: open source maintainer survival</a></li><li><a href="#git-github-pr-review">Reusable prompt: pull request review</a></li><li><a href="#git-github-release-automation">Reusable prompt: release automation</a></li></ul></li><li><a href="#mobile-dev">mobile-dev</a> <span class="count">(5)</span><ul><li><a href="#mobile-dev-mobile-app-develop">Reusable prompt: mobile app development</a></li><li><a href="#mobile-dev-mobile-performance">Reusable prompt: mobile performance</a></li><li><a href="#mobile-dev-mobile-ui-audit">Reusable prompt: mobile UI audit</a></li><li><a href="#mobile-dev-mobile-ui-overhaul">Reusable prompt: mobile UI overhaul</a></li><li><a href="#mobile-dev-website-to-mobile-app">Reusable prompt: website to mobile app</a></li></ul></li><li><a href="#security-performance">security-performance</a> <span class="count">(8)</span><ul><li><a href="#security-performance-auth-implementation">Reusable prompt: authentication &amp; authorization implementation</a></li><li><a href="#security-performance-dependency-audit">Reusable prompt: dependency audit</a></li><li><a href="#security-performance-load-testing">Reusable prompt: load testing</a></li><li><a href="#security-performance-memory-leak-hunting">Reusable prompt: memory leak hunting</a></li><li><a href="#security-performance-performance-optimization">Reusable prompt: performance optimization</a></li><li><a href="#security-performance-secrets-management">Reusable prompt: secrets management</a></li><li><a href="#security-performance-security-audit">Reusable prompt: security audit</a></li><li><a href="#security-performance-threat-modeling">Reusable prompt: threat modeling</a></li></ul></li><li><a href="#system-design">system-design</a> <span class="count">(5)</span><ul><li><a href="#system-design-adr-writing">Reusable prompt: architecture decision record</a></li><li><a href="#system-design-caching-strategy">Reusable prompt: caching strategy</a></li><li><a href="#system-design-concurrency-debugging">Reusable prompt: concurrency &amp; race condition debugging</a></li><li><a href="#system-design-system-design">Reusable prompt: system design</a></li><li><a href="#system-design-technical-debt-triage">Reusable prompt: technical debt triage</a></li></ul></li><li><a href="#testing-quality">testing-quality</a> <span class="count">(9)</span><ul><li><a href="#testing-quality-bug-finder">Reusable prompt: bug finder</a></li><li><a href="#testing-quality-bug-finder-with-docs">Reusable prompt: bug finder with docs</a></li><li><a href="#testing-quality-chaos-resilience">Reusable prompt: chaos &amp; resilience testing</a></li><li><a href="#testing-quality-code-coverage-gap">Reusable prompt: coverage gap analysis</a></li><li><a href="#testing-quality-contract-testing">Reusable prompt: contract testing</a></li><li><a href="#testing-quality-e2e-test-scaffold">Reusable prompt: end-to-end test scaffold</a></li><li><a href="#testing-quality-mutation-testing">Reusable prompt: mutation testing</a></li><li><a href="#testing-quality-test-driven-development">Reusable prompt: strict TDD</a></li><li><a href="#testing-quality-test-writing">Reusable prompt: comprehensive test writing</a></li></ul></li></ul>
+<div class="controls">
+<button id="expandAll" type="button">Expand all</button>
+<button id="collapseAll" type="button">Collapse all</button>
+</div>
+<ul><li><a href="#a-a-p-contributing"><i data-lucide="users" aria-hidden="true"></i>a-a-p-contributing</a> <span class="count">(6)</span><ul><li><a href="#a-a-p-contributing-fix-reported-bug">Reusable prompt: fix a reported bug</a></li><li><a href="#a-a-p-contributing-new-prompt-contribution">Reusable prompt: new prompt contribution</a></li><li><a href="#a-a-p-contributing-one-pager-schema">Reusable prompt: one-pager prompt schema</a></li><li><a href="#a-a-p-contributing-prompt-pr-review">Reusable prompt: prompt PR review</a></li><li><a href="#a-a-p-contributing-resolve-open-issue">Reusable prompt: resolve an open issue</a></li><li><a href="#a-a-p-contributing-spec-prompt-schema">Reusable prompt: spec prompt schema</a></li></ul></li><li><a href="#career-learning"><i data-lucide="graduation-cap" aria-hidden="true"></i>career-learning</a> <span class="count">(6)</span><ul><li><a href="#career-learning-code-interview-practice">Reusable prompt: coding interview practice</a></li><li><a href="#career-learning-conference-talk-proposal-prep">Reusable prompt: conference talk proposal &amp; prep</a></li><li><a href="#career-learning-learning-roadmap">Reusable prompt: learning roadmap</a></li><li><a href="#career-learning-portfolio-project">Reusable prompt: portfolio project builder</a></li><li><a href="#career-learning-resume-review">Reusable prompt: resume review</a></li><li><a href="#career-learning-tech-blog-writer">Reusable prompt: technical blog writer</a></li></ul></li><li><a href="#code-review"><i data-lucide="eye" aria-hidden="true"></i>code-review</a> <span class="count">(5)</span><ul><li><a href="#code-review-accessibility-review">Reusable prompt: accessibility review</a></li><li><a href="#code-review-architecture-review">Reusable prompt: architecture review</a></li><li><a href="#code-review-codebase-audit">Reusable prompt: codebase audit</a></li><li><a href="#code-review-performance-review">Reusable prompt: performance review</a></li><li><a href="#code-review-secure-code-review">Reusable prompt: security-focused code review</a></li></ul></li><li><a href="#core-coding"><i data-lucide="code-2" aria-hidden="true"></i>core-coding</a> <span class="count">(15)</span><ul><li><a href="#core-coding-agent-codebase-onboarding">Reusable prompt: agent codebase onboarding</a></li><li><a href="#core-coding-api-design">Reusable prompt: API design</a></li><li><a href="#core-coding-api-integration">Reusable prompt: REST API integration</a></li><li><a href="#core-coding-cli-tool-build">Reusable prompt: CLI tool build</a></li><li><a href="#core-coding-code-migration">Reusable prompt: code migration</a></li><li><a href="#core-coding-database-design">Reusable prompt: database design</a></li><li><a href="#core-coding-datetime-timezone-correctness">Reusable prompt: datetime &amp; timezone correctness</a></li><li><a href="#core-coding-debugging">Reusable prompt: systematic debugging</a></li><li><a href="#core-coding-environment-setup">Reusable prompt: environment setup</a></li><li><a href="#core-coding-error-handling-strategy">Reusable prompt: error handling strategy</a></li><li><a href="#core-coding-feature-implementation">Reusable prompt: end-to-end feature implementation</a></li><li><a href="#core-coding-human-codebase-onboarding">Reusable prompt: codebase understanding</a></li><li><a href="#core-coding-pair-programming-session">Reusable prompt: pair-programming session</a></li><li><a href="#core-coding-refactoring">Reusable prompt: safe refactoring</a></li><li><a href="#core-coding-regular-expressions">Reusable prompt: regular expressions that don&#x27;t bite</a></li></ul></li><li><a href="#data-ai"><i data-lucide="database" aria-hidden="true"></i>data-ai</a> <span class="count">(7)</span><ul><li><a href="#data-ai-ai-agent-build">Reusable prompt: AI agent build</a></li><li><a href="#data-ai-csv-spreadsheet-wrangling">Reusable prompt: CSV &amp; spreadsheet wrangling</a></li><li><a href="#data-ai-data-pipeline">Reusable prompt: data pipeline construction</a></li><li><a href="#data-ai-llm-feature-eval">Reusable prompt: LLM feature evaluation</a></li><li><a href="#data-ai-rag-pipeline">Reusable prompt: RAG pipeline</a></li><li><a href="#data-ai-responsible-web-scraping">Reusable prompt: responsible web scraping</a></li><li><a href="#data-ai-sql-query-optimization">Reusable prompt: SQL query optimization</a></li></ul></li><li><a href="#devops-deploy"><i data-lucide="server" aria-hidden="true"></i>devops-deploy</a> <span class="count">(9)</span><ul><li><a href="#devops-deploy-backup-disaster-recovery">Reusable prompt: backup &amp; disaster recovery</a></li><li><a href="#devops-deploy-database-schema-migrations">Reusable prompt: database schema &amp; migrations</a></li><li><a href="#devops-deploy-deployment-runbook">Reusable prompt: deployment runbook</a></li><li><a href="#devops-deploy-docker-containerization">Reusable prompt: Docker containerization</a></li><li><a href="#devops-deploy-feature-flag-rollout">Reusable prompt: feature flags &amp; progressive rollout</a></li><li><a href="#devops-deploy-incident-response">Reusable prompt: incident response</a></li><li><a href="#devops-deploy-infrastructure-as-code">Reusable prompt: infrastructure as code</a></li><li><a href="#devops-deploy-kubernetes-deployment">Reusable prompt: Kubernetes deployment</a></li><li><a href="#devops-deploy-monitoring-observability">Reusable prompt: monitoring and observability</a></li></ul></li><li><a href="#docs-delivery"><i data-lucide="file-text" aria-hidden="true"></i>docs-delivery</a> <span class="count">(5)</span><ul><li><a href="#docs-delivery-api-documentation">Reusable prompt: API documentation</a></li><li><a href="#docs-delivery-documentation-writer">Reusable prompt: documentation writer</a></li><li><a href="#docs-delivery-inline-documentation">Reusable prompt: inline documentation</a></li><li><a href="#docs-delivery-readme-builder">Reusable prompt: README builder</a></li><li><a href="#docs-delivery-release-notes-changelog">Reusable prompt: changelog &amp; release notes</a></li></ul></li><li><a href="#frontend-ui"><i data-lucide="palette" aria-hidden="true"></i>frontend-ui</a> <span class="count">(9)</span><ul><li><a href="#frontend-ui-component-build">Reusable prompt: component build</a></li><li><a href="#frontend-ui-design-handoff">Reusable prompt: design handoff to code</a></li><li><a href="#frontend-ui-i18n-localization">Reusable prompt: internationalization (i18n)</a></li><li><a href="#frontend-ui-instagram-carousel">Reusable prompt: Instagram carousel from a repo</a></li><li><a href="#frontend-ui-responsive-design">Reusable prompt: responsive design</a></li><li><a href="#frontend-ui-state-management">Reusable prompt: frontend state management</a></li><li><a href="#frontend-ui-ui-audit">Reusable prompt: UI audit</a></li><li><a href="#frontend-ui-web-performance-vitals">Reusable prompt: Core Web Vitals optimization</a></li><li><a href="#frontend-ui-website-seo">Reusable prompt: Website SEO audit and optimization</a></li></ul></li><li><a href="#git-github"><i data-lucide="git-branch" aria-hidden="true"></i>git-github</a> <span class="count">(12)</span><ul><li><a href="#git-github-ci-cd-workflow">Reusable prompt: CI/CD pipeline builder</a></li><li><a href="#git-github-commit-checklist">Reusable prompt: commit checklist &amp; consistency gates</a></li><li><a href="#git-github-dependency-upgrade">Reusable prompt: dependency upgrade</a></li><li><a href="#git-github-git-bisect-debug">Reusable prompt: git bisect debug</a></li><li><a href="#git-github-git-history-surgery">Reusable prompt: git history surgery</a></li><li><a href="#git-github-good-first-issue-workflow">Reusable prompt: good-first-issue guard workflow</a></li><li><a href="#git-github-issue-resolving">Reusable prompt: resolve a GitHub issue</a></li><li><a href="#git-github-issue-triage-for-maintainers">Reusable prompt: issue triage for maintainers</a></li><li><a href="#git-github-open-source-contribution">Reusable prompt: open-source contribution</a></li><li><a href="#git-github-open-source-maintainer-survival">Reusable prompt: open source maintainer survival</a></li><li><a href="#git-github-pr-review">Reusable prompt: pull request review</a></li><li><a href="#git-github-release-automation">Reusable prompt: release automation</a></li></ul></li><li><a href="#mobile-dev"><i data-lucide="smartphone" aria-hidden="true"></i>mobile-dev</a> <span class="count">(5)</span><ul><li><a href="#mobile-dev-mobile-app-develop">Reusable prompt: mobile app development</a></li><li><a href="#mobile-dev-mobile-performance">Reusable prompt: mobile performance</a></li><li><a href="#mobile-dev-mobile-ui-audit">Reusable prompt: mobile UI audit</a></li><li><a href="#mobile-dev-mobile-ui-overhaul">Reusable prompt: mobile UI overhaul</a></li><li><a href="#mobile-dev-website-to-mobile-app">Reusable prompt: website to mobile app</a></li></ul></li><li><a href="#security-performance"><i data-lucide="shield" aria-hidden="true"></i>security-performance</a> <span class="count">(8)</span><ul><li><a href="#security-performance-auth-implementation">Reusable prompt: authentication &amp; authorization implementation</a></li><li><a href="#security-performance-dependency-audit">Reusable prompt: dependency audit</a></li><li><a href="#security-performance-load-testing">Reusable prompt: load testing</a></li><li><a href="#security-performance-memory-leak-hunting">Reusable prompt: memory leak hunting</a></li><li><a href="#security-performance-performance-optimization">Reusable prompt: performance optimization</a></li><li><a href="#security-performance-secrets-management">Reusable prompt: secrets management</a></li><li><a href="#security-performance-security-audit">Reusable prompt: security audit</a></li><li><a href="#security-performance-threat-modeling">Reusable prompt: threat modeling</a></li></ul></li><li><a href="#system-design"><i data-lucide="layers" aria-hidden="true"></i>system-design</a> <span class="count">(5)</span><ul><li><a href="#system-design-adr-writing">Reusable prompt: architecture decision record</a></li><li><a href="#system-design-caching-strategy">Reusable prompt: caching strategy</a></li><li><a href="#system-design-concurrency-debugging">Reusable prompt: concurrency &amp; race condition debugging</a></li><li><a href="#system-design-system-design">Reusable prompt: system design</a></li><li><a href="#system-design-technical-debt-triage">Reusable prompt: technical debt triage</a></li></ul></li><li><a href="#testing-quality"><i data-lucide="flask-conical" aria-hidden="true"></i>testing-quality</a> <span class="count">(9)</span><ul><li><a href="#testing-quality-bug-finder">Reusable prompt: bug finder</a></li><li><a href="#testing-quality-bug-finder-with-docs">Reusable prompt: bug finder with docs</a></li><li><a href="#testing-quality-chaos-resilience">Reusable prompt: chaos &amp; resilience testing</a></li><li><a href="#testing-quality-code-coverage-gap">Reusable prompt: coverage gap analysis</a></li><li><a href="#testing-quality-contract-testing">Reusable prompt: contract testing</a></li><li><a href="#testing-quality-e2e-test-scaffold">Reusable prompt: end-to-end test scaffold</a></li><li><a href="#testing-quality-mutation-testing">Reusable prompt: mutation testing</a></li><li><a href="#testing-quality-test-driven-development">Reusable prompt: strict TDD</a></li><li><a href="#testing-quality-test-writing">Reusable prompt: comprehensive test writing</a></li></ul></li></ul>
 </nav>
 <section class="cat">
-<h2 id="a-a-p-contributing">a-a-p-contributing</h2>
+<h2 id="a-a-p-contributing"><i data-lucide="users" aria-hidden="true"></i><span>a-a-p-contributing</span><span class="count">(6)</span></h2>
 <article class="prompt">
 <div class="head">
-<h3 id="a-a-p-contributing-fix-reported-bug">Reusable prompt: fix a reported bug</h3>
+<h3 id="a-a-p-contributing-fix-reported-bug"><i data-lucide="users" aria-hidden="true"></i><span>Reusable prompt: fix a reported bug</span></h3>
 <button class="copy" data-copy="a-a-p-contributing-fix-reported-bug">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/a-a-p-contributing/fix-reported-bug-prompt.md">a-a-p-contributing/fix-reported-bug-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to fix a bug reported in
 an issue in this repository, with proof, in the smallest possible change.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-a-a-p-contributing-fix-reported-bug">Fix the bug in issue `#N` in this `awesome-ai-prompts` repository. Do not
 start coding until the bug is reproduced and the root cause is proven. A fix
 without a reproduced failure is not a fix - it is a guess.
@@ -89,15 +119,17 @@ without a reproduced failure is not a fix - it is a guess.
 
 The after-state of the reproduction no longer fails, and every gate named in
 step 4 passed with its output shown.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="a-a-p-contributing-new-prompt-contribution">Reusable prompt: new prompt contribution</h3>
+<h3 id="a-a-p-contributing-new-prompt-contribution"><i data-lucide="users" aria-hidden="true"></i><span>Reusable prompt: new prompt contribution</span></h3>
 <button class="copy" data-copy="a-a-p-contributing-new-prompt-contribution">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/a-a-p-contributing/new-prompt-contribution-prompt.md">a-a-p-contributing/new-prompt-contribution-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to add a new prompt to
 this repository, in a form a maintainer can merge on the first pass.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-a-a-p-contributing-new-prompt-contribution">Help me add a new prompt to this `awesome-ai-prompts` repository. Every prompt
 here follows strict conventions and CI enforces them, so read the rules before
 writing anything. Do not write the file until we have agreed on the idea.
@@ -150,10 +182,11 @@ writing anything. Do not write the file until we have agreed on the idea.
 Run every command in step 8 and paste the outputs. Confirm the README section
 lists exactly one new entry, the Contents count matches the folder, and the
 CHANGELOG entry names the new file.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="a-a-p-contributing-one-pager-schema">Reusable prompt: one-pager prompt schema</h3>
+<h3 id="a-a-p-contributing-one-pager-schema"><i data-lucide="users" aria-hidden="true"></i><span>Reusable prompt: one-pager prompt schema</span></h3>
 <button class="copy" data-copy="a-a-p-contributing-one-pager-schema">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/a-a-p-contributing/one-pager-schema-prompt.md">a-a-p-contributing/one-pager-schema-prompt.md</a></p>
@@ -161,6 +194,7 @@ CHANGELOG entry names the new file.</pre>
 prompt for this catalog: the repo&#x27;s compact format for quick, well-scoped
 tasks. This file is itself a one-pager - the block you write must fit the
 same budget.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-a-a-p-contributing-one-pager-schema">Write `[the new prompt]` as a one-pager in this repository - a
 self-contained prompt for one quick task that fits on a single printed page.
 Match the field contract below, then verify the result against the same
@@ -201,15 +235,17 @@ checks this file satisfies.
   verification matrix - that is a spec prompt.
 - Never exceed the budget by dropping verification; drop optional steps.
 - Never reference other prompts or assume context a stranger lacks.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="a-a-p-contributing-prompt-pr-review">Reusable prompt: prompt PR review</h3>
+<h3 id="a-a-p-contributing-prompt-pr-review"><i data-lucide="users" aria-hidden="true"></i><span>Reusable prompt: prompt PR review</span></h3>
 <button class="copy" data-copy="a-a-p-contributing-prompt-pr-review">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/a-a-p-contributing/prompt-pr-review-prompt.md">a-a-p-contributing/prompt-pr-review-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to review a pull request
 that adds or changes prompts in this repository, against its real gates.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-a-a-p-contributing-prompt-pr-review">Review pull request `#N`, which changes prompts in this `awesome-ai-prompts`
 repository. Return an explicit verdict: APPROVE, READY AFTER FIXES, or REQUEST
 CHANGES, with every finding tied to a file and line. Do not skim - read the
@@ -254,15 +290,17 @@ prompt: ...`), has a short usage note, a `---` divider, then the body. Files
 
 Show the outputs of the two scripts and the markdownlint run, and state that
 the em-dash scan was clean, with the commands you used.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="a-a-p-contributing-resolve-open-issue">Reusable prompt: resolve an open issue</h3>
+<h3 id="a-a-p-contributing-resolve-open-issue"><i data-lucide="users" aria-hidden="true"></i><span>Reusable prompt: resolve an open issue</span></h3>
 <button class="copy" data-copy="a-a-p-contributing-resolve-open-issue">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/a-a-p-contributing/resolve-open-issue-prompt.md">a-a-p-contributing/resolve-open-issue-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to take an open issue in
 this repository from reading the ticket to a mergeable pull request.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-a-a-p-contributing-resolve-open-issue">Help me complete the issue I point you at in this `awesome-ai-prompts`
 repository and land it as a pull request a maintainer will merge. This is a
 catalog of copy-paste prompts, so most issues are about wiring, wording, or new
@@ -307,16 +345,18 @@ prompts - read the conventions before changing anything.
 Confirm the reproduction or before-state from step 2, then the check outputs
 from step 7. For a broken link or script, show that the fix catches the old
 failure.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="a-a-p-contributing-spec-prompt-schema">Reusable prompt: spec prompt schema<span class="spec">spec</span></h3>
+<h3 id="a-a-p-contributing-spec-prompt-schema"><i data-lucide="users" aria-hidden="true"></i><span>Reusable prompt: spec prompt schema</span><span class="spec">spec</span></h3>
 <button class="copy" data-copy="a-a-p-contributing-spec-prompt-schema">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/a-a-p-contributing/spec-prompt-schema-prompt.md">a-a-p-contributing/spec-prompt-schema-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to author a spec prompt
 for this catalog: the repo&#x27;s heavy format for big, risky work that demands
 scope, hard constraints, and evidence-gated verification.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-a-a-p-contributing-spec-prompt-schema">Write `[the new prompt]` as a spec prompt in this repository - the format for
 tasks where failure is expensive and agent claims need proof. Match the field
 contract below exactly, and register the result in the index with the spec
@@ -370,19 +410,21 @@ README and are registered in `SPEC_PROMPTS` in
 - Never end a spec prompt without an explicit acceptance gate.
 - Never accept &quot;done&quot; without the evidence the gate names.
 - Never register a spec prompt without its badge, index entry, and checks.</pre>
+</details>
 </article>
 </section>
 <section class="cat">
-<h2 id="career-learning">career-learning</h2>
+<h2 id="career-learning"><i data-lucide="graduation-cap" aria-hidden="true"></i><span>career-learning</span><span class="count">(6)</span></h2>
 <article class="prompt">
 <div class="head">
-<h3 id="career-learning-code-interview-practice">Reusable prompt: coding interview practice</h3>
+<h3 id="career-learning-code-interview-practice"><i data-lucide="graduation-cap" aria-hidden="true"></i><span>Reusable prompt: coding interview practice</span></h3>
 <button class="copy" data-copy="career-learning-code-interview-practice">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/career-learning/code-interview-practice-prompt.md">career-learning/code-interview-practice-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to run structured
 interview practice - hints on demand, honest feedback, and complexity
 analysis, like a good mock interviewer.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-career-learning-code-interview-practice">Act as my interview coach for coding problems. I&#x27;ll give you a problem or ask
 you to pick one. Run the session like a real technical interview, but with the
 coaching controls below.
@@ -416,16 +458,18 @@ coaching controls below.
 - Be honest, not flattering. If my solution is wrong, say why precisely.
 - If I&#x27;m stuck for a long time, coach me on a strategy (try a smaller case,
   brute force first, draw it out) rather than just handing me the answer.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="career-learning-conference-talk-proposal-prep">Reusable prompt: conference talk proposal &amp; prep</h3>
+<h3 id="career-learning-conference-talk-proposal-prep"><i data-lucide="graduation-cap" aria-hidden="true"></i><span>Reusable prompt: conference talk proposal &amp; prep</span></h3>
 <button class="copy" data-copy="career-learning-conference-talk-proposal-prep">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/career-learning/conference-talk-proposal-prep-prompt.md">career-learning/conference-talk-proposal-prep-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to turn a talk idea into
 a submission that gets accepted and a presentation you can actually deliver
 in the slot you are given.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-career-learning-conference-talk-proposal-prep">Help me prepare a conference talk: `[talk idea / topic / experience]`. The
 goal is a submission that gets accepted and a talk that fits its slot, with
 a real demo that survives live. Work through proposal, iteration, outline,
@@ -474,16 +518,18 @@ demo, and rehearsal, and verify each stage before moving on.
 - Never plan a live demo step you cannot fall back from.
 - Keep iteration real: each revision must address a named weakness, not be
   cosmetic word-shuffling.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="career-learning-learning-roadmap">Reusable prompt: learning roadmap</h3>
+<h3 id="career-learning-learning-roadmap"><i data-lucide="graduation-cap" aria-hidden="true"></i><span>Reusable prompt: learning roadmap</span></h3>
 <button class="copy" data-copy="career-learning-learning-roadmap">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/career-learning/learning-roadmap-prompt.md">career-learning/learning-roadmap-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to turn a skill gap into
 a concrete, project-based learning roadmap with checkpoints you can actually
 verify.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-career-learning-learning-roadmap">Build a learning roadmap for the specified skill or goal. The output must be
 a plan someone can follow and verify - projects that produce artifacts,
 checkpoints that prove progress - not a list of courses.
@@ -525,15 +571,17 @@ projects/checkpoints/time estimates, review cadence, and the capstone.
   consumption alone does not count as progress.
 - No phase without a way to verify success; if you can&#x27;t test it, restate it.
 - Prefer depth on fewer things over surveying everything.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="career-learning-portfolio-project">Reusable prompt: portfolio project builder</h3>
+<h3 id="career-learning-portfolio-project"><i data-lucide="graduation-cap" aria-hidden="true"></i><span>Reusable prompt: portfolio project builder</span></h3>
 <button class="copy" data-copy="career-learning-portfolio-project">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/career-learning/portfolio-project-prompt.md">career-learning/portfolio-project-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to take a project idea
 from vague concept to a polished portfolio piece you&#x27;d be proud to show.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-career-learning-portfolio-project">Help me build a portfolio-worthy project. I&#x27;ll describe the idea; you help me
 shape it into something scoped, real, and presentable - something I can
 explain confidently and that demonstrates actual skill.
@@ -571,16 +619,18 @@ explain confidently and that demonstrates actual skill.
   doesn&#x27;t support.
 - The goal is a project I can talk about confidently - if we add complexity,
   make sure I can explain it.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="career-learning-resume-review">Reusable prompt: resume review</h3>
+<h3 id="career-learning-resume-review"><i data-lucide="graduation-cap" aria-hidden="true"></i><span>Reusable prompt: resume review</span></h3>
 <button class="copy" data-copy="career-learning-resume-review">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/career-learning/resume-review-prompt.md">career-learning/resume-review-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to review a technical
 resume - honest feedback on impact, clarity, and keyword density, not generic
 &quot;use action verbs&quot; advice.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-career-learning-resume-review">Review my technical resume for `[role / company / level]`. The goal: honest,
 specific feedback that helps me stand out as a strong candidate, not polished
 mediocrity.
@@ -622,16 +672,18 @@ mediocrity.
 - Never pad the resume with filler - every line must earn its space.
 - If the resume is already strong, say what works and suggest only minor
   refinements rather than inventing problems.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="career-learning-tech-blog-writer">Reusable prompt: technical blog writer</h3>
+<h3 id="career-learning-tech-blog-writer"><i data-lucide="graduation-cap" aria-hidden="true"></i><span>Reusable prompt: technical blog writer</span></h3>
 <button class="copy" data-copy="career-learning-tech-blog-writer">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/career-learning/tech-blog-writer-prompt.md">career-learning/tech-blog-writer-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to turn a project,
 technical concept, or engineering experience into a clear, engaging blog
 post with real content and real insights, not fluff.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-career-learning-tech-blog-writer">Help me write a technical blog post about `[topic / project / experience]`.
 The goal: a post that teaches something real, engages the reader, and
 demonstrates technical depth without being inaccessible.
@@ -672,19 +724,21 @@ demonstrates technical depth without being inaccessible.
   saying...&quot;) - either say it or don&#x27;t.
 - If the topic is too broad, narrow it - a focused post on one specific
   lesson beats a shallow overview of everything.</pre>
+</details>
 </article>
 </section>
 <section class="cat">
-<h2 id="code-review">code-review</h2>
+<h2 id="code-review"><i data-lucide="eye" aria-hidden="true"></i><span>code-review</span><span class="count">(5)</span></h2>
 <article class="prompt">
 <div class="head">
-<h3 id="code-review-accessibility-review">Reusable prompt: accessibility review</h3>
+<h3 id="code-review-accessibility-review"><i data-lucide="eye" aria-hidden="true"></i><span>Reusable prompt: accessibility review</span></h3>
 <button class="copy" data-copy="code-review-accessibility-review">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/code-review/accessibility-review-prompt.md">code-review/accessibility-review-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to audit UI code for
 accessibility compliance - WCAG-concrete findings with fixes, not a generic
 &quot;use alt text&quot; checklist.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-code-review-accessibility-review">Review the accessibility of `[component / page / feature]` in this repository.
 The goal: ensure the UI is usable by people relying on keyboards, screen
 readers, and assistive technologies, meeting WCAG 2.1 AA at minimum.
@@ -734,16 +788,18 @@ readers, and assistive technologies, meeting WCAG 2.1 AA at minimum.
   than inventing issues.
 - Do not flag visual-only decorative elements (purely decorative images,
   ornamental dividers) as missing alt text.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="code-review-architecture-review">Reusable prompt: architecture review<span class="spec">spec</span></h3>
+<h3 id="code-review-architecture-review"><i data-lucide="eye" aria-hidden="true"></i><span>Reusable prompt: architecture review</span><span class="spec">spec</span></h3>
 <button class="copy" data-copy="code-review-architecture-review">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/code-review/architecture-review-prompt.md">code-review/architecture-review-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to audit a repository&#x27;s
 architecture with evidence-backed scores and a prioritized refactoring plan -
 the heavy format, because a wrong audit ships a misleading roadmap.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-code-review-architecture-review">Audit the architecture of this repository as a senior software architect.
 Read-only: this produces a report, never diffs. Every claim must trace to a
 file:line or a measured number - accuracy matters more than volume.
@@ -841,10 +897,11 @@ State all four before reading any code:
   exactly one.
 - Never pad - five verified findings beat forty speculative ones.
 - Never propose a rewrite; fixes must be incremental and verifiable.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="code-review-codebase-audit">Reusable prompt: codebase audit<span class="spec">spec</span></h3>
+<h3 id="code-review-codebase-audit"><i data-lucide="eye" aria-hidden="true"></i><span>Reusable prompt: codebase audit</span><span class="spec">spec</span></h3>
 <button class="copy" data-copy="code-review-codebase-audit">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/code-review/codebase-audit-prompt.md">code-review/codebase-audit-prompt.md</a></p>
@@ -852,6 +909,7 @@ State all four before reading any code:
 codebase audit across architecture, quality, and maintainability dimensions with
 evidence-backed 0-10 scores and a prioritized refactoring roadmap - the heavy
 format, because a flawed audit produces a misguided roadmap.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-code-review-codebase-audit">Audit this repo as a senior software architect. Read-only: this produces a
 report, never diffs. Every claim must trace to a file:line or measured evidence -
 accuracy matters more than volume.
@@ -954,16 +1012,18 @@ State all four before reading any code:
 - Never pad findings - verified architectural facts beat speculative lists.
 - Never propose big-bang rewrites; fixes must be incremental and verifiable.
 - Never accept &quot;done&quot; without satisfying every deliverable in this spec.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="code-review-performance-review">Reusable prompt: performance review</h3>
+<h3 id="code-review-performance-review"><i data-lucide="eye" aria-hidden="true"></i><span>Reusable prompt: performance review</span></h3>
 <button class="copy" data-copy="code-review-performance-review">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/code-review/performance-review-prompt.md">code-review/performance-review-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to review code for
 performance anti-patterns - with evidence and specific fixes, not vague
 &quot;make it faster&quot; advice.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-code-review-performance-review">Review the performance of `[file / module / endpoint]` in this repository.
 Find real inefficiencies and propose concrete fixes backed by evidence.
 
@@ -1008,15 +1068,17 @@ Find real inefficiencies and propose concrete fixes backed by evidence.
   with a one-liner) unless profiling proves it matters.
 - If the code is already performant, say so and stop - do not invent problems.
 - Always verify that the proposed fix preserves correctness.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="code-review-secure-code-review">Reusable prompt: security-focused code review</h3>
+<h3 id="code-review-secure-code-review"><i data-lucide="eye" aria-hidden="true"></i><span>Reusable prompt: security-focused code review</span></h3>
 <button class="copy" data-copy="code-review-secure-code-review">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/code-review/secure-code-review-prompt.md">code-review/secure-code-review-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to review a PR or diff
 through a security lens - find real vulnerabilities, with evidence.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-code-review-secure-code-review">Review this code with a security focus. The author has already had a
 functional review - your job is to find the ways an attacker or a bad input
 could abuse it. Verify everything; don&#x27;t flag theoretical risks without a
@@ -1062,13 +1124,14 @@ nice-to-harden. No fluff, no duplicates.
 - Don&#x27;t fix the code unless asked - report the findings and proposed fixes.
 - Never dismiss a real issue because it&#x27;s &quot;just&quot; a demo/assignment; say so
   but still report it.</pre>
+</details>
 </article>
 </section>
 <section class="cat">
-<h2 id="core-coding">core-coding</h2>
+<h2 id="core-coding"><i data-lucide="code-2" aria-hidden="true"></i><span>core-coding</span><span class="count">(15)</span></h2>
 <article class="prompt">
 <div class="head">
-<h3 id="core-coding-agent-codebase-onboarding">Reusable prompt: agent codebase onboarding<span class="spec">spec</span></h3>
+<h3 id="core-coding-agent-codebase-onboarding"><i data-lucide="code-2" aria-hidden="true"></i><span>Reusable prompt: agent codebase onboarding</span><span class="spec">spec</span></h3>
 <button class="copy" data-copy="core-coding-agent-codebase-onboarding">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/core-coding/agent-codebase-onboarding-prompt.md">core-coding/agent-codebase-onboarding-prompt.md</a></p>
@@ -1079,6 +1142,7 @@ read budgets, a defined deliverable, and required verification - not a browse
 and a summary. It is written for the agent to consume itself: no questions to
 the user, file:line anchors instead of pasted bodies, and a living model held
 in context rather than a report to print.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-core-coding-agent-codebase-onboarding">You have been dropped into a repository you have never seen. Before you take on
 any task, run the onboarding protocol below and end with a compact, verified
 working model in your own context: enough to run it, change it, test it, and
@@ -1200,15 +1264,17 @@ Before declaring the model complete, confirm each of these:
   confirmed claim mean onboarding is done.
 - The goal is not to understand everything; it is to be ready to act on
   evidence.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="core-coding-api-design">Reusable prompt: API design</h3>
+<h3 id="core-coding-api-design"><i data-lucide="code-2" aria-hidden="true"></i><span>Reusable prompt: API design</span></h3>
 <button class="copy" data-copy="core-coding-api-design">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/core-coding/api-design-prompt.md">core-coding/api-design-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to design a well-structured
 REST API - with conventions, validation, and an OpenAPI spec, not ad-hoc routes.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-core-coding-api-design">Design a REST API for `[feature / domain]`. The goal: a consistent, documented,
 and validated API that other developers can understand and integrate with
 confidently.
@@ -1244,15 +1310,17 @@ confidently.
 - Keep the API consistent: if one list endpoint uses `?page=`, all should.
 - If the codebase already has API conventions, follow them exactly - do not
   introduce a parallel style.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="core-coding-api-integration">Reusable prompt: REST API integration</h3>
+<h3 id="core-coding-api-integration"><i data-lucide="code-2" aria-hidden="true"></i><span>Reusable prompt: REST API integration</span></h3>
 <button class="copy" data-copy="core-coding-api-integration">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/core-coding/api-integration-prompt.md">core-coding/api-integration-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to integrate an external
 REST API into this codebase - typed, tested, and resilient, not a quick hack.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-core-coding-api-integration">Integrate the `[API name / endpoint docs]` into this repository&#x27;s codebase.
 Read the actual API docs and the existing code before writing anything.
 
@@ -1284,10 +1352,11 @@ Read the actual API docs and the existing code before writing anything.
 - Verify your assumptions about the API against real responses where possible.
 - If the docs and the live API disagree, flag it and verify rather than
   guessing which is right.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="core-coding-cli-tool-build">Reusable prompt: CLI tool build</h3>
+<h3 id="core-coding-cli-tool-build"><i data-lucide="code-2" aria-hidden="true"></i><span>Reusable prompt: CLI tool build</span></h3>
 <button class="copy" data-copy="core-coding-cli-tool-build">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/core-coding/cli-tool-build-prompt.md">core-coding/cli-tool-build-prompt.md</a></p>
@@ -1295,6 +1364,7 @@ Read the actual API docs and the existing code before writing anything.
 tool that behaves the way real CLI users expect: documented flags, typed
 exit codes, safe pipe and TTY handling, and a logic core that is easy to
 test without spawning subprocesses.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-core-coding-cli-tool-build">Build a command-line tool for `[what the tool does]` in this repository.
 The goal: a CLI a seasoned user can run without surprises - correct exit
 codes, a clean `--help`, sane behavior under pipes and scripts, and a test
@@ -1347,16 +1417,18 @@ suite that covers the logic directly.
 - Never use global mutable state; keep the run function pure and injectable.
 - Never add a flag you cannot document and test.
 - Match the repo&#x27;s existing CLI conventions over your preference.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="core-coding-code-migration">Reusable prompt: code migration<span class="spec">spec</span></h3>
+<h3 id="core-coding-code-migration"><i data-lucide="code-2" aria-hidden="true"></i><span>Reusable prompt: code migration</span><span class="spec">spec</span></h3>
 <button class="copy" data-copy="core-coding-code-migration">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/core-coding/code-migration-prompt.md">core-coding/code-migration-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to migrate code between
 frameworks, languages, or major versions - incrementally, with behavior parity
 verified at every step.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-core-coding-code-migration">Migrate `[source code / module / feature]` from `[current stack/version]` to
 `[target stack/version]`. The rule: **behavioral parity at every step** - the
 application must work before, between, and after the migration.
@@ -1405,16 +1477,18 @@ application must work before, between, and after the migration.
   continuing - never stack broken changes.
 - If a dependency has no compatible version for the target, flag it early
   rather than hacking around it.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="core-coding-database-design">Reusable prompt: database design</h3>
+<h3 id="core-coding-database-design"><i data-lucide="code-2" aria-hidden="true"></i><span>Reusable prompt: database design</span></h3>
 <button class="copy" data-copy="core-coding-database-design">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/core-coding/database-design-prompt.md">core-coding/database-design-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to model a relational
 database schema from requirements - normalized, indexed, and ready for
 migration.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-core-coding-database-design">Design a database schema for `[feature / domain]`. The goal: a clean,
 normalized data model that supports the required queries without over-engineering.
 
@@ -1453,16 +1527,18 @@ normalized data model that supports the required queries without over-engineerin
   follow them exactly.
 - Do not design for scale you don&#x27;t need yet - a clean schema beats a
   prematurely optimized one.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="core-coding-datetime-timezone-correctness">Reusable prompt: datetime &amp; timezone correctness</h3>
+<h3 id="core-coding-datetime-timezone-correctness"><i data-lucide="code-2" aria-hidden="true"></i><span>Reusable prompt: datetime &amp; timezone correctness</span></h3>
 <button class="copy" data-copy="core-coding-datetime-timezone-correctness">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/core-coding/datetime-timezone-correctness-prompt.md">core-coding/datetime-timezone-correctness-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to handle dates and
 times correctly instead of shipping the timezone bug that only shows up in
 production, months later.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-core-coding-datetime-timezone-correctness">Review or implement the datetime handling in this task. Timezone bugs are
 among the most common production defects and are almost never caught by a
 &quot;looks right on my machine&quot; check; treat every date/time value as a trap
@@ -1505,16 +1581,18 @@ until proven otherwise.
   timezone database, not a fixed number.
 - If a date&#x27;s true intended timezone is ambiguous from context, ask or
   document the assumption instead of guessing UTC vs local silently.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="core-coding-debugging">Reusable prompt: systematic debugging</h3>
+<h3 id="core-coding-debugging"><i data-lucide="code-2" aria-hidden="true"></i><span>Reusable prompt: systematic debugging</span></h3>
 <button class="copy" data-copy="core-coding-debugging">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/core-coding/debugging-prompt.md">core-coding/debugging-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to debug a problem the
 way a disciplined engineer does: reproduce first, find the root cause, fix
 the smallest thing, and prove it.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-core-coding-debugging">Debug the reported problem in this repository. Work systematically - do not
 guess-and-patch. Follow these steps in order.
 
@@ -1545,16 +1623,18 @@ guess-and-patch. Follow these steps in order.
   ruled out and what you&#x27;d try next - do not ship an unverified patch.
 - Flag any pre-existing bugs you notice while debugging as notes, don&#x27;t fix
   them silently.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="core-coding-environment-setup">Reusable prompt: environment setup</h3>
+<h3 id="core-coding-environment-setup"><i data-lucide="code-2" aria-hidden="true"></i><span>Reusable prompt: environment setup</span></h3>
 <button class="copy" data-copy="core-coding-environment-setup">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/core-coding/environment-setup-prompt.md">core-coding/environment-setup-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to bootstrap a development
 environment from scratch - every dependency installed, every tool configured,
 first build verified.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-core-coding-environment-setup">Set up a complete development environment for this repository from scratch.
 The goal: a new contributor can clone the repo and be productive in minutes,
 not hours.
@@ -1592,10 +1672,11 @@ not hours.
   rather than working around them.
 - Verify every tool and service actually works, not just that it installed
   without error.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="core-coding-error-handling-strategy">Reusable prompt: error handling strategy</h3>
+<h3 id="core-coding-error-handling-strategy"><i data-lucide="code-2" aria-hidden="true"></i><span>Reusable prompt: error handling strategy</span></h3>
 <button class="copy" data-copy="core-coding-error-handling-strategy">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/core-coding/error-handling-strategy-prompt.md">core-coding/error-handling-strategy-prompt.md</a></p>
@@ -1603,6 +1684,7 @@ not hours.
 coherent error handling strategy across a component or service: every failure
 mode mapped to a typed error, a log line that can be searched, and a documented
 policy for what is retried versus what reaches the user.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-core-coding-error-handling-strategy">Design and apply a consistent error handling strategy for `[component or
 service]` in this repository. The goal: no bare try/catch, no swallowed
 errors, no unhandled crash on a path a user can hit. Inspection here means
@@ -1656,15 +1738,17 @@ reading code, not trusting it.
 Run the repo&#x27;s test suite and paste the output. Then list, with evidence, the
 failure modes you injected and what each produced (log line, retry behaviour,
 user-visible result). Confirm no error path exists that catches and ignores.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="core-coding-feature-implementation">Reusable prompt: end-to-end feature implementation</h3>
+<h3 id="core-coding-feature-implementation"><i data-lucide="code-2" aria-hidden="true"></i><span>Reusable prompt: end-to-end feature implementation</span></h3>
 <button class="copy" data-copy="core-coding-feature-implementation">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/core-coding/feature-implementation-prompt.md">core-coding/feature-implementation-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to build a feature from
 spec to shipped, with verification at every stage.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-core-coding-feature-implementation">You are implementing a feature in this repository. Work end-to-end: understand
 the requirement, design a minimal solution that fits the existing
 architecture, implement it, verify it, and leave the codebase clean. Never
@@ -1706,10 +1790,11 @@ guess - read the relevant code first and verify every claim you make.
   hacking around it.
 - Commit in small, logical commits following the repo&#x27;s commit convention
   (check `git log`), and only when the work is verified.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="core-coding-human-codebase-onboarding">Reusable prompt: codebase understanding<span class="spec">spec</span></h3>
+<h3 id="core-coding-human-codebase-onboarding"><i data-lucide="code-2" aria-hidden="true"></i><span>Reusable prompt: codebase understanding</span><span class="spec">spec</span></h3>
 <button class="copy" data-copy="core-coding-human-codebase-onboarding">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/core-coding/human-codebase-onboarding-prompt.md">core-coding/human-codebase-onboarding-prompt.md</a></p>
@@ -1717,6 +1802,7 @@ guess - read the relevant code first and verify every claim you make.
 detailed understanding of an unfamiliar repository. The agent must confirm
 every claim against real code and configuration, not the README alone, and
 produce a structured report with file:line citations.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-core-coding-human-codebase-onboarding">Build a detailed understanding of this repository. Produce a report that a
 new team member could use to navigate the codebase on day one. Verify
 everything against the code, lockfiles, and config - do not paraphrase the
@@ -1817,16 +1903,18 @@ Before reporting the understanding complete, confirm each of these:
   deep dive in one pass unless the request is small.
 - If something cannot be determined from the repository, say what is missing
   and how to find it - do not guess.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="core-coding-pair-programming-session">Reusable prompt: pair-programming session</h3>
+<h3 id="core-coding-pair-programming-session"><i data-lucide="code-2" aria-hidden="true"></i><span>Reusable prompt: pair-programming session</span></h3>
 <button class="copy" data-copy="core-coding-pair-programming-session">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/core-coding/pair-programming-session-prompt.md">core-coding/pair-programming-session-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to work interactively the
 way you&#x27;d pair with a careful human - small steps, explanations, and
 confirmation before anything big.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-core-coding-pair-programming-session">You are my pair-programming partner on this repository. We work in small,
 explainable steps. You are allowed to read code, search, and run commands, but
 you must not take large or surprising actions on your own.
@@ -1853,15 +1941,17 @@ you must not take large or surprising actions on your own.
   don&#x27;t silently change direction.
 - No fluff: no &quot;great question!&quot;, no summarizing what I already said. Just do
   the work and talk when there&#x27;s something worth saying.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="core-coding-refactoring">Reusable prompt: safe refactoring</h3>
+<h3 id="core-coding-refactoring"><i data-lucide="code-2" aria-hidden="true"></i><span>Reusable prompt: safe refactoring</span></h3>
 <button class="copy" data-copy="core-coding-refactoring">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/core-coding/refactoring-prompt.md">core-coding/refactoring-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to refactor code without
 breaking behavior - the tests are the guardrails.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-core-coding-refactoring">Refactor the code I point you at in this repository. The goal is cleaner,
 more maintainable code with **identical external behavior**. Treat the test
 suite as the contract.
@@ -1893,10 +1983,11 @@ suite as the contract.
   behavior.
 - Verify with the repo&#x27;s own tooling - find the commands in `pyproject.toml`,
   `package.json`, `Makefile`, CI workflows, or README.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="core-coding-regular-expressions">Reusable prompt: regular expressions that don&#x27;t bite</h3>
+<h3 id="core-coding-regular-expressions"><i data-lucide="code-2" aria-hidden="true"></i><span>Reusable prompt: regular expressions that don&#x27;t bite</span></h3>
 <button class="copy" data-copy="core-coding-regular-expressions">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/core-coding/regular-expressions-prompt.md">core-coding/regular-expressions-prompt.md</a></p>
@@ -1904,6 +1995,7 @@ suite as the contract.
 regular expression the way a senior engineer would: a defined purpose, a corpus
 of cases that proves the behavior, and a check that the pattern cannot blow up
 on adversarial input.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-core-coding-regular-expressions">Help me write `[what the regex must match]` in `[language or stack]`. Treat a
 regex as risky code, not a magic one-liner: it needs a stated purpose, tests
 against real inputs, and evidence that it cannot hang on bad input. Write it
@@ -1959,13 +2051,14 @@ only after we agree on the behavior it must have.
 Paste the test run over the corpus (passes and intended non-matches), the
 worst-case timing for any adversarial input you constructed, and the final
 pattern. Confirm the behavior is pinned by a repeatable test in the repo.</pre>
+</details>
 </article>
 </section>
 <section class="cat">
-<h2 id="data-ai">data-ai</h2>
+<h2 id="data-ai"><i data-lucide="database" aria-hidden="true"></i><span>data-ai</span><span class="count">(7)</span></h2>
 <article class="prompt">
 <div class="head">
-<h3 id="data-ai-ai-agent-build">Reusable prompt: AI agent build<span class="spec">spec</span></h3>
+<h3 id="data-ai-ai-agent-build"><i data-lucide="database" aria-hidden="true"></i><span>Reusable prompt: AI agent build</span><span class="spec">spec</span></h3>
 <button class="copy" data-copy="data-ai-ai-agent-build">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/data-ai/ai-agent-build-prompt.md">data-ai/ai-agent-build-prompt.md</a></p>
@@ -1973,6 +2066,7 @@ pattern. Confirm the behavior is pinned by a repeatable test in the repo.</pre>
 LLM-powered agent for this project. The agent&#x27;s behavior and decisions must
 be verifiable against an eval set with measured cost and latency - not
 judged by vibes.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-data-ai-ai-agent-build">Build `[the agent&#x27;s job in one sentence]` as an LLM agent: a loop that plans,
 calls tools, observes results, and decides the next step until the task is
 done or it is safe to stop. Deliver a harness with named tool contracts,
@@ -2047,15 +2141,17 @@ works.
   report.
 - If a task cannot be made safely autonomous, say so and propose the
   human-in-the-loop change instead of shipping an unsafe loop.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="data-ai-csv-spreadsheet-wrangling">Reusable prompt: CSV &amp; spreadsheet wrangling</h3>
+<h3 id="data-ai-csv-spreadsheet-wrangling"><i data-lucide="database" aria-hidden="true"></i><span>Reusable prompt: CSV &amp; spreadsheet wrangling</span></h3>
 <button class="copy" data-copy="data-ai-csv-spreadsheet-wrangling">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/data-ai/csv-spreadsheet-wrangling-prompt.md">data-ai/csv-spreadsheet-wrangling-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to clean and load a messy
 CSV or spreadsheet export without silently corrupting or dropping data.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-data-ai-csv-spreadsheet-wrangling">Load and clean the spreadsheet/CSV data described in this task. Messy exports
 are where most data projects actually start; the goal is a validated dataset
 plus a report of everything that had to be fixed or rejected, not a script
@@ -2096,16 +2192,18 @@ that just runs without erroring.
 - If a column&#x27;s real-world meaning makes an inference rule unsafe (e.g.
   leading-zero IDs read as integers), say so explicitly rather than silently
   &quot;fixing&quot; it.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="data-ai-data-pipeline">Reusable prompt: data pipeline construction</h3>
+<h3 id="data-ai-data-pipeline"><i data-lucide="database" aria-hidden="true"></i><span>Reusable prompt: data pipeline construction</span></h3>
 <button class="copy" data-copy="data-ai-data-pipeline">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/data-ai/data-pipeline-prompt.md">data-ai/data-pipeline-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to build an ETL/data
 pipeline that survives bad input, reruns, and schema drift - and proves its
 output is correct.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-data-ai-data-pipeline">Build the requested data pipeline (extract, transform, load) in this
 repository. Pipelines fail quietly; yours must fail loudly, resume cleanly,
 and make correctness checkable at every stage.
@@ -2140,16 +2238,18 @@ and make correctness checkable at every stage.
 - Hardcode nothing that varies per environment (paths, credentials, URLs).
 - If source data quality makes guarantees impossible, say exactly what you
   can and cannot promise.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="data-ai-llm-feature-eval">Reusable prompt: LLM feature evaluation</h3>
+<h3 id="data-ai-llm-feature-eval"><i data-lucide="database" aria-hidden="true"></i><span>Reusable prompt: LLM feature evaluation</span></h3>
 <button class="copy" data-copy="data-ai-llm-feature-eval">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/data-ai/llm-feature-eval-prompt.md">data-ai/llm-feature-eval-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to evaluate an LLM-powered
 feature rigorously - with a test set, defined metrics, and pass thresholds
 decided before looking at results.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-data-ai-llm-feature-eval">Evaluate the LLM-powered feature in this repository (or a proposed prompt or
 model change). Goal: replace &quot;looks fine to me&quot; with repeatable measurements.
 
@@ -2184,16 +2284,18 @@ model change). Goal: replace &quot;looks fine to me&quot; with repeatable measur
 - Never evaluate on the same examples you tuned prompts against - keep a
   held-out split.
 - Log model/version/prompt hash with every run so results are reproducible.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="data-ai-rag-pipeline">Reusable prompt: RAG pipeline</h3>
+<h3 id="data-ai-rag-pipeline"><i data-lucide="database" aria-hidden="true"></i><span>Reusable prompt: RAG pipeline</span></h3>
 <button class="copy" data-copy="data-ai-rag-pipeline">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/data-ai/rag-pipeline-prompt.md">data-ai/rag-pipeline-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to build a
 retrieval-augmented generation pipeline with evaluation built in - so answers
 are grounded, cited, and measurably better than raw prompting.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-data-ai-rag-pipeline">Build the requested retrieval-augmented generation (RAG) feature. The bar:
 answers must be grounded in retrieved sources with citations, and quality
 must be evaluated against a test set, not vibes.
@@ -2230,15 +2332,17 @@ must be evaluated against a test set, not vibes.
 - Permission checks happen at retrieval time - filtered search alone is not
   authorization.
 - Every answer must trace to cited chunks; uncited claims are defects.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="data-ai-responsible-web-scraping">Reusable prompt: responsible web scraping</h3>
+<h3 id="data-ai-responsible-web-scraping"><i data-lucide="database" aria-hidden="true"></i><span>Reusable prompt: responsible web scraping</span></h3>
 <button class="copy" data-copy="data-ai-responsible-web-scraping">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/data-ai/responsible-web-scraping-prompt.md">data-ai/responsible-web-scraping-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to build a scraper that
 respects the site it&#x27;s reading and survives its next layout change.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-data-ai-responsible-web-scraping">Build the requested web scraper/crawler. Scraping without guardrails gets
 IPs banned, breaks on the next redesign, and can create legal exposure;
 build it defensively from the start.
@@ -2279,16 +2383,18 @@ build it defensively from the start.
   lawful basis.
 - If `robots.txt` or ToS is ambiguous or unreachable, treat that as &quot;ask a
   human before proceeding,&quot; not as permission by default.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="data-ai-sql-query-optimization">Reusable prompt: SQL query optimization</h3>
+<h3 id="data-ai-sql-query-optimization"><i data-lucide="database" aria-hidden="true"></i><span>Reusable prompt: SQL query optimization</span></h3>
 <button class="copy" data-copy="data-ai-sql-query-optimization">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/data-ai/sql-query-optimization-prompt.md">data-ai/sql-query-optimization-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to make a slow query fast
 with proof - plans before and after, indexes justified, and regressions
 checked.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-data-ai-sql-query-optimization">Optimize the specified slow SQL query or query set. Work like a DBA: measure,
 read the plan, change one thing, measure again. No index is added without
 evidence it will be used.
@@ -2325,19 +2431,21 @@ language explanation of why the plan changed.
   data.
 - One hypothesis per iteration; if a change doesn&#x27;t move the plan, revert it.
 - Verify the result set is identical before and after - correctness first.</pre>
+</details>
 </article>
 </section>
 <section class="cat">
-<h2 id="devops-deploy">devops-deploy</h2>
+<h2 id="devops-deploy"><i data-lucide="server" aria-hidden="true"></i><span>devops-deploy</span><span class="count">(9)</span></h2>
 <article class="prompt">
 <div class="head">
-<h3 id="devops-deploy-backup-disaster-recovery">Reusable prompt: backup &amp; disaster recovery</h3>
+<h3 id="devops-deploy-backup-disaster-recovery"><i data-lucide="server" aria-hidden="true"></i><span>Reusable prompt: backup &amp; disaster recovery</span></h3>
 <button class="copy" data-copy="devops-deploy-backup-disaster-recovery">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/devops-deploy/backup-disaster-recovery-prompt.md">devops-deploy/backup-disaster-recovery-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to build backups and a DR
 plan that have actually been restored - untested backups are Schrödinger&#x27;s
 backups.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-devops-deploy-backup-disaster-recovery">Set up backups and disaster recovery for this system. The deliverable is not
 backup jobs - it is demonstrated restores, documented recovery steps, and
 known RTO/RPO numbers.
@@ -2381,15 +2489,17 @@ table of stores with their measured RPO/RTO.
 - Alerting on backup failure is mandatory; silent failures don&#x27;t count.
 - Never test restores against production data in place; use scratch
   environments.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="devops-deploy-database-schema-migrations">Reusable prompt: database schema &amp; migrations</h3>
+<h3 id="devops-deploy-database-schema-migrations"><i data-lucide="server" aria-hidden="true"></i><span>Reusable prompt: database schema &amp; migrations</span></h3>
 <button class="copy" data-copy="devops-deploy-database-schema-migrations">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/devops-deploy/database-schema-migrations-prompt.md">devops-deploy/database-schema-migrations-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to design or evolve a
 database schema safely - backward-compatible migrations and a clean rollout.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-devops-deploy-database-schema-migrations">Design/update the database schema for `[feature/change]` in this repository
 and write the migrations. Treat the schema like a public API: changes must be
 backward-compatible unless the migration plan explicitly says otherwise.
@@ -2431,15 +2541,17 @@ backward-compatible unless the migration plan explicitly says otherwise.
 - Keep each migration focused on one logical change.
 - If the schema change can&#x27;t be made backward-compatible, stop and flag the
   coordination needed instead of hiding it.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="devops-deploy-deployment-runbook">Reusable prompt: deployment runbook</h3>
+<h3 id="devops-deploy-deployment-runbook"><i data-lucide="server" aria-hidden="true"></i><span>Reusable prompt: deployment runbook</span></h3>
 <button class="copy" data-copy="devops-deploy-deployment-runbook">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/devops-deploy/deployment-runbook-prompt.md">devops-deploy/deployment-runbook-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to deploy a service
 safely - with a rollback plan, verified steps, and no surprises.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-devops-deploy-deployment-runbook">Prepare a safe deployment of `[version / branch]` of this application to
 `[environment]`. A deployment is a risky operation: the plan must be precise,
 verifiable, and reversible.
@@ -2479,15 +2591,17 @@ verifiable, and reversible.
 - Never put secrets in the runbook; reference how they&#x27;re supplied.
 - If something in the plan is uncertain, mark it as needing confirmation -
   don&#x27;t paper over it.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="devops-deploy-docker-containerization">Reusable prompt: Docker containerization</h3>
+<h3 id="devops-deploy-docker-containerization"><i data-lucide="server" aria-hidden="true"></i><span>Reusable prompt: Docker containerization</span></h3>
 <button class="copy" data-copy="devops-deploy-docker-containerization">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/devops-deploy/docker-containerization-prompt.md">devops-deploy/docker-containerization-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to containerize an
 application - a small, secure, working image, not a copy-pasted Dockerfile.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-devops-deploy-docker-containerization">Create a Docker image for this application. The goal: a reproducible, small,
 secure image that runs the app the way it&#x27;s meant to run.
 
@@ -2527,16 +2641,18 @@ secure image that runs the app the way it&#x27;s meant to run.
 - Never commit secrets, private keys, or `.env` files to the image or the repo.
 - If the app is hard to containerize cleanly (stateful, needs host services),
   stop and flag it rather than hacking around it.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="devops-deploy-feature-flag-rollout">Reusable prompt: feature flags &amp; progressive rollout</h3>
+<h3 id="devops-deploy-feature-flag-rollout"><i data-lucide="server" aria-hidden="true"></i><span>Reusable prompt: feature flags &amp; progressive rollout</span></h3>
 <button class="copy" data-copy="devops-deploy-feature-flag-rollout">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/devops-deploy/feature-flag-rollout-prompt.md">devops-deploy/feature-flag-rollout-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to ship a risky change
 behind a flag with progressive rollout, an instant kill switch, and a cleanup
 plan.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-devops-deploy-feature-flag-rollout">Ship the requested feature behind a feature flag with a progressive rollout
 plan. Flags exist to decouple deploy from release: the code ships dark,
 enables gradually, and can be killed in seconds without a redeploy.
@@ -2571,16 +2687,18 @@ enables gradually, and can be killed in seconds without a redeploy.
   grenade.
 - Schema changes behind flags must stay backward-compatible with both states,
   since rollback can leave mixed data.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="devops-deploy-incident-response">Reusable prompt: incident response</h3>
+<h3 id="devops-deploy-incident-response"><i data-lucide="server" aria-hidden="true"></i><span>Reusable prompt: incident response</span></h3>
 <button class="copy" data-copy="devops-deploy-incident-response">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/devops-deploy/incident-response-prompt.md">devops-deploy/incident-response-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to debug a live incident
 or write a post-mortem - structured triage, root-cause analysis, and
 actionable follow-ups, not blame.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-devops-deploy-incident-response">Help me debug this incident or write a post-mortem for `[incident description
 / error / symptom]`. The goal: understand what happened, fix it, prevent it
 from happening again, and document it honestly.
@@ -2631,16 +2749,18 @@ from happening again, and document it honestly.
   root cause - reduce impact first.
 - If the root cause is uncertain, say so and list what evidence supports
   each hypothesis.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="devops-deploy-infrastructure-as-code">Reusable prompt: infrastructure as code</h3>
+<h3 id="devops-deploy-infrastructure-as-code"><i data-lucide="server" aria-hidden="true"></i><span>Reusable prompt: infrastructure as code</span></h3>
 <button class="copy" data-copy="devops-deploy-infrastructure-as-code">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/devops-deploy/infrastructure-as-code-prompt.md">devops-deploy/infrastructure-as-code-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to define or change cloud
 infrastructure (Terraform/OpenTofu, CloudFormation, CDK, Pulumi) with the
 same discipline as the rest of your code.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-devops-deploy-infrastructure-as-code">Set up / modify the infrastructure for this repository using
 `[Terraform/OpenTofu/CloudFormation/CDK/Pulumi]`. Treat infrastructure as
 code: reviewable, versioned, and safely applied.
@@ -2676,16 +2796,18 @@ code: reviewable, versioned, and safely applied.
 - Never hardcode secrets; never commit credentials or private keys.
 - If the cloud setup can&#x27;t be validated without real credentials, say so and
   produce the config plus a clear plan-verification step for the user.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="devops-deploy-kubernetes-deployment">Reusable prompt: Kubernetes deployment</h3>
+<h3 id="devops-deploy-kubernetes-deployment"><i data-lucide="server" aria-hidden="true"></i><span>Reusable prompt: Kubernetes deployment</span></h3>
 <button class="copy" data-copy="devops-deploy-kubernetes-deployment">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/devops-deploy/kubernetes-deployment-prompt.md">devops-deploy/kubernetes-deployment-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to deploy to Kubernetes
 securely: real health probes, zero-downtime rollouts, non-root pods, and
 bounded resources.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-devops-deploy-kubernetes-deployment">Deploy this application to Kubernetes properly. The bar: pods pass real
 health checks, rollouts don&#x27;t drop requests, nothing runs as root, and
 resource usage is bounded and visible.
@@ -2722,16 +2844,18 @@ resource usage is bounded and visible.
   applied is fiction.
 - If the cluster lacks a feature (e.g., NetworkPolicy enforcement), say so
   rather than pretending the YAML protects anything.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="devops-deploy-monitoring-observability">Reusable prompt: monitoring and observability</h3>
+<h3 id="devops-deploy-monitoring-observability"><i data-lucide="server" aria-hidden="true"></i><span>Reusable prompt: monitoring and observability</span></h3>
 <button class="copy" data-copy="devops-deploy-monitoring-observability">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/devops-deploy/monitoring-observability-prompt.md">devops-deploy/monitoring-observability-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to set up logging,
 metrics, and alerting - actionable dashboards and alerts, not noisy
 dashboards nobody checks.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-devops-deploy-monitoring-observability">Set up monitoring and observability for `[service / application / endpoint]`.
 The goal: when something goes wrong, you know what, where, and why within
 minutes, not hours of log-diving.
@@ -2777,19 +2901,21 @@ minutes, not hours of log-diving.
   stack.
 - If the repo already has observability tooling, extend it rather than
   introducing a parallel system.</pre>
+</details>
 </article>
 </section>
 <section class="cat">
-<h2 id="docs-delivery">docs-delivery</h2>
+<h2 id="docs-delivery"><i data-lucide="file-text" aria-hidden="true"></i><span>docs-delivery</span><span class="count">(5)</span></h2>
 <article class="prompt">
 <div class="head">
-<h3 id="docs-delivery-api-documentation">Reusable prompt: API documentation</h3>
+<h3 id="docs-delivery-api-documentation"><i data-lucide="file-text" aria-hidden="true"></i><span>Reusable prompt: API documentation</span></h3>
 <button class="copy" data-copy="docs-delivery-api-documentation">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/docs-delivery/api-documentation-prompt.md">docs-delivery/api-documentation-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to generate accurate API
 documentation from existing code - OpenAPI specs, endpoint references, or
 SDK guides that match what the code actually does.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-docs-delivery-api-documentation">Generate API documentation for `[endpoint / route group / service]` in this
 repository. The goal: docs that accurately describe the real API, not an
 idealized version that doesn&#x27;t match the code.
@@ -2828,15 +2954,17 @@ idealized version that doesn&#x27;t match the code.
   don&#x27;t omit it because it&#x27;s uncommon.
 - If the existing docs and the code disagree, the code wins and the docs
   need fixing.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="docs-delivery-documentation-writer">Reusable prompt: documentation writer</h3>
+<h3 id="docs-delivery-documentation-writer"><i data-lucide="file-text" aria-hidden="true"></i><span>Reusable prompt: documentation writer</span></h3>
 <button class="copy" data-copy="docs-delivery-documentation-writer">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/docs-delivery/documentation-writer-prompt.md">docs-delivery/documentation-writer-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to write or update
 documentation that is accurate, useful, and in the project&#x27;s voice.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-docs-delivery-documentation-writer">Write/update documentation for this repository: `[README / API docs / setup
 guide / CONTRIBUTING]`. Good docs are accurate, honest, and easy to skim.
 Never write docs that sound confident but say nothing.
@@ -2871,16 +2999,18 @@ Never write docs that sound confident but say nothing.
 - Don&#x27;t copy-paste marketing fluff or generic boilerplate - say what THIS
   project does.
 - If the code and the docs disagree, trust the code and fix the docs.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="docs-delivery-inline-documentation">Reusable prompt: inline documentation</h3>
+<h3 id="docs-delivery-inline-documentation"><i data-lucide="file-text" aria-hidden="true"></i><span>Reusable prompt: inline documentation</span></h3>
 <button class="copy" data-copy="docs-delivery-inline-documentation">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/docs-delivery/inline-documentation-prompt.md">docs-delivery/inline-documentation-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to add or improve inline
 documentation - accurate JSDoc/docstrings that explain the &quot;why&quot;, not ones
 that restate the code.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-docs-delivery-inline-documentation">Add or improve inline documentation (JSDoc, docstrings, comments) for
 `[file / module / function]` in this repository. The goal: documentation that
 helps a future developer understand the non-obvious decisions, not noise that
@@ -2923,16 +3053,18 @@ restates what the code already says.
   the placeholder.
 - If the code is too complex to document concisely, the code may need
   refactoring rather than longer docs.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="docs-delivery-readme-builder">Reusable prompt: README builder</h3>
+<h3 id="docs-delivery-readme-builder"><i data-lucide="file-text" aria-hidden="true"></i><span>Reusable prompt: README builder</span></h3>
 <button class="copy" data-copy="docs-delivery-readme-builder">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/docs-delivery/readme-builder-prompt.md">docs-delivery/readme-builder-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to build a comprehensive
 README from scratch - honest, useful, and structured for someone encountering
 the project for the first time.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-docs-delivery-readme-builder">Build a README.md for this repository from scratch (or rewrite the existing
 one). The goal: a README that helps a newcomer understand what this project
 does, why they&#x27;d use it, and how to get started in under 2 minutes.
@@ -2972,15 +3104,17 @@ does, why they&#x27;d use it, and how to get started in under 2 minutes.
   section or remove it.
 - Keep the README scannable: short paragraphs, code blocks, and lists. No
   walls of text.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="docs-delivery-release-notes-changelog">Reusable prompt: changelog &amp; release notes</h3>
+<h3 id="docs-delivery-release-notes-changelog"><i data-lucide="file-text" aria-hidden="true"></i><span>Reusable prompt: changelog &amp; release notes</span></h3>
 <button class="copy" data-copy="docs-delivery-release-notes-changelog">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/docs-delivery/release-notes-changelog-prompt.md">docs-delivery/release-notes-changelog-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to turn git history into
 a clear, honest changelog for a release.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-docs-delivery-release-notes-changelog">Write the release notes/changelog for `[version / tag / range of commits]` of
 this repository, based on the actual git history. Read the commits - don&#x27;t
 write from memory or from the release title alone.
@@ -3010,19 +3144,21 @@ write from memory or from the release title alone.
 - If the repo uses auto-generated release notes, improve and reconcile with
   them rather than duplicating or conflicting.
 - Verify the version numbers and links you reference exist.</pre>
+</details>
 </article>
 </section>
 <section class="cat">
-<h2 id="frontend-ui">frontend-ui</h2>
+<h2 id="frontend-ui"><i data-lucide="palette" aria-hidden="true"></i><span>frontend-ui</span><span class="count">(9)</span></h2>
 <article class="prompt">
 <div class="head">
-<h3 id="frontend-ui-component-build">Reusable prompt: component build</h3>
+<h3 id="frontend-ui-component-build"><i data-lucide="palette" aria-hidden="true"></i><span>Reusable prompt: component build</span></h3>
 <button class="copy" data-copy="frontend-ui-component-build">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/frontend-ui/component-build-prompt.md">frontend-ui/component-build-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to build a reusable,
 accessible UI component - with proper props, variants, and stories, not a
 one-off hardcoded element.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-frontend-ui-component-build">Build a reusable UI component for `[component name and purpose]` in this
 repository. The goal: a component that works across multiple contexts, is
 accessible, and follows the project&#x27;s design system conventions.
@@ -3062,10 +3198,11 @@ accessible, and follows the project&#x27;s design system conventions.
 - Never skip accessibility - a component that isn&#x27;t accessible is not done.
 - If the codebase already has a similar component, extend it rather than
   building from scratch.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="frontend-ui-design-handoff">Reusable prompt: design handoff to code</h3>
+<h3 id="frontend-ui-design-handoff"><i data-lucide="palette" aria-hidden="true"></i><span>Reusable prompt: design handoff to code</span></h3>
 <button class="copy" data-copy="frontend-ui-design-handoff">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/frontend-ui/design-handoff-prompt.md">frontend-ui/design-handoff-prompt.md</a></p>
@@ -3073,6 +3210,7 @@ accessible, and follows the project&#x27;s design system conventions.
 (mockup image, Figma screenshot, or reference HTML) into code that matches
 it closely and behaves responsively, using a comparison loop that finds the
 gaps.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-frontend-ui-design-handoff">Implement `[the page or component]` to match the provided design
 `[reference: link, file, or screenshot path]` in this repository. The goal
 is visual parity at the target breakpoints - close enough that a side-by-side
@@ -3121,16 +3259,18 @@ comparison shows only intentional differences.
 - Never call it done before the side-by-side comparison step.
 - If the reference is ambiguous, list the ambiguity and your default rather
   than silently choosing.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="frontend-ui-i18n-localization">Reusable prompt: internationalization (i18n)</h3>
+<h3 id="frontend-ui-i18n-localization"><i data-lucide="palette" aria-hidden="true"></i><span>Reusable prompt: internationalization (i18n)</span></h3>
 <button class="copy" data-copy="frontend-ui-i18n-localization">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/frontend-ui/i18n-localization-prompt.md">frontend-ui/i18n-localization-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to internationalize an
 app properly - strings extracted, formats localized, layouts resilient, RTL
 handled.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-frontend-ui-i18n-localization">Internationalize this application so adding a new language is a translation
 task, not a code task. Extract everything locale-dependent; verify with a
 pseudo-locale before writing real translations.
@@ -3166,10 +3306,11 @@ pseudo-locale before writing real translations.
 - Never build sentences by concatenating translated fragments.
 - Language names, dates, and numbers inside content count as strings:
   extract them too.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="frontend-ui-instagram-carousel">Reusable prompt: Instagram carousel from a repo</h3>
+<h3 id="frontend-ui-instagram-carousel"><i data-lucide="palette" aria-hidden="true"></i><span>Reusable prompt: Instagram carousel from a repo</span></h3>
 <button class="copy" data-copy="frontend-ui-instagram-carousel">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/frontend-ui/instagram-carousel-prompt.md">frontend-ui/instagram-carousel-prompt.md</a></p>
@@ -3177,6 +3318,7 @@ pseudo-locale before writing real translations.
 branded, swipeable Instagram carousel, delivered as self-contained HTML slides
 ready to screenshot and post. Repo-agnostic: it works for any project, in any
 language, with any visual identity.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-frontend-ui-instagram-carousel">Create an Instagram carousel post about this repository, following the repo&#x27;s
 existing visual identity. Deliver it as a single self-contained HTML file
 containing `N` slide sections (ask me for `N` if I haven&#x27;t said, otherwise default
@@ -3290,16 +3432,18 @@ is **not part of the slides** (e.g. a `.post-notes` block) containing:
 - Do not pad slides with placeholder content; if you don&#x27;t have a real fact for
   a slot, leave the slide out or reshape the arc rather than fabricate.
 - Follow the repo&#x27;s actual category counts and naming.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="frontend-ui-responsive-design">Reusable prompt: responsive design</h3>
+<h3 id="frontend-ui-responsive-design"><i data-lucide="palette" aria-hidden="true"></i><span>Reusable prompt: responsive design</span></h3>
 <button class="copy" data-copy="frontend-ui-responsive-design">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/frontend-ui/responsive-design-prompt.md">frontend-ui/responsive-design-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to audit and implement
 responsive layouts - mobile-first, fluid, and tested at every breakpoint,
 not &quot;looks fine on my screen.&quot;</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-frontend-ui-responsive-design">Audit and implement responsive design for `[page / component / layout]` in
 this repository. The goal: a UI that works well at every screen size, built
 mobile-first with fluid techniques, not breakpoint hacks.
@@ -3341,16 +3485,18 @@ mobile-first with fluid techniques, not breakpoint hacks.
   exist on touch devices.
 - If the repo uses a CSS framework (Tailwind, Bootstrap), use its built-in
   responsive utilities rather than custom media queries.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="frontend-ui-state-management">Reusable prompt: frontend state management</h3>
+<h3 id="frontend-ui-state-management"><i data-lucide="palette" aria-hidden="true"></i><span>Reusable prompt: frontend state management</span></h3>
 <button class="copy" data-copy="frontend-ui-state-management">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/frontend-ui/state-management-prompt.md">frontend-ui/state-management-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to untangle or design
 client state - the right home for each kind of state, minimal moving parts,
 no sync bugs.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-frontend-ui-state-management">Design or refactor the client-side state management for this frontend app.
 The goal: each piece of state has exactly one home and one owner, derived
 data is computed rather than stored, and no component syncs state by hand.
@@ -3385,10 +3531,11 @@ data is computed rather than stored, and no component syncs state by hand.
 - Two sources of truth for the same fact must be merged, or one deleted.
 - Any state you add must answer: who owns it, who may write it, and when is
   it invalidated?</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="frontend-ui-ui-audit">Reusable prompt: UI audit<span class="spec">spec</span></h3>
+<h3 id="frontend-ui-ui-audit"><i data-lucide="palette" aria-hidden="true"></i><span>Reusable prompt: UI audit</span><span class="spec">spec</span></h3>
 <button class="copy" data-copy="frontend-ui-ui-audit">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/frontend-ui/ui-audit-prompt.md">frontend-ui/ui-audit-prompt.md</a></p>
@@ -3396,6 +3543,7 @@ data is computed rather than stored, and no component syncs state by hand.
 level - with defined scope, hard constraints, and evidence-backed findings
 that cite exact file:line and proposed fixes. Every finding must be
 verifiable against the codebase.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-frontend-ui-ui-audit">Audit the UI of `[page / component / feature]` in this repository against the
 project&#x27;s own design system and conventions. Produce a prioritized list of
 findings, each with a concrete fix that can be checked against the repo&#x27;s
@@ -3516,16 +3664,18 @@ Before reporting the audit complete, confirm each of these:
   priority than a 2px spacing inconsistency.
 - If the UI is already consistent within scope, say so and list what was
   verified - do not invent issues to fill the report.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="frontend-ui-web-performance-vitals">Reusable prompt: Core Web Vitals optimization</h3>
+<h3 id="frontend-ui-web-performance-vitals"><i data-lucide="palette" aria-hidden="true"></i><span>Reusable prompt: Core Web Vitals optimization</span></h3>
 <button class="copy" data-copy="frontend-ui-web-performance-vitals">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/frontend-ui/web-performance-vitals-prompt.md">frontend-ui/web-performance-vitals-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to diagnose and fix real
 Core Web Vitals problems - measured in lab and field, with before/after
 proof.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-frontend-ui-web-performance-vitals">Diagnose and improve this site&#x27;s Core Web Vitals (LCP, INP, CLS). Work from
 measurements: identify the dominant problem first, fix it, re-measure.
 Optimizing the wrong thing is wasted effort.
@@ -3561,16 +3711,18 @@ impact, and what remains with expected gains.
 - Field data outranks lab data when they disagree - optimize what users
   experience.
 - Once a vital is comfortably green, stop polishing it and move to the next.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="frontend-ui-website-seo">Reusable prompt: Website SEO audit and optimization</h3>
+<h3 id="frontend-ui-website-seo"><i data-lucide="palette" aria-hidden="true"></i><span>Reusable prompt: Website SEO audit and optimization</span></h3>
 <button class="copy" data-copy="frontend-ui-website-seo">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/frontend-ui/website-seo-prompt.md">frontend-ui/website-seo-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to perform a technical
 SEO audit - crawlability, metadata, structured data, redirects, and speed -
 with verification at every step.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-frontend-ui-website-seo">Audit and improve this website&#x27;s technical SEO. Work from verified
 evidence, not guesses: a bot hasn&#x27;t rendered or indexed a page just because
 you typed a URL. Rank fixes by impact on indexing and ranking, implement
@@ -3635,18 +3787,20 @@ remaining blocked-by-non-technical-work items.
 - Optimize pages people search for - not an arbitrary audit list.
 - If content quality or rankings are the goal, say so and scope in the
   content work; this prompt is the technical foundation.</pre>
+</details>
 </article>
 </section>
 <section class="cat">
-<h2 id="git-github">git-github</h2>
+<h2 id="git-github"><i data-lucide="git-branch" aria-hidden="true"></i><span>git-github</span><span class="count">(12)</span></h2>
 <article class="prompt">
 <div class="head">
-<h3 id="git-github-ci-cd-workflow">Reusable prompt: CI/CD pipeline builder<span class="spec">spec</span></h3>
+<h3 id="git-github-ci-cd-workflow"><i data-lucide="git-branch" aria-hidden="true"></i><span>Reusable prompt: CI/CD pipeline builder</span><span class="spec">spec</span></h3>
 <button class="copy" data-copy="git-github-ci-cd-workflow">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/git-github/ci-cd-workflow-prompt.md">git-github/ci-cd-workflow-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to build a GitHub Actions
 pipeline that is correct, secure, and actually verified.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-git-github-ci-cd-workflow">Create a CI/CD pipeline for **this** repository using GitHub Actions. Do not
 ask which repo - use the current one. The pipeline must be fully automatic and
 enforce the constraints below.
@@ -3694,16 +3848,18 @@ bash with the GitHub CLI (`gh`) - no unchecked third-party actions.
    conflict with it - reconcile rather than replace.
 5. Confirm commit-message style follows the repo&#x27;s conventions (Conventional
    Commits) if committing.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="git-github-commit-checklist">Reusable prompt: commit checklist &amp; consistency gates</h3>
+<h3 id="git-github-commit-checklist"><i data-lucide="git-branch" aria-hidden="true"></i><span>Reusable prompt: commit checklist &amp; consistency gates</span></h3>
 <button class="copy" data-copy="git-github-commit-checklist">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/git-github/commit-checklist-prompt.md">git-github/commit-checklist-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to add automated PR gates
 that keep a repository&#x27;s derived artifacts in sync - so forgetting the
 housekeeping becomes structurally impossible.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-git-github-commit-checklist">Build a commit checklist for this repository: deterministic checks that fail
 CI when derived artifacts drift out of sync. Repos rot through forgotten
 bookkeeping, not bad intentions; make the bookkeeping unforgettable without
@@ -3746,15 +3902,17 @@ drowning contributors in noise.
 - Keep the suite fast and quiet when green - gates that cry wolf get deleted.
 - Enforcement changes are stated in the PR description, never snuck into an
   unrelated change.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="git-github-dependency-upgrade">Reusable prompt: dependency upgrade</h3>
+<h3 id="git-github-dependency-upgrade"><i data-lucide="git-branch" aria-hidden="true"></i><span>Reusable prompt: dependency upgrade</span></h3>
 <button class="copy" data-copy="git-github-dependency-upgrade">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/git-github/dependency-upgrade-prompt.md">git-github/dependency-upgrade-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to upgrade a dependency
 safely - change what breaks, understand what changed, and verify.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-git-github-dependency-upgrade">Upgrade `[package]` from `[old version]` to `[new version]` in this repository.
 Do this carefully: an upgrade is a code change with its own risk, not a
 package.json edit.
@@ -3788,16 +3946,18 @@ package.json edit.
 - If the new version needs a different runtime/Node/Python/Go version, stop
   and flag it instead of silently changing the environment.
 - Verify with the repo&#x27;s real checks; don&#x27;t claim green CI you didn&#x27;t see.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="git-github-git-bisect-debug">Reusable prompt: git bisect debug</h3>
+<h3 id="git-github-git-bisect-debug"><i data-lucide="git-branch" aria-hidden="true"></i><span>Reusable prompt: git bisect debug</span></h3>
 <button class="copy" data-copy="git-github-git-bisect-debug">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/git-github/git-bisect-debug-prompt.md">git-github/git-bisect-debug-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to use git bisect to find
 the exact commit that introduced a bug - binary search through history with a
 verified test, not manual git log reading.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-git-github-git-bisect-debug">Use git bisect to find the exact commit that introduced `[bug / regression /
 behavior change]`. The goal: pinpoint the introducing commit so the fix is
 targeted, not a guess.
@@ -3837,16 +3997,18 @@ targeted, not a guess.
   `git bisect skip` or choose a narrower range rather than aborting.
 - If the bug is in a dependency, bisect the dependency separately, not this
   repo&#x27;s history.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="git-github-git-history-surgery">Reusable prompt: git history surgery</h3>
+<h3 id="git-github-git-history-surgery"><i data-lucide="git-branch" aria-hidden="true"></i><span>Reusable prompt: git history surgery</span></h3>
 <button class="copy" data-copy="git-github-git-history-surgery">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/git-github/git-history-surgery-prompt.md">git-github/git-history-surgery-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to perform tricky git
 operations safely - clean history, find the culprit commit, or rescue lost
 work without damaging the repo.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-git-github-git-history-surgery">Help me with the git operation I describe in this repository. Work carefully:
 git history surgery can destroy work. Verify your commands before running
 them and prefer non-destructive operations.
@@ -3879,10 +4041,11 @@ them and prefer non-destructive operations.
   tooling instead.
 - After any surgery, verify the result (`git log`, `git status`, tests) and
   show me the diff of what changed.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="git-github-good-first-issue-workflow">Reusable prompt: good-first-issue guard workflow<span class="spec">spec</span></h3>
+<h3 id="git-github-good-first-issue-workflow"><i data-lucide="git-branch" aria-hidden="true"></i><span>Reusable prompt: good-first-issue guard workflow</span><span class="spec">spec</span></h3>
 <button class="copy" data-copy="git-github-good-first-issue-workflow">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/git-github/good-first-issue-workflow-prompt.md">git-github/good-first-issue-workflow-prompt.md</a></p>
@@ -3896,6 +4059,7 @@ their PR is closed, with a note to pick an **unreserved** issue instead.
 First-time assignees get a welcome comment and keep the issue unless their
 assignment goes stale (no open PR within 14 days), at which point it&#x27;s
 released back to the pool.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-git-github-good-first-issue-workflow">Create a GitHub Actions workflow for **this** repository that reserves
 starter-labeled issues (`good first issue` and `help wanted`) for first-time
 contributors. The workflow must run fully automatically with no manual
@@ -4009,10 +4173,11 @@ instead.
    during verification.
 4. Confirm commit-message style follows the repo&#x27;s conventions
    (Conventional Commits) if committing.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="git-github-issue-resolving">Reusable prompt: resolve a GitHub issue</h3>
+<h3 id="git-github-issue-resolving"><i data-lucide="git-branch" aria-hidden="true"></i><span>Reusable prompt: resolve a GitHub issue</span></h3>
 <button class="copy" data-copy="git-github-issue-resolving">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/git-github/issue-resolving-prompt.md">git-github/issue-resolving-prompt.md</a></p>
@@ -4020,6 +4185,7 @@ instead.
 any repository from reading the ticket to a mergeable pull request, with the
 failure reproduced, the root cause proven, and the fix verified against the
 project&#x27;s real checks.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-git-github-issue-resolving">Help me resolve the GitHub issue I point you at (`OWNER/REPO#N`). The goal is
 a pull request a maintainer merges on the first or second review, not a patch
 that looks plausible. An issue is not resolved until the failing behavior is
@@ -4096,15 +4262,17 @@ gone, a regression test catches it, and the project&#x27;s own checks pass.
 3. The project&#x27;s full check pipeline from step 7 passes and the outputs are
    in the PR description.
 4. The PR diff contains only what the issue asked for, plus tests and docs.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="git-github-issue-triage-for-maintainers">Reusable prompt: issue triage for maintainers</h3>
+<h3 id="git-github-issue-triage-for-maintainers"><i data-lucide="git-branch" aria-hidden="true"></i><span>Reusable prompt: issue triage for maintainers</span></h3>
 <button class="copy" data-copy="git-github-issue-triage-for-maintainers">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/git-github/issue-triage-for-maintainers-prompt.md">git-github/issue-triage-for-maintainers-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to turn a backlog of
 untriaged issues into labeled, prioritized, answerable queues.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-git-github-issue-triage-for-maintainers">Triage the open issues in this repository. The goal is a backlog a
 maintainer can act on in priority order, not a pile of &quot;looked at it&quot; noise.
 
@@ -4146,15 +4314,17 @@ medium/low`) rather than inventing ad hoc labels per issue. Justify the
   extend it, don&#x27;t fragment it.
 - Ask, don&#x27;t assume, when severity or priority genuinely depends on product
   judgment rather than technical facts.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="git-github-open-source-contribution">Reusable prompt: open-source contribution</h3>
+<h3 id="git-github-open-source-contribution"><i data-lucide="git-branch" aria-hidden="true"></i><span>Reusable prompt: open-source contribution</span></h3>
 <button class="copy" data-copy="git-github-open-source-contribution">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/git-github/open-source-contribution-prompt.md">git-github/open-source-contribution-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to make a high-quality
 contribution to an open-source repository you don&#x27;t own - the right way.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-git-github-open-source-contribution">Help me contribute to the open-source project I point you at (`OWNER/REPO`).
 Read the project&#x27;s conventions before doing anything. A maintainer is going
 to read your work - make it easy to review and merge.
@@ -4190,10 +4360,11 @@ to read your work - make it easy to review and merge.
 - Never submit a PR with unrelated changes, dependency bumps, or formatting
   churn mixed in.
 - Don&#x27;t claim you ran tests you didn&#x27;t run. Verification must be real.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="git-github-open-source-maintainer-survival">Reusable prompt: open source maintainer survival</h3>
+<h3 id="git-github-open-source-maintainer-survival"><i data-lucide="git-branch" aria-hidden="true"></i><span>Reusable prompt: open source maintainer survival</span></h3>
 <button class="copy" data-copy="git-github-open-source-maintainer-survival">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/git-github/open-source-maintainer-survival-prompt.md">git-github/open-source-maintainer-survival-prompt.md</a></p>
@@ -4201,6 +4372,7 @@ to read your work - make it easy to review and merge.
 project&#x27;s maintenance practices so it keeps moving without burning out its
 maintainers: clear contribution guidelines, automation for the tedious
 parts, kind ways to say no, and a bus factor that is not one person.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-git-github-open-source-maintainer-survival">Review this project&#x27;s maintenance setup and produce a plan that keeps it
 sustainable: less noise, more automation, documented boundaries, and a path
 for others to take over. Recommend changes that are actionable in this repo,
@@ -4252,16 +4424,18 @@ not generic advice.
 - Never write a decline template that is curt or dismissive.
 - Keep recommendations scoped to this repo; do not drift into how to run
   every open source project ever.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="git-github-pr-review">Reusable prompt: pull request review</h3>
+<h3 id="git-github-pr-review"><i data-lucide="git-branch" aria-hidden="true"></i><span>Reusable prompt: pull request review</span></h3>
 <button class="copy" data-copy="git-github-pr-review">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/git-github/pr-review-prompt.md">git-github/pr-review-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to get a structured,
 evidence-driven pull request review that prioritises correctness over
 comment volume.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-git-github-pr-review">You are a senior software engineer reviewing a GitHub Pull Request.
 
 Your job is to determine whether the changes are correct, safe, maintainable, and consistent with the existing codebase.
@@ -4831,16 +5005,18 @@ You are not a comment generator.
 You are a maintainer.
 
 Read the code. Understand the intent. Find what actually matters. Explain it clearly. Then stop.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="git-github-release-automation">Reusable prompt: release automation</h3>
+<h3 id="git-github-release-automation"><i data-lucide="git-branch" aria-hidden="true"></i><span>Reusable prompt: release automation</span></h3>
 <button class="copy" data-copy="git-github-release-automation">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/git-github/release-automation-prompt.md">git-github/release-automation-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to automate versioning,
 tagging, changelog generation, and publishing - a reliable release pipeline,
 not a manual checklist.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-git-github-release-automation">Automate the release process for this repository. The goal: a CI-driven
 pipeline that versions, tags, changelogs, and publishes releases
 consistently, with no manual steps that can be forgotten.
@@ -4882,13 +5058,14 @@ consistently, with no manual steps that can be forgotten.
 - Never publish to a public registry without a tag and release notes.
 - If the project has multiple publish targets (e.g. npm + Docker), all must
   be part of the same release workflow.</pre>
+</details>
 </article>
 </section>
 <section class="cat">
-<h2 id="mobile-dev">mobile-dev</h2>
+<h2 id="mobile-dev"><i data-lucide="smartphone" aria-hidden="true"></i><span>mobile-dev</span><span class="count">(5)</span></h2>
 <article class="prompt">
 <div class="head">
-<h3 id="mobile-dev-mobile-app-develop">Reusable prompt: mobile app development<span class="spec">spec</span></h3>
+<h3 id="mobile-dev-mobile-app-develop"><i data-lucide="smartphone" aria-hidden="true"></i><span>Reusable prompt: mobile app development</span><span class="spec">spec</span></h3>
 <button class="copy" data-copy="mobile-dev-mobile-app-develop">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/mobile-dev/mobile-app-develop-prompt.md">mobile-dev/mobile-app-develop-prompt.md</a></p>
@@ -4896,6 +5073,7 @@ consistently, with no manual steps that can be forgotten.
 feature and verify it on real platforms - not just a single simulator
 screen. The agent must prove the feature survives no signal, revoked
 permissions, backgrounding, and platform differences.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-mobile-dev-mobile-app-develop">Build `[the mobile feature]` for this project and prove it works on a real
 device or emulator for each supported platform. The goal: a feature that
 survives the conditions real apps face - offline, permission denied,
@@ -4965,16 +5143,18 @@ in a hot-reload session.
 - Never let a network failure surface as an unhandled error screen.
 - If behavior differs by platform, handle it explicitly and note it - do not
   paper over it.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="mobile-dev-mobile-performance">Reusable prompt: mobile performance</h3>
+<h3 id="mobile-dev-mobile-performance"><i data-lucide="smartphone" aria-hidden="true"></i><span>Reusable prompt: mobile performance</span></h3>
 <button class="copy" data-copy="mobile-dev-mobile-performance">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/mobile-dev/mobile-performance-prompt.md">mobile-dev/mobile-performance-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to find and fix mobile
 performance problems from measurements - startup, frame rate, app size,
 memory, and network - with before/after proof for every change.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-mobile-dev-mobile-performance">Improve `[what is slow: startup, scrolling, bundle size, memory, or network]`
 for this mobile project. Measure each problem on a real device or emulator
 first, identify what actually costs you, fix the few things that matter, and
@@ -5018,10 +5198,11 @@ prove the result with the same measurement method before and after.
 - Never ship a size or memory regression to fix a startup one without saying
   so.
 - Prefer a few measured wins over many speculative micro-optimizations.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="mobile-dev-mobile-ui-audit">Reusable prompt: mobile UI audit<span class="spec">spec</span></h3>
+<h3 id="mobile-dev-mobile-ui-audit"><i data-lucide="smartphone" aria-hidden="true"></i><span>Reusable prompt: mobile UI audit</span><span class="spec">spec</span></h3>
 <button class="copy" data-copy="mobile-dev-mobile-ui-audit">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/mobile-dev/mobile-ui-audit-prompt.md">mobile-dev/mobile-ui-audit-prompt.md</a></p>
@@ -5030,6 +5211,7 @@ spec level: platform conventions, touch targets, safe areas, accessibility,
 states, and theming - with evidence-backed findings that cite exact file:line
 and a verifiable fix for each one. Mobile UI lives on the device, so the audit
 runs on a real screen, not a web-inspector view of a portrait render.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-mobile-dev-mobile-ui-audit">Audit the UI of `[screen / flow / feature]` in this mobile project against the
 platform conventions it must run on (iOS and/or Android) and the project&#x27;s own
 design conventions. Produce a prioritized list of findings, each with a
@@ -5126,10 +5308,11 @@ layout before moving to spacing nuance.
   2pt spacing nit.
 - If the UI is already consistent within scope, say so and list what was
   verified - do not invent issues to fill the report.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="mobile-dev-mobile-ui-overhaul">Reusable prompt: mobile UI overhaul<span class="spec">spec</span></h3>
+<h3 id="mobile-dev-mobile-ui-overhaul"><i data-lucide="smartphone" aria-hidden="true"></i><span>Reusable prompt: mobile UI overhaul</span><span class="spec">spec</span></h3>
 <button class="copy" data-copy="mobile-dev-mobile-ui-overhaul">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/mobile-dev/mobile-ui-overhaul-prompt.md">mobile-dev/mobile-ui-overhaul-prompt.md</a></p>
@@ -5138,6 +5321,7 @@ end-to-end: define a target design, reimplement the screens against the
 project&#x27;s conventions, and prove the result on every declared platform with
 before/after evidence. An overhaul that only restyles one screen in a
 hot-reload session is not an overhaul.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-mobile-dev-mobile-ui-overhaul">Overhaul the UI of `[feature / the whole app]` for this mobile project. Define
 what the target UI must be, reimplement the screens, and prove the result on
 every declared platform with before/after evidence - preserving the app&#x27;s
@@ -5213,10 +5397,11 @@ behavior, state, and data flows.
 - Never claim a win without before and after evidence generated the same way.
 - If a screen already meets the target spec, say so with evidence rather than
   changing it for change&#x27;s sake.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="mobile-dev-website-to-mobile-app">Reusable prompt: website to mobile app<span class="spec">spec</span></h3>
+<h3 id="mobile-dev-website-to-mobile-app"><i data-lucide="smartphone" aria-hidden="true"></i><span>Reusable prompt: website to mobile app</span><span class="spec">spec</span></h3>
 <button class="copy" data-copy="mobile-dev-website-to-mobile-app">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/mobile-dev/website-to-mobile-app-prompt.md">mobile-dev/website-to-mobile-app-prompt.md</a></p>
@@ -5224,6 +5409,7 @@ behavior, state, and data flows.
 website into a mobile app, picking the adaptation strategy from the website&#x27;s
 actual architecture rather than a preferred toolkit. The choice must be
 justified against the site&#x27;s code, and the result proven on a real device.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-mobile-dev-website-to-mobile-app">Turn `[the website]` into `[the mobile app]`. Decide the adaptation strategy
 from the website&#x27;s actual architecture, then build and verify the app on the
 declared platforms. The strategy is a decision, not a default.
@@ -5300,19 +5486,21 @@ declared platforms. The strategy is a decision, not a default.
 - Never ship a platform you have not run.
 - Never claim &quot;works just like the website&quot; for behaviors you did not verify
   offline and after background.</pre>
+</details>
 </article>
 </section>
 <section class="cat">
-<h2 id="security-performance">security-performance</h2>
+<h2 id="security-performance"><i data-lucide="shield" aria-hidden="true"></i><span>security-performance</span><span class="count">(8)</span></h2>
 <article class="prompt">
 <div class="head">
-<h3 id="security-performance-auth-implementation">Reusable prompt: authentication &amp; authorization implementation</h3>
+<h3 id="security-performance-auth-implementation"><i data-lucide="shield" aria-hidden="true"></i><span>Reusable prompt: authentication &amp; authorization implementation</span></h3>
 <button class="copy" data-copy="security-performance-auth-implementation">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/security-performance/auth-implementation-prompt.md">security-performance/auth-implementation-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to implement auth the
 safe way - sessions and tokens done right, authorization checked server-side,
 and the common pitfalls closed.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-security-performance-auth-implementation">Implement the requested authentication/authorization for this application.
 Auth bugs are catastrophic and subtle; follow established patterns exactly
 and verify each property with tests.
@@ -5347,16 +5535,18 @@ and verify each property with tests.
 - Error messages must not reveal whether an email or account exists.
 - If a maintained auth library or service in the stack covers a need, use it
   instead of hand-building; note any deviation and why.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="security-performance-dependency-audit">Reusable prompt: dependency audit</h3>
+<h3 id="security-performance-dependency-audit"><i data-lucide="shield" aria-hidden="true"></i><span>Reusable prompt: dependency audit</span></h3>
 <button class="copy" data-copy="security-performance-dependency-audit">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/security-performance/dependency-audit-prompt.md">security-performance/dependency-audit-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to audit dependencies for
 vulnerabilities, license issues, and staleness - with actionable fix
 recommendations, not just a wall of warnings.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-security-performance-dependency-audit">Audit the dependencies of this repository. The goal: identify security risks,
 license concerns, and stale packages, then provide a prioritized fix plan.
 
@@ -5399,16 +5589,18 @@ license concerns, and stale packages, then provide a prioritized fix plan.
   existing dependency has a safe version.
 - If a dependency is abandoned with no maintained fork, flag it for
   replacement rather than continuing to use it.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="security-performance-load-testing">Reusable prompt: load testing</h3>
+<h3 id="security-performance-load-testing"><i data-lucide="shield" aria-hidden="true"></i><span>Reusable prompt: load testing</span></h3>
 <button class="copy" data-copy="security-performance-load-testing">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/security-performance/load-testing-prompt.md">security-performance/load-testing-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to design and run load
 tests with measurable thresholds and reproducible results, not a one-off
 &quot;it felt fast&quot; test.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-security-performance-load-testing">Design and run load tests for `[endpoint / service / workflow]` in this
 repository. The goal: measurable performance under load with clear pass/fail
 thresholds, not just &quot;it didn&#x27;t crash.&quot;
@@ -5448,16 +5640,18 @@ thresholds, not just &quot;it didn&#x27;t crash.&quot;
 - Never use toy data volumes that don&#x27;t represent real usage patterns.
 - If the test environment differs significantly from production, document
   the differences and how they affect the results.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="security-performance-memory-leak-hunting">Reusable prompt: memory leak hunting</h3>
+<h3 id="security-performance-memory-leak-hunting"><i data-lucide="shield" aria-hidden="true"></i><span>Reusable prompt: memory leak hunting</span></h3>
 <button class="copy" data-copy="security-performance-memory-leak-hunting">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/security-performance/memory-leak-hunting-prompt.md">security-performance/memory-leak-hunting-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to hunt down a memory leak
 in a running service: measure the growth, isolate what retains memory, apply a
 minimal fix, and verify the allocation curve goes flat under the same load.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-security-performance-memory-leak-hunting">Find and fix the memory leak in `[service or component]`. Work from
 measurements, never from suspicion: a process that &quot;seems to grow&quot; is not
 evidence. Establish the baseline curve, reproduce steady growth, isolate the
@@ -5507,15 +5701,17 @@ Paste the before and after memory curves (same scenario, same duration) with the
 command that produced each. Show the retainer and ownership chain from the
 diffed snapshots, and quote the line that holds the reference, with the fix on
 top of it. Run the repo&#x27;s test suite and show it passes.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="security-performance-performance-optimization">Reusable prompt: performance optimization</h3>
+<h3 id="security-performance-performance-optimization"><i data-lucide="shield" aria-hidden="true"></i><span>Reusable prompt: performance optimization</span></h3>
 <button class="copy" data-copy="security-performance-performance-optimization">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/security-performance/performance-optimization-prompt.md">security-performance/performance-optimization-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to find real bottlenecks
 and fix them with evidence - never guess-and-tune.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-security-performance-performance-optimization">Optimize the performance of `[feature / endpoint / function / hot path]` in
 this repository. The rule: **measure first, prove every change**.
 
@@ -5549,16 +5745,18 @@ this repository. The rule: **measure first, prove every change**.
   comprehension&quot; without evidence it matters).
 - If the win comes with a trade-off (memory, complexity, portability), state
   it plainly.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="security-performance-secrets-management">Reusable prompt: secrets management</h3>
+<h3 id="security-performance-secrets-management"><i data-lucide="shield" aria-hidden="true"></i><span>Reusable prompt: secrets management</span></h3>
 <button class="copy" data-copy="security-performance-secrets-management">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/security-performance/secrets-management-prompt.md">security-performance/secrets-management-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to audit and remediate
 hardcoded secrets - find them, remove them, and set up proper secret
 management.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-security-performance-secrets-management">Audit this repository for hardcoded secrets and set up proper secret
 management. The goal: no secrets in code, no secrets in git history, and a
 clear pattern for handling secrets going forward.
@@ -5604,15 +5802,17 @@ clear pattern for handling secrets going forward.
   they need rotation and history rewriting or acknowledgment.
 - If the project uses a secrets manager (Vault, AWS Secrets Manager, etc.),
   integrate with it rather than introducing a new solution.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="security-performance-security-audit">Reusable prompt: security audit<span class="spec">spec</span></h3>
+<h3 id="security-performance-security-audit"><i data-lucide="shield" aria-hidden="true"></i><span>Reusable prompt: security audit</span><span class="spec">spec</span></h3>
 <button class="copy" data-copy="security-performance-security-audit">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/security-performance/security-audit-prompt.md">security-performance/security-audit-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to run a disciplined
 security review that produces verified findings, not FUD.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-security-performance-security-audit">Audit this repository for security vulnerabilities. Be rigorous and honest:
 report real issues with evidence, and skip anything you can&#x27;t verify. Your
 findings are what the team will act on, so accuracy matters more than volume.
@@ -5658,16 +5858,18 @@ found clean.
   plainly.
 - If something looks vulnerable but you can&#x27;t confirm the path, mark it as
   &quot;needs confirmation&quot; rather than a confirmed finding.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="security-performance-threat-modeling">Reusable prompt: threat modeling</h3>
+<h3 id="security-performance-threat-modeling"><i data-lucide="shield" aria-hidden="true"></i><span>Reusable prompt: threat modeling</span></h3>
 <button class="copy" data-copy="security-performance-threat-modeling">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/security-performance/threat-modeling-prompt.md">security-performance/threat-modeling-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to threat-model a feature
 or system before or while building it - structured, specific, and ranked by
 real risk.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-security-performance-threat-modeling">Threat-model the specified feature or system in this repository. Produce a
 ranked list of realistic threats with mitigations - not a generic checklist.
 
@@ -5706,19 +5908,21 @@ mitigation, verification) plus the top three mitigations to implement first.
   config first; flag assumptions explicitly.
 - Do not implement mitigations unprompted; propose them.
 - A security control without a verification step does not count as mitigated.</pre>
+</details>
 </article>
 </section>
 <section class="cat">
-<h2 id="system-design">system-design</h2>
+<h2 id="system-design"><i data-lucide="layers" aria-hidden="true"></i><span>system-design</span><span class="count">(5)</span></h2>
 <article class="prompt">
 <div class="head">
-<h3 id="system-design-adr-writing">Reusable prompt: architecture decision record</h3>
+<h3 id="system-design-adr-writing"><i data-lucide="layers" aria-hidden="true"></i><span>Reusable prompt: architecture decision record</span></h3>
 <button class="copy" data-copy="system-design-adr-writing">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/system-design/adr-writing-prompt.md">system-design/adr-writing-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to turn a real technical
 decision into an Architecture Decision Record (ADR) that future teammates
 will actually understand.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-system-design-adr-writing">Write an ADR for a decision made (or being made) in this repository. The goal
 is a short, factual record of what was decided, why, and what alternatives
 were rejected - readable in two minutes by someone with no context.
@@ -5753,16 +5957,18 @@ under ~100 lines.
 - No rewriting history: if a decision looks wrong today, note it as a
   candidate for a superseding ADR instead of editing the old one.
 - Every claim about the codebase must be verified against the actual code.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="system-design-caching-strategy">Reusable prompt: caching strategy</h3>
+<h3 id="system-design-caching-strategy"><i data-lucide="layers" aria-hidden="true"></i><span>Reusable prompt: caching strategy</span></h3>
 <button class="copy" data-copy="system-design-caching-strategy">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/system-design/caching-strategy-prompt.md">system-design/caching-strategy-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to add caching that
 actually pays for itself - with invalidation designed up front and hit rates
 measured, not assumed.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-system-design-caching-strategy">Design and implement caching for this application where measurement shows it
 helps. Cache only what is measurably expensive and safely cacheable; wrong
 caching is worse than no caching.
@@ -5798,16 +6004,18 @@ caching is worse than no caching.
 - If you cannot define how and when an entry becomes invalid, do not add the
   cache yet.
 - Report the stale-data window explicitly so its owner can accept it.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="system-design-concurrency-debugging">Reusable prompt: concurrency &amp; race condition debugging</h3>
+<h3 id="system-design-concurrency-debugging"><i data-lucide="layers" aria-hidden="true"></i><span>Reusable prompt: concurrency &amp; race condition debugging</span></h3>
 <button class="copy" data-copy="system-design-concurrency-debugging">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/system-design/concurrency-debugging-prompt.md">system-design/concurrency-debugging-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to hunt down race
 conditions, deadlocks, and async bugs methodically instead of sprinkling
 sleep calls and hoping.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-system-design-concurrency-debugging">Debug this concurrency problem (race condition, deadlock, flaky parallel
 test, or async ordering bug). Concurrency bugs are proven, not guessed: you
 must be able to explain the exact interleaving that causes the failure.
@@ -5842,16 +6050,18 @@ must be able to explain the exact interleaving that causes the failure.
   handled, backed by repeated clean runs.
 - Sleep-based &quot;fixes&quot; are not fixes - reject them explicitly.
 - Note deadlock potential of any new locking (lock ordering, reentrancy).</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="system-design-system-design">Reusable prompt: system design<span class="spec">spec</span></h3>
+<h3 id="system-design-system-design"><i data-lucide="layers" aria-hidden="true"></i><span>Reusable prompt: system design</span><span class="spec">spec</span></h3>
 <button class="copy" data-copy="system-design-system-design">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/system-design/system-design-prompt.md">system-design/system-design-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to design a system from
 requirements the way a senior engineer would: constraints first, components
 second, tradeoffs stated out loud, and every assumption labeled.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-system-design-system-design">Design the specified system for this project. Produce an architecture a team
 could start building tomorrow - concrete, justified, and honest about
 tradeoffs. Do not hand-wave scale or skip the boring parts (auth, failure,
@@ -5895,16 +6105,18 @@ and a phased delivery plan.
 - Numbers beat adjectives: &quot;p95 under 200ms&quot;, not &quot;fast&quot;.
 - Flag every assumption so readers can challenge it; never present guesses as
   decisions.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="system-design-technical-debt-triage">Reusable prompt: technical debt triage</h3>
+<h3 id="system-design-technical-debt-triage"><i data-lucide="layers" aria-hidden="true"></i><span>Reusable prompt: technical debt triage</span></h3>
 <button class="copy" data-copy="system-design-technical-debt-triage">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/system-design/technical-debt-triage-prompt.md">system-design/technical-debt-triage-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to inventory a codebase&#x27;s
 technical debt and get a prioritized paydown plan grounded in evidence, not
 vibes.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-system-design-technical-debt-triage">Inventory the technical debt in this repository and produce a triaged,
 prioritized paydown plan. Debt means anything that makes change slower or
 riskier than it should be: tangled modules, missing tests on critical paths,
@@ -5939,19 +6151,21 @@ the top three actions you would take this week and why.
 - No drive-by refactoring: this task produces a plan, not diffs, unless asked.
 - Do not pad the list - ten real debts beat forty speculative ones.
 - Dead code is debt too: recommend deletion where behavior isn&#x27;t referenced.</pre>
+</details>
 </article>
 </section>
 <section class="cat">
-<h2 id="testing-quality">testing-quality</h2>
+<h2 id="testing-quality"><i data-lucide="flask-conical" aria-hidden="true"></i><span>testing-quality</span><span class="count">(9)</span></h2>
 <article class="prompt">
 <div class="head">
-<h3 id="testing-quality-bug-finder">Reusable prompt: bug finder<span class="spec">spec</span></h3>
+<h3 id="testing-quality-bug-finder"><i data-lucide="flask-conical" aria-hidden="true"></i><span>Reusable prompt: bug finder</span><span class="spec">spec</span></h3>
 <button class="copy" data-copy="testing-quality-bug-finder">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/testing-quality/bug-finder-prompt.md">testing-quality/bug-finder-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to sweep a codebase
 across multiple correctness factors and produce a clear, evidence-backed,
 priority-ordered list of bugs - not guesses.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-testing-quality-bug-finder">Find the real bugs in this repository. Sweep the codebase across the factors
 below, read the actual code, and produce a clear, priority-ordered list of
 confirmed bugs. Accuracy beats volume: only report what you can verify with
@@ -6039,10 +6253,11 @@ Then end with:
 - If a suspected bug is guarded by an unclear invariant, mark it &quot;needs
   confirmation&quot; and say what would resolve it.
 - Be concise and concrete. No filler like &quot;this code could be improved&quot;.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="testing-quality-bug-finder-with-docs">Reusable prompt: bug finder with docs<span class="spec">spec</span></h3>
+<h3 id="testing-quality-bug-finder-with-docs"><i data-lucide="flask-conical" aria-hidden="true"></i><span>Reusable prompt: bug finder with docs</span><span class="spec">spec</span></h3>
 <button class="copy" data-copy="testing-quality-bug-finder-with-docs">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/testing-quality/bug-finder-with-docs-prompt.md">testing-quality/bug-finder-with-docs-prompt.md</a></p>
@@ -6050,6 +6265,7 @@ Then end with:
 across multiple correctness factors, produce a clear, priority-ordered list
 of bugs - and leave behind durable documentation of everything found so the
 team can act on it later.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-testing-quality-bug-finder-with-docs">Find the real bugs in this repository and document them. Sweep the codebase
 across the factors below, read the actual code, and produce a clear,
 priority-ordered list of confirmed bugs. Then record every finding in the
@@ -6166,15 +6382,17 @@ Then end the report with:
   improved&quot;.
 - If the repo already has a bug ledger or known-issues doc, update it, do not
   create a second one.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="testing-quality-chaos-resilience">Reusable prompt: chaos &amp; resilience testing</h3>
+<h3 id="testing-quality-chaos-resilience"><i data-lucide="flask-conical" aria-hidden="true"></i><span>Reusable prompt: chaos &amp; resilience testing</span></h3>
 <button class="copy" data-copy="testing-quality-chaos-resilience">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/testing-quality/chaos-resilience-prompt.md">testing-quality/chaos-resilience-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to test how the system
 behaves when dependencies fail - and to close the gaps found, with evidence.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-testing-quality-chaos-resilience">Test this system&#x27;s resilience by injecting failures. The question is never
 &quot;does it work?&quot; but &quot;what happens when X is slow, down, or full?&quot; - and the
 answer must come from experiments, not confidence.
@@ -6212,16 +6430,18 @@ answer must come from experiments, not confidence.
 - A timeout default of &quot;none/infinite&quot; is a defect - flag every one found.
 - Report what was tested and what wasn&#x27;t; untested resilience is unknown, not
   proven.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="testing-quality-code-coverage-gap">Reusable prompt: coverage gap analysis</h3>
+<h3 id="testing-quality-code-coverage-gap"><i data-lucide="flask-conical" aria-hidden="true"></i><span>Reusable prompt: coverage gap analysis</span></h3>
 <button class="copy" data-copy="testing-quality-code-coverage-gap">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/testing-quality/code-coverage-gap-prompt.md">testing-quality/code-coverage-gap-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to find real coverage
 gaps and fill them with tests that matter - not lines that bump the
 percentage.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-testing-quality-code-coverage-gap">Find the untested and under-tested parts of this repository and close the gaps
 with meaningful tests. The goal is risk reduction, not a higher coverage
 number.
@@ -6252,16 +6472,18 @@ number.
 - Don&#x27;t weaken existing assertions to improve coverage.
 - If a piece of code is painful to test, say so and suggest a small
   refactor rather than fighting it with a contrived test.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="testing-quality-contract-testing">Reusable prompt: contract testing</h3>
+<h3 id="testing-quality-contract-testing"><i data-lucide="flask-conical" aria-hidden="true"></i><span>Reusable prompt: contract testing</span></h3>
 <button class="copy" data-copy="testing-quality-contract-testing">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/testing-quality/contract-testing-prompt.md">testing-quality/contract-testing-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to set up consumer-driven
 contract tests between services, so API drift is caught in CI before it hits
 production.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-testing-quality-contract-testing">Set up contract testing between this service and its consumers or providers.
 Goal: each side verifies against a shared contract in CI, so breaking changes
 fail builds instead of production integrations.
@@ -6295,15 +6517,17 @@ fail builds instead of production integrations.
 - Never loosen a contract just to make a failing build green; change the code
   or consciously version/bump the contract with the consumer&#x27;s agreement.
 - Contract tests complement, not replace, integration smoke tests.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="testing-quality-e2e-test-scaffold">Reusable prompt: end-to-end test scaffold</h3>
+<h3 id="testing-quality-e2e-test-scaffold"><i data-lucide="flask-conical" aria-hidden="true"></i><span>Reusable prompt: end-to-end test scaffold</span></h3>
 <button class="copy" data-copy="testing-quality-e2e-test-scaffold">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/testing-quality/e2e-test-scaffold-prompt.md">testing-quality/e2e-test-scaffold-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to scaffold end-to-end or
 integration tests - realistic scenarios with proper setup, not toy smoke tests.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-testing-quality-e2e-test-scaffold">Scaffold end-to-end or integration tests for `[feature / workflow / route]`.
 The goal: tests that verify real user flows work correctly, with realistic
 fixtures and CI-ready setup.
@@ -6344,16 +6568,18 @@ fixtures and CI-ready setup.
   helpers or fixtures.
 - Tests that pass sometimes and fail sometimes are worse than no tests - fix
   flakiness before merging.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="testing-quality-mutation-testing">Reusable prompt: mutation testing</h3>
+<h3 id="testing-quality-mutation-testing"><i data-lucide="flask-conical" aria-hidden="true"></i><span>Reusable prompt: mutation testing</span></h3>
 <button class="copy" data-copy="testing-quality-mutation-testing">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/testing-quality/mutation-testing-prompt.md">testing-quality/mutation-testing-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to run mutation testing
 and validate that your test suite actually catches real defects, not just
 achieves coverage numbers.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-testing-quality-mutation-testing">Run mutation testing on `[module / file / test suite]` in this repository.
 The goal: find tests that pass even when the code is broken - these are the
 gaps where coverage lies.
@@ -6394,16 +6620,18 @@ gaps where coverage lies.
   framework, say so clearly instead of forcing an incompatible tool.
 - Mutation testing is a complement to code coverage, not a replacement. Use
   both.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="testing-quality-test-driven-development">Reusable prompt: strict TDD</h3>
+<h3 id="testing-quality-test-driven-development"><i data-lucide="flask-conical" aria-hidden="true"></i><span>Reusable prompt: strict TDD</span></h3>
 <button class="copy" data-copy="testing-quality-test-driven-development">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/testing-quality/test-driven-development-prompt.md">testing-quality/test-driven-development-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to build code
 test-first. Strict discipline - no code without a failing test, no skipping
 steps.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-testing-quality-test-driven-development">Implement `[feature/task]` using strict test-driven development in this
 repository. The discipline is the point - follow the cycle exactly.
 
@@ -6437,16 +6665,18 @@ any test is failing.
   must change.
 - If a test is genuinely wrong (the requirement changed), update it and say
   so explicitly - don&#x27;t quietly change tests to match implementation.</pre>
+</details>
 </article>
 <article class="prompt">
 <div class="head">
-<h3 id="testing-quality-test-writing">Reusable prompt: comprehensive test writing</h3>
+<h3 id="testing-quality-test-writing"><i data-lucide="flask-conical" aria-hidden="true"></i><span>Reusable prompt: comprehensive test writing</span></h3>
 <button class="copy" data-copy="testing-quality-test-writing">Copy prompt</button>
 </div>
 <p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/testing-quality/test-writing-prompt.md">testing-quality/test-writing-prompt.md</a></p>
 <div class="intro"><p>Copy-paste the block below into any AI coding agent to write tests that
 actually protect the code - meaningful assertions, real edge cases, and the
 repo&#x27;s own testing conventions.</p></div>
+<details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-testing-quality-test-writing">Write tests for `[function/module/feature]` in this repository. The goal is
 tests that catch regressions and document behavior - not tests that pad the
 coverage number.
@@ -6479,16 +6709,18 @@ coverage number.
 - If the code is untestable as written, say so and suggest a small refactor -
   don&#x27;t contort the test to work around it.
 - Run the repo&#x27;s full suite and checks to confirm nothing else broke.</pre>
+</details>
 </article>
 </section>
 <footer class="site">
 <p>Generated by scripts/build-all.py from the prompt files in this repo. Do not edit by hand. Regenerate with: python3 scripts/build-all.py</p>
 </footer>
 </div>
+<script src="https://unpkg.com/lucide@latest"></script>
 <script>
 function copyPrompt(id) {
   var el = document.getElementById('body-' + id);
-  var text = el.innerText;
+  var text = el.textContent;
   function done() { el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
   function fallback() {
     var ta = document.createElement('textarea');
@@ -6504,9 +6736,16 @@ function copyPrompt(id) {
     fallback();
   }
 }
+function toggleAll(open) {
+  document.querySelectorAll('details.body').forEach(function (d) { d.open = open; });
+}
 document.querySelectorAll('button.copy').forEach(function (b) {
   b.addEventListener('click', function () { copyPrompt(b.getAttribute('data-copy')); });
 });
+document.getElementById('expandAll').addEventListener('click', function () { toggleAll(true); });
+document.getElementById('collapseAll').addEventListener('click', function () { toggleAll(false); });
+window.addEventListener('beforeprint', function () { toggleAll(true); });
+if (window.lucide) { lucide.createIcons(); }
 </script>
 </body>
 </html>
