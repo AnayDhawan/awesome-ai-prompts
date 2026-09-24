@@ -17,6 +17,10 @@ verifiable result before it calls the work done.
 
 **[★ Star on GitHub](https://github.com/shauryagangrade/awesome-ai-prompts)**
 
+![A one-line prompt gets "quit prompting bro"; the same request with an awesome-ai-prompts prompt gets a planned, tested login page](docs/demo.gif)
+
+_This GIF was created using [openvidstudio](https://github.com/AnayDhawan/openvidstudio)._
+
 [![Contributors](https://contrib.rocks/image?repo=shauryagangrade/awesome-ai-prompts&t=20260921)](https://github.com/shauryagangrade/awesome-ai-prompts/graphs/contributors)
 
 Starring is the hello; a merged PR is the handshake. Every merged prompt PR
