@@ -17,9 +17,9 @@ verifiable result before it calls the work done.
 
 **[★ Star on GitHub](https://github.com/shauryagangrade/awesome-ai-prompts)**
 
-![A one-line prompt gets "quit prompting bro"; the same request with an awesome-ai-prompts prompt gets a planned, tested login page](docs/demo.gif)
+![A one-line prompt gets "quit prompting bro". Then a prompt from this repo is copied and pasted into opencode, which reads the code and reports every claim with file:line evidence](docs/demo.gif)
 
-_This GIF was created using [openvidstudio](https://github.com/AnayDhawan/openvidstudio)._
+_The opening chat is staged. The rest is the real opencode run from [prompt-in-action.mp4](docs/media/prompt-in-action.mp4), sped up in places. Made with [openvidstudio](https://github.com/AnayDhawan/openvidstudio)._
 
 [![Contributors](https://contrib.rocks/image?repo=shauryagangrade/awesome-ai-prompts&t=20260921)](https://github.com/shauryagangrade/awesome-ai-prompts/graphs/contributors)
 
