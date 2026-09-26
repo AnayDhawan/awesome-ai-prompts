@@ -117,3 +117,8 @@ Types: `feat | fix | docs | style | refactor | perf | test | ci | chore`
 ## Community
 
 Questions and discussion happen in [GitHub Discussions](https://github.com/shauryagangrade/awesome-ai-prompts/discussions).
+
+This project is volunteer-maintained and non-commercial. Please keep issues
+and pull requests about the prompts themselves: we do not buy design work, we
+do not merge paid third-party actions, and we do not commit generated images,
+so please do not use an issue to sell any of those.
