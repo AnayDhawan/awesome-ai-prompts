@@ -73,7 +73,7 @@ from the repository, not an assumption to carry forward.
    - **Logo** - rebuild the mark as inline SVG, from the official SVG or by
      approximating its shapes and colors, so it can sit on each slide.
    - **Voice** - pull the org tagline and tone from the README, for example
-     "built by students, for students", and reuse its phrasing.
+     "verify, don't guess", and reuse its phrasing.
 
 3. **Plan the slide arc** - One idea per slide, big headlines, no walls of
    text. The recommended default structure for 8 slides, adapted to `N`:

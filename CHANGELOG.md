@@ -16,6 +16,8 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   meta description, canonical URL, Open Graph and Twitter card tags, and JSON-LD structured
   data. `vercel.json` rewrites the clean public URLs onto the files in `website/`, and
   `--check` now verifies the whole committed site, not just the main page.
+- Broadened positioning from student developers to all developers: README intro, `CITATION.cff`
+  keywords, and the brand-voice example in `frontend-ui/instagram-carousel-prompt.md`.
 - Promote `git-github/pr-review-prompt.md` and `frontend-ui/instagram-carousel-prompt.md` to spec prompts ([spec] badge) and register both in `SPEC_PROMPTS`.
 - Normalize all remaining one-pager prompts onto the contract (`## Steps`, `## Verification`, `## Rules`) with prompt-specific verification content; rewrite or consolidate Rules where needed.
 - Trim over-budget one-pagers (≤45 lines / ≤550 words) by tightening steps; cut Rules to 3-5 bullets. Preserve Verification content.

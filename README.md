@@ -4,8 +4,8 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/shauryagangrade/awesome-ai-prompts?style=social)](https://github.com/shauryagangrade/awesome-ai-prompts)
 
-A curated list of copy-paste AI prompts for **student developers who use AI
-coding agents**. Unlike most prompt lists, these aren't one-off hacks - they're
+A curated list of copy-paste AI prompts for **any developer who uses AI coding
+agents**. Unlike most prompt lists, these aren't one-off hacks - they're
 disciplined, **senior-engineer workflows that verify, don't guess**: read the
 code before editing, small confirmed steps, and tests as guardrails. Paste one
 into Claude, ChatGPT, Copilot, Cursor, opencode, or any agent and it takes
