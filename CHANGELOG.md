@@ -15,7 +15,9 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   plus `website/sitemap.xml` and `website/robots.txt`. Every page carries a unique title,
   meta description, canonical URL, Open Graph and Twitter card tags, and JSON-LD structured
   data. `vercel.json` rewrites the clean public URLs onto the files in `website/`, and
-  `--check` now verifies the whole committed site, not just the main page.
+  `--check` now verifies the whole committed site, not just the main page. Internal
+  cross-links are emitted root-relative and extensionless (`/prompt/<cat>/<slug>`) so
+  they resolve correctly at any page depth.
 - Add `website/llms.txt` (llmstxt.org convention): a deterministic Markdown index of the
   catalog for LLM readers, served at `/llms.txt`.
 - Broadened positioning from student developers to all developers: README intro, `CITATION.cff`

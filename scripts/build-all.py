@@ -360,7 +360,7 @@ def render_prompt(path, title, intro, body, spec_rels, icon):
 <h3 id="{anchor}">{icon_html}<span>{html.escape(title)}</span>{spec_html}</h3>
 <button class="copy" data-copy="{anchor}">Copy prompt</button>
 </div>
-<p class="meta"><a href="{src_link}">{html.escape(cat + '/' + path.name)}</a> &middot; <a class="pagenav" href="{PROMPT_PAGES}/{cat}/{slug_for(path)}.html">view page</a></p>
+<p class="meta"><a href="{src_link}">{html.escape(cat + '/' + path.name)}</a> &middot; <a class="pagenav" href="/{PROMPT_PAGES}/{cat}/{slug_for(path)}">view page</a></p>
 {intro_html}
 <details class="body"><summary>Show prompt</summary>
 <pre class="prompt" id="body-{anchor}">{html.escape(body)}</pre>
@@ -398,7 +398,7 @@ def render_page(output_path):
             f'<section class="cat">\n<h2 id="{cat}"><i data-lucide="{category_icon(cat)}" '
             f'aria-hidden="true"></i><span>{html.escape(cat)}</span>'
             f'<span class="count">({len(loaded)})</span>'
-            f'<a class="pagenav" href="{CATEGORY_PAGES}/{cat}.html">category page</a></h2>\n'
+            f'<a class="pagenav" href="/{CATEGORY_PAGES}/{cat}">category page</a></h2>\n'
             + "\n".join(cat_html)
             + "\n</section>"
         )
@@ -588,7 +588,7 @@ def render_category_page(cat, entries):
         },
     )
     cards = "".join(
-        f'<li><a href="{PROMPT_PAGES}/{cat}/{slug_for(path)}.html">'
+        f'<li><a href="/{PROMPT_PAGES}/{cat}/{slug_for(path)}">'
         f'<strong><i data-lucide="{category_icon(cat)}" aria-hidden="true"></i> '
         f"{html.escape(clean_title(title, spec))}</strong>"
         f"<span>{html.escape(clip(intro, 90))}</span></a></li>"
@@ -602,7 +602,7 @@ def render_category_page(cat, entries):
     return page_shell(
         meta=meta,
         sub=f"{len(entries)} prompts in {cat}. Each page has the full prompt block ready to paste.",
-        breadcrumb=f'<a href="../{MAIN_PAGE_NAME}">All prompts</a> &rsaquo; {html.escape(cat)}',
+        breadcrumb=f'<a href="/">All prompts</a> &rsaquo; {html.escape(cat)}',
         content=content,
     )
 
@@ -649,7 +649,7 @@ def render_prompt_page(cat, path, title, intro, body, is_spec, entries):
         paras = [html.escape(p.strip()) for p in intro.split("\n\n") if p.strip()]
         intro_html = f'<div class="intro">{"".join(f"<p>{p}</p>" for p in paras)}</div>'
     siblings = "".join(
-        f'<li><a href="{slug_for(sibling)}.html">{html.escape(clean_title(sib_title, spec))}</a></li>'
+        f'<li><a href="/{PROMPT_PAGES}/{cat}/{slug_for(sibling)}">{html.escape(clean_title(sib_title, spec))}</a></li>'
         for sibling, sib_title, _, _, spec in entries
         if sibling != path
     )
@@ -670,8 +670,8 @@ def render_prompt_page(cat, path, title, intro, body, is_spec, entries):
         meta=meta,
         sub="One prompt from the awesome-ai-prompts catalog, ready to paste into your AI coding agent.",
         breadcrumb=(
-            f'<a href="../../{MAIN_PAGE_NAME}">All prompts</a> &rsaquo; '
-            f'<a href="../{cat}.html">{html.escape(cat)}</a> &rsaquo; {html.escape(title)}'
+            f'<a href="/">All prompts</a> &rsaquo; '
+            f'<a href="/{CATEGORY_PAGES}/{cat}">{html.escape(cat)}</a> &rsaquo; {html.escape(title)}'
         ),
         content=content,
         extra_js=(
