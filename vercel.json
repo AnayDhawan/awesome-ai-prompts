@@ -13,6 +13,7 @@
       "destination": "/website/prompt/:cat/:slug.html"
     },
     { "source": "/sitemap.xml", "destination": "/website/sitemap.xml" },
-    { "source": "/robots.txt", "destination": "/website/robots.txt" }
+    { "source": "/robots.txt", "destination": "/website/robots.txt" },
+    { "source": "/llms.txt", "destination": "/website/llms.txt" }
   ]
 }

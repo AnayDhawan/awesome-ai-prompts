@@ -81,6 +81,39 @@ class PageStructureTest(unittest.TestCase):
         self.assertIn('href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/', self.html)
 
 
+class LlmsTxtTest(unittest.TestCase):
+    """llms.txt is the LLM-facing index; it must cover the whole catalog."""
+
+    @classmethod
+    def setUpClass(cls):
+        with tempfile.TemporaryDirectory() as tmp:
+            BUILD_ALL.render_llms_txt(Path(tmp), BUILD_ALL.spec_prompt_rels())
+            cls.text = (Path(tmp) / "llms.txt").read_text(encoding="utf-8")
+
+    def test_header_follows_llmstxt_convention(self):
+        self.assertTrue(self.text.startswith("# awesome-ai-prompts\n"))
+        self.assertIn("> A curated list", self.text)
+        self.assertIn("## Categories", self.text)
+        self.assertIn("## Prompts", self.text)
+
+    def test_every_tracked_prompt_linked(self):
+        tracked = {
+            f"{cat}/{BUILD_ALL.slug_for(path)}"
+            for cat in BUILD_ALL.category_order()
+            for path in BUILD_ALL.prompt_files(cat)
+        }
+        self.assertGreater(len(tracked), 0)
+        linked = re.findall(
+            re.escape(BUILD_ALL.SITE_URL) + r"/prompt/([a-z0-9-]+)/([a-z0-9-]+)\)",
+            self.text,
+        )
+        self.assertEqual({f"{cat}/{slug}" for cat, slug in linked}, tracked)
+
+    def test_every_category_linked(self):
+        for cat in BUILD_ALL.category_order():
+            self.assertIn(f"]({BUILD_ALL.SITE_URL}/category/{cat}):", self.text)
+
+
 class SplitPromptTest(unittest.TestCase):
     def test_title_intro_and_body(self):
         with tempfile.TemporaryDirectory() as tmp:

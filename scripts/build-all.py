@@ -14,10 +14,11 @@ a unique title and meta description, a canonical URL, Open Graph and Twitter
 card tags, and a JSON-LD graph. The whole site lives in one folder:
 website/index.html (the main catalog), website/category/<cat>.html (one page
 per category), website/prompt/<cat>/<slug>.html (one page per prompt),
-website/sitemap.xml, and website/robots.txt. vercel.json rewrites keep the
-public URLs short: / serves the catalog, /category/<cat>, /prompt/<cat>/<slug>,
-/sitemap.xml, and /robots.txt map onto the files under website/. Nothing
-generated lives at the repo root.
+website/sitemap.xml, website/robots.txt, and website/llms.txt (a Markdown
+index of the catalog for LLM readers, per llmstxt.org). vercel.json rewrites
+keep the public URLs short: / serves the catalog, /category/<cat>,
+/prompt/<cat>/<slug>, /sitemap.xml, /robots.txt, and /llms.txt map onto the
+files under website/. Nothing generated lives at the repo root.
 
 Output is deliberately deterministic: category and file order are sorted and no
 timestamps or build metadata are embedded, so two runs are byte-identical.
@@ -707,9 +708,66 @@ def render_robots(dest_root):
     )
 
 
+def render_llms_txt(dest_root, spec_rels):
+    """llms.txt: a Markdown index of the site for LLM readers.
+
+    Follows the llmstxt.org convention - project name, a blockquote summary,
+    then sections of bullet links - so an agent can discover the prompt pages
+    and fetch the one it needs instead of wading through the full catalog.
+    Categories first, then every prompt with its usage note as the link
+    description.
+    """
+    cats = [c for c in category_order() if prompt_files(c)]
+    total = sum(len(prompt_files(cat)) for cat in cats)
+    lines = [
+        "# awesome-ai-prompts",
+        "",
+        (
+            "> A curated list of copy-paste AI coding-agent prompts for developers: "
+            "disciplined workflows that verify, don't guess."
+        ),
+        "",
+        (
+            f"{total} prompts across {len(cats)} categories, generated from the prompt files "
+            f"in github.com/shauryagangrade/awesome-ai-prompts (MIT licensed). Each prompt "
+            "page carries the full prompt block ready to paste into an AI coding agent."
+        ),
+        "",
+        "## Site",
+        "",
+        (
+            f"- [All prompts on one page]({SITE_URL}/): the full catalog with a mini-TOC "
+            "and one-click copy buttons"
+        ),
+        (
+            f"- [GitHub repository](https://{SELF_REPO}): source of truth for every prompt, "
+            "contributions welcome"
+        ),
+        "",
+        "## Categories",
+        "",
+    ]
+    for cat in cats:
+        count = len(prompt_files(cat))
+        noun = "prompt" if count == 1 else "prompts"
+        lines.append(f"- [{cat}]({SITE_URL}/{CATEGORY_PAGES}/{cat}): {count} {noun}")
+    lines += ["", "## Prompts", ""]
+    for cat in cats:
+        lines.append(f"### {cat}")
+        lines.append("")
+        for path in prompt_files(cat):
+            title, intro, _ = split_prompt(path)
+            is_spec = f"{cat}/{path.name}" in spec_rels
+            title = meta_title(clean_title(title, is_spec))
+            url = f"{SITE_URL}/{PROMPT_PAGES}/{cat}/{slug_for(path)}"
+            lines.append(f"- [{title}]({url}): {clip(intro) or 'copy-paste prompt'}")
+        lines.append("")
+    (dest_root / "llms.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
 def render_site(dest_root):
     """Write the whole generated site: main catalog, per-category and
-    per-prompt pages, sitemap.xml, and robots.txt.
+    per-prompt pages, sitemap.xml, robots.txt, and llms.txt.
 
     Subpage paths mirror the clean URLs Vercel serves them under (see
     vercel.json cleanUrls). Returns the number of prompts rendered.
@@ -733,6 +791,7 @@ def render_site(dest_root):
             (prompt_dir / f"{slug_for(path)}.html").write_text(page, encoding="utf-8")
     render_sitemap(dest_root)
     render_robots(dest_root)
+    render_llms_txt(dest_root, spec_rels)
     return total
 
 
@@ -811,7 +870,7 @@ def main():
         return check()
 
     total = render_site(SITE_DIR)
-    print(f"Wrote {SITE_DIRNAME}/ ({MAIN_PAGE_NAME}, {CATEGORY_PAGES}/*.html, {PROMPT_PAGES}/*/*.html, sitemap.xml, robots.txt; {total} prompts)")
+    print(f"Wrote {SITE_DIRNAME}/ ({MAIN_PAGE_NAME}, {CATEGORY_PAGES}/*.html, {PROMPT_PAGES}/*/*.html, sitemap.xml, robots.txt, llms.txt; {total} prompts)")
     if args.output != DEFAULT_OUTPUT:
         render_page(args.output)
         print(f"Wrote an extra copy of the catalog to {args.output} ({total} prompts)")

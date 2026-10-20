@@ -34,7 +34,7 @@ install; skip them unless you are touching line endings or adding a secret.
 
 After changing any prompt file or `README.md`, run `python3 scripts/build-all.py`
 (not `--check`) and commit the regenerated site under `website/` (main catalog,
-per-category and per-prompt pages, sitemap, robots). CI fails on a stale
+per-category and per-prompt pages, sitemap, robots, llms). CI fails on a stale
 catalog.
 
 ## Stage new files before running the gates
@@ -77,7 +77,7 @@ most of them but not the exact-match requirement.
    backlink.
 5. `CHANGELOG.md` `[Unreleased]` - matched by basename only.
 6. `website/` - regenerate the site (index.html, category/, prompt/,
-   sitemap.xml, robots.txt).
+   sitemap.xml, robots.txt, llms.txt).
 
 If the prompt is `[spec]`, also add its path to `SPEC_PROMPTS` in
 `scripts/check-consistency.sh` and put the badge `img` on its README listing
@@ -111,8 +111,8 @@ Prefer deriving a new check from the files on disk over growing either list.
   hyphen.
 - **Everything under `website/` is generated.** Never hand-edit it: the main
   catalog (`website/index.html`), the per-category and per-prompt pages, and
-  `website/sitemap.xml` and `website/robots.txt` all come from
-  `scripts/build-all.py`. Generated files are excluded from `typos` and
+  `website/sitemap.xml`, `website/robots.txt`, and `website/llms.txt` all come
+  from `scripts/build-all.py`. Generated files are excluded from `typos` and
   `editorconfig-checker` via `website/**`; the prettier glob only covers
   md/json/yaml/css, so HTML is never prettier-checked.
 - **The first `---` is the prompt boundary.** Above it is the intro (title,

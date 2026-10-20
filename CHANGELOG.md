@@ -16,6 +16,8 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   meta description, canonical URL, Open Graph and Twitter card tags, and JSON-LD structured
   data. `vercel.json` rewrites the clean public URLs onto the files in `website/`, and
   `--check` now verifies the whole committed site, not just the main page.
+- Add `website/llms.txt` (llmstxt.org convention): a deterministic Markdown index of the
+  catalog for LLM readers, served at `/llms.txt`.
 - Broadened positioning from student developers to all developers: README intro, `CITATION.cff`
   keywords, and the brand-voice example in `frontend-ui/instagram-carousel-prompt.md`.
 - Promote `git-github/pr-review-prompt.md` and `frontend-ui/instagram-carousel-prompt.md` to spec prompts ([spec] badge) and register both in `SPEC_PROMPTS`.

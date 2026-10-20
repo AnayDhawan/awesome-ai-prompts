@@ -228,7 +228,9 @@ and a one-click copy button on each card. The same build generates the whole
 - `website/prompt/<cat>/<slug>.html` - one page per prompt, at
   `/prompt/<cat>/<slug>`, with the intro and the full prompt block behind a
   copy button.
-- `website/sitemap.xml` and `website/robots.txt` - crawler entry points.
+- `website/sitemap.xml`, `website/robots.txt`, and `website/llms.txt` - crawler
+  and agent entry points (llms.txt is a Markdown index of the catalog per the
+  llmstxt.org convention).
 
 Every page carries a unique title, meta description, canonical URL, Open
 Graph and Twitter card tags, and JSON-LD structured data. To regenerate the
