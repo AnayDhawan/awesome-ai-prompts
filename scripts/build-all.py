@@ -771,8 +771,8 @@ def render_site(dest_root):
     """Write the whole generated site: main catalog, per-category and
     per-prompt pages, sitemap.xml, robots.txt, and llms.txt.
 
-    Subpage paths mirror the clean URLs Vercel serves them under (see
-    vercel.json cleanUrls). Returns the number of prompts rendered.
+    Subpage paths mirror the clean URLs Vercel serves them under (see the
+    rewrites in vercel.json). Returns the number of prompts rendered.
     """
     dest_root = Path(dest_root)
     dest_root.mkdir(parents=True, exist_ok=True)
