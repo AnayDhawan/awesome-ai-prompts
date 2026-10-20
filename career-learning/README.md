@@ -3,7 +3,7 @@
 Prompts for getting hired and getting better: interviews, resumes, portfolios, blog posts, roadmaps, and conference talks.
 
 Back to the [main index](../README.md#career--learning) or browse
-[every prompt on one page](../ALL_PROMPTS.html).
+[every prompt on one page](../website/index.html).
 
 ## Prompts
 

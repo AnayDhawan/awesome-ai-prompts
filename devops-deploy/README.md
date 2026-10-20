@@ -3,7 +3,7 @@
 Prompts for shipping and running software in production: containers, deploys, infrastructure, migrations, and incidents.
 
 Back to the [main index](../README.md#devops--deploy) or browse
-[every prompt on one page](../ALL_PROMPTS.html).
+[every prompt on one page](../website/index.html).
 
 ## Prompts
 

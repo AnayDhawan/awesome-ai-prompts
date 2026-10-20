@@ -1,6 +1,7 @@
 {
   "Exclude": [
     "^ALL_PROMPTS\\.html$",
+    "^website/",
     "^docs/media/",
     "^tmp/",
     "^drafts/",

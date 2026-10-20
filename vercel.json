@@ -1,4 +1,18 @@
 {
   "outputDirectory": ".",
-  "rewrites": [{ "source": "/", "destination": "/ALL_PROMPTS.html" }]
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/", "destination": "/website/index.html" },
+    {
+      "source": "/category/:cat",
+      "destination": "/website/category/:cat.html"
+    },
+    {
+      "source": "/prompt/:cat/:slug",
+      "destination": "/website/prompt/:cat/:slug.html"
+    },
+    { "source": "/sitemap.xml", "destination": "/website/sitemap.xml" },
+    { "source": "/robots.txt", "destination": "/website/robots.txt" }
+  ]
 }

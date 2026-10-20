@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>browser extension development | awesome-ai-prompts</title>
+<meta name="description" content="Copy-paste the block below into any AI coding agent to build or review a Manifest V3 extension with justified permissions, clean context splits, and a...">
+<link rel="canonical" href="https://awesome-ai-prompts.vercel.app/prompt/frontend-ui/browser-extension-development">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="awesome-ai-prompts">
+<meta property="og:title" content="browser extension development | awesome-ai-prompts">
+<meta property="og:description" content="Copy-paste the block below into any AI coding agent to build or review a Manifest V3 extension with justified permissions, clean context splits, and a...">
+<meta property="og:url" content="https://awesome-ai-prompts.vercel.app/prompt/frontend-ui/browser-extension-development">
+<meta property="og:image" content="https://awesome-ai-prompts.vercel.app/assets/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="browser extension development | awesome-ai-prompts">
+<meta name="twitter:description" content="Copy-paste the block below into any AI coding agent to build or review a Manifest V3 extension with justified permissions, clean context splits, and a...">
+<meta name="twitter:image" content="https://awesome-ai-prompts.vercel.app/assets/social-preview.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","description":"Copy-paste the block below into any AI coding agent to build or review a Manifest V3 extension with justified permissions, clean context splits, and a...","isPartOf":{"@type":"WebSite","url":"https://awesome-ai-prompts.vercel.app/"},"mainEntity":{"@type":"CreativeWork","license":"https://spdx.org/licenses/MIT.html","name":"browser extension development","url":"https://awesome-ai-prompts.vercel.app/prompt/frontend-ui/browser-extension-development"},"name":"browser extension development","url":"https://awesome-ai-prompts.vercel.app/prompt/frontend-ui/browser-extension-development"}]}</script>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;color:#1a1a1a;margin:0;background:#f7f7f5}
+.wrap{max-width:760px;margin:0 auto;padding:2rem 1.5rem 4rem}
+header.site{border-bottom:2px solid #1a1a1a;padding-bottom:1rem;margin-bottom:1.5rem}
+header.site h1{margin:0 0 .25rem;font-size:1.6rem}
+header.site p.sub{margin:.25rem 0;color:#555;font-size:.95rem}
+header.site nav.links{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;margin-top:.9rem;font-size:.9rem}
+header.site nav.links a{color:#1a1a1a;text-decoration:none;border-bottom:1px dotted #999}
+header.site nav.links a:hover{border-bottom-style:solid;color:#2f4f7f}
+nav.crumb{font-size:.85rem;color:#777;margin-bottom:1.25rem}
+nav.crumb a{color:#777;text-decoration:none;border-bottom:1px dotted #bbb}
+nav.crumb a:hover{color:#2f4f7f;border-bottom-style:solid}
+h2.page{border-bottom:2px solid #333;padding-bottom:.35rem;font-size:1.35rem;display:flex;align-items:center;gap:.5rem;margin:0 0 1rem}
+h2.page svg{width:1.2rem;height:1.2rem;flex:none;color:#2f4f7f}
+span.spec{display:inline-block;font-size:.7rem;vertical-align:middle;background:#7fb3df;color:#fff;border-radius:4px;padding:.05rem .45rem;margin-left:.15rem}
+article.prompt{background:#fff;border:1px solid #ddd;border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:1.75rem}
+article.prompt .head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+article.prompt .meta{font-size:.82rem;color:#777;margin:0 0 .75rem}
+article.prompt .meta a{color:#777}
+.intro p{margin:.4rem 0 .9rem;color:#333}
+button.copy{border:1px solid #ddd;background:#fff;padding:.25rem .6rem;border-radius:6px;color:#666;cursor:pointer;font-size:.78rem;flex:none}
+button.copy:hover{background:rgba(0,0,0,.05);color:#111}
+pre.prompt{white-space:pre-wrap;background:#1e1e1e;color:#e6e6e6;border-radius:6px;padding:1rem;margin:0;overflow-x:auto}
+ul.cards{list-style:none;padding:0;margin:0 0 1.5rem}
+ul.cards li{margin:.4rem 0}
+ul.cards a{display:block;background:#fff;border:1px solid #ddd;border-radius:8px;padding:.7rem 1rem;text-decoration:none;color:#1a1a1a}
+ul.cards a:hover{border-color:#2f4f7f}
+ul.cards strong{display:block}
+ul.cards span{font-size:.85rem;color:#555}
+section.siblings{margin-top:2rem}
+section.siblings h3{font-size:1rem;text-transform:uppercase;letter-spacing:.04em;color:#555}
+section.siblings ul{margin:.25rem 0;padding-left:1.25rem}
+section.siblings a{color:#1a1a1a;text-decoration:none;border-bottom:1px dotted #999}
+section.siblings a:hover{border-bottom-style:solid}
+a.cta{display:inline-block;font-size:.9rem;color:#2f4f7f;text-decoration:none;border-bottom:1px dotted #999}
+a.cta:hover{border-bottom-style:solid}
+footer.site{margin-top:3rem;padding-top:1rem;border-top:1px solid #ddd;color:#888;font-size:.85rem}
+@media print{button.copy{display:none}.wrap{max-width:none;padding:0}pre.prompt{color:#000;background:#fff;border:1px solid #ccc}}
+</style>
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+<h1>awesome-ai-prompts</h1>
+<p class="sub">One prompt from the awesome-ai-prompts catalog, ready to paste into your AI coding agent.</p>
+<nav class="links">
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/README.md">README &amp; docs</a>
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts">Star on GitHub</a>
+</nav>
+</header>
+<nav class="crumb"><a href="../../index.html">All prompts</a> &rsaquo; <a href="../frontend-ui.html">frontend-ui</a> &rsaquo; Reusable prompt: browser extension development</nav>
+<main>
+<h2 class="page"><i data-lucide="palette" aria-hidden="true"></i><span>Reusable prompt: browser extension development</span><span class="spec">spec</span></h2>
+<article class="prompt">
+<div class="head">
+<p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/frontend-ui/browser-extension-development-prompt.md">frontend-ui/browser-extension-development-prompt.md</a></p>
+<button class="copy" type="button">Copy prompt</button>
+</div>
+<div class="intro"><p>Copy-paste the block below into any AI coding agent to build or review a
+Manifest V3 extension with justified permissions, clean context splits, and a
+local iteration loop. Use the heavy format when a rejected review or a leaked
+permission is expensive: store-bound extensions and anything touching user
+pages or remote data.</p><p>Keywords: browser extension, manifest v3, content script, service worker, csp</p></div>
+<pre class="prompt" id="prompt-body">Build or review `[what the extension does, in one sentence]` as a Manifest V3
+extension for `[target browsers]`. Treat every permission, every entry point,
+and every cached remote value as something a reviewer will interrogate. Return
+a file tree, a manifest with written permission justifications, and the typed
+message contracts between contexts.
+
+## Define the scope first
+
+State each decision in one line before touching the manifest or any context.
+Treat them as decisions you can revise, not questions for the user.
+
+1. **Browsers and surfaces** - Name the target browser or browsers and the
+   exact surfaces in scope: popup, options page, content script, background
+   service worker, devtools panel. State which surfaces are out of scope.
+2. **Single purpose** - Write in one sentence what the user invokes the
+   extension to do. If the sentence needs &quot;and&quot;, split the scope or cut it.
+3. **Inputs and outputs** - Inputs: the pages, origins, and messages the
+   extension reads. Outputs: the storage schema, the message contracts, and
+   the packaged artifact.
+4. **Out of scope** - Native messaging, enterprise policy, cross-browser
+   polyfills, and any remote backend this pass does not build.
+
+## What to produce
+
+1. **Manifest V3 with justified permissions** - Every `permissions` and
+   `host_permissions` entry annotated with the code that reads it, the feature
+   that breaks without it, and why the narrower form fails. This is the matrix
+   a store reviewer checks.
+2. **Context split** - A table putting each function in exactly one of:
+   background service worker (long-lived state, network, alarms, no DOM),
+   content script (reads and writes the page, per matched origin, isolated
+   from page script), or UI surface (short-lived, talks only to the worker).
+3. **Storage and messaging contracts** - The storage API per data class
+   (`storage.local`, `storage.sync`, `storage.session`), one typed message
+   union, one handler per context, and one schema migration function.
+4. **CSP and no-remote-code statement** - Bundled code only: no `eval`, no
+   `new Function`, no runtime-fetched script or wasm, no CDN import, and no
+   inline handler. Cite the build step that inlines every dependency.
+5. **Local iteration loop** - The exact steps to load the unpacked build,
+   where the worker log and content-script errors surface, and how to inspect
+   the injected script in the page&#x27;s element panel.
+6. **Store review checklist** - A privacy policy naming every field collected,
+   a per-permission justification, a single purpose statement, an uninstall
+   that deletes stored data, and icons and a description present.
+
+## Method
+
+1. **Inventory the extension or scaffold** - Read the manifest and existing
+   contexts and list every permission with the file that uses it. Exit: a
+   file:line map of permissions to code, before any new permission.
+2. **Cut scope to one purpose** - Resolve the single purpose and delete
+   anything that does not serve it. Exit: a one-sentence purpose and the
+   out-of-scope list.
+3. **Split the contexts** - Move each function into exactly one context and
+   route cross-context calls through the worker. Exit: a context table with no
+   function listed twice.
+4. **Type the messaging** - Declare the discriminated union and a single
+   handler per context, handling a sleeping worker, a closed page, and a
+   content script that is not injected. Exit: every message has a type and a
+   failure branch.
+5. **Persist with the right API** - Choose `storage.local`, `storage.sync`, or
+   `storage.session` per data class and add one migration function. Exit: one
+   state owner, with no duplicate state in page local storage.
+6. **Enforce the CSP** - Remove every remote or dynamic code path and prove
+   the bundle builds offline. Exit: a build from a clean clone with no network
+   fetch at runtime.
+7. **Load unpacked and iterate** - Follow the developer-mode steps, reload the
+   extension, and exercise one action per context while watching the console.
+   Exit: a console log with no errors or warnings from the extension.
+8. **Walk the review checklist** - Run the permission-removal pass and the
+   store checklist. Exit: each item verified or explicitly listed as
+   unverified.
+
+## Verification
+
+- [ ] The scope names the browser or browsers, every surface in scope, the
+      single purpose, and the out-of-scope list.
+- [ ] Every manifest permission has a written justification and a file:line
+      that reads it; no broad host permission covers a narrower need.
+- [ ] Each function lives in exactly one context, and the context table lists
+      no function twice.
+- [ ] All cross-context calls go through the worker and use the typed message
+      union; a sleeping worker and a closed page are handled.
+- [ ] Storage APIs match the data class, one migration function exists, and no
+      page context holds durable state.
+- [ ] The extension contains no `eval`, `new Function`, remote script, wasm, or
+      inline handler, and it builds from a clean clone without a runtime fetch.
+- [ ] The extension loads unpacked with no console errors in the worker, the
+      content script, or a UI surface.
+- [ ] A permission-removal pass removes each optional permission in turn and
+      changes nothing user-visible; anything it breaks is listed.
+- [ ] The store checklist covers the privacy policy, permission justification,
+      single purpose, uninstall data deletion, icons, and description.
+- [ ] Every checklist item not verified is named, with the reason.
+
+## Rules
+
+- No permission ships without a named feature and a written justification next
+  to it; a wildcard host match is never the default.
+- No remote code, no `eval`, no `new Function`, no inline script, no CDN
+  import, and no build step that fetches at runtime.
+- The worker owns long-lived truth; no state in a page context outlives the
+  page.
+- Every message is typed and fails without crashing the worker or leaving the
+  UI waiting forever.
+- Treat content read out of a page as untrusted input, never as data to act on
+  without validation.
+- Loading, testing, and packaging must work offline from a clean clone.</pre>
+</article>
+<section class="siblings">
+<h3>More frontend-ui prompts</h3>
+<ul><li><a href="animation-performance.html">Reusable prompt: animation that stays smooth on a mid-range phone</a></li><li><a href="component-build.html">Reusable prompt: component build</a></li><li><a href="design-handoff.html">Reusable prompt: design handoff to code</a></li><li><a href="design-tokens-theming.html">Reusable prompt: design tokens that survive dark mode and a rebrand</a></li><li><a href="i18n-localization.html">Reusable prompt: internationalization (i18n)</a></li><li><a href="instagram-carousel.html">Reusable prompt: Instagram carousel from a repo</a></li><li><a href="pwa-offline-support.html">Reusable prompt: offline-first that survives a new deploy</a></li><li><a href="responsive-design.html">Reusable prompt: responsive design</a></li><li><a href="state-management.html">Reusable prompt: frontend state management</a></li><li><a href="ui-audit.html">Reusable prompt: UI audit</a></li><li><a href="web-performance-vitals.html">Reusable prompt: Core Web Vitals optimization</a></li><li><a href="website-seo.html">Reusable prompt: Website SEO audit and optimization</a></li></ul>
+</section>
+</main>
+<footer class="site">
+<p>Generated by scripts/build-all.py from the prompt files in this repo. Do not edit by hand. Regenerate with: python3 scripts/build-all.py</p>
+</footer>
+</div>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+document.querySelector('button.copy').addEventListener('click', function () { copyText(document.getElementById('prompt-body')); });
+function copyText(el) {
+  var text = el.textContent;
+  function done() { el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+  function fallback() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } finally { document.body.removeChild(ta); }
+    done();
+  }
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done, fallback);
+  } else {
+    fallback();
+  }
+}
+if (window.lucide) { lucide.createIcons(); }
+</script>
+</body>
+</html>

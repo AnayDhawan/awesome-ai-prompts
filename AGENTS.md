@@ -33,8 +33,9 @@ python3 -m unittest discover -s scripts/tests
 install; skip them unless you are touching line endings or adding a secret.
 
 After changing any prompt file or `README.md`, run `python3 scripts/build-all.py`
-(not `--check`) and commit the regenerated `ALL_PROMPTS.html`. CI fails on a
-stale catalog.
+(not `--check`) and commit the regenerated site under `website/` (main catalog,
+per-category and per-prompt pages, sitemap, robots). CI fails on a stale
+catalog.
 
 ## Stage new files before running the gates
 
@@ -54,7 +55,7 @@ Two consequences, both reproduced:
 
 - A new prompt file dropped into an existing category is picked up by the
   catalog even while untracked, because `prompt_files()` globs the filesystem.
-  `build-all.py --check` fails with "committed ALL_PROMPTS.html is stale".
+  `build-all.py --check` fails with "FAIL stale: website/...".
 - A brand new **category folder** that is untracked is invisible to the catalog
   _and_ to `check-links.sh` section 1. Only `check-consistency.sh` catches it,
   by iterating folders on disk.
@@ -75,7 +76,8 @@ most of them but not the exact-match requirement.
 4. `<category>/README.md` - one-line entry, plus the `../README.md#<anchor>`
    backlink.
 5. `CHANGELOG.md` `[Unreleased]` - matched by basename only.
-6. `ALL_PROMPTS.html` - regenerate.
+6. `website/` - regenerate the site (index.html, category/, prompt/,
+   sitemap.xml, robots.txt).
 
 If the prompt is `[spec]`, also add its path to `SPEC_PROMPTS` in
 `scripts/check-consistency.sh` and put the badge `img` on its README listing
@@ -107,8 +109,12 @@ Prefer deriving a new check from the files on disk over growing either list.
 
 - **No em dashes anywhere.** CI runs `git grep -I -l $'\u2014'`. Use an ASCII
   hyphen.
-- **`ALL_PROMPTS.html` is generated.** Never hand-edit it. It is excluded from
-  `typos`, `editorconfig-checker`, and the prettier glob.
+- **Everything under `website/` is generated.** Never hand-edit it: the main
+  catalog (`website/index.html`), the per-category and per-prompt pages, and
+  `website/sitemap.xml` and `website/robots.txt` all come from
+  `scripts/build-all.py`. Generated files are excluded from `typos` and
+  `editorconfig-checker` via `website/**`; the prettier glob only covers
+  md/json/yaml/css, so HTML is never prettier-checked.
 - **The first `---` is the prompt boundary.** Above it is the intro (title,
   usage note, `Keywords:`); below it is what the user pastes. Nothing above the
   divider may be needed in order to use the prompt.

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>message queues and event-driven design | awesome-ai-prompts</title>
+<meta name="description" content="Copy-paste the block below into any AI coding agent to design an event-driven flow that survives duplicate, late, and out-of-order delivery. This is the...">
+<link rel="canonical" href="https://awesome-ai-prompts.vercel.app/prompt/system-design/message-queues-event-driven-design">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="awesome-ai-prompts">
+<meta property="og:title" content="message queues and event-driven design | awesome-ai-prompts">
+<meta property="og:description" content="Copy-paste the block below into any AI coding agent to design an event-driven flow that survives duplicate, late, and out-of-order delivery. This is the...">
+<meta property="og:url" content="https://awesome-ai-prompts.vercel.app/prompt/system-design/message-queues-event-driven-design">
+<meta property="og:image" content="https://awesome-ai-prompts.vercel.app/assets/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="message queues and event-driven design | awesome-ai-prompts">
+<meta name="twitter:description" content="Copy-paste the block below into any AI coding agent to design an event-driven flow that survives duplicate, late, and out-of-order delivery. This is the...">
+<meta name="twitter:image" content="https://awesome-ai-prompts.vercel.app/assets/social-preview.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","description":"Copy-paste the block below into any AI coding agent to design an event-driven flow that survives duplicate, late, and out-of-order delivery. This is the...","isPartOf":{"@type":"WebSite","url":"https://awesome-ai-prompts.vercel.app/"},"mainEntity":{"@type":"CreativeWork","license":"https://spdx.org/licenses/MIT.html","name":"message queues and event-driven design","url":"https://awesome-ai-prompts.vercel.app/prompt/system-design/message-queues-event-driven-design"},"name":"message queues and event-driven design","url":"https://awesome-ai-prompts.vercel.app/prompt/system-design/message-queues-event-driven-design"}]}</script>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;color:#1a1a1a;margin:0;background:#f7f7f5}
+.wrap{max-width:760px;margin:0 auto;padding:2rem 1.5rem 4rem}
+header.site{border-bottom:2px solid #1a1a1a;padding-bottom:1rem;margin-bottom:1.5rem}
+header.site h1{margin:0 0 .25rem;font-size:1.6rem}
+header.site p.sub{margin:.25rem 0;color:#555;font-size:.95rem}
+header.site nav.links{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;margin-top:.9rem;font-size:.9rem}
+header.site nav.links a{color:#1a1a1a;text-decoration:none;border-bottom:1px dotted #999}
+header.site nav.links a:hover{border-bottom-style:solid;color:#2f4f7f}
+nav.crumb{font-size:.85rem;color:#777;margin-bottom:1.25rem}
+nav.crumb a{color:#777;text-decoration:none;border-bottom:1px dotted #bbb}
+nav.crumb a:hover{color:#2f4f7f;border-bottom-style:solid}
+h2.page{border-bottom:2px solid #333;padding-bottom:.35rem;font-size:1.35rem;display:flex;align-items:center;gap:.5rem;margin:0 0 1rem}
+h2.page svg{width:1.2rem;height:1.2rem;flex:none;color:#2f4f7f}
+span.spec{display:inline-block;font-size:.7rem;vertical-align:middle;background:#7fb3df;color:#fff;border-radius:4px;padding:.05rem .45rem;margin-left:.15rem}
+article.prompt{background:#fff;border:1px solid #ddd;border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:1.75rem}
+article.prompt .head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+article.prompt .meta{font-size:.82rem;color:#777;margin:0 0 .75rem}
+article.prompt .meta a{color:#777}
+.intro p{margin:.4rem 0 .9rem;color:#333}
+button.copy{border:1px solid #ddd;background:#fff;padding:.25rem .6rem;border-radius:6px;color:#666;cursor:pointer;font-size:.78rem;flex:none}
+button.copy:hover{background:rgba(0,0,0,.05);color:#111}
+pre.prompt{white-space:pre-wrap;background:#1e1e1e;color:#e6e6e6;border-radius:6px;padding:1rem;margin:0;overflow-x:auto}
+ul.cards{list-style:none;padding:0;margin:0 0 1.5rem}
+ul.cards li{margin:.4rem 0}
+ul.cards a{display:block;background:#fff;border:1px solid #ddd;border-radius:8px;padding:.7rem 1rem;text-decoration:none;color:#1a1a1a}
+ul.cards a:hover{border-color:#2f4f7f}
+ul.cards strong{display:block}
+ul.cards span{font-size:.85rem;color:#555}
+section.siblings{margin-top:2rem}
+section.siblings h3{font-size:1rem;text-transform:uppercase;letter-spacing:.04em;color:#555}
+section.siblings ul{margin:.25rem 0;padding-left:1.25rem}
+section.siblings a{color:#1a1a1a;text-decoration:none;border-bottom:1px dotted #999}
+section.siblings a:hover{border-bottom-style:solid}
+a.cta{display:inline-block;font-size:.9rem;color:#2f4f7f;text-decoration:none;border-bottom:1px dotted #999}
+a.cta:hover{border-bottom-style:solid}
+footer.site{margin-top:3rem;padding-top:1rem;border-top:1px solid #ddd;color:#888;font-size:.85rem}
+@media print{button.copy{display:none}.wrap{max-width:none;padding:0}pre.prompt{color:#000;background:#fff;border:1px solid #ccc}}
+</style>
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+<h1>awesome-ai-prompts</h1>
+<p class="sub">One prompt from the awesome-ai-prompts catalog, ready to paste into your AI coding agent.</p>
+<nav class="links">
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/README.md">README &amp; docs</a>
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts">Star on GitHub</a>
+</nav>
+</header>
+<nav class="crumb"><a href="../../index.html">All prompts</a> &rsaquo; <a href="../system-design.html">system-design</a> &rsaquo; Reusable prompt: message queues and event-driven design</nav>
+<main>
+<h2 class="page"><i data-lucide="layers" aria-hidden="true"></i><span>Reusable prompt: message queues and event-driven design</span><span class="spec">spec</span></h2>
+<article class="prompt">
+<div class="head">
+<p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/system-design/message-queues-event-driven-design-prompt.md">system-design/message-queues-event-driven-design-prompt.md</a></p>
+<button class="copy" type="button">Copy prompt</button>
+</div>
+<div class="intro"><p>Copy-paste the block below into any AI coding agent to design an
+event-driven flow that survives duplicate, late, and out-of-order
+delivery. This is the heavy format for flows where a lost, duplicated,
+or replayed event costs money, so the design is proven before it ships.</p><p>Keywords: message queue, event driven, ordering, idempotent consumer, replay</p></div>
+<pre class="prompt" id="prompt-body">Design the event-driven flow for `[what: order pipeline, notifications,
+audit log, workflow]` in this repository. The rule: at-least-once
+delivery means every message may arrive twice, late, and out of order.
+Design for that explicitly and prove it with recorded traces, not prose.
+
+## Define the scope first
+
+Decide these before any work starts; state each one in writing.
+
+1. **The flow** - Name it, its trigger, and where it ends. List every
+   producer, the broker, and every consumer by name.
+2. **The broker** - Use the broker already in the stack. If none exists,
+   justify the choice against the operational cost of adding one.
+3. **Targets** - State throughput (messages per second), end-to-end
+   latency, and availability as numbers.
+4. **The ordering requirement** - Name the key that carries ordering (a
+   customer, aggregate, or entity ID); never say &quot;global ordering&quot;.
+5. **Out of scope** - Name what this pass will not do: a new broker,
+   cross-region replication, exactly-once delivery, other teams&#x27; flows.
+
+## What to produce
+
+1. **Event catalog** - A table with one row per event: its name as a
+   past-tense fact (`OrderPlaced`, not `PlaceOrder`), its version, each
+   field with a type and required flag, the compatibility rule it holds
+   to, and where the schema lives.
+2. **Ordering key and non-guarantees** - The key that carries ordering,
+   and an explicit list of the orderings that are not guaranteed.
+3. **Consumer idempotency design** - Per consumer, the dedupe key or
+   idempotent write, and the retention of the dedupe record, which must
+   outlive the maximum redelivery window.
+4. **Replay and backfill procedure** - How far history is retained, how
+   a replay is marked so live consumers can distinguish it, and how
+   side effects are suppressed, including the dry-run path.
+5. **DLQ operations** - The bounded retry count, who is alerted, how an
+   operator inspects a parked message, and the command to replay it.
+6. **Failure-path traces** - One recorded trace each for duplicate
+   delivery, out-of-order delivery, a consumer down for a day, a poison
+   message mid-partition, and a one-week replay.
+
+## Method
+
+Run these phases in order; each has an exit condition.
+
+1. **Baseline the flow** - If the flow exists, measure current
+   throughput, latency, error rate, and lag before touching anything. If
+   it is greenfield, write the targets as the baseline to beat. Exit:
+   numbers are recorded, not estimated.
+2. **Draw the flow and name every event** - Producers, broker, and
+   consumers, then the event catalog. Exit: every hop and every event is
+   named and versioned.
+3. **Fix ordering per key** - Choose the ordering key and write the
+   non-guarantees. Exit: the key and the full non-guarantee list are
+   written.
+4. **Harden consumers** - Give each consumer a dedupe mechanism and a
+   retention longer than the redelivery window. Exit: no consumer relies
+   on the broker to deliver once.
+5. **Design replay and backfill** - Set the retention, the replay
+   marker, and side-effect suppression. Exit: a dry-run path exists and
+   a one-week replay was traced.
+6. **Wire DLQ operations** - Bound retries, alert on depth, and record
+   the inspect and replay commands. Exit: an operator can replay a
+   parked message from the runbook alone.
+7. **Trace the five failure paths** - Exercise each path and record its
+   end state. Exit: all five traces end with a stated system state.
+8. **Re-measure** - Repeat the baseline measurements. Exit: measured
+   numbers are compared with the targets.
+
+## Verification
+
+- [ ] Every event is a past-tense fact and carries a version, field
+      types, required flags, and an additive-only or major-version
+      compatibility rule.
+- [ ] The ordering key is named, and the orderings explicitly not
+      guaranteed are listed.
+- [ ] Every consumer has a dedupe key or idempotent write, with a
+      retention that outlives the maximum redelivery window.
+- [ ] A duplicate delivery was traced and the consumer produced no
+      second side effect.
+- [ ] An out-of-order delivery was traced and either the final state is
+      correct or the divergence is explained.
+- [ ] A consumer down for a day was traced, and recovery or backfill is
+      specified.
+- [ ] A poison message mid-partition was traced and parked without
+      blocking the partition indefinitely.
+- [ ] A one-week replay was traced with side effects suppressed, and
+      the dry-run path is documented.
+- [ ] DLQ alerting, inspection, and replay are documented with the
+      exact commands to run.
+- [ ] Throughput, latency, and lag are measured and compared with the
+      stated targets, not estimated.
+- [ ] No part of the design relies on exactly-once delivery or global
+      ordering.
+
+## Rules
+
+- Never assume exactly-once delivery; assume duplicates and make
+  consumers idempotent.
+- Never rely on global ordering; choose a key and enforce ordering per
+  key.
+- Never add a consumer without a versioned contract it can be pinned
+  to.
+- Never ship without a DLQ and a stated replay procedure.
+- Never let a replay send a real email, charge a real card, or mutate an
+  external system without an explicit dry-run path.
+- Never introduce a new broker when one is already in the stack unless
+  the operational cost is justified in writing.
+- Never claim a delivery, ordering, or replay property without a run
+  log or trace to back it.</pre>
+</article>
+<section class="siblings">
+<h3>More system-design prompts</h3>
+<ul><li><a href="adr-writing.html">Reusable prompt: architecture decision record</a></li><li><a href="caching-strategy.html">Reusable prompt: caching strategy</a></li><li><a href="concurrency-debugging.html">Reusable prompt: concurrency &amp; race condition debugging</a></li><li><a href="legacy-code-modernization-assessment.html">Reusable prompt: legacy code modernization assessment</a></li><li><a href="system-design.html">Reusable prompt: system design</a></li><li><a href="technical-debt-triage.html">Reusable prompt: technical debt triage</a></li></ul>
+</section>
+</main>
+<footer class="site">
+<p>Generated by scripts/build-all.py from the prompt files in this repo. Do not edit by hand. Regenerate with: python3 scripts/build-all.py</p>
+</footer>
+</div>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+document.querySelector('button.copy').addEventListener('click', function () { copyText(document.getElementById('prompt-body')); });
+function copyText(el) {
+  var text = el.textContent;
+  function done() { el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+  function fallback() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } finally { document.body.removeChild(ta); }
+    done();
+  }
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done, fallback);
+  } else {
+    fallback();
+  }
+}
+if (window.lucide) { lucide.createIcons(); }
+</script>
+</body>
+</html>

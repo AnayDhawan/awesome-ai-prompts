@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSV &amp; spreadsheet wrangling | awesome-ai-prompts</title>
+<meta name="description" content="Copy-paste the block below into any AI coding agent to clean and load a messy CSV or spreadsheet export without silently corrupting or dropping data...">
+<link rel="canonical" href="https://awesome-ai-prompts.vercel.app/prompt/data-ai/csv-spreadsheet-wrangling">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="awesome-ai-prompts">
+<meta property="og:title" content="CSV &amp; spreadsheet wrangling | awesome-ai-prompts">
+<meta property="og:description" content="Copy-paste the block below into any AI coding agent to clean and load a messy CSV or spreadsheet export without silently corrupting or dropping data...">
+<meta property="og:url" content="https://awesome-ai-prompts.vercel.app/prompt/data-ai/csv-spreadsheet-wrangling">
+<meta property="og:image" content="https://awesome-ai-prompts.vercel.app/assets/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CSV &amp; spreadsheet wrangling | awesome-ai-prompts">
+<meta name="twitter:description" content="Copy-paste the block below into any AI coding agent to clean and load a messy CSV or spreadsheet export without silently corrupting or dropping data...">
+<meta name="twitter:image" content="https://awesome-ai-prompts.vercel.app/assets/social-preview.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","description":"Copy-paste the block below into any AI coding agent to clean and load a messy CSV or spreadsheet export without silently corrupting or dropping data...","isPartOf":{"@type":"WebSite","url":"https://awesome-ai-prompts.vercel.app/"},"mainEntity":{"@type":"CreativeWork","license":"https://spdx.org/licenses/MIT.html","name":"CSV & spreadsheet wrangling","url":"https://awesome-ai-prompts.vercel.app/prompt/data-ai/csv-spreadsheet-wrangling"},"name":"CSV & spreadsheet wrangling","url":"https://awesome-ai-prompts.vercel.app/prompt/data-ai/csv-spreadsheet-wrangling"}]}</script>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;color:#1a1a1a;margin:0;background:#f7f7f5}
+.wrap{max-width:760px;margin:0 auto;padding:2rem 1.5rem 4rem}
+header.site{border-bottom:2px solid #1a1a1a;padding-bottom:1rem;margin-bottom:1.5rem}
+header.site h1{margin:0 0 .25rem;font-size:1.6rem}
+header.site p.sub{margin:.25rem 0;color:#555;font-size:.95rem}
+header.site nav.links{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;margin-top:.9rem;font-size:.9rem}
+header.site nav.links a{color:#1a1a1a;text-decoration:none;border-bottom:1px dotted #999}
+header.site nav.links a:hover{border-bottom-style:solid;color:#2f4f7f}
+nav.crumb{font-size:.85rem;color:#777;margin-bottom:1.25rem}
+nav.crumb a{color:#777;text-decoration:none;border-bottom:1px dotted #bbb}
+nav.crumb a:hover{color:#2f4f7f;border-bottom-style:solid}
+h2.page{border-bottom:2px solid #333;padding-bottom:.35rem;font-size:1.35rem;display:flex;align-items:center;gap:.5rem;margin:0 0 1rem}
+h2.page svg{width:1.2rem;height:1.2rem;flex:none;color:#2f4f7f}
+span.spec{display:inline-block;font-size:.7rem;vertical-align:middle;background:#7fb3df;color:#fff;border-radius:4px;padding:.05rem .45rem;margin-left:.15rem}
+article.prompt{background:#fff;border:1px solid #ddd;border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:1.75rem}
+article.prompt .head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+article.prompt .meta{font-size:.82rem;color:#777;margin:0 0 .75rem}
+article.prompt .meta a{color:#777}
+.intro p{margin:.4rem 0 .9rem;color:#333}
+button.copy{border:1px solid #ddd;background:#fff;padding:.25rem .6rem;border-radius:6px;color:#666;cursor:pointer;font-size:.78rem;flex:none}
+button.copy:hover{background:rgba(0,0,0,.05);color:#111}
+pre.prompt{white-space:pre-wrap;background:#1e1e1e;color:#e6e6e6;border-radius:6px;padding:1rem;margin:0;overflow-x:auto}
+ul.cards{list-style:none;padding:0;margin:0 0 1.5rem}
+ul.cards li{margin:.4rem 0}
+ul.cards a{display:block;background:#fff;border:1px solid #ddd;border-radius:8px;padding:.7rem 1rem;text-decoration:none;color:#1a1a1a}
+ul.cards a:hover{border-color:#2f4f7f}
+ul.cards strong{display:block}
+ul.cards span{font-size:.85rem;color:#555}
+section.siblings{margin-top:2rem}
+section.siblings h3{font-size:1rem;text-transform:uppercase;letter-spacing:.04em;color:#555}
+section.siblings ul{margin:.25rem 0;padding-left:1.25rem}
+section.siblings a{color:#1a1a1a;text-decoration:none;border-bottom:1px dotted #999}
+section.siblings a:hover{border-bottom-style:solid}
+a.cta{display:inline-block;font-size:.9rem;color:#2f4f7f;text-decoration:none;border-bottom:1px dotted #999}
+a.cta:hover{border-bottom-style:solid}
+footer.site{margin-top:3rem;padding-top:1rem;border-top:1px solid #ddd;color:#888;font-size:.85rem}
+@media print{button.copy{display:none}.wrap{max-width:none;padding:0}pre.prompt{color:#000;background:#fff;border:1px solid #ccc}}
+</style>
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+<h1>awesome-ai-prompts</h1>
+<p class="sub">One prompt from the awesome-ai-prompts catalog, ready to paste into your AI coding agent.</p>
+<nav class="links">
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/README.md">README &amp; docs</a>
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts">Star on GitHub</a>
+</nav>
+</header>
+<nav class="crumb"><a href="../../index.html">All prompts</a> &rsaquo; <a href="../data-ai.html">data-ai</a> &rsaquo; Reusable prompt: CSV &amp; spreadsheet wrangling</nav>
+<main>
+<h2 class="page"><i data-lucide="database" aria-hidden="true"></i><span>Reusable prompt: CSV &amp; spreadsheet wrangling</span></h2>
+<article class="prompt">
+<div class="head">
+<p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/data-ai/csv-spreadsheet-wrangling-prompt.md">data-ai/csv-spreadsheet-wrangling-prompt.md</a></p>
+<button class="copy" type="button">Copy prompt</button>
+</div>
+<div class="intro"><p>Copy-paste the block below into any AI coding agent to clean and load a messy
+CSV or spreadsheet export without silently corrupting or dropping data.</p><p>Keywords: csv, spreadsheet, excel, data wrangling, parsing, messy data, pivot</p></div>
+<pre class="prompt" id="prompt-body">Load and clean the spreadsheet/CSV data described in this task. Messy exports
+are where most data projects actually start; the goal is a validated dataset
+plus a report of everything that had to be fixed or rejected, not a script that
+just runs without erroring.
+
+## Steps
+
+1. **Detect encoding before parsing** - Do not assume UTF-8. Sniff the byte
+   order mark (Windows exports are often UTF-16 with a BOM) and fall back
+   through UTF-8, UTF-8-SIG, Windows-1252, and UTF-16 rather than guessing
+   once.
+2. **Infer types, but make overrides explicit** - Auto-detect column types from
+   a sample, then let the caller override any column by name. Never silently
+   coerce a column that fails inference on some rows; flag it instead of
+   picking a lossy fallback.
+3. **State dedup and fuzzy-match rules up front** - Document the dedup key(s),
+   whether matching is exact or fuzzy (and the threshold), and which duplicate
+   survives when rows conflict. Never dedupe under an undocumented rule.
+4. **Validate every row, don&#x27;t just parse it** - Enforce required columns, type
+   ranges, and referential rules. Route failures to a quarantine set with a
+   per-row reason; never drop a row without recording why.
+5. **Produce a validation report** - Rows in, accepted, quarantined, and
+   deduplicated, plus a breakdown of quarantine reasons. This is the artifact a
+   human actually checks; a clean exit code proves nothing.
+6. **Round-trip before trusting the pipeline** - Write the cleaned data out and
+   re-read it, confirming values, types, and row count survive unchanged. Watch
+   date and timezone drift, leading zeros in ID-like strings, and float
+   precision.
+
+## Verification
+
+- [ ] The encoding and delimiter were detected rather than assumed, and an
+      ambiguous detection failed loudly instead of mis-parsing.
+- [ ] Every dropped, coerced, or deduplicated row is counted and explained in
+      the report.
+- [ ] Quarantined rows carry a per-row reason; none were dropped silently.
+- [ ] Leading-zero IDs, date and timezone drift, and float precision were each
+      checked specifically.
+- [ ] Cleaned data was written and re-read, with values, types, and row count
+      identical after the round trip.
+
+## Rules
+
+- Silent data loss is the cardinal sin: every dropped, coerced, or deduplicated
+  row must be counted and explained in the report.
+- Never assume the input encoding or delimiter; detect both, and fail loudly
+  (not with a mis-parsed but &quot;successful&quot; load) when detection is ambiguous.
+- If a column&#x27;s real-world meaning makes an inference rule unsafe (e.g.
+  leading-zero IDs read as integers), say so explicitly rather than silently
+  &quot;fixing&quot; it.</pre>
+</article>
+<section class="siblings">
+<h3>More data-ai prompts</h3>
+<ul><li><a href="ab-test-design-analysis.html">Reusable prompt: A/B test design and analysis</a></li><li><a href="ai-agent-build.html">Reusable prompt: AI agent build</a></li><li><a href="analytics-event-tracking.html">Reusable prompt: analytics event tracking that does not rot</a></li><li><a href="data-pipeline.html">Reusable prompt: data pipeline construction</a></li><li><a href="data-quality-validation.html">Reusable prompt: data quality and validation contracts</a></li><li><a href="data-visualization.html">Reusable prompt: honest, accessible charts</a></li><li><a href="fine-tune-vs-rag-vs-prompting-decision.html">Reusable prompt: prompting, RAG, or fine-tuning</a></li><li><a href="llm-feature-eval.html">Reusable prompt: LLM feature evaluation</a></li><li><a href="ml-model-deployment-basics.html">Reusable prompt: ship a model like a service</a></li><li><a href="rag-pipeline.html">Reusable prompt: RAG pipeline</a></li><li><a href="responsible-web-scraping.html">Reusable prompt: responsible web scraping</a></li><li><a href="sql-query-optimization.html">Reusable prompt: SQL query optimization</a></li></ul>
+</section>
+</main>
+<footer class="site">
+<p>Generated by scripts/build-all.py from the prompt files in this repo. Do not edit by hand. Regenerate with: python3 scripts/build-all.py</p>
+</footer>
+</div>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+document.querySelector('button.copy').addEventListener('click', function () { copyText(document.getElementById('prompt-body')); });
+function copyText(el) {
+  var text = el.textContent;
+  function done() { el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+  function fallback() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } finally { document.body.removeChild(ta); }
+    done();
+  }
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done, fallback);
+  } else {
+    fallback();
+  }
+}
+if (window.lucide) { lucide.createIcons(); }
+</script>
+</body>
+</html>

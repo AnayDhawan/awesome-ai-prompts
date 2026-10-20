@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>regular expressions that don&#x27;t bite | awesome-ai-prompts</title>
+<meta name="description" content="Copy-paste the block below into any AI coding agent to write or repair a regular expression the way a senior engineer would: a defined purpose, a corpus...">
+<link rel="canonical" href="https://awesome-ai-prompts.vercel.app/prompt/core-coding/regular-expressions">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="awesome-ai-prompts">
+<meta property="og:title" content="regular expressions that don&#x27;t bite | awesome-ai-prompts">
+<meta property="og:description" content="Copy-paste the block below into any AI coding agent to write or repair a regular expression the way a senior engineer would: a defined purpose, a corpus...">
+<meta property="og:url" content="https://awesome-ai-prompts.vercel.app/prompt/core-coding/regular-expressions">
+<meta property="og:image" content="https://awesome-ai-prompts.vercel.app/assets/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="regular expressions that don&#x27;t bite | awesome-ai-prompts">
+<meta name="twitter:description" content="Copy-paste the block below into any AI coding agent to write or repair a regular expression the way a senior engineer would: a defined purpose, a corpus...">
+<meta name="twitter:image" content="https://awesome-ai-prompts.vercel.app/assets/social-preview.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","description":"Copy-paste the block below into any AI coding agent to write or repair a regular expression the way a senior engineer would: a defined purpose, a corpus...","isPartOf":{"@type":"WebSite","url":"https://awesome-ai-prompts.vercel.app/"},"mainEntity":{"@type":"CreativeWork","license":"https://spdx.org/licenses/MIT.html","name":"regular expressions that don't bite","url":"https://awesome-ai-prompts.vercel.app/prompt/core-coding/regular-expressions"},"name":"regular expressions that don't bite","url":"https://awesome-ai-prompts.vercel.app/prompt/core-coding/regular-expressions"}]}</script>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;color:#1a1a1a;margin:0;background:#f7f7f5}
+.wrap{max-width:760px;margin:0 auto;padding:2rem 1.5rem 4rem}
+header.site{border-bottom:2px solid #1a1a1a;padding-bottom:1rem;margin-bottom:1.5rem}
+header.site h1{margin:0 0 .25rem;font-size:1.6rem}
+header.site p.sub{margin:.25rem 0;color:#555;font-size:.95rem}
+header.site nav.links{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;margin-top:.9rem;font-size:.9rem}
+header.site nav.links a{color:#1a1a1a;text-decoration:none;border-bottom:1px dotted #999}
+header.site nav.links a:hover{border-bottom-style:solid;color:#2f4f7f}
+nav.crumb{font-size:.85rem;color:#777;margin-bottom:1.25rem}
+nav.crumb a{color:#777;text-decoration:none;border-bottom:1px dotted #bbb}
+nav.crumb a:hover{color:#2f4f7f;border-bottom-style:solid}
+h2.page{border-bottom:2px solid #333;padding-bottom:.35rem;font-size:1.35rem;display:flex;align-items:center;gap:.5rem;margin:0 0 1rem}
+h2.page svg{width:1.2rem;height:1.2rem;flex:none;color:#2f4f7f}
+span.spec{display:inline-block;font-size:.7rem;vertical-align:middle;background:#7fb3df;color:#fff;border-radius:4px;padding:.05rem .45rem;margin-left:.15rem}
+article.prompt{background:#fff;border:1px solid #ddd;border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:1.75rem}
+article.prompt .head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+article.prompt .meta{font-size:.82rem;color:#777;margin:0 0 .75rem}
+article.prompt .meta a{color:#777}
+.intro p{margin:.4rem 0 .9rem;color:#333}
+button.copy{border:1px solid #ddd;background:#fff;padding:.25rem .6rem;border-radius:6px;color:#666;cursor:pointer;font-size:.78rem;flex:none}
+button.copy:hover{background:rgba(0,0,0,.05);color:#111}
+pre.prompt{white-space:pre-wrap;background:#1e1e1e;color:#e6e6e6;border-radius:6px;padding:1rem;margin:0;overflow-x:auto}
+ul.cards{list-style:none;padding:0;margin:0 0 1.5rem}
+ul.cards li{margin:.4rem 0}
+ul.cards a{display:block;background:#fff;border:1px solid #ddd;border-radius:8px;padding:.7rem 1rem;text-decoration:none;color:#1a1a1a}
+ul.cards a:hover{border-color:#2f4f7f}
+ul.cards strong{display:block}
+ul.cards span{font-size:.85rem;color:#555}
+section.siblings{margin-top:2rem}
+section.siblings h3{font-size:1rem;text-transform:uppercase;letter-spacing:.04em;color:#555}
+section.siblings ul{margin:.25rem 0;padding-left:1.25rem}
+section.siblings a{color:#1a1a1a;text-decoration:none;border-bottom:1px dotted #999}
+section.siblings a:hover{border-bottom-style:solid}
+a.cta{display:inline-block;font-size:.9rem;color:#2f4f7f;text-decoration:none;border-bottom:1px dotted #999}
+a.cta:hover{border-bottom-style:solid}
+footer.site{margin-top:3rem;padding-top:1rem;border-top:1px solid #ddd;color:#888;font-size:.85rem}
+@media print{button.copy{display:none}.wrap{max-width:none;padding:0}pre.prompt{color:#000;background:#fff;border:1px solid #ccc}}
+</style>
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+<h1>awesome-ai-prompts</h1>
+<p class="sub">One prompt from the awesome-ai-prompts catalog, ready to paste into your AI coding agent.</p>
+<nav class="links">
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/README.md">README &amp; docs</a>
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts">Star on GitHub</a>
+</nav>
+</header>
+<nav class="crumb"><a href="../../index.html">All prompts</a> &rsaquo; <a href="../core-coding.html">core-coding</a> &rsaquo; Reusable prompt: regular expressions that don&#x27;t bite</nav>
+<main>
+<h2 class="page"><i data-lucide="code-2" aria-hidden="true"></i><span>Reusable prompt: regular expressions that don&#x27;t bite</span></h2>
+<article class="prompt">
+<div class="head">
+<p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/core-coding/regular-expressions-prompt.md">core-coding/regular-expressions-prompt.md</a></p>
+<button class="copy" type="button">Copy prompt</button>
+</div>
+<div class="intro"><p>Copy-paste the block below into any AI coding agent to write or repair a
+regular expression the way a senior engineer would: a defined purpose, a corpus
+of cases that proves the behavior, and a check that the pattern cannot blow up
+on adversarial input.</p><p>Keywords: regex, regular expression, pattern matching, escaping, catastrophic backtracking, grep</p></div>
+<pre class="prompt" id="prompt-body">Help me write `[what the regex must match]` in `[language or stack]`. Treat a
+regex as risky code, not a magic one-liner: it needs a stated purpose, tests
+against real inputs, and evidence that it cannot hang on bad input. Write it
+only after we agree on the behavior it must have.
+
+## Steps
+
+1. **State the purpose in plain words** - What must match, what must not, and where the pattern runs: validation, extraction, a hot path, or user-supplied input. If the plain statement is hard to write, the regex is the wrong tool - say so and propose ordinary string handling.
+2. **Choose the simplest expression** - Prefer the smallest pattern that meets the purpose. A string method or a tiny state machine often beats a regex, and a language-provided parser for a structured format (JSON, URL, email) beats both.
+3. **Anchor and bound it** - Anchor start and end or use word boundaries where the behavior demands. Match what the caller needs, not a fuzzy subproblem, and avoid dot-all or unconstrained groups.
+4. **Build a corpus and test** - List must-match, must-not-match, and edge inputs (empty, whitespace, unicode, mixed case, very long, lookalikes, embedded newlines), run them in a throwaway test, and paste the results rather than asserting them.
+5. **Hunt catastrophic backtracking** - Inspect for nested quantifiers and alternatives that rescan the same text, `(a+)+` and `(a|a)*`, especially on untrusted input. Bound the input length, or time the worst-case input from step 4 and show it returning fast.
+6. **Ship the corpus as a test** - The adopted pattern lands with its corpus as a repeatable test that fails if the behavior changes, plus a short comment giving the purpose, the corpus, and why this construction. Regexes are for text with a shape; parsers are for formats with grammar.
+
+## Verification
+
+- [ ] The corpus test ran, showing both the passes and the intended non-matches.
+- [ ] The worst-case adversarial input from the corpus was timed, and it returns fast.
+- [ ] Any nested quantifier over user-controlled input is bounded, or the pattern was rewritten to remove it.
+- [ ] The corpus test landed in the repo in the same change as the pattern.
+- [ ] The final pattern is pasted, with a comment stating the purpose and the corpus.
+
+## Rules
+
+- Never write a regex without running it against the agreed corpus and showing
+  the output.
+- Never accept a pattern with nested loops over the same input on
+  user-controlled data without bounding it first.
+- Prefer parser, string, or index operations over a regex when the format is
+  structured. Regexes are for matching text with a shape; parsers are for
+  formats with grammar.
+- No pattern change in production code without the corpus test landing in the
+  same change.</pre>
+</article>
+<section class="siblings">
+<h3>More core-coding prompts</h3>
+<ul><li><a href="agent-codebase-onboarding.html">Reusable prompt: agent codebase onboarding</a></li><li><a href="api-design.html">Reusable prompt: API design</a></li><li><a href="api-integration.html">Reusable prompt: REST API integration</a></li><li><a href="cli-tool-build.html">Reusable prompt: CLI tool build</a></li><li><a href="code-migration.html">Reusable prompt: code migration</a></li><li><a href="database-design.html">Reusable prompt: database design</a></li><li><a href="datetime-timezone-correctness.html">Reusable prompt: datetime &amp; timezone correctness</a></li><li><a href="debugging.html">Reusable prompt: systematic debugging</a></li><li><a href="email-delivery.html">Reusable prompt: email delivery</a></li><li><a href="environment-setup.html">Reusable prompt: environment setup</a></li><li><a href="error-handling-strategy.html">Reusable prompt: error handling strategy</a></li><li><a href="feature-implementation.html">Reusable prompt: end-to-end feature implementation</a></li><li><a href="file-uploads-media-handling.html">Reusable prompt: file uploads and media handling</a></li><li><a href="graphql-api-design.html">Reusable prompt: GraphQL API design</a></li><li><a href="human-codebase-onboarding.html">Reusable prompt: codebase understanding</a></li><li><a href="pair-programming-session.html">Reusable prompt: pair-programming session</a></li><li><a href="payment-integration.html">Reusable prompt: payment integration</a></li><li><a href="refactoring.html">Reusable prompt: safe refactoring</a></li><li><a href="websockets-realtime-features.html">Reusable prompt: WebSockets and realtime features</a></li></ul>
+</section>
+</main>
+<footer class="site">
+<p>Generated by scripts/build-all.py from the prompt files in this repo. Do not edit by hand. Regenerate with: python3 scripts/build-all.py</p>
+</footer>
+</div>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+document.querySelector('button.copy').addEventListener('click', function () { copyText(document.getElementById('prompt-body')); });
+function copyText(el) {
+  var text = el.textContent;
+  function done() { el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+  function fallback() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } finally { document.body.removeChild(ta); }
+    done();
+  }
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done, fallback);
+  } else {
+    fallback();
+  }
+}
+if (window.lucide) { lucide.createIcons(); }
+</script>
+</body>
+</html>

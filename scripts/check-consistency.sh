@@ -91,11 +91,12 @@ fi
 
 # 3. Category folders and README sections exist in both directions.
 # scripts/, docs/, assets/, and i18n/ hold tooling, collateral, design sources,
-# and translated mirrors rather than English prompts, so they are not categories
-# and need no README section.
+# and translated mirrors rather than English prompts. website/ holds
+# build-all.py's generated site, so it is not a category and needs no README
+# section either.
 for d in */; do
   d="${d%/}"
-  case "$d" in scripts | docs | assets | i18n) continue ;; esac
+  case "$d" in scripts | docs | assets | i18n | website) continue ;; esac
   if git check-ignore -q -- "$d/"; then
     # Skip local-only, gitignored directories (e.g. design assets).
     continue

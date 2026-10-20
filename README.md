@@ -217,17 +217,31 @@ CI pass.
 ### Printable one-page catalog
 
 For workshops, printing, or browsing the whole corpus on one page, open
-[ALL_PROMPTS.html](ALL_PROMPTS.html) - every prompt, a linked mini-TOC, and a
-one-click copy button on each card. To regenerate it after the catalog changes:
+[website/index.html](website/index.html) - every prompt, a linked mini-TOC,
+and a one-click copy button on each card. The same build generates the whole
+[awesome-ai-prompts.vercel.app](https://awesome-ai-prompts.vercel.app) site in
+[website/](website/), one folder holding everything that gets deployed:
+
+- `website/index.html` - the full catalog, served at the site root.
+- `website/category/<cat>.html` - one index page per category, at
+  `/category/<cat>`.
+- `website/prompt/<cat>/<slug>.html` - one page per prompt, at
+  `/prompt/<cat>/<slug>`, with the intro and the full prompt block behind a
+  copy button.
+- `website/sitemap.xml` and `website/robots.txt` - crawler entry points.
+
+Every page carries a unique title, meta description, canonical URL, Open
+Graph and Twitter card tags, and JSON-LD structured data. To regenerate the
+whole site after the catalog changes:
 
 ```bash
 python3 scripts/build-all.py
 ```
 
-The page is committed so static hosts can serve it directly - the repo's
-[vercel.json](vercel.json) deploys it at the root on Vercel. CI runs
-`python3 scripts/build-all.py --check`, which fails if the builder becomes
-non-deterministic or the committed page drifts out of sync.
+All pages are committed so static hosts can serve them directly - the repo's
+[vercel.json](vercel.json) rewrites the clean public URLs onto the files in
+`website/`. CI runs `python3 scripts/build-all.py --check`, which fails if the
+builder becomes non-deterministic or any committed page drifts out of sync.
 
 ### Guidelines
 

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>monitoring and observability | awesome-ai-prompts</title>
+<meta name="description" content="Copy-paste the block below into any AI coding agent to set up logging, metrics, and alerting - actionable dashboards and alerts, not noisy dashboards...">
+<link rel="canonical" href="https://awesome-ai-prompts.vercel.app/prompt/devops-deploy/monitoring-observability">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="awesome-ai-prompts">
+<meta property="og:title" content="monitoring and observability | awesome-ai-prompts">
+<meta property="og:description" content="Copy-paste the block below into any AI coding agent to set up logging, metrics, and alerting - actionable dashboards and alerts, not noisy dashboards...">
+<meta property="og:url" content="https://awesome-ai-prompts.vercel.app/prompt/devops-deploy/monitoring-observability">
+<meta property="og:image" content="https://awesome-ai-prompts.vercel.app/assets/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="monitoring and observability | awesome-ai-prompts">
+<meta name="twitter:description" content="Copy-paste the block below into any AI coding agent to set up logging, metrics, and alerting - actionable dashboards and alerts, not noisy dashboards...">
+<meta name="twitter:image" content="https://awesome-ai-prompts.vercel.app/assets/social-preview.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","description":"Copy-paste the block below into any AI coding agent to set up logging, metrics, and alerting - actionable dashboards and alerts, not noisy dashboards...","isPartOf":{"@type":"WebSite","url":"https://awesome-ai-prompts.vercel.app/"},"mainEntity":{"@type":"CreativeWork","license":"https://spdx.org/licenses/MIT.html","name":"monitoring and observability","url":"https://awesome-ai-prompts.vercel.app/prompt/devops-deploy/monitoring-observability"},"name":"monitoring and observability","url":"https://awesome-ai-prompts.vercel.app/prompt/devops-deploy/monitoring-observability"}]}</script>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;color:#1a1a1a;margin:0;background:#f7f7f5}
+.wrap{max-width:760px;margin:0 auto;padding:2rem 1.5rem 4rem}
+header.site{border-bottom:2px solid #1a1a1a;padding-bottom:1rem;margin-bottom:1.5rem}
+header.site h1{margin:0 0 .25rem;font-size:1.6rem}
+header.site p.sub{margin:.25rem 0;color:#555;font-size:.95rem}
+header.site nav.links{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;margin-top:.9rem;font-size:.9rem}
+header.site nav.links a{color:#1a1a1a;text-decoration:none;border-bottom:1px dotted #999}
+header.site nav.links a:hover{border-bottom-style:solid;color:#2f4f7f}
+nav.crumb{font-size:.85rem;color:#777;margin-bottom:1.25rem}
+nav.crumb a{color:#777;text-decoration:none;border-bottom:1px dotted #bbb}
+nav.crumb a:hover{color:#2f4f7f;border-bottom-style:solid}
+h2.page{border-bottom:2px solid #333;padding-bottom:.35rem;font-size:1.35rem;display:flex;align-items:center;gap:.5rem;margin:0 0 1rem}
+h2.page svg{width:1.2rem;height:1.2rem;flex:none;color:#2f4f7f}
+span.spec{display:inline-block;font-size:.7rem;vertical-align:middle;background:#7fb3df;color:#fff;border-radius:4px;padding:.05rem .45rem;margin-left:.15rem}
+article.prompt{background:#fff;border:1px solid #ddd;border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:1.75rem}
+article.prompt .head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+article.prompt .meta{font-size:.82rem;color:#777;margin:0 0 .75rem}
+article.prompt .meta a{color:#777}
+.intro p{margin:.4rem 0 .9rem;color:#333}
+button.copy{border:1px solid #ddd;background:#fff;padding:.25rem .6rem;border-radius:6px;color:#666;cursor:pointer;font-size:.78rem;flex:none}
+button.copy:hover{background:rgba(0,0,0,.05);color:#111}
+pre.prompt{white-space:pre-wrap;background:#1e1e1e;color:#e6e6e6;border-radius:6px;padding:1rem;margin:0;overflow-x:auto}
+ul.cards{list-style:none;padding:0;margin:0 0 1.5rem}
+ul.cards li{margin:.4rem 0}
+ul.cards a{display:block;background:#fff;border:1px solid #ddd;border-radius:8px;padding:.7rem 1rem;text-decoration:none;color:#1a1a1a}
+ul.cards a:hover{border-color:#2f4f7f}
+ul.cards strong{display:block}
+ul.cards span{font-size:.85rem;color:#555}
+section.siblings{margin-top:2rem}
+section.siblings h3{font-size:1rem;text-transform:uppercase;letter-spacing:.04em;color:#555}
+section.siblings ul{margin:.25rem 0;padding-left:1.25rem}
+section.siblings a{color:#1a1a1a;text-decoration:none;border-bottom:1px dotted #999}
+section.siblings a:hover{border-bottom-style:solid}
+a.cta{display:inline-block;font-size:.9rem;color:#2f4f7f;text-decoration:none;border-bottom:1px dotted #999}
+a.cta:hover{border-bottom-style:solid}
+footer.site{margin-top:3rem;padding-top:1rem;border-top:1px solid #ddd;color:#888;font-size:.85rem}
+@media print{button.copy{display:none}.wrap{max-width:none;padding:0}pre.prompt{color:#000;background:#fff;border:1px solid #ccc}}
+</style>
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+<h1>awesome-ai-prompts</h1>
+<p class="sub">One prompt from the awesome-ai-prompts catalog, ready to paste into your AI coding agent.</p>
+<nav class="links">
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/README.md">README &amp; docs</a>
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts">Star on GitHub</a>
+</nav>
+</header>
+<nav class="crumb"><a href="../../index.html">All prompts</a> &rsaquo; <a href="../devops-deploy.html">devops-deploy</a> &rsaquo; Reusable prompt: monitoring and observability</nav>
+<main>
+<h2 class="page"><i data-lucide="server" aria-hidden="true"></i><span>Reusable prompt: monitoring and observability</span></h2>
+<article class="prompt">
+<div class="head">
+<p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/devops-deploy/monitoring-observability-prompt.md">devops-deploy/monitoring-observability-prompt.md</a></p>
+<button class="copy" type="button">Copy prompt</button>
+</div>
+<div class="intro"><p>Copy-paste the block below into any AI coding agent to set up logging, metrics,
+and alerting - actionable dashboards and alerts, not noisy dashboards nobody
+checks.</p><p>Keywords: monitoring, observability, metrics, logs, tracing, alerting, slo</p></div>
+<pre class="prompt" id="prompt-body">Set up monitoring and observability for `[service / application / endpoint]`.
+The goal: when something goes wrong, you know what, where, and why within
+minutes, not hours of log-diving.
+
+## Steps
+
+1. **Map the system first** - Read the code for critical paths, external
+   dependencies, error conditions, and performance-sensitive operations. Define
+   what &quot;healthy&quot; looks like before what &quot;broken&quot; looks like.
+2. **Add structured logging** - Emit JSON at request entry/exit, external
+   calls, database queries, error paths, and business-critical operations. Use
+   the repo&#x27;s consistent levels and correlation IDs.
+3. **Instrument the four signals** - Latency (p50, p95, p99), traffic (requests
+   per second), errors (rate and types), and saturation (CPU, memory,
+   connection pool usage), per critical path, on the repo&#x27;s existing metrics
+   library.
+4. **Build incident dashboards** - Answer the on-call questions: is the service
+   healthy, what is the error rate, which endpoints are slow, are dependencies
+   responding. One service per dashboard, key signals at a glance.
+5. **Configure and verify alerts** - Alert only on actionable conditions: error
+   rate above threshold, latency exceeding SLA, dependency unreachable, disk or
+   memory critical. Each alert carries a severity, a runbook link, and an
+   owning team. Then trigger or simulate a real failure and show the log line,
+   the metric, the dashboard, and the alert.
+
+## Verification
+
+- [ ] Existing observability tooling was extended rather than replaced.
+- [ ] Structured JSON logging exists at the critical points, with no logging
+      added to a hot loop.
+- [ ] The four golden signals are instrumented per critical path, not globally.
+- [ ] Every alert states the action it expects, and no alert fires on a
+      condition nobody would act on.
+- [ ] A real or simulated failure was triggered and the resulting log line,
+      metric, and alert were shown.
+- [ ] Dashboards answer the named on-call questions rather than just displaying
+      available data.
+
+## Rules
+
+- Never add logging in hot loops or high-frequency paths without considering
+  the performance impact.
+- Never create alerts that nobody should act on - if you can&#x27;t define the
+  response action, don&#x27;t alert on it.
+- Never use plain text logging when structured logging is available in the
+  stack.
+- If the repo already has observability tooling, extend it rather than
+  introducing a parallel system.</pre>
+</article>
+<section class="siblings">
+<h3>More devops-deploy prompts</h3>
+<ul><li><a href="background-jobs-scheduled-tasks.html">Reusable prompt: background jobs and scheduled tasks</a></li><li><a href="backup-disaster-recovery.html">Reusable prompt: backup &amp; disaster recovery</a></li><li><a href="capacity-planning.html">Reusable prompt: capacity planning</a></li><li><a href="cloud-cost-optimization.html">Reusable prompt: cloud cost optimization</a></li><li><a href="database-schema-migrations.html">Reusable prompt: database schema &amp; migrations</a></li><li><a href="deployment-runbook.html">Reusable prompt: deployment runbook</a></li><li><a href="docker-containerization.html">Reusable prompt: Docker containerization</a></li><li><a href="feature-flag-rollout.html">Reusable prompt: feature flags &amp; progressive rollout</a></li><li><a href="incident-response.html">Reusable prompt: incident response</a></li><li><a href="infrastructure-as-code.html">Reusable prompt: infrastructure as code</a></li><li><a href="kubernetes-deployment.html">Reusable prompt: Kubernetes deployment</a></li></ul>
+</section>
+</main>
+<footer class="site">
+<p>Generated by scripts/build-all.py from the prompt files in this repo. Do not edit by hand. Regenerate with: python3 scripts/build-all.py</p>
+</footer>
+</div>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+document.querySelector('button.copy').addEventListener('click', function () { copyText(document.getElementById('prompt-body')); });
+function copyText(el) {
+  var text = el.textContent;
+  function done() { el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+  function fallback() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } finally { document.body.removeChild(ta); }
+    done();
+  }
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done, fallback);
+  } else {
+    fallback();
+  }
+}
+if (window.lucide) { lucide.createIcons(); }
+</script>
+</body>
+</html>

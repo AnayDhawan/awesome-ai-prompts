@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>threat modeling | awesome-ai-prompts</title>
+<meta name="description" content="Copy-paste the block below into any AI coding agent to threat-model a feature or system before or while building it - structured, specific, and ranked by...">
+<link rel="canonical" href="https://awesome-ai-prompts.vercel.app/prompt/security-performance/threat-modeling">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="awesome-ai-prompts">
+<meta property="og:title" content="threat modeling | awesome-ai-prompts">
+<meta property="og:description" content="Copy-paste the block below into any AI coding agent to threat-model a feature or system before or while building it - structured, specific, and ranked by...">
+<meta property="og:url" content="https://awesome-ai-prompts.vercel.app/prompt/security-performance/threat-modeling">
+<meta property="og:image" content="https://awesome-ai-prompts.vercel.app/assets/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="threat modeling | awesome-ai-prompts">
+<meta name="twitter:description" content="Copy-paste the block below into any AI coding agent to threat-model a feature or system before or while building it - structured, specific, and ranked by...">
+<meta name="twitter:image" content="https://awesome-ai-prompts.vercel.app/assets/social-preview.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","description":"Copy-paste the block below into any AI coding agent to threat-model a feature or system before or while building it - structured, specific, and ranked by...","isPartOf":{"@type":"WebSite","url":"https://awesome-ai-prompts.vercel.app/"},"mainEntity":{"@type":"CreativeWork","license":"https://spdx.org/licenses/MIT.html","name":"threat modeling","url":"https://awesome-ai-prompts.vercel.app/prompt/security-performance/threat-modeling"},"name":"threat modeling","url":"https://awesome-ai-prompts.vercel.app/prompt/security-performance/threat-modeling"}]}</script>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;color:#1a1a1a;margin:0;background:#f7f7f5}
+.wrap{max-width:760px;margin:0 auto;padding:2rem 1.5rem 4rem}
+header.site{border-bottom:2px solid #1a1a1a;padding-bottom:1rem;margin-bottom:1.5rem}
+header.site h1{margin:0 0 .25rem;font-size:1.6rem}
+header.site p.sub{margin:.25rem 0;color:#555;font-size:.95rem}
+header.site nav.links{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;margin-top:.9rem;font-size:.9rem}
+header.site nav.links a{color:#1a1a1a;text-decoration:none;border-bottom:1px dotted #999}
+header.site nav.links a:hover{border-bottom-style:solid;color:#2f4f7f}
+nav.crumb{font-size:.85rem;color:#777;margin-bottom:1.25rem}
+nav.crumb a{color:#777;text-decoration:none;border-bottom:1px dotted #bbb}
+nav.crumb a:hover{color:#2f4f7f;border-bottom-style:solid}
+h2.page{border-bottom:2px solid #333;padding-bottom:.35rem;font-size:1.35rem;display:flex;align-items:center;gap:.5rem;margin:0 0 1rem}
+h2.page svg{width:1.2rem;height:1.2rem;flex:none;color:#2f4f7f}
+span.spec{display:inline-block;font-size:.7rem;vertical-align:middle;background:#7fb3df;color:#fff;border-radius:4px;padding:.05rem .45rem;margin-left:.15rem}
+article.prompt{background:#fff;border:1px solid #ddd;border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:1.75rem}
+article.prompt .head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+article.prompt .meta{font-size:.82rem;color:#777;margin:0 0 .75rem}
+article.prompt .meta a{color:#777}
+.intro p{margin:.4rem 0 .9rem;color:#333}
+button.copy{border:1px solid #ddd;background:#fff;padding:.25rem .6rem;border-radius:6px;color:#666;cursor:pointer;font-size:.78rem;flex:none}
+button.copy:hover{background:rgba(0,0,0,.05);color:#111}
+pre.prompt{white-space:pre-wrap;background:#1e1e1e;color:#e6e6e6;border-radius:6px;padding:1rem;margin:0;overflow-x:auto}
+ul.cards{list-style:none;padding:0;margin:0 0 1.5rem}
+ul.cards li{margin:.4rem 0}
+ul.cards a{display:block;background:#fff;border:1px solid #ddd;border-radius:8px;padding:.7rem 1rem;text-decoration:none;color:#1a1a1a}
+ul.cards a:hover{border-color:#2f4f7f}
+ul.cards strong{display:block}
+ul.cards span{font-size:.85rem;color:#555}
+section.siblings{margin-top:2rem}
+section.siblings h3{font-size:1rem;text-transform:uppercase;letter-spacing:.04em;color:#555}
+section.siblings ul{margin:.25rem 0;padding-left:1.25rem}
+section.siblings a{color:#1a1a1a;text-decoration:none;border-bottom:1px dotted #999}
+section.siblings a:hover{border-bottom-style:solid}
+a.cta{display:inline-block;font-size:.9rem;color:#2f4f7f;text-decoration:none;border-bottom:1px dotted #999}
+a.cta:hover{border-bottom-style:solid}
+footer.site{margin-top:3rem;padding-top:1rem;border-top:1px solid #ddd;color:#888;font-size:.85rem}
+@media print{button.copy{display:none}.wrap{max-width:none;padding:0}pre.prompt{color:#000;background:#fff;border:1px solid #ccc}}
+</style>
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+<h1>awesome-ai-prompts</h1>
+<p class="sub">One prompt from the awesome-ai-prompts catalog, ready to paste into your AI coding agent.</p>
+<nav class="links">
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/README.md">README &amp; docs</a>
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts">Star on GitHub</a>
+</nav>
+</header>
+<nav class="crumb"><a href="../../index.html">All prompts</a> &rsaquo; <a href="../security-performance.html">security-performance</a> &rsaquo; Reusable prompt: threat modeling</nav>
+<main>
+<h2 class="page"><i data-lucide="shield" aria-hidden="true"></i><span>Reusable prompt: threat modeling</span></h2>
+<article class="prompt">
+<div class="head">
+<p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/security-performance/threat-modeling-prompt.md">security-performance/threat-modeling-prompt.md</a></p>
+<button class="copy" type="button">Copy prompt</button>
+</div>
+<div class="intro"><p>Copy-paste the block below into any AI coding agent to threat-model a feature
+or system before or while building it - structured, specific, and ranked by
+real risk.</p><p>A threat model table (threat, actor, asset, STRIDE category, risk, mitigation,
+verification) plus the top three mitigations to implement first.</p><p>Keywords: threat model, attack surface, trust boundaries, abuse cases, assets, mitigations</p></div>
+<pre class="prompt" id="prompt-body">Threat-model the specified feature or system in this repository. Produce a
+ranked list of realistic threats with mitigations - not a generic checklist.
+
+## Steps
+
+1. **Diagram the trust boundaries** - Components, data flows, and every
+   boundary where an attacker can inject influence (user input, third-party
+   APIs, webhooks, file uploads, admin surfaces). Apply STRIDE per boundary:
+   Spoofing, Tampering, Repudiation, Information disclosure, Denial of service,
+   Elevation of privilege.
+2. **Enumerate threats concretely** - For each element: what could an attacker
+   with that vantage point do? Name the actor (anonymous user, authenticated
+   peer, compromised dependency, insider) and the asset at risk. Vague threats
+   (&quot;input might be malicious&quot;) are rejected; specific ones (&quot;the webhook
+   endpoint accepts unsigned payloads, so anyone can forge events&quot;) are the
+   goal.
+3. **Rate realistically** - Impact times likelihood with a one-line
+   justification each. Consider exploitability, not just severity if exploited.
+4. **Mitigate in order** - For each accepted threat: the control (validation,
+   signature verification, authz check, rate limit, encryption), where it lives
+   in the code, and how to verify it works. Mark residual risk after
+   mitigation.
+5. **Turn top findings into work** - Concrete tasks and tests: the negative
+   test that proves the control rejects the attack, and the regression that
+   keeps it fixed.
+
+## Verification
+
+- [ ] The diagram is grounded in the actual code, routes, and data flows, not a
+      generic template.
+- [ ] Trust boundaries are marked, and every threat names a concrete path
+      across one.
+- [ ] Each threat is rated by impact and likelihood with a one-line
+      justification.
+- [ ] Every mitigation proposed carries a verification step; a control with no
+      check is not counted.
+- [ ] Mitigations were proposed, not implemented unprompted.
+- [ ] The top findings became concrete tasks with negative tests.
+
+## Rules
+
+- Ground every threat in the actual architecture - read the code, routes, and
+  config first; flag assumptions explicitly.
+- Do not implement mitigations unprompted; propose them.
+- A security control without a verification step does not count as mitigated.</pre>
+</article>
+<section class="siblings">
+<h3>More security-performance prompts</h3>
+<ul><li><a href="auth-implementation.html">Reusable prompt: authentication &amp; authorization implementation</a></li><li><a href="dependency-audit.html">Reusable prompt: dependency audit</a></li><li><a href="load-testing.html">Reusable prompt: load testing</a></li><li><a href="memory-leak-hunting.html">Reusable prompt: memory leak hunting</a></li><li><a href="performance-optimization.html">Reusable prompt: performance optimization</a></li><li><a href="privacy-gdpr-compliance-review.html">Reusable prompt: privacy and GDPR compliance review</a></li><li><a href="prompt-injection-defense.html">Reusable prompt: prompt injection defense</a></li><li><a href="rate-limiting-abuse-prevention.html">Reusable prompt: rate limiting and abuse prevention</a></li><li><a href="secrets-management.html">Reusable prompt: secrets management</a></li><li><a href="security-audit.html">Reusable prompt: security audit</a></li></ul>
+</section>
+</main>
+<footer class="site">
+<p>Generated by scripts/build-all.py from the prompt files in this repo. Do not edit by hand. Regenerate with: python3 scripts/build-all.py</p>
+</footer>
+</div>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+document.querySelector('button.copy').addEventListener('click', function () { copyText(document.getElementById('prompt-body')); });
+function copyText(el) {
+  var text = el.textContent;
+  function done() { el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+  function fallback() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } finally { document.body.removeChild(ta); }
+    done();
+  }
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done, fallback);
+  } else {
+    fallback();
+  }
+}
+if (window.lucide) { lucide.createIcons(); }
+</script>
+</body>
+</html>

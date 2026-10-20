@@ -3,7 +3,7 @@
 Prompts for explaining code and changes to other people: READMEs, API docs, inline comments, and changelogs.
 
 Back to the [main index](../README.md#docs--delivery) or browse
-[every prompt on one page](../ALL_PROMPTS.html).
+[every prompt on one page](../website/index.html).
 
 ## Prompts
 

@@ -9,6 +9,13 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+- Site SEO, with everything deployed now living in a single `website/` folder:
+  `scripts/build-all.py` generates `website/index.html` (the former root `ALL_PROMPTS.html`),
+  one page per category (`/category/<cat>`), one page per prompt (`/prompt/<cat>/<slug>`),
+  plus `website/sitemap.xml` and `website/robots.txt`. Every page carries a unique title,
+  meta description, canonical URL, Open Graph and Twitter card tags, and JSON-LD structured
+  data. `vercel.json` rewrites the clean public URLs onto the files in `website/`, and
+  `--check` now verifies the whole committed site, not just the main page.
 - Promote `git-github/pr-review-prompt.md` and `frontend-ui/instagram-carousel-prompt.md` to spec prompts ([spec] badge) and register both in `SPEC_PROMPTS`.
 - Normalize all remaining one-pager prompts onto the contract (`## Steps`, `## Verification`, `## Rules`) with prompt-specific verification content; rewrite or consolidate Rules where needed.
 - Trim over-budget one-pagers (≤45 lines / ≤550 words) by tightening steps; cut Rules to 3-5 bullets. Preserve Verification content.

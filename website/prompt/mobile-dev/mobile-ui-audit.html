@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mobile UI audit | awesome-ai-prompts</title>
+<meta name="description" content="Copy-paste the block below into any AI coding agent to audit a mobile UI at spec level: platform conventions, touch targets, safe areas, accessibility...">
+<link rel="canonical" href="https://awesome-ai-prompts.vercel.app/prompt/mobile-dev/mobile-ui-audit">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="awesome-ai-prompts">
+<meta property="og:title" content="mobile UI audit | awesome-ai-prompts">
+<meta property="og:description" content="Copy-paste the block below into any AI coding agent to audit a mobile UI at spec level: platform conventions, touch targets, safe areas, accessibility...">
+<meta property="og:url" content="https://awesome-ai-prompts.vercel.app/prompt/mobile-dev/mobile-ui-audit">
+<meta property="og:image" content="https://awesome-ai-prompts.vercel.app/assets/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="mobile UI audit | awesome-ai-prompts">
+<meta name="twitter:description" content="Copy-paste the block below into any AI coding agent to audit a mobile UI at spec level: platform conventions, touch targets, safe areas, accessibility...">
+<meta name="twitter:image" content="https://awesome-ai-prompts.vercel.app/assets/social-preview.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","description":"Copy-paste the block below into any AI coding agent to audit a mobile UI at spec level: platform conventions, touch targets, safe areas, accessibility...","isPartOf":{"@type":"WebSite","url":"https://awesome-ai-prompts.vercel.app/"},"mainEntity":{"@type":"CreativeWork","license":"https://spdx.org/licenses/MIT.html","name":"mobile UI audit","url":"https://awesome-ai-prompts.vercel.app/prompt/mobile-dev/mobile-ui-audit"},"name":"mobile UI audit","url":"https://awesome-ai-prompts.vercel.app/prompt/mobile-dev/mobile-ui-audit"}]}</script>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;color:#1a1a1a;margin:0;background:#f7f7f5}
+.wrap{max-width:760px;margin:0 auto;padding:2rem 1.5rem 4rem}
+header.site{border-bottom:2px solid #1a1a1a;padding-bottom:1rem;margin-bottom:1.5rem}
+header.site h1{margin:0 0 .25rem;font-size:1.6rem}
+header.site p.sub{margin:.25rem 0;color:#555;font-size:.95rem}
+header.site nav.links{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;margin-top:.9rem;font-size:.9rem}
+header.site nav.links a{color:#1a1a1a;text-decoration:none;border-bottom:1px dotted #999}
+header.site nav.links a:hover{border-bottom-style:solid;color:#2f4f7f}
+nav.crumb{font-size:.85rem;color:#777;margin-bottom:1.25rem}
+nav.crumb a{color:#777;text-decoration:none;border-bottom:1px dotted #bbb}
+nav.crumb a:hover{color:#2f4f7f;border-bottom-style:solid}
+h2.page{border-bottom:2px solid #333;padding-bottom:.35rem;font-size:1.35rem;display:flex;align-items:center;gap:.5rem;margin:0 0 1rem}
+h2.page svg{width:1.2rem;height:1.2rem;flex:none;color:#2f4f7f}
+span.spec{display:inline-block;font-size:.7rem;vertical-align:middle;background:#7fb3df;color:#fff;border-radius:4px;padding:.05rem .45rem;margin-left:.15rem}
+article.prompt{background:#fff;border:1px solid #ddd;border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:1.75rem}
+article.prompt .head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+article.prompt .meta{font-size:.82rem;color:#777;margin:0 0 .75rem}
+article.prompt .meta a{color:#777}
+.intro p{margin:.4rem 0 .9rem;color:#333}
+button.copy{border:1px solid #ddd;background:#fff;padding:.25rem .6rem;border-radius:6px;color:#666;cursor:pointer;font-size:.78rem;flex:none}
+button.copy:hover{background:rgba(0,0,0,.05);color:#111}
+pre.prompt{white-space:pre-wrap;background:#1e1e1e;color:#e6e6e6;border-radius:6px;padding:1rem;margin:0;overflow-x:auto}
+ul.cards{list-style:none;padding:0;margin:0 0 1.5rem}
+ul.cards li{margin:.4rem 0}
+ul.cards a{display:block;background:#fff;border:1px solid #ddd;border-radius:8px;padding:.7rem 1rem;text-decoration:none;color:#1a1a1a}
+ul.cards a:hover{border-color:#2f4f7f}
+ul.cards strong{display:block}
+ul.cards span{font-size:.85rem;color:#555}
+section.siblings{margin-top:2rem}
+section.siblings h3{font-size:1rem;text-transform:uppercase;letter-spacing:.04em;color:#555}
+section.siblings ul{margin:.25rem 0;padding-left:1.25rem}
+section.siblings a{color:#1a1a1a;text-decoration:none;border-bottom:1px dotted #999}
+section.siblings a:hover{border-bottom-style:solid}
+a.cta{display:inline-block;font-size:.9rem;color:#2f4f7f;text-decoration:none;border-bottom:1px dotted #999}
+a.cta:hover{border-bottom-style:solid}
+footer.site{margin-top:3rem;padding-top:1rem;border-top:1px solid #ddd;color:#888;font-size:.85rem}
+@media print{button.copy{display:none}.wrap{max-width:none;padding:0}pre.prompt{color:#000;background:#fff;border:1px solid #ccc}}
+</style>
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+<h1>awesome-ai-prompts</h1>
+<p class="sub">One prompt from the awesome-ai-prompts catalog, ready to paste into your AI coding agent.</p>
+<nav class="links">
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/README.md">README &amp; docs</a>
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts">Star on GitHub</a>
+</nav>
+</header>
+<nav class="crumb"><a href="../../index.html">All prompts</a> &rsaquo; <a href="../mobile-dev.html">mobile-dev</a> &rsaquo; Reusable prompt: mobile UI audit</nav>
+<main>
+<h2 class="page"><i data-lucide="smartphone" aria-hidden="true"></i><span>Reusable prompt: mobile UI audit</span><span class="spec">spec</span></h2>
+<article class="prompt">
+<div class="head">
+<p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/mobile-dev/mobile-ui-audit-prompt.md">mobile-dev/mobile-ui-audit-prompt.md</a></p>
+<button class="copy" type="button">Copy prompt</button>
+</div>
+<div class="intro"><p>Copy-paste the block below into any AI coding agent to audit a mobile UI at
+spec level: platform conventions, touch targets, safe areas, accessibility,
+states, and theming - with evidence-backed findings that cite exact file:line
+and a verifiable fix for each one. Mobile UI lives on the device, so the audit
+runs on a real screen, not a web-inspector view of a portrait render.</p><p>Keywords: mobile ui, tap targets, safe area, platform guidelines, polish, small screens</p></div>
+<pre class="prompt" id="prompt-body">Audit the UI of `[screen / flow / feature]` in this mobile project against the
+platform conventions it must run on (iOS and/or Android) and the project&#x27;s own
+design conventions. Produce a prioritized list of findings, each with a
+concrete fix that can be checked against the codebase - not a style wishlist.
+
+## Define the scope first
+
+1. **Platforms and devices** - Which platforms are in scope, the OS version
+   floor, and the concrete devices and screen sizes to audit (small phone,
+   large phone, tablet if in scope).
+2. **Screens and flows** - The specific screens, routes, and flows to cover.
+3. **Design conventions in use** - The tokens, theme, and component
+   conventions the project follows. If none exist, say so and recommend one; do
+   not invent one.
+4. **Out of scope** - Anything explicitly excluded.
+
+Do not begin until the scope and conventions are defined and confirmed.
+
+## What to produce
+
+A findings report covering every in-scope screen, grouped by the dimension
+below. Each finding carries file:line, the current value, the correct value,
+and the exact change needed, backed by a screenshot where the claim is visual.
+Work the dimensions in order; stop on a broken layout before moving to spacing
+nuance.
+
+1. **Platform conventions** - Layout, controls, and navigation follow the
+   platform idiom (iOS or Android): tab bar vs bottom nav, back affordance,
+   swipe-back, pickers and dialogs, feedback patterns. Flag inverted or mixed
+   conventions.
+2. **Touch targets and hit areas** - Every interactive element is at least
+   44x44 pt (iOS) / 48 dp (Android), with the real tappable bounds equal to or
+   larger than the visual bounds, never smaller. Flag undersized targets and
+   overlapping hit areas.
+3. **Safe areas and cutouts** - Content clears the notch, camera cutout,
+   status bar, home indicator, and rounded corners on the declared devices.
+   Flag layouts that assume a full rectangle.
+4. **Layout across sizes, density, and orientation** - Check on the declared
+   devices at the densities they actually render (@1x/@2x/@3x), portrait and
+   landscape. Flag clipped text, off-screen content, and fixed-pixel layouts
+   that break on a smaller device.
+5. **Keyboard and input** - Focused fields are never obscured by the keyboard,
+   the layout responds when the keyboard opens, and fields use the right input
+   type (email, number, phone) so the correct keyboard appears.
+6. **States and feedback** - Loading, empty, error, success, offline, and
+   retry states exist and are consistent. Interactive elements give visible
+   feedback on tap; silent failures are flagged.
+7. **Accessibility** - The UI holds at larger font and dynamic-type scales
+   without clipped text, contrast meets the platform minimum, and every element
+   is reachable by screen reader and keyboard. Flag touch-only dependencies.
+8. **Theming** - If the project supports light/dark (or more) themes, each
+   screen is checked in every supported theme. Hardcoded colors that break a
+   theme are flagged.
+
+## Method
+
+1. **Read the design architecture first** - Find the token definitions, theme,
+   and shared components before auditing. You audit against the project&#x27;s own
+   system, not an invented one.
+2. **Read each screen&#x27;s layout and style code** - Note dimensions, colors, and
+   constraints with the specific file:line and value for every deviation.
+3. **Run it, do not just read it** - On each declared platform, run the app on
+   a device or simulator at the declared OS, in portrait and landscape, at the
+   large font scale and in each theme. Capture screenshots as evidence.
+4. **Group findings by dimension** - Organize everything under its audit
+   dimension, not as a flat list.
+5. **Show the fix, not just the problem** - For each finding: file:line, the
+   current value, the correct value, and the exact change. If a token or shared
+   component should be used, name it.
+
+## Verification
+
+- [ ] Every finding cites a specific file:line, not a vague location.
+- [ ] No finding invents a platform or design convention the project does not
+      have; missing conventions are reported, not assumed.
+- [ ] Findings are prioritized: broken layouts, unreadable text, and
+      unreachable controls first, minor spacing and typography nits last.
+- [ ] Each platform in scope was run (device or simulator), not only read in
+      code.
+- [ ] Touch targets, safe areas, and large font scale were checked on every
+      in-scope screen.
+- [ ] Intentional, documented design choices are not flagged unless they
+      conflict with a platform requirement.
+- [ ] If the UI already meets the conventions within scope, that is stated
+      explicitly with what was verified, not padded with invented issues.
+
+## Rules
+
+- State the scope, platforms, devices, and conventions before auditing. Do not
+  audit a moving target.
+- Never report &quot;could be more consistent&quot; without specifying what is
+  inconsistent, where it is, and what the correct value should be.
+- Never invent tokens, components, or platform guidelines the project does not
+  have.
+- Do not flag intentional, documented design choices as errors.
+- Prioritize by user impact: a clipped screen at large font scale outranks a
+  2pt spacing nit.
+- If the UI is already consistent within scope, say so and list what was
+  verified - do not invent issues to fill the report.</pre>
+</article>
+<section class="siblings">
+<h3>More mobile-dev prompts</h3>
+<ul><li><a href="mobile-app-develop.html">Reusable prompt: mobile app development</a></li><li><a href="mobile-app-project-setup.html">Reusable prompt: mobile app project setup</a></li><li><a href="mobile-performance.html">Reusable prompt: mobile performance</a></li><li><a href="mobile-ui-audit-fix.html">Reusable prompt: mobile UI audit remediation</a></li><li><a href="mobile-ui-overhaul.html">Reusable prompt: mobile UI overhaul</a></li><li><a href="push-notifications-deep-links.html">Reusable prompt: mobile notifications and deep links</a></li><li><a href="website-to-mobile-app.html">Reusable prompt: website to mobile app</a></li></ul>
+</section>
+</main>
+<footer class="site">
+<p>Generated by scripts/build-all.py from the prompt files in this repo. Do not edit by hand. Regenerate with: python3 scripts/build-all.py</p>
+</footer>
+</div>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+document.querySelector('button.copy').addEventListener('click', function () { copyText(document.getElementById('prompt-body')); });
+function copyText(el) {
+  var text = el.textContent;
+  function done() { el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+  function fallback() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } finally { document.body.removeChild(ta); }
+    done();
+  }
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done, fallback);
+  } else {
+    fallback();
+  }
+}
+if (window.lucide) { lucide.createIcons(); }
+</script>
+</body>
+</html>

@@ -47,7 +47,7 @@ page background, both under the 4.5:1 needed for body text, so the card uses
 `#555` and `#666` instead.
 
 Colors are taken from the CSS in `scripts/build-all.py` so the card reads as the
-same product as `ALL_PROMPTS.html`: the `#f7f7f5` page background, `#1a1a1a`
+same product as `website/index.html`: the `#f7f7f5` page background, `#1a1a1a`
 ink, white cards with `#ddd` borders and 8px radii, and the `#2f4f7f` blue
 accent. The card is light throughout, and its palette is a closed set of seven
 colors. Catalog colors deliberately left out: `#4a6fa5`, which was the

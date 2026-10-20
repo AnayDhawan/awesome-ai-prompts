@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kubernetes deployment | awesome-ai-prompts</title>
+<meta name="description" content="Copy-paste the block below into any AI coding agent to deploy to Kubernetes securely: real health probes, zero-downtime rollouts, non-root pods, and...">
+<link rel="canonical" href="https://awesome-ai-prompts.vercel.app/prompt/devops-deploy/kubernetes-deployment">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="awesome-ai-prompts">
+<meta property="og:title" content="Kubernetes deployment | awesome-ai-prompts">
+<meta property="og:description" content="Copy-paste the block below into any AI coding agent to deploy to Kubernetes securely: real health probes, zero-downtime rollouts, non-root pods, and...">
+<meta property="og:url" content="https://awesome-ai-prompts.vercel.app/prompt/devops-deploy/kubernetes-deployment">
+<meta property="og:image" content="https://awesome-ai-prompts.vercel.app/assets/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kubernetes deployment | awesome-ai-prompts">
+<meta name="twitter:description" content="Copy-paste the block below into any AI coding agent to deploy to Kubernetes securely: real health probes, zero-downtime rollouts, non-root pods, and...">
+<meta name="twitter:image" content="https://awesome-ai-prompts.vercel.app/assets/social-preview.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","description":"Copy-paste the block below into any AI coding agent to deploy to Kubernetes securely: real health probes, zero-downtime rollouts, non-root pods, and...","isPartOf":{"@type":"WebSite","url":"https://awesome-ai-prompts.vercel.app/"},"mainEntity":{"@type":"CreativeWork","license":"https://spdx.org/licenses/MIT.html","name":"Kubernetes deployment","url":"https://awesome-ai-prompts.vercel.app/prompt/devops-deploy/kubernetes-deployment"},"name":"Kubernetes deployment","url":"https://awesome-ai-prompts.vercel.app/prompt/devops-deploy/kubernetes-deployment"}]}</script>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;color:#1a1a1a;margin:0;background:#f7f7f5}
+.wrap{max-width:760px;margin:0 auto;padding:2rem 1.5rem 4rem}
+header.site{border-bottom:2px solid #1a1a1a;padding-bottom:1rem;margin-bottom:1.5rem}
+header.site h1{margin:0 0 .25rem;font-size:1.6rem}
+header.site p.sub{margin:.25rem 0;color:#555;font-size:.95rem}
+header.site nav.links{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;margin-top:.9rem;font-size:.9rem}
+header.site nav.links a{color:#1a1a1a;text-decoration:none;border-bottom:1px dotted #999}
+header.site nav.links a:hover{border-bottom-style:solid;color:#2f4f7f}
+nav.crumb{font-size:.85rem;color:#777;margin-bottom:1.25rem}
+nav.crumb a{color:#777;text-decoration:none;border-bottom:1px dotted #bbb}
+nav.crumb a:hover{color:#2f4f7f;border-bottom-style:solid}
+h2.page{border-bottom:2px solid #333;padding-bottom:.35rem;font-size:1.35rem;display:flex;align-items:center;gap:.5rem;margin:0 0 1rem}
+h2.page svg{width:1.2rem;height:1.2rem;flex:none;color:#2f4f7f}
+span.spec{display:inline-block;font-size:.7rem;vertical-align:middle;background:#7fb3df;color:#fff;border-radius:4px;padding:.05rem .45rem;margin-left:.15rem}
+article.prompt{background:#fff;border:1px solid #ddd;border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:1.75rem}
+article.prompt .head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+article.prompt .meta{font-size:.82rem;color:#777;margin:0 0 .75rem}
+article.prompt .meta a{color:#777}
+.intro p{margin:.4rem 0 .9rem;color:#333}
+button.copy{border:1px solid #ddd;background:#fff;padding:.25rem .6rem;border-radius:6px;color:#666;cursor:pointer;font-size:.78rem;flex:none}
+button.copy:hover{background:rgba(0,0,0,.05);color:#111}
+pre.prompt{white-space:pre-wrap;background:#1e1e1e;color:#e6e6e6;border-radius:6px;padding:1rem;margin:0;overflow-x:auto}
+ul.cards{list-style:none;padding:0;margin:0 0 1.5rem}
+ul.cards li{margin:.4rem 0}
+ul.cards a{display:block;background:#fff;border:1px solid #ddd;border-radius:8px;padding:.7rem 1rem;text-decoration:none;color:#1a1a1a}
+ul.cards a:hover{border-color:#2f4f7f}
+ul.cards strong{display:block}
+ul.cards span{font-size:.85rem;color:#555}
+section.siblings{margin-top:2rem}
+section.siblings h3{font-size:1rem;text-transform:uppercase;letter-spacing:.04em;color:#555}
+section.siblings ul{margin:.25rem 0;padding-left:1.25rem}
+section.siblings a{color:#1a1a1a;text-decoration:none;border-bottom:1px dotted #999}
+section.siblings a:hover{border-bottom-style:solid}
+a.cta{display:inline-block;font-size:.9rem;color:#2f4f7f;text-decoration:none;border-bottom:1px dotted #999}
+a.cta:hover{border-bottom-style:solid}
+footer.site{margin-top:3rem;padding-top:1rem;border-top:1px solid #ddd;color:#888;font-size:.85rem}
+@media print{button.copy{display:none}.wrap{max-width:none;padding:0}pre.prompt{color:#000;background:#fff;border:1px solid #ccc}}
+</style>
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+<h1>awesome-ai-prompts</h1>
+<p class="sub">One prompt from the awesome-ai-prompts catalog, ready to paste into your AI coding agent.</p>
+<nav class="links">
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/README.md">README &amp; docs</a>
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts">Star on GitHub</a>
+</nav>
+</header>
+<nav class="crumb"><a href="../../index.html">All prompts</a> &rsaquo; <a href="../devops-deploy.html">devops-deploy</a> &rsaquo; Reusable prompt: Kubernetes deployment</nav>
+<main>
+<h2 class="page"><i data-lucide="server" aria-hidden="true"></i><span>Reusable prompt: Kubernetes deployment</span></h2>
+<article class="prompt">
+<div class="head">
+<p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/devops-deploy/kubernetes-deployment-prompt.md">devops-deploy/kubernetes-deployment-prompt.md</a></p>
+<button class="copy" type="button">Copy prompt</button>
+</div>
+<div class="intro"><p>Copy-paste the block below into any AI coding agent to deploy to Kubernetes
+securely: real health probes, zero-downtime rollouts, non-root pods, and
+bounded resources.</p><p>Keywords: kubernetes, k8s, pod, helm, manifest, rollout, ingress</p></div>
+<pre class="prompt" id="prompt-body">Deploy this application to Kubernetes properly. The bar: pods pass real health
+checks, rollouts don&#x27;t drop requests, nothing runs as root, and resource usage
+is bounded and visible.
+
+## Steps
+
+1. **Confirm the image is deployable** - Small, non-root, no floating `latest`
+   tag, configuration via env/files rather than rebuilds. If the Dockerfile
+   needs fixing, fix it first.
+2. **Write manifests the declarative way** - Deployments (not bare pods),
+   ConfigMaps/Secrets for config, Services, Ingress or HTTPRoute. Prefer
+   Kustomize overlays per environment over copy-pasted YAML. Resource requests
+   should match observed usage; limits prevent noisy neighbors.
+3. **Health probes that mean something** - Liveness = process healthy (cheap,
+   never depends on other services); readiness = able to serve (checks what
+   actually matters); startupProbe for slow boots. A probe hitting `/` of a SPA
+   is not a health check.
+4. **Zero-downtime rollout** - Tune maxUnavailable/maxSurge; handle SIGTERM (or
+   a preStop delay) so connections drain; set terminationGracePeriodSeconds
+   long enough for in-flight work; gate on readiness during startup. Verify by
+   watching error rates during a rollout.
+5. **Lock down and observe** - securityContext (non-root, read-only rootfs,
+   dropped capabilities), NetworkPolicies where the cluster enforces them,
+   secrets from a secret manager rather than committed YAML, autoscaling based
+   on real metrics, PodDisruptionBudget for availability tiers.
+6. **Verify end-to-end** - Apply to a staging namespace, run smoke tests
+   against the service, kill a pod under traffic and show zero failed requests,
+   then tear down cleanly.
+
+## Verification
+
+- [ ] No `latest` tag is used and no container runs as root.
+- [ ] Deployments are used rather than bare pods, with resource requests and
+      limits set.
+- [ ] Liveness and readiness probes mean different things and both were
+      exercised.
+- [ ] Rolling-update settings and `SIGTERM` handling give a zero-downtime
+      rollout, shown by an in-flight request surviving.
+- [ ] `securityContext` sets a non-root user, read-only root filesystem, and
+      dropped capabilities.
+- [ ] The manifests were applied to staging and smoke-tested, not just written.
+- [ ] Any cluster feature the manifests assume is verified as enforced, or the
+      gap is stated.
+
+## Rules
+
+- No `latest` tags and no root containers.
+- Every manifest change must be applied and verified - YAML that was never
+  applied is fiction.
+- If the cluster lacks a feature (e.g., NetworkPolicy enforcement), say so
+  rather than pretending the YAML protects anything.</pre>
+</article>
+<section class="siblings">
+<h3>More devops-deploy prompts</h3>
+<ul><li><a href="background-jobs-scheduled-tasks.html">Reusable prompt: background jobs and scheduled tasks</a></li><li><a href="backup-disaster-recovery.html">Reusable prompt: backup &amp; disaster recovery</a></li><li><a href="capacity-planning.html">Reusable prompt: capacity planning</a></li><li><a href="cloud-cost-optimization.html">Reusable prompt: cloud cost optimization</a></li><li><a href="database-schema-migrations.html">Reusable prompt: database schema &amp; migrations</a></li><li><a href="deployment-runbook.html">Reusable prompt: deployment runbook</a></li><li><a href="docker-containerization.html">Reusable prompt: Docker containerization</a></li><li><a href="feature-flag-rollout.html">Reusable prompt: feature flags &amp; progressive rollout</a></li><li><a href="incident-response.html">Reusable prompt: incident response</a></li><li><a href="infrastructure-as-code.html">Reusable prompt: infrastructure as code</a></li><li><a href="monitoring-observability.html">Reusable prompt: monitoring and observability</a></li></ul>
+</section>
+</main>
+<footer class="site">
+<p>Generated by scripts/build-all.py from the prompt files in this repo. Do not edit by hand. Regenerate with: python3 scripts/build-all.py</p>
+</footer>
+</div>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+document.querySelector('button.copy').addEventListener('click', function () { copyText(document.getElementById('prompt-body')); });
+function copyText(el) {
+  var text = el.textContent;
+  function done() { el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+  function fallback() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } finally { document.body.removeChild(ta); }
+    done();
+  }
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done, fallback);
+  } else {
+    fallback();
+  }
+}
+if (window.lucide) { lucide.createIcons(); }
+</script>
+</body>
+</html>

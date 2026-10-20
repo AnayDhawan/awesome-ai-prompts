@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mobile UI audit remediation | awesome-ai-prompts</title>
+<meta name="description" content="Copy-paste the block below into any AI coding agent to remediate every finding from `mobile-ui-audit-prompt.md`. These two prompts are co-dependent: the...">
+<link rel="canonical" href="https://awesome-ai-prompts.vercel.app/prompt/mobile-dev/mobile-ui-audit-fix">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="awesome-ai-prompts">
+<meta property="og:title" content="mobile UI audit remediation | awesome-ai-prompts">
+<meta property="og:description" content="Copy-paste the block below into any AI coding agent to remediate every finding from `mobile-ui-audit-prompt.md`. These two prompts are co-dependent: the...">
+<meta property="og:url" content="https://awesome-ai-prompts.vercel.app/prompt/mobile-dev/mobile-ui-audit-fix">
+<meta property="og:image" content="https://awesome-ai-prompts.vercel.app/assets/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="mobile UI audit remediation | awesome-ai-prompts">
+<meta name="twitter:description" content="Copy-paste the block below into any AI coding agent to remediate every finding from `mobile-ui-audit-prompt.md`. These two prompts are co-dependent: the...">
+<meta name="twitter:image" content="https://awesome-ai-prompts.vercel.app/assets/social-preview.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","description":"Copy-paste the block below into any AI coding agent to remediate every finding from `mobile-ui-audit-prompt.md`. These two prompts are co-dependent: the...","isPartOf":{"@type":"WebSite","url":"https://awesome-ai-prompts.vercel.app/"},"mainEntity":{"@type":"CreativeWork","license":"https://spdx.org/licenses/MIT.html","name":"mobile UI audit remediation","url":"https://awesome-ai-prompts.vercel.app/prompt/mobile-dev/mobile-ui-audit-fix"},"name":"mobile UI audit remediation","url":"https://awesome-ai-prompts.vercel.app/prompt/mobile-dev/mobile-ui-audit-fix"}]}</script>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;color:#1a1a1a;margin:0;background:#f7f7f5}
+.wrap{max-width:760px;margin:0 auto;padding:2rem 1.5rem 4rem}
+header.site{border-bottom:2px solid #1a1a1a;padding-bottom:1rem;margin-bottom:1.5rem}
+header.site h1{margin:0 0 .25rem;font-size:1.6rem}
+header.site p.sub{margin:.25rem 0;color:#555;font-size:.95rem}
+header.site nav.links{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;margin-top:.9rem;font-size:.9rem}
+header.site nav.links a{color:#1a1a1a;text-decoration:none;border-bottom:1px dotted #999}
+header.site nav.links a:hover{border-bottom-style:solid;color:#2f4f7f}
+nav.crumb{font-size:.85rem;color:#777;margin-bottom:1.25rem}
+nav.crumb a{color:#777;text-decoration:none;border-bottom:1px dotted #bbb}
+nav.crumb a:hover{color:#2f4f7f;border-bottom-style:solid}
+h2.page{border-bottom:2px solid #333;padding-bottom:.35rem;font-size:1.35rem;display:flex;align-items:center;gap:.5rem;margin:0 0 1rem}
+h2.page svg{width:1.2rem;height:1.2rem;flex:none;color:#2f4f7f}
+span.spec{display:inline-block;font-size:.7rem;vertical-align:middle;background:#7fb3df;color:#fff;border-radius:4px;padding:.05rem .45rem;margin-left:.15rem}
+article.prompt{background:#fff;border:1px solid #ddd;border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:1.75rem}
+article.prompt .head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+article.prompt .meta{font-size:.82rem;color:#777;margin:0 0 .75rem}
+article.prompt .meta a{color:#777}
+.intro p{margin:.4rem 0 .9rem;color:#333}
+button.copy{border:1px solid #ddd;background:#fff;padding:.25rem .6rem;border-radius:6px;color:#666;cursor:pointer;font-size:.78rem;flex:none}
+button.copy:hover{background:rgba(0,0,0,.05);color:#111}
+pre.prompt{white-space:pre-wrap;background:#1e1e1e;color:#e6e6e6;border-radius:6px;padding:1rem;margin:0;overflow-x:auto}
+ul.cards{list-style:none;padding:0;margin:0 0 1.5rem}
+ul.cards li{margin:.4rem 0}
+ul.cards a{display:block;background:#fff;border:1px solid #ddd;border-radius:8px;padding:.7rem 1rem;text-decoration:none;color:#1a1a1a}
+ul.cards a:hover{border-color:#2f4f7f}
+ul.cards strong{display:block}
+ul.cards span{font-size:.85rem;color:#555}
+section.siblings{margin-top:2rem}
+section.siblings h3{font-size:1rem;text-transform:uppercase;letter-spacing:.04em;color:#555}
+section.siblings ul{margin:.25rem 0;padding-left:1.25rem}
+section.siblings a{color:#1a1a1a;text-decoration:none;border-bottom:1px dotted #999}
+section.siblings a:hover{border-bottom-style:solid}
+a.cta{display:inline-block;font-size:.9rem;color:#2f4f7f;text-decoration:none;border-bottom:1px dotted #999}
+a.cta:hover{border-bottom-style:solid}
+footer.site{margin-top:3rem;padding-top:1rem;border-top:1px solid #ddd;color:#888;font-size:.85rem}
+@media print{button.copy{display:none}.wrap{max-width:none;padding:0}pre.prompt{color:#000;background:#fff;border:1px solid #ccc}}
+</style>
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+<h1>awesome-ai-prompts</h1>
+<p class="sub">One prompt from the awesome-ai-prompts catalog, ready to paste into your AI coding agent.</p>
+<nav class="links">
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/README.md">README &amp; docs</a>
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts">Star on GitHub</a>
+</nav>
+</header>
+<nav class="crumb"><a href="../../index.html">All prompts</a> &rsaquo; <a href="../mobile-dev.html">mobile-dev</a> &rsaquo; Reusable prompt: mobile UI audit remediation</nav>
+<main>
+<h2 class="page"><i data-lucide="smartphone" aria-hidden="true"></i><span>Reusable prompt: mobile UI audit remediation</span><span class="spec">spec</span></h2>
+<article class="prompt">
+<div class="head">
+<p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/mobile-dev/mobile-ui-audit-fix-prompt.md">mobile-dev/mobile-ui-audit-fix-prompt.md</a></p>
+<button class="copy" type="button">Copy prompt</button>
+</div>
+<div class="intro"><p>Copy-paste the block below into any AI coding agent to remediate every finding
+from `mobile-ui-audit-prompt.md`. These two prompts are co-dependent: the audit
+produces the findings; this prompt consumes them and fixes them with proof.</p><p>Keywords: mobile ui, audit remediation, tap targets, safe area, accessibility, platform conventions, verification</p></div>
+<pre class="prompt" id="prompt-body">You are fixing the UI issues discovered by a mobile UI audit. Your job is to
+address **every finding** from the audit report, in priority order, with
+evidence-backed fixes. Do not refactor unrelated code. Do not invent new
+issues.
+
+## Prerequisites
+
+1. **Audit report exists** - You must have the output from
+   `mobile-ui-audit-prompt.md`. By default, read `AUDIT.md` at the repository
+   root. If it is in a different path, use that path.
+2. **Evidence available** - The audit report must include findings with
+   `file:line`, current value, correct value, exact change needed, and
+   screenshots/evidence where visual. If any finding is missing required
+   fields, list them and stop.
+3. **Scope is known** - The audit&#x27;s stated platforms, devices, OS floor, screens,
+   themes, and conventions are binding. Do not expand scope unless you state why
+   and get confirmation.
+
+Do not begin until all prerequisites are satisfied.
+
+## What to produce
+
+1. **Remediation plan** - Extract all findings from the audit report, group by
+   the audit dimensions (platform conventions, touch targets/hit areas, safe
+   areas/cutouts, layout across sizes/density/orientation, keyboard/input,
+   states/feedback, accessibility, theming), and reorder by user impact:
+   broken layouts → unreadable text → unreachable controls → safe areas/keyboard
+   → states/feedback → accessibility nits → spacing/typography nits. Show a
+   checklist of every finding (by ID/title + file:line).
+2. **Fixes applied** - For each finding, apply the exact change specified. If
+   the audit named a token/component to use, use it. If the audit said &quot;use
+   existing token X&quot; and X does not exist, report that as a blocker with
+   evidence, do not create a new token unless the audit explicitly allowed it.
+3. **Fix report (AUDIT_FIXES.md)** - Write/update `AUDIT_FIXES.md` mapping each
+   finding to a status: `fixed`, `waived` (with reason), or `blocked` (with
+   blocker). For each `fixed` finding include: file:line changed, before→after
+   diff summary, commit/patch reference, and &quot;after&quot; evidence (screenshots).
+   For each `waived` finding, state why it matches an intentional, documented
+   design choice and cite that document.
+4. **Verification matrix** - A table of every in-scope screen per platform,
+   device, OS, theme, and orientation, showing before→after captures taken the
+   same way as the audit, plus pass/fail against each finding that affects that
+   screen.
+5. **Behavior guard** - Confirm preserved behaviors (state, navigation,
+   permissions, offline, deep links, lifecycle) were not changed. List how you
+   verified (tests run, manual checks on device/simulator).
+6. **Build and test proof** - Show the app builds cleanly on every platform in
+   scope, type checks/lint pass, and any tests covering touched flows still
+   pass. Include command outputs or CI references.
+
+## Method
+
+1. **Parse the audit** - Read the full audit report (AUDIT.md by default).
+   Extract: scope, platforms/devices, conventions, and the complete findings
+   list with file:line, current, correct, exact change, evidence paths. Treat
+   the audit as authoritative.
+2. **Plan before coding** - Present the remediation plan checklist and confirm
+   priority. Do not start edits until confirmed.
+3. **Fix in priority order** - Work top-to-bottom by impact. For each finding,
+   make the minimal change to satisfy &quot;correct value&quot;. Prefer using existing
+   tokens/components/shared styles. Do not bundle unrelated cleanups.
+4. **Verify as you go** - After fixing a finding that affects layout/touch
+   targets/safe areas/keyboard/accessibility, verify on the relevant platform(s)
+   at the declared device(s). Re-check large font scale and affected themes.
+5. **Prove with evidence** - Capture &quot;after&quot; screenshots from the same views
+   used in the audit (same device, orientation, theme, scale). Update
+   AUDIT_FIXES.md immediately with evidence and status.
+6. **Final verification** - Re-run the verification checks from the audit where
+   applicable (touch targets, safe areas, large font scale, keyboard, themes,
+   accessibility). Confirm every finding is either `fixed` with evidence, or
+   `waived` with documented justification.
+7. **Build/test** - Build and run checks for all platforms in scope. Run tests
+   for touched flows. Report pass/fail.
+
+## Verification
+
+- [ ] Every finding from the audit appears in AUDIT_FIXES.md with a status.
+- [ ] All `fixed` findings cite specific file:line changes and include
+      before→after evidence (screenshots) from device/simulator, not just code
+      diff.
+- [ ] Touch targets, safe areas, keyboard handling, large font scale,
+      accessibility, and themes were re-checked on declared devices/platforms.
+- [ ] Before→after captures exist for every screen affected by fixes, taken the
+      same way as the audit.
+- [ ] App builds cleanly on every platform in scope; lint/type checks and
+      relevant tests pass.
+- [ ] No behavior changes (state, navigation, permissions, offline, deep links,
+      lifecycle) introduced. Documented confirmation exists.
+- [ ] No finding was &quot;fixed&quot; by refactoring unrelated code. Changes are minimal
+      and match the audit&#x27;s exact change.
+- [ ] Intentional design choices are only waived with citation to documented
+      conventions.
+- [ ] No new tokens/components were invented unless the audit explicitly
+      allowed it.
+
+## Rules
+
+- Consume the audit report. Do not re-audit. Fix what the audit found.
+- Fix all findings. If you cannot fix a finding without changing behavior or
+  expanding scope, mark it `blocked` with a concrete blocker and do not guess.
+- Use the project&#x27;s existing tokens, components, and conventions. If missing and
+  not allowed, block.
+- Prioritize by user impact. Do not polish nits before fixing broken layouts or
+  unreachable controls.
+- Evidence is required. No status change without before→after proof on device
+  or simulator for visual issues.
+- These prompts are co-dependent. The audit defines the contract; this
+  remediation must satisfy it completely.</pre>
+</article>
+<section class="siblings">
+<h3>More mobile-dev prompts</h3>
+<ul><li><a href="mobile-app-develop.html">Reusable prompt: mobile app development</a></li><li><a href="mobile-app-project-setup.html">Reusable prompt: mobile app project setup</a></li><li><a href="mobile-performance.html">Reusable prompt: mobile performance</a></li><li><a href="mobile-ui-audit.html">Reusable prompt: mobile UI audit</a></li><li><a href="mobile-ui-overhaul.html">Reusable prompt: mobile UI overhaul</a></li><li><a href="push-notifications-deep-links.html">Reusable prompt: mobile notifications and deep links</a></li><li><a href="website-to-mobile-app.html">Reusable prompt: website to mobile app</a></li></ul>
+</section>
+</main>
+<footer class="site">
+<p>Generated by scripts/build-all.py from the prompt files in this repo. Do not edit by hand. Regenerate with: python3 scripts/build-all.py</p>
+</footer>
+</div>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+document.querySelector('button.copy').addEventListener('click', function () { copyText(document.getElementById('prompt-body')); });
+function copyText(el) {
+  var text = el.textContent;
+  function done() { el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+  function fallback() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } finally { document.body.removeChild(ta); }
+    done();
+  }
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done, fallback);
+  } else {
+    fallback();
+  }
+}
+if (window.lucide) { lucide.createIcons(); }
+</script>
+</body>
+</html>

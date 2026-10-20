@@ -11,7 +11,9 @@ mis = "mis"
 
 [files]
 extend-exclude = [
-  # Generated page - source of truth is the prompt .md files.
+  # Generated site (source of truth is the prompt .md files).
+  "website/**",
+  # Legacy location of the generated catalog page.
   "ALL_PROMPTS.html",
   # Vendored Next.js demo app (out of scope for repo linting).
   "docs/media/demo-app/**",

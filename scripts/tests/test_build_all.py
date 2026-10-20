@@ -1,6 +1,6 @@
 """Structural tests for scripts/build-all.py's generated page.
 
-CI's `build-all.py --check` only guarantees the committed ALL_PROMPTS.html is
+CI's `build-all.py --check` only guarantees the committed site under website/ is
 deterministic and in sync with the builder; it cannot see a template change
 that produces valid-looking but broken HTML. These tests run the real builder
 and assert the structural invariants the page relies on: one collapsed

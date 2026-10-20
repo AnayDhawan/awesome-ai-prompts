@@ -7,7 +7,7 @@ Prompts carrying the light-blue badge are the heavyweight
 hard constraints and required verification.
 
 Back to the [main index](../README.md#frontend--ui) or browse
-[every prompt on one page](../ALL_PROMPTS.html).
+[every prompt on one page](../website/index.html).
 
 ## Prompts
 
