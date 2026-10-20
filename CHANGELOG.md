@@ -20,6 +20,8 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   they resolve correctly at any page depth.
 - Add `website/llms.txt` (llmstxt.org convention): a deterministic Markdown index of the
   catalog for LLM readers, served at `/llms.txt`.
+- Add the Google Search Console site-verification file, served at the domain root via a
+  `vercel.json` rewrite.
 - Broadened positioning from student developers to all developers: README intro, `CITATION.cff`
   keywords, and the brand-voice example in `frontend-ui/instagram-carousel-prompt.md`.
 - Promote `git-github/pr-review-prompt.md` and `frontend-ui/instagram-carousel-prompt.md` to spec prompts ([spec] badge) and register both in `SPEC_PROMPTS`.

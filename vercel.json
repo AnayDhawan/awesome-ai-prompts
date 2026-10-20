@@ -13,6 +13,10 @@
     },
     { "source": "/sitemap.xml", "destination": "/website/sitemap.xml" },
     { "source": "/robots.txt", "destination": "/website/robots.txt" },
-    { "source": "/llms.txt", "destination": "/website/llms.txt" }
+    { "source": "/llms.txt", "destination": "/website/llms.txt" },
+    {
+      "source": "/googlecefe33353aa9a372.html",
+      "destination": "/website/googlecefe33353aa9a372.html"
+    }
   ]
 }
