@@ -694,8 +694,10 @@ def sitemap_urls():
 
 
 def render_sitemap(dest_root):
-    lines = ['<?xml version="1.0" encoding="UTF-8"?>',
-             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ]
     lines.extend(f"<url><loc>{url}</loc></url>" for url in sitemap_urls())
     lines.append("</urlset>")
     (dest_root / "sitemap.xml").write_text("\n".join(lines) + "\n", encoding="utf-8")
