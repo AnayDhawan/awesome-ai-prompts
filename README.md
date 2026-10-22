@@ -21,7 +21,7 @@ verifiable result before it calls the work done.
 
 _The opening chat is staged. The rest is the real opencode run from [prompt-in-action.mp4](docs/media/prompt-in-action.mp4), sped up in places. Made with [openvidstudio](https://github.com/AnayDhawan/openvidstudio)._
 
-[![Contributors](https://contrib.rocks/image?repo=shauryagangrade/awesome-ai-prompts&t=20260921)](https://github.com/shauryagangrade/awesome-ai-prompts/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=shauryagangrade/awesome-ai-prompts&t=20261022)](https://github.com/shauryagangrade/awesome-ai-prompts/graphs/contributors)
 
 Starring is the hello; a merged PR is the handshake. Every merged prompt PR
 auto-appends its author to [CONTRIBUTORS.md](CONTRIBUTORS.md) - the avatars
