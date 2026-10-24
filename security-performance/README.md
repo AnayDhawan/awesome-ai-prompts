@@ -26,6 +26,8 @@ Back to the [main index](../README.md#security--performance) or browse
 
 - [rate-limiting-abuse-prevention-prompt.md](rate-limiting-abuse-prevention-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - protect public endpoints: limits tiered by cost, algorithm chosen for the traffic shape, shared counters, load-test proof.
 
+- [secrets-scanning-response-prompt.md](secrets-scanning-response-prompt.md) - respond to a leaked secret: rotate first, find every copy, check for misuse, rewrite history safely, and prevent a repeat.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,
