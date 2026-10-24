@@ -304,7 +304,7 @@ described above.
 - [Code review & quality](#code-review--quality) (6) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Testing & quality](#testing--quality) (10) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Docs & delivery](#docs--delivery) (6)
-- [Security & performance](#security--performance) (11) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [Security & performance](#security--performance) (12) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [DevOps & deploy](#devops--deploy) (12)
 - [Career & learning](#career--learning) (7)
 - [Frontend & UI](#frontend--ui) (13) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
@@ -415,6 +415,7 @@ described above.
 - [prompt-injection-defense-prompt.md](security-performance/prompt-injection-defense-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - threat-model one attack class: where untrusted text reaches the context, out-of-band tool gating, a red-team suite, honest residual risk.
 - [privacy-gdpr-compliance-review-prompt.md](security-performance/privacy-gdpr-compliance-review-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - systematic privacy pass: data inventory with retention, lawful basis, consent withdrawal, user rights flows, processors, ranked minimization.
 - [rate-limiting-abuse-prevention-prompt.md](security-performance/rate-limiting-abuse-prevention-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - protect public endpoints: limits tiered by cost, algorithm chosen for the traffic shape, shared counters, load-test proof.
+- [dependency-vuln-triage-prompt.md](security-performance/dependency-vuln-triage-prompt.md) - triage existing vulnerability alerts: dependency path, exploit conditions, reachability here, then one evidence-backed decision per advisory.
 
 ## DevOps & deploy
 

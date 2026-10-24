@@ -2,7 +2,7 @@
 
 > A curated list of copy-paste AI coding-agent prompts for developers: disciplined workflows that verify, don't guess.
 
-134 prompts across 14 categories, generated from the prompt files in github.com/shauryagangrade/awesome-ai-prompts (MIT licensed). Each prompt page carries the full prompt block ready to paste into an AI coding agent.
+135 prompts across 14 categories, generated from the prompt files in github.com/shauryagangrade/awesome-ai-prompts (MIT licensed). Each prompt page carries the full prompt block ready to paste into an AI coding agent.
 
 ## Site
 
@@ -21,7 +21,7 @@
 - [frontend-ui](https://awesome-ai-prompts.vercel.app/category/frontend-ui): 13 prompts
 - [git-github](https://awesome-ai-prompts.vercel.app/category/git-github): 14 prompts
 - [mobile-dev](https://awesome-ai-prompts.vercel.app/category/mobile-dev): 8 prompts
-- [security-performance](https://awesome-ai-prompts.vercel.app/category/security-performance): 11 prompts
+- [security-performance](https://awesome-ai-prompts.vercel.app/category/security-performance): 12 prompts
 - [system-and-exploration](https://awesome-ai-prompts.vercel.app/category/system-and-exploration): 1 prompt
 - [system-design](https://awesome-ai-prompts.vercel.app/category/system-design): 7 prompts
 - [testing-quality](https://awesome-ai-prompts.vercel.app/category/testing-quality): 10 prompts
@@ -167,6 +167,7 @@
 
 - [authentication & authorization implementation](https://awesome-ai-prompts.vercel.app/prompt/security-performance/auth-implementation): Copy-paste the block below into any AI coding agent to implement auth the safe way - sessions and tokens done right, authorization checked server-side...
 - [dependency audit](https://awesome-ai-prompts.vercel.app/prompt/security-performance/dependency-audit): Copy-paste the block below into any AI coding agent to audit dependencies for vulnerabilities, license issues, and staleness - with actionable fix...
+- [dependency vulnerability triage](https://awesome-ai-prompts.vercel.app/prompt/security-performance/dependency-vuln-triage): Copy-paste the block below into any AI coding agent to triage a list of dependency vulnerability alerts - decide which ones actually affect this project...
 - [load testing](https://awesome-ai-prompts.vercel.app/prompt/security-performance/load-testing): Copy-paste the block below into any AI coding agent to design and run load tests with measurable thresholds and reproducible results, not a one-off "it...
 - [memory leak hunting](https://awesome-ai-prompts.vercel.app/prompt/security-performance/memory-leak-hunting): Copy-paste the block below into any AI coding agent to hunt down a memory leak in a running service: measure the growth, isolate what retains memory...
 - [performance optimization](https://awesome-ai-prompts.vercel.app/prompt/security-performance/performance-optimization): Copy-paste the block below into any AI coding agent to find real bottlenecks and fix them with evidence - never guess-and-tune. Keywords: performance...

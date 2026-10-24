@@ -26,6 +26,8 @@ Back to the [main index](../README.md#security--performance) or browse
 
 - [rate-limiting-abuse-prevention-prompt.md](rate-limiting-abuse-prevention-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - protect public endpoints: limits tiered by cost, algorithm chosen for the traffic shape, shared counters, load-test proof.
 
+- [dependency-vuln-triage-prompt.md](dependency-vuln-triage-prompt.md) - triage existing vulnerability alerts: dependency path, exploit conditions, reachability here, then one evidence-backed decision per advisory.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,
