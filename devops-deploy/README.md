@@ -23,6 +23,8 @@ Back to the [main index](../README.md#devops--deploy) or browse
 
 - [capacity-planning-prompt.md](capacity-planning-prompt.md) - name the wall and the date: headroom per bottleneck, forecast off a product metric, dated scaling options, early alerts.
 
+- [ci-gate-diagnosis-prompt.md](ci-gate-diagnosis-prompt.md) - diagnose a failed CI check from its logs: caused by this change or not, flake or real, then fix the code, fix the pipeline, or retry.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,

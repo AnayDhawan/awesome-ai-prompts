@@ -2,7 +2,7 @@
 
 > A curated list of copy-paste AI coding-agent prompts for developers: disciplined workflows that verify, don't guess.
 
-134 prompts across 14 categories, generated from the prompt files in github.com/shauryagangrade/awesome-ai-prompts (MIT licensed). Each prompt page carries the full prompt block ready to paste into an AI coding agent.
+135 prompts across 14 categories, generated from the prompt files in github.com/shauryagangrade/awesome-ai-prompts (MIT licensed). Each prompt page carries the full prompt block ready to paste into an AI coding agent.
 
 ## Site
 
@@ -16,7 +16,7 @@
 - [code-review](https://awesome-ai-prompts.vercel.app/category/code-review): 6 prompts
 - [core-coding](https://awesome-ai-prompts.vercel.app/category/core-coding): 20 prompts
 - [data-ai](https://awesome-ai-prompts.vercel.app/category/data-ai): 13 prompts
-- [devops-deploy](https://awesome-ai-prompts.vercel.app/category/devops-deploy): 12 prompts
+- [devops-deploy](https://awesome-ai-prompts.vercel.app/category/devops-deploy): 13 prompts
 - [docs-delivery](https://awesome-ai-prompts.vercel.app/category/docs-delivery): 6 prompts
 - [frontend-ui](https://awesome-ai-prompts.vercel.app/category/frontend-ui): 13 prompts
 - [git-github](https://awesome-ai-prompts.vercel.app/category/git-github): 14 prompts
@@ -100,6 +100,7 @@
 - [background jobs and scheduled tasks](https://awesome-ai-prompts.vercel.app/prompt/devops-deploy/background-jobs-scheduled-tasks): Copy-paste the block below into any AI coding agent to add async work that survives retries, deploys, and duplicates - with idempotent handlers, bounded...
 - [backup & disaster recovery](https://awesome-ai-prompts.vercel.app/prompt/devops-deploy/backup-disaster-recovery): Copy-paste the block below into any AI coding agent to build backups and a DR plan that have actually been restored - untested backups are Schrödinger's...
 - [capacity planning](https://awesome-ai-prompts.vercel.app/prompt/devops-deploy/capacity-planning): Copy-paste the block below into any AI coding agent to find out when the system will hit a wall, and how long it takes to fix - so upgrades are scheduled...
+- [CI gate diagnosis](https://awesome-ai-prompts.vercel.app/prompt/devops-deploy/ci-gate-diagnosis): Copy-paste the block below into any AI coding agent to find out why a CI check failed and what to do about it - fix the code, fix the pipeline, or retry -...
 - [cloud cost optimization](https://awesome-ai-prompts.vercel.app/prompt/devops-deploy/cloud-cost-optimization): Copy-paste the block below into any AI coding agent to cut infrastructure spend without breaking anything - ranked by real cost, rightsized from measured...
 - [database schema & migrations](https://awesome-ai-prompts.vercel.app/prompt/devops-deploy/database-schema-migrations): Copy-paste the block below into any AI coding agent to design or evolve a database schema safely - backward-compatible migrations and a clean rollout...
 - [deployment runbook](https://awesome-ai-prompts.vercel.app/prompt/devops-deploy/deployment-runbook): Copy-paste the block below into any AI coding agent to deploy a service safely - with a rollback plan, verified steps, and no surprises. Keywords...
