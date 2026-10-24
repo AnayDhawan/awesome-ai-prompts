@@ -15,30 +15,34 @@ Before deleting anything, establish:
 1. **Current state** - Identify the current branch, uncommitted changes (staged/unstaged), stashes, worktrees, and recent PR branches.
 2. **Safety boundaries** - Never delete the current branch, branches with unpushed commits that aren't clearly merged, stashes that contain unique work without confirmation, or worktrees currently in use.
 3. **Upstream tracking** - Understand which branches track remotes and which have been merged into main/master/develop.
-4. **Build artifacts** - Identify caches/build outputs (node_modules, dist, build, .next, target, __pycache__, etc.) that can be safely removed.
+4. **Build artifacts** - Identify caches/build outputs (node_modules, dist, build, .next, target, **pycache**, etc.) that can be safely removed.
 
 ## What to clean up
 
 ### Branches
+
 - Delete local branches that have been merged into the default branch (main/master/develop)
 - Delete local branches whose upstream remote branches have been deleted (gone)
-- Never delete protected branches (main, master, develop, trunk, release/*)
+- Never delete protected branches (main, master, develop, trunk, release/\*)
 - Never delete the currently checked out branch
 
 ### Worktrees
+
 - List all git worktrees with `git worktree list`
 - Remove worktrees that are no longer needed (merged PRs, completed work)
 - Never remove the main worktree or worktrees with uncommitted changes without explicit confirmation
 - Prune stale worktree references
 
 ### Stashes
+
 - Review all stashes (`git stash list`) with context
 - Identify stashes that are old and likely obsolete (from completed PRs)
 - Drop stashes only with confirmation or if clearly from merged work
 - Never drop stashes with unique uncommitted work without explicit approval
 
 ### Local files and artifacts
-- Remove build outputs and caches that are safe to regenerate (dist/, build/, .next/, out/, target/, __pycache__/, .pytest_cache/, coverage/)
+
+- Remove build outputs and caches that are safe to regenerate (dist/, build/, .next/, out/, target/, **pycache**/, .pytest_cache/, coverage/)
 - Remove node_modules only if explicitly requested or if disk space critical and can be reinstalled
 - Remove .DS_Store and other OS artifacts
 - Clear temporary files in tmp/ only if clearly generated artifacts

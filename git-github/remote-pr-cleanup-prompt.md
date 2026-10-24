@@ -21,22 +21,26 @@ Before deleting anything remotely, establish:
 ## What to clean up
 
 ### Remote-tracking branches
+
 - Prune stale remote-tracking branches with `git fetch --prune`
 - Remove local references to branches deleted on remote
 - Keep tracking branches for active remotes
 
 ### Merged PR branches
+
 - Delete remote branches that have been merged into default branch via PR
 - For each branch to delete, verify it's merged (check PR status via `gh` if available)
 - Never delete default branch or protected branches
 - Never delete branches from open PRs
 
 ### Closed/unmerged PR branches
+
 - Identify branches from closed PRs that were not merged
 - These may contain useful work - require explicit confirmation before deletion
 - Consider if author wants to recover or abandon
 
 ### Remote sync
+
 - Fetch from all relevant remotes
 - Sync with upstream if it's a fork (fetch upstream, consider if rebase/merge needed)
 - Update local default branch to track latest

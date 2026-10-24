@@ -2,7 +2,7 @@
 
 > A curated list of copy-paste AI coding-agent prompts for developers: disciplined workflows that verify, don't guess.
 
-136 prompts across 15 categories, generated from the prompt files in github.com/shauryagangrade/awesome-ai-prompts (MIT licensed). Each prompt page carries the full prompt block ready to paste into an AI coding agent.
+134 prompts across 14 categories, generated from the prompt files in github.com/shauryagangrade/awesome-ai-prompts (MIT licensed). Each prompt page carries the full prompt block ready to paste into an AI coding agent.
 
 ## Site
 
@@ -25,7 +25,6 @@
 - [system-and-exploration](https://awesome-ai-prompts.vercel.app/category/system-and-exploration): 1 prompt
 - [system-design](https://awesome-ai-prompts.vercel.app/category/system-design): 7 prompts
 - [testing-quality](https://awesome-ai-prompts.vercel.app/category/testing-quality): 10 prompts
-- [tmp](https://awesome-ai-prompts.vercel.app/category/tmp): 2 prompts
 
 ## Prompts
 
@@ -204,9 +203,4 @@
 - [property-based testing](https://awesome-ai-prompts.vercel.app/prompt/testing-quality/property-based-testing): Copy-paste the block below into any AI coding agent to write property-based tests that catch bugs through generated inputs rather than hand-picked...
 - [strict TDD](https://awesome-ai-prompts.vercel.app/prompt/testing-quality/test-driven-development): Copy-paste the block below into any AI coding agent to build code test-first. Strict discipline - no code without a failing test, no skipping steps...
 - [comprehensive test writing](https://awesome-ai-prompts.vercel.app/prompt/testing-quality/test-writing): Copy-paste the block below into any AI coding agent to write tests that actually protect the code - meaningful assertions, real edge cases, and the repo's...
-
-### tmp
-
-- [local PR cleanup [spec]](https://awesome-ai-prompts.vercel.app/prompt/tmp/local-pr-cleanup): Copy-paste the block below into any AI coding agent to perform full local hygiene after complex PR-related work - safely removing stale branches...
-- [remote PR cleanup [spec]](https://awesome-ai-prompts.vercel.app/prompt/tmp/remote-pr-cleanup): Copy-paste the block below into any AI coding agent to perform full remote hygiene after complex PR-related work - safely pruning remote-tracking...
 
