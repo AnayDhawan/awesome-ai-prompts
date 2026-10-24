@@ -15,6 +15,8 @@ Back to the [main index](../README.md#docs--delivery) or browse
 
 - [architecture-documentation-prompt.md](architecture-documentation-prompt.md) - write architecture docs with evidence, tradeoffs, and verification.$
 
+- [migration-guide-prompt.md](migration-guide-prompt.md) - write a migration guide for a breaking change or upgrade: ordered steps, every example run, a rollback, and a way to check it worked.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,

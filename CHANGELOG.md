@@ -11,6 +11,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- Add `docs-delivery/migration-guide-prompt.md` - prompt for writing a migration guide for a breaking change or upgrade: ordered steps, every example run from the old version, a rollback that names what is irreversible, and a success check.
 - Add `git-github/local-pr-cleanup-prompt.md` - spec prompt for full local hygiene after complex PR work: branches, worktrees, stashes, and build artifacts.
 - Add `git-github/remote-pr-cleanup-prompt.md` - spec prompt for full remote hygiene after complex PR work: prune remotes, delete merged PR branches, sync with upstream.
 

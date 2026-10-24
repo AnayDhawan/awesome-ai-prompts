@@ -2,7 +2,7 @@
 
 > A curated list of copy-paste AI coding-agent prompts for developers: disciplined workflows that verify, don't guess.
 
-134 prompts across 14 categories, generated from the prompt files in github.com/shauryagangrade/awesome-ai-prompts (MIT licensed). Each prompt page carries the full prompt block ready to paste into an AI coding agent.
+135 prompts across 14 categories, generated from the prompt files in github.com/shauryagangrade/awesome-ai-prompts (MIT licensed). Each prompt page carries the full prompt block ready to paste into an AI coding agent.
 
 ## Site
 
@@ -17,7 +17,7 @@
 - [core-coding](https://awesome-ai-prompts.vercel.app/category/core-coding): 20 prompts
 - [data-ai](https://awesome-ai-prompts.vercel.app/category/data-ai): 13 prompts
 - [devops-deploy](https://awesome-ai-prompts.vercel.app/category/devops-deploy): 12 prompts
-- [docs-delivery](https://awesome-ai-prompts.vercel.app/category/docs-delivery): 6 prompts
+- [docs-delivery](https://awesome-ai-prompts.vercel.app/category/docs-delivery): 7 prompts
 - [frontend-ui](https://awesome-ai-prompts.vercel.app/category/frontend-ui): 13 prompts
 - [git-github](https://awesome-ai-prompts.vercel.app/category/git-github): 14 prompts
 - [mobile-dev](https://awesome-ai-prompts.vercel.app/category/mobile-dev): 8 prompts
@@ -116,6 +116,7 @@
 - [architecture documentation](https://awesome-ai-prompts.vercel.app/prompt/docs-delivery/architecture-documentation): Copy-paste the block below into any AI coding agent to document the architecture of a feature or system change: components, data flow, tradeoffs, and...
 - [documentation writer](https://awesome-ai-prompts.vercel.app/prompt/docs-delivery/documentation-writer): Copy-paste the block below into any AI coding agent to write or update documentation that is accurate, useful, and in the project's voice. Keywords...
 - [inline documentation](https://awesome-ai-prompts.vercel.app/prompt/docs-delivery/inline-documentation): Copy-paste the block below into any AI coding agent to add or improve inline documentation - accurate JSDoc/docstrings that explain the "why", not ones...
+- [migration guide](https://awesome-ai-prompts.vercel.app/prompt/docs-delivery/migration-guide): Copy-paste the block below into any AI coding agent to write a migration guide for a breaking change, upgrade, or API move - every step tested, with a way...
 - [README builder](https://awesome-ai-prompts.vercel.app/prompt/docs-delivery/readme-builder): Copy-paste the block below into any AI coding agent to build a comprehensive README from scratch - honest, useful, and structured for someone encountering...
 - [changelog & release notes](https://awesome-ai-prompts.vercel.app/prompt/docs-delivery/release-notes-changelog): Copy-paste the block below into any AI coding agent to turn git history into a clear, honest changelog for a release. Keywords: changelog, release notes...
 

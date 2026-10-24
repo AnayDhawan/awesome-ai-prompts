@@ -303,7 +303,7 @@ described above.
 - [Git & GitHub](#git--github) (14) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Code review & quality](#code-review--quality) (6) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Testing & quality](#testing--quality) (10) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [Docs & delivery](#docs--delivery) (6)
+- [Docs & delivery](#docs--delivery) (7)
 - [Security & performance](#security--performance) (11) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [DevOps & deploy](#devops--deploy) (12)
 - [Career & learning](#career--learning) (7)
@@ -401,6 +401,7 @@ described above.
 - [api-documentation-prompt.md](docs-delivery/api-documentation-prompt.md) - generate OpenAPI/Swagger docs from existing code with accurate schemas.
 - [readme-builder-prompt.md](docs-delivery/readme-builder-prompt.md) - build a comprehensive README from scratch: purpose, quickstart, examples.
 - [inline-documentation-prompt.md](docs-delivery/inline-documentation-prompt.md) - add JSDoc/docstrings to existing code: accurate, concise, non-redundant.
+- [migration-guide-prompt.md](docs-delivery/migration-guide-prompt.md) - write a migration guide for a breaking change or upgrade: ordered steps, every example run, a rollback, and a way to check it worked.
 
 ## Security & performance
 
