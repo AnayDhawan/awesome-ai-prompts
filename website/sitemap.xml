@@ -101,10 +101,12 @@
 <url><loc>https://awesome-ai-prompts.vercel.app/prompt/git-github/good-first-issue-workflow</loc></url>
 <url><loc>https://awesome-ai-prompts.vercel.app/prompt/git-github/issue-resolving</loc></url>
 <url><loc>https://awesome-ai-prompts.vercel.app/prompt/git-github/issue-triage-for-maintainers</loc></url>
+<url><loc>https://awesome-ai-prompts.vercel.app/prompt/git-github/local-pr-cleanup</loc></url>
 <url><loc>https://awesome-ai-prompts.vercel.app/prompt/git-github/open-source-contribution</loc></url>
 <url><loc>https://awesome-ai-prompts.vercel.app/prompt/git-github/open-source-maintainer-survival</loc></url>
 <url><loc>https://awesome-ai-prompts.vercel.app/prompt/git-github/pr-review</loc></url>
 <url><loc>https://awesome-ai-prompts.vercel.app/prompt/git-github/release-automation</loc></url>
+<url><loc>https://awesome-ai-prompts.vercel.app/prompt/git-github/remote-pr-cleanup</loc></url>
 <url><loc>https://awesome-ai-prompts.vercel.app/category/mobile-dev</loc></url>
 <url><loc>https://awesome-ai-prompts.vercel.app/prompt/mobile-dev/mobile-app-develop</loc></url>
 <url><loc>https://awesome-ai-prompts.vercel.app/prompt/mobile-dev/mobile-app-project-setup</loc></url>
@@ -147,4 +149,7 @@
 <url><loc>https://awesome-ai-prompts.vercel.app/prompt/testing-quality/property-based-testing</loc></url>
 <url><loc>https://awesome-ai-prompts.vercel.app/prompt/testing-quality/test-driven-development</loc></url>
 <url><loc>https://awesome-ai-prompts.vercel.app/prompt/testing-quality/test-writing</loc></url>
+<url><loc>https://awesome-ai-prompts.vercel.app/category/tmp</loc></url>
+<url><loc>https://awesome-ai-prompts.vercel.app/prompt/tmp/local-pr-cleanup</loc></url>
+<url><loc>https://awesome-ai-prompts.vercel.app/prompt/tmp/remote-pr-cleanup</loc></url>
 </urlset>

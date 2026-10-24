@@ -2,7 +2,7 @@
 
 > A curated list of copy-paste AI coding-agent prompts for developers: disciplined workflows that verify, don't guess.
 
-132 prompts across 14 categories, generated from the prompt files in github.com/shauryagangrade/awesome-ai-prompts (MIT licensed). Each prompt page carries the full prompt block ready to paste into an AI coding agent.
+136 prompts across 15 categories, generated from the prompt files in github.com/shauryagangrade/awesome-ai-prompts (MIT licensed). Each prompt page carries the full prompt block ready to paste into an AI coding agent.
 
 ## Site
 
@@ -19,12 +19,13 @@
 - [devops-deploy](https://awesome-ai-prompts.vercel.app/category/devops-deploy): 12 prompts
 - [docs-delivery](https://awesome-ai-prompts.vercel.app/category/docs-delivery): 6 prompts
 - [frontend-ui](https://awesome-ai-prompts.vercel.app/category/frontend-ui): 13 prompts
-- [git-github](https://awesome-ai-prompts.vercel.app/category/git-github): 12 prompts
+- [git-github](https://awesome-ai-prompts.vercel.app/category/git-github): 14 prompts
 - [mobile-dev](https://awesome-ai-prompts.vercel.app/category/mobile-dev): 8 prompts
 - [security-performance](https://awesome-ai-prompts.vercel.app/category/security-performance): 11 prompts
 - [system-and-exploration](https://awesome-ai-prompts.vercel.app/category/system-and-exploration): 1 prompt
 - [system-design](https://awesome-ai-prompts.vercel.app/category/system-design): 7 prompts
 - [testing-quality](https://awesome-ai-prompts.vercel.app/category/testing-quality): 10 prompts
+- [tmp](https://awesome-ai-prompts.vercel.app/category/tmp): 2 prompts
 
 ## Prompts
 
@@ -145,10 +146,12 @@
 - [good-first-issue guard workflow](https://awesome-ai-prompts.vercel.app/prompt/git-github/good-first-issue-workflow): Copy-paste the block below into any AI coding agent to build the same good-first-issue enforcement workflow for a different repository. Keywords: good...
 - [resolve a GitHub issue](https://awesome-ai-prompts.vercel.app/prompt/git-github/issue-resolving): Copy-paste the block below into any AI coding agent to take a GitHub issue in any repository from reading the ticket to a mergeable pull request, with the...
 - [issue triage for maintainers](https://awesome-ai-prompts.vercel.app/prompt/git-github/issue-triage-for-maintainers): Copy-paste the block below into any AI coding agent to turn a backlog of untriaged issues into labeled, prioritized, answerable queues. Keywords: issue...
+- [local PR cleanup](https://awesome-ai-prompts.vercel.app/prompt/git-github/local-pr-cleanup): Copy-paste the block below into any AI coding agent to perform full local hygiene after complex PR-related work - safely removing stale branches...
 - [open-source contribution](https://awesome-ai-prompts.vercel.app/prompt/git-github/open-source-contribution): Copy-paste the block below into any AI coding agent to make a high-quality contribution to an open-source repository you don't own - the right way...
 - [open source maintainer survival](https://awesome-ai-prompts.vercel.app/prompt/git-github/open-source-maintainer-survival): Copy-paste the block below into any AI coding agent to harden an open source project's maintenance practices so it keeps moving without burning out its...
 - [pull request review](https://awesome-ai-prompts.vercel.app/prompt/git-github/pr-review): Copy-paste the block below into any AI coding agent to get a structured, evidence-driven pull request review that prioritises correctness over comment...
 - [release automation](https://awesome-ai-prompts.vercel.app/prompt/git-github/release-automation): Copy-paste the block below into any AI coding agent to automate versioning, tagging, changelog generation, and publishing - a reliable release pipeline...
+- [remote PR cleanup](https://awesome-ai-prompts.vercel.app/prompt/git-github/remote-pr-cleanup): Copy-paste the block below into any AI coding agent to perform full remote hygiene after complex PR-related work - safely pruning remote-tracking...
 
 ### mobile-dev
 
@@ -201,4 +204,9 @@
 - [property-based testing](https://awesome-ai-prompts.vercel.app/prompt/testing-quality/property-based-testing): Copy-paste the block below into any AI coding agent to write property-based tests that catch bugs through generated inputs rather than hand-picked...
 - [strict TDD](https://awesome-ai-prompts.vercel.app/prompt/testing-quality/test-driven-development): Copy-paste the block below into any AI coding agent to build code test-first. Strict discipline - no code without a failing test, no skipping steps...
 - [comprehensive test writing](https://awesome-ai-prompts.vercel.app/prompt/testing-quality/test-writing): Copy-paste the block below into any AI coding agent to write tests that actually protect the code - meaningful assertions, real edge cases, and the repo's...
+
+### tmp
+
+- [local PR cleanup [spec]](https://awesome-ai-prompts.vercel.app/prompt/tmp/local-pr-cleanup): Copy-paste the block below into any AI coding agent to perform full local hygiene after complex PR-related work - safely removing stale branches...
+- [remote PR cleanup [spec]](https://awesome-ai-prompts.vercel.app/prompt/tmp/remote-pr-cleanup): Copy-paste the block below into any AI coding agent to perform full remote hygiene after complex PR-related work - safely pruning remote-tracking...
 

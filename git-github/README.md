@@ -23,6 +23,8 @@ Back to the [main index](../README.md#git--github) or browse
 - [issue-triage-for-maintainers-prompt.md](issue-triage-for-maintainers-prompt.md) - turn an untriaged backlog into labeled, prioritized, answerable queues.
 - [issue-resolving-prompt.md](issue-resolving-prompt.md) - resolve a GitHub issue end-to-end: reproduce the failure, prove the root cause, land a minimal fix with a regression test, and verify against the project's checks.
 - [open-source-maintainer-survival-prompt.md](open-source-maintainer-survival-prompt.md) - harden maintenance practices: guidelines, automation, kind declines, bus factor, handoff.
+- [local-pr-cleanup-prompt.md](local-pr-cleanup-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - full local hygiene after complex PR work: branches, worktrees, stashes, and build artifacts.
+- [remote-pr-cleanup-prompt.md](remote-pr-cleanup-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - full remote hygiene after complex PR work: prune remotes, delete merged PR branches, sync with upstream.
 
 ## Adding a prompt here
 

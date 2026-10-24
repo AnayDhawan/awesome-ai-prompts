@@ -300,7 +300,7 @@ described above.
 - [Contributing to this repo](#contributing-to-this-repo) (6) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Core coding](#core-coding) (20) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [System design](#system-design) (7) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [Git & GitHub](#git--github) (12) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [Git & GitHub](#git--github) (14) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Code review & quality](#code-review--quality) (6) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Testing & quality](#testing--quality) (10) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Docs & delivery](#docs--delivery) (6)
@@ -368,6 +368,8 @@ described above.
 - [issue-triage-for-maintainers-prompt.md](git-github/issue-triage-for-maintainers-prompt.md) - turn an untriaged backlog into labeled, prioritized, answerable queues.
 - [issue-resolving-prompt.md](git-github/issue-resolving-prompt.md) - resolve a GitHub issue end-to-end: reproduce the failure, prove the root cause, land a minimal fix with a regression test, and verify against the project's checks.
 - [open-source-maintainer-survival-prompt.md](git-github/open-source-maintainer-survival-prompt.md) - harden maintenance practices: guidelines, automation, kind declines, bus factor, handoff.
+- [local-pr-cleanup-prompt.md](git-github/local-pr-cleanup-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - full local hygiene after complex PR work: branches, worktrees, stashes, and build artifacts.
+- [remote-pr-cleanup-prompt.md](git-github/remote-pr-cleanup-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - full remote hygiene after complex PR work: prune remotes, delete merged PR branches, sync with upstream.
 
 ## Code review & quality
 

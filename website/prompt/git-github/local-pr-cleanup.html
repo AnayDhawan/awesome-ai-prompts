@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>local PR cleanup | awesome-ai-prompts</title>
+<meta name="description" content="Copy-paste the block below into any AI coding agent to perform full local hygiene after complex PR-related work - safely removing stale branches...">
+<link rel="canonical" href="https://awesome-ai-prompts.vercel.app/prompt/git-github/local-pr-cleanup">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="awesome-ai-prompts">
+<meta property="og:title" content="local PR cleanup | awesome-ai-prompts">
+<meta property="og:description" content="Copy-paste the block below into any AI coding agent to perform full local hygiene after complex PR-related work - safely removing stale branches...">
+<meta property="og:url" content="https://awesome-ai-prompts.vercel.app/prompt/git-github/local-pr-cleanup">
+<meta property="og:image" content="https://awesome-ai-prompts.vercel.app/assets/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="local PR cleanup | awesome-ai-prompts">
+<meta name="twitter:description" content="Copy-paste the block below into any AI coding agent to perform full local hygiene after complex PR-related work - safely removing stale branches...">
+<meta name="twitter:image" content="https://awesome-ai-prompts.vercel.app/assets/social-preview.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","description":"Copy-paste the block below into any AI coding agent to perform full local hygiene after complex PR-related work - safely removing stale branches...","isPartOf":{"@type":"WebSite","url":"https://awesome-ai-prompts.vercel.app/"},"mainEntity":{"@type":"CreativeWork","license":"https://spdx.org/licenses/MIT.html","name":"local PR cleanup","url":"https://awesome-ai-prompts.vercel.app/prompt/git-github/local-pr-cleanup"},"name":"local PR cleanup","url":"https://awesome-ai-prompts.vercel.app/prompt/git-github/local-pr-cleanup"}]}</script>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;color:#1a1a1a;margin:0;background:#f7f7f5}
+.wrap{max-width:760px;margin:0 auto;padding:2rem 1.5rem 4rem}
+header.site{border-bottom:2px solid #1a1a1a;padding-bottom:1rem;margin-bottom:1.5rem}
+header.site h1{margin:0 0 .25rem;font-size:1.6rem}
+header.site p.sub{margin:.25rem 0;color:#555;font-size:.95rem}
+header.site nav.links{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;margin-top:.9rem;font-size:.9rem}
+header.site nav.links a{color:#1a1a1a;text-decoration:none;border-bottom:1px dotted #999}
+header.site nav.links a:hover{border-bottom-style:solid;color:#2f4f7f}
+nav.crumb{font-size:.85rem;color:#777;margin-bottom:1.25rem}
+nav.crumb a{color:#777;text-decoration:none;border-bottom:1px dotted #bbb}
+nav.crumb a:hover{color:#2f4f7f;border-bottom-style:solid}
+h2.page{border-bottom:2px solid #333;padding-bottom:.35rem;font-size:1.35rem;display:flex;align-items:center;gap:.5rem;margin:0 0 1rem}
+h2.page svg{width:1.2rem;height:1.2rem;flex:none;color:#2f4f7f}
+span.spec{display:inline-block;font-size:.7rem;vertical-align:middle;background:#7fb3df;color:#fff;border-radius:4px;padding:.05rem .45rem;margin-left:.15rem}
+article.prompt{background:#fff;border:1px solid #ddd;border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:1.75rem}
+article.prompt .head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+article.prompt .meta{font-size:.82rem;color:#777;margin:0 0 .75rem}
+article.prompt .meta a{color:#777}
+.intro p{margin:.4rem 0 .9rem;color:#333}
+button.copy{border:1px solid #ddd;background:#fff;padding:.25rem .6rem;border-radius:6px;color:#666;cursor:pointer;font-size:.78rem;flex:none}
+button.copy:hover{background:rgba(0,0,0,.05);color:#111}
+pre.prompt{white-space:pre-wrap;background:#1e1e1e;color:#e6e6e6;border-radius:6px;padding:1rem;margin:0;overflow-x:auto}
+ul.cards{list-style:none;padding:0;margin:0 0 1.5rem}
+ul.cards li{margin:.4rem 0}
+ul.cards a{display:block;background:#fff;border:1px solid #ddd;border-radius:8px;padding:.7rem 1rem;text-decoration:none;color:#1a1a1a}
+ul.cards a:hover{border-color:#2f4f7f}
+ul.cards strong{display:block}
+ul.cards span{font-size:.85rem;color:#555}
+section.siblings{margin-top:2rem}
+section.siblings h3{font-size:1rem;text-transform:uppercase;letter-spacing:.04em;color:#555}
+section.siblings ul{margin:.25rem 0;padding-left:1.25rem}
+section.siblings a{color:#1a1a1a;text-decoration:none;border-bottom:1px dotted #999}
+section.siblings a:hover{border-bottom-style:solid}
+a.cta{display:inline-block;font-size:.9rem;color:#2f4f7f;text-decoration:none;border-bottom:1px dotted #999}
+a.cta:hover{border-bottom-style:solid}
+footer.site{margin-top:3rem;padding-top:1rem;border-top:1px solid #ddd;color:#888;font-size:.85rem}
+@media print{button.copy{display:none}.wrap{max-width:none;padding:0}pre.prompt{color:#000;background:#fff;border:1px solid #ccc}}
+</style>
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+<h1>awesome-ai-prompts</h1>
+<p class="sub">One prompt from the awesome-ai-prompts catalog, ready to paste into your AI coding agent.</p>
+<nav class="links">
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/README.md">README &amp; docs</a>
+<a href="https://github.com/shauryagangrade/awesome-ai-prompts">Star on GitHub</a>
+</nav>
+</header>
+<nav class="crumb"><a href="/">All prompts</a> &rsaquo; <a href="/category/git-github">git-github</a> &rsaquo; Reusable prompt: local PR cleanup</nav>
+<main>
+<h2 class="page"><i data-lucide="git-branch" aria-hidden="true"></i><span>Reusable prompt: local PR cleanup</span><span class="spec">spec</span></h2>
+<article class="prompt">
+<div class="head">
+<p class="meta"><a href="https://github.com/shauryagangrade/awesome-ai-prompts/blob/main/git-github/local-pr-cleanup-prompt.md">git-github/local-pr-cleanup-prompt.md</a></p>
+<button class="copy" type="button">Copy prompt</button>
+</div>
+<div class="intro"><p>Copy-paste the block below into any AI coding agent to perform full local hygiene after complex PR-related work - safely removing stale branches, worktrees, stashes, and build artifacts without losing uncommitted work or breaking your working tree.</p><p>Keywords: local cleanup, prune branches, worktree cleanup, stash cleanup, post pr cleanup, git hygiene</p></div>
+<pre class="prompt" id="prompt-body">Perform **full local hygiene** after complex PR-related work in this repository. The goal is a clean, safe local state with no orphaned branches, worktrees, stashes, or build artifacts - without deleting anything that is unmerged, uncommitted, or actively in use.
+
+## Define the scope first
+
+Before deleting anything, establish:
+
+1. **Current state** - Identify the current branch, uncommitted changes (staged/unstaged), stashes, worktrees, and recent PR branches.
+2. **Safety boundaries** - Never delete the current branch, branches with unpushed commits that aren&#x27;t clearly merged, stashes that contain unique work without confirmation, or worktrees currently in use.
+3. **Upstream tracking** - Understand which branches track remotes and which have been merged into main/master/develop.
+4. **Build artifacts** - Identify caches/build outputs (node_modules, dist, build, .next, target, __pycache__, etc.) that can be safely removed.
+
+## What to clean up
+
+### Branches
+- Delete local branches that have been merged into the default branch (main/master/develop)
+- Delete local branches whose upstream remote branches have been deleted (gone)
+- Never delete protected branches (main, master, develop, trunk, release/*)
+- Never delete the currently checked out branch
+
+### Worktrees
+- List all git worktrees with `git worktree list`
+- Remove worktrees that are no longer needed (merged PRs, completed work)
+- Never remove the main worktree or worktrees with uncommitted changes without explicit confirmation
+- Prune stale worktree references
+
+### Stashes
+- Review all stashes (`git stash list`) with context
+- Identify stashes that are old and likely obsolete (from completed PRs)
+- Drop stashes only with confirmation or if clearly from merged work
+- Never drop stashes with unique uncommitted work without explicit approval
+
+### Local files and artifacts
+- Remove build outputs and caches that are safe to regenerate (dist/, build/, .next/, out/, target/, __pycache__/, .pytest_cache/, coverage/)
+- Remove node_modules only if explicitly requested or if disk space critical and can be reinstalled
+- Remove .DS_Store and other OS artifacts
+- Clear temporary files in tmp/ only if clearly generated artifacts
+
+## Method
+
+1. **Audit first** - Run `git status`, `git branch -a`, `git worktree list`, `git stash list`, `git remote -v`. Create a full inventory.
+2. **Identify safe targets** - Determine merged branches via `git branch --merged &lt;default-branch&gt;`, find gone upstream branches, identify stale worktrees.
+3. **Present plan** - Show a clear plan of what will be deleted with rationale. Group by category (branches, worktrees, stashes, files).
+4. **Get confirmation** - For anything destructive, especially stashes with unique content or large artifacts, ask for confirmation before proceeding.
+5. **Execute safely** - Delete in order: worktrees first (if any), then branches, then stashes, then files. Use safe commands (`git branch -d` not `-D` unless necessary and justified).
+6. **Verify** - After cleanup, show final state. Confirm no uncommitted work lost, no protected branches deleted.
+
+## Verification
+
+- [ ] Audited full local state (status, branches, worktrees, stashes, remotes)
+- [ ] Identified default branch correctly
+- [ ] Only merged/gone branches targeted for deletion (verified with evidence)
+- [ ] Protected branches never deleted
+- [ ] Current branch never deleted
+- [ ] Worktrees with uncommitted changes not deleted without confirmation
+- [ ] Stashes reviewed; unique work not dropped without confirmation
+- [ ] Build artifacts identified as regenerable before deletion
+- [ ] No uncommitted changes lost
+- [ ] Final state reported clearly
+
+## Rules
+
+- Never delete without showing what and why first.
+- Never use `git branch -D` on merged branches when `-d` works; only force delete with clear justification.
+- Never touch branches that aren&#x27;t clearly merged or have gone upstream without confirmation.
+- Never delete stashes blindly - inspect with `git stash show -p` if unclear.
+- Never remove node_modules or large dependencies without explicit confirmation.
+- Always preserve uncommitted work - if unsure, stop and ask.
+- Be conservative: when in doubt, don&#x27;t delete.
+- Report everything clearly with counts.</pre>
+</article>
+<section class="siblings">
+<h3>More git-github prompts</h3>
+<ul><li><a href="/prompt/git-github/ci-cd-workflow">Reusable prompt: CI/CD pipeline builder</a></li><li><a href="/prompt/git-github/commit-checklist">Reusable prompt: commit checklist &amp; consistency gates</a></li><li><a href="/prompt/git-github/dependency-upgrade">Reusable prompt: dependency upgrade</a></li><li><a href="/prompt/git-github/git-bisect-debug">Reusable prompt: git bisect debug</a></li><li><a href="/prompt/git-github/git-history-surgery">Reusable prompt: git history surgery</a></li><li><a href="/prompt/git-github/good-first-issue-workflow">Reusable prompt: good-first-issue guard workflow</a></li><li><a href="/prompt/git-github/issue-resolving">Reusable prompt: resolve a GitHub issue</a></li><li><a href="/prompt/git-github/issue-triage-for-maintainers">Reusable prompt: issue triage for maintainers</a></li><li><a href="/prompt/git-github/open-source-contribution">Reusable prompt: open-source contribution</a></li><li><a href="/prompt/git-github/open-source-maintainer-survival">Reusable prompt: open source maintainer survival</a></li><li><a href="/prompt/git-github/pr-review">Reusable prompt: pull request review</a></li><li><a href="/prompt/git-github/release-automation">Reusable prompt: release automation</a></li><li><a href="/prompt/git-github/remote-pr-cleanup">Reusable prompt: remote PR cleanup</a></li></ul>
+</section>
+</main>
+<footer class="site">
+<p>Generated by scripts/build-all.py from the prompt files in this repo. Do not edit by hand. Regenerate with: python3 scripts/build-all.py</p>
+</footer>
+</div>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+document.querySelector('button.copy').addEventListener('click', function () { copyText(document.getElementById('prompt-body')); });
+function copyText(el) {
+  var text = el.textContent;
+  function done() { el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+  function fallback() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } finally { document.body.removeChild(ta); }
+    done();
+  }
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done, fallback);
+  } else {
+    fallback();
+  }
+}
+if (window.lucide) { lucide.createIcons(); }
+</script>
+</body>
+</html>
