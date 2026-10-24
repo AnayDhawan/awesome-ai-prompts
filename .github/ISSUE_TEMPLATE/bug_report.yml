@@ -1,41 +1,82 @@
-name: Bug report
-description: Report something that is not working as expected
+name: Bug Report
+description: Report an issue where something isn't working as expected
 title: "[Bug]: "
 labels: ["bug"]
 body:
   - type: markdown
     attributes:
-      value: Thanks for taking the time to file a bug. Please fill out the sections below.
+      value: |
+        Thank you for taking the time to report a bug! To help us investigate and resolve this issue as quickly as possible, please provide as much detail as you can below.
   - type: textarea
-    id: what-happened
+    id: summary
     attributes:
-      label: What happened?
-      description: A clear description of the bug, including what you expected instead.
+      label: Summary
+      description: A clear and concise description of the bug you're experiencing.
+      placeholder: "Describe the issue in a few sentences..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen? How should this work correctly?
+      placeholder: "I expected..."
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened? Include any error messages, unexpected outputs, or incorrect behavior you observed.
+      placeholder: "Instead, this happened..."
     validations:
       required: true
   - type: textarea
     id: repro
     attributes:
-      label: Steps to reproduce
-      description: Minimal steps so a maintainer can reproduce it.
+      label: Steps to Reproduce
+      description: Provide a minimal, step-by-step set of instructions so a maintainer can reproduce this issue reliably.
       placeholder: |
-        1. ...
-        2. ...
-        3. ...
+        1. Navigate to...
+        2. Copy the prompt from...
+        3. Use it with [agent name]...
+        4. Observe the error...
     validations:
       required: true
   - type: textarea
     id: environment
     attributes:
-      label: Environment
-      description: Which AI agent/tool you used, and the awesome-ai-prompts version.
-      placeholder: "Agent: ... | version: ..."
+      label: Environment Details
+      description: Tell us about the context where this issue occurred.
+      placeholder: |
+        - AI Agent/Tool: (e.g., Claude, ChatGPT, Cursor, Copilot, OpenCode)
+        - Version/Model: (e.g., Claude Sonnet 4.5, GPT-4o)
+        - Repository version: (commit SHA or release tag, if relevant)
+        - Operating System: (e.g., macOS, Windows, Linux)
+    validations:
+      required: false
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or Recordings
+      description: If applicable, add screenshots, screen recordings, or GIFs to help illustrate the problem.
+      placeholder: "Drag and drop images here, or paste links to them."
     validations:
       required: false
   - type: textarea
     id: logs
     attributes:
-      label: Relevant logs or output
+      label: Relevant Logs, Errors, or Output
+      description: Include any error messages, stack traces, or unexpected output from your AI agent.
       render: shell
+      placeholder: "Paste logs here..."
+    validations:
+      required: false
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Is there anything else we should know? Any workarounds you've tried, related issues, or other details that might help?
+      placeholder: "Add any other context about the problem here..."
     validations:
       required: false
