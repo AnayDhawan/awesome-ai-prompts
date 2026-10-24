@@ -4,4 +4,6 @@ Prompts that turn an agent into a safe, strictly read-only investigator to analy
 
 - [drive-space-investigator-prompt.md](drive-space-investigator-prompt.md) - Strictly read-only drive space investigator that scans near-capacity disks, finds largest files and waste/regenerable items, and produces a comprehensive, review-only report.
 
+- [impact-analysis-prompt.md](impact-analysis-prompt.md) - trace the blast radius of a planned change before editing: direct and indirect users, contracts, schemas, config, and tests, each with file and line as proof.
+
 [← Back to README](../README.md#system--exploration)

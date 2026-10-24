@@ -11,6 +11,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- Add `system-and-exploration/impact-analysis-prompt.md` - prompt for tracing the blast radius of a planned change before editing: direct and indirect users, contracts, schemas, config, and tests, each with path:line evidence and a breaks versus changes-behavior split.
 - Add `git-github/local-pr-cleanup-prompt.md` - spec prompt for full local hygiene after complex PR work: branches, worktrees, stashes, and build artifacts.
 - Add `git-github/remote-pr-cleanup-prompt.md` - spec prompt for full remote hygiene after complex PR work: prune remotes, delete merged PR branches, sync with upstream.
 

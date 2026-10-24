@@ -310,7 +310,7 @@ described above.
 - [Frontend & UI](#frontend--ui) (13) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Data & AI](#data--ai) (13) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Mobile development](#mobile-development) (8) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [System & Exploration](#system--exploration) (1) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [System & Exploration](#system--exploration) (2) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 
 ## Contributing to this repo
 
@@ -487,3 +487,4 @@ described above.
 ## System & Exploration
 
 - [drive-space-investigator-prompt.md](system-and-exploration/drive-space-investigator-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - Strictly read-only drive space investigator that scans near-capacity disks, finds largest files and waste/regenerable items, and produces a comprehensive, review-only report.
+- [impact-analysis-prompt.md](system-and-exploration/impact-analysis-prompt.md) - trace the blast radius of a planned change before editing: direct and indirect users, contracts, schemas, config, and tests, each with file and line as proof.

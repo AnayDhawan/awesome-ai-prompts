@@ -2,7 +2,7 @@
 
 > A curated list of copy-paste AI coding-agent prompts for developers: disciplined workflows that verify, don't guess.
 
-134 prompts across 14 categories, generated from the prompt files in github.com/shauryagangrade/awesome-ai-prompts (MIT licensed). Each prompt page carries the full prompt block ready to paste into an AI coding agent.
+135 prompts across 14 categories, generated from the prompt files in github.com/shauryagangrade/awesome-ai-prompts (MIT licensed). Each prompt page carries the full prompt block ready to paste into an AI coding agent.
 
 ## Site
 
@@ -22,7 +22,7 @@
 - [git-github](https://awesome-ai-prompts.vercel.app/category/git-github): 14 prompts
 - [mobile-dev](https://awesome-ai-prompts.vercel.app/category/mobile-dev): 8 prompts
 - [security-performance](https://awesome-ai-prompts.vercel.app/category/security-performance): 11 prompts
-- [system-and-exploration](https://awesome-ai-prompts.vercel.app/category/system-and-exploration): 1 prompt
+- [system-and-exploration](https://awesome-ai-prompts.vercel.app/category/system-and-exploration): 2 prompts
 - [system-design](https://awesome-ai-prompts.vercel.app/category/system-design): 7 prompts
 - [testing-quality](https://awesome-ai-prompts.vercel.app/category/testing-quality): 10 prompts
 
@@ -180,6 +180,7 @@
 ### system-and-exploration
 
 - [Drive space investigator (read-only)](https://awesome-ai-prompts.vercel.app/prompt/system-and-exploration/drive-space-investigator): Paste this entire prompt into your agent. This heavy-format spec is for investigating near-capacity disks with strict read-only constraints and...
+- [impact analysis](https://awesome-ai-prompts.vercel.app/prompt/system-and-exploration/impact-analysis): Copy-paste the block below into any AI coding agent to trace the blast radius of a planned change before anything is edited - every module, contract...
 
 ### system-design
 
